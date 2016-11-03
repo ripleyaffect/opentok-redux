@@ -1,4 +1,5 @@
 import { applyMiddleware, compose, createStore } from 'redux'
+import thunkMiddleware from 'redux-thunk'
 
 import { app } from './reducers'
 
@@ -15,6 +16,6 @@ export default () => {
   return createStore(
     app,
     {},
-    composeEnhancers(applyMiddleware()) // Add middlewares here
+    composeEnhancers(applyMiddleware(thunkMiddleware))
   )
 }
