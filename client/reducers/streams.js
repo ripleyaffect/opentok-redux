@@ -28,3 +28,11 @@ export const get = (state, id) => {
 export const getAll = (state) => {
   return _.values(state.byId)
 }
+
+export const getNodeId = (state, stream) => {
+  if (!stream || !stream.id) {
+    console.log('Must pass a stream to get the node ide')
+    return null
+  }
+  return `stream-${stream.id}`
+}

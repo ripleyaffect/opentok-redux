@@ -3,7 +3,7 @@ import { combineReducers } from 'redux'
 
 export const byId = (state={}, action) => {
   switch (action.type) {
-    case 'SUBSCRIBE_TO_STREAM_SUCCESS':
+    case 'STREAM_SUBSCRIBER_CREATED':
       return {
         ...state,
         [action.stream.id]: action.subscriber

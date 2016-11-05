@@ -7,8 +7,8 @@ import styles from './styles.less'
 
 const Messages = ({ messages }) => {
   return <div className={styles.messages}>
-    {messages.map(
-      message => <div className={styles.message}>{message.content}</div>)}
+    {messages.map(message => <div
+        className={styles.message} key={message.id}>{message.content}</div>)}
   </div>
 }
 

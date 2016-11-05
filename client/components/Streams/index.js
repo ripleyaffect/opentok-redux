@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import Subscriber from 'app/components/Subscriber'
 import { getAllStreams } from 'app/reducers'
 
 class Streams extends React.Component {
@@ -8,7 +9,7 @@ class Streams extends React.Component {
     const { streams } = this.props
 
     return <div>
-      {streams.map(stream => <p key={stream.id}>{stream.id}</p>)}
+      {streams.map(stream => <Subscriber key={stream.id} streamId={stream.id}/>)}
     </div>
   }
 }

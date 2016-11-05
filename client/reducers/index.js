@@ -43,8 +43,6 @@ export const session = (state=null, action) => {
   switch (action.type) {
     case 'CONNECT_TO_SESSION_SUCCESS':
       return action.session
-    case 'SUBSCRIBE_TO_STREAM_SUCCESS':
-      return action.session
     default:
       return state
   }
@@ -83,4 +81,7 @@ export const getStream = (state, streamId) => {
 }
 export const getAllStreams = (state) => {
   return fromStreams.getAll(state.streams)
+}
+export const getStreamNodeId = (state, stream) => {
+  return fromStreams.getNodeId(state.streams, stream)
 }

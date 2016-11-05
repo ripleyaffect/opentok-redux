@@ -1,18 +1,14 @@
 .bar {
   width: 100%;
+  box-shadow: 0 1px 2px #666;
+  border-radius: 5px;
 }
 
 .message {
-  width: ~'calc(100% - 24px)';
+  border-radius: 5px;
+  width: ~'calc(100% - 20px)';
   padding: 10px;
-  border: 2px #ddd solid;
-  border-top:none;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border: none;
   font-size: 15px;
   outline: none;
-
-  &:focus {
-    border-color: #bbb;
-  }
 }

@@ -12,6 +12,9 @@ app.use('/static', express.static(__dirname + '/public'))
 app.use('/api', require('./routers/api'))
 
 // Apply routes
+app.get('/', (req, res) => {
+  res.redirect('/common-room')
+})
 app.get('*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html')
 })

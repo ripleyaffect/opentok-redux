@@ -2,6 +2,8 @@ import OT from 'opentok-client-sdk'
 import superagent from 'superagent'
 import { v4 } from 'uuid'
 
+import { getStreamNodeId } from 'app/reducers'
+
 export const decrement = () => ({
   type: 'DECREMENT'
 })
@@ -62,8 +64,8 @@ export const publishToSession = (publishAudio=false, publishVideo=false) => {
     // Initialize the publisher
     const publisher = OT.initPublisher(
       'publisher-container', {
-        width: '100%',
-        height: 'calc(100vh - 45px)',
+        width: '100px',
+        height: '80px',
       })
 
     // Publish to the session
@@ -119,5 +121,29 @@ export const receiveMessage = (event) => {
   return {
     message: event.data,
     type: 'RECEIVE_MESSAGE',
+  }
+}
+
+export const subscribeToStream = (stream, options={}) => {
+
+  return (dispatch, getState) => {
+    const state = getState()
+    const session = state.session
+
+    // Passed options take precedence over defaults
+    const defaultOptions = {
+      height: 'calc(100vh - 75px)',
+      width: '100%',
+    }
+    const finalOptions = _.assign({}, defaultOptions, options)
+
+    const subscriber = session.subscribe(
+      stream, getStreamNodeId(state, stream), finalOptions)
+
+    dispatch({
+      type: 'STREAM_SUBSCRIBER_CREATED',
+      stream,
+      subscriber,
+    })
   }
 }

@@ -7,10 +7,8 @@ import {
   removeStream,
   receiveMessage,
 } from 'app/actions'
+import Feed from 'app/components/Feed'
 import MessageBar from 'app/components/MessageBar'
-import Messages from 'app/components/Messages'
-import Publishers from 'app/components/Publishers'
-import Streams from 'app/components/Streams'
 
 class Session extends React.Component {
   componentDidMount() {
@@ -33,10 +31,8 @@ class Session extends React.Component {
 
     return session ?
       <div>
-        <Publishers />
+        <Feed />
         <MessageBar />
-        <Messages />
-        <Streams />
       </div>
     : <div />
   }
