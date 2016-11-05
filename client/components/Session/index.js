@@ -9,6 +9,7 @@ import {
 } from 'app/actions'
 import Feed from 'app/components/Feed'
 import MessageBar from 'app/components/MessageBar'
+import { getSession } from 'app/reducers'
 
 class Session extends React.Component {
   componentDidMount() {
@@ -29,18 +30,16 @@ class Session extends React.Component {
   render() {
     const { session } = this.props
 
-    return session ?
-      <div>
-        <Feed />
-        <MessageBar />
-      </div>
-    : <div />
+    return <div>
+      {session && <Feed />}
+      {session && <MessageBar />}
+    </div>
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return { session: state.session }
-}
+const mapStateToProps = (state) => ({
+  session: getSession(state),
+})
 
 const mapDispatchToProps = {
   dispatchConnectToSession: connectToSession,

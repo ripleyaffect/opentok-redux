@@ -1,22 +1,7 @@
 import _ from 'lodash'
 import { combineReducers } from 'redux'
 
-const defaultState = {
-  1: {
-    id: 1,
-    content: 'asdf 1',
-  },
-  2: {
-    id: 2,
-    content: 'asdf 2',
-  },
-  3: {
-    id: 3,
-    content: 'asdf 3',
-  }
-}
-
-export const byId = (state=defaultState, action) => {
+export const byId = (state={}, action) => {
   switch (action.type) {
     case 'RECEIVE_MESSAGE':
       return {

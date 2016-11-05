@@ -29,6 +29,15 @@ export const getAll = (state) => {
   return _.values(state.byId)
 }
 
+export const getConnectionStreams = (state, connectionId) => {
+  if (!connectionId) {
+    console.log('Must pass a connection id to get connection streams')
+    return []
+  }
+  return _.filter(
+    _.values(state.byId), stream => stream.connection.id === connectionId)
+}
+
 export const getNodeId = (state, stream) => {
   if (!stream || !stream.id) {
     console.log('Must pass a stream to get the node ide')

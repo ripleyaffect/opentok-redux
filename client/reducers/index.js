@@ -2,78 +2,35 @@ import { combineReducers } from 'redux'
 
 import messages, * as fromMessages from './messages'
 import publishers from './publishers'
+import session, * as fromSession from './session'
 import streams, * as fromStreams from './streams'
 import subscribers from './subscribers'
-
-export const value = (state=0, action) => {
-  switch (action.type) {
-    case 'DECREMENT':
-      return state - 1
-    case 'INCREMENT':
-      return state + 1
-    default:
-      return state
-  }
-}
-
-
-export const tokboxApiKey = (state=null, action) => {
-  switch (action.type) {
-    case 'FETCH_TOKEN_REQUEST':
-      return null
-    case 'FETCH_TOKEN_SUCCESS':
-      return action.tokboxApiKey
-    default:
-      return state
-  }
-}
-
-export const sessionId = (state=null, action) => {
-  switch (action.type) {
-    case 'FETCH_TOKEN_REQUEST':
-      return null
-    case 'FETCH_TOKEN_SUCCESS':
-      return action.sessionId
-    default:
-      return state
-  }
-}
-
-export const session = (state=null, action) => {
-  switch (action.type) {
-    case 'CONNECT_TO_SESSION_SUCCESS':
-      return action.session
-    default:
-      return state
-  }
-}
-
-export const token = (state=null, action) => {
-  switch (action.type) {
-    case 'FETCH_TOKEN_REQUEST':
-      return null
-    case 'FETCH_TOKEN_SUCCESS':
-      return action.token
-    default:
-      return state
-  }
-}
 
 export const app = combineReducers({
   messages,
   publishers,
+  session,
   streams,
   subscribers,
-  session,
-  sessionId,
-  tokboxApiKey,
-  token,
 })
 
 // Selectors
 
 export const getAllMessages = (state) => {
   return fromMessages.getAll(state.messages)
+}
+
+export const getTokboxApiKey = (state) => {
+  return fromSession.getTokboxApiKey(state.session)
+}
+export const getSession = (state) => {
+  return fromSession.get(state.session)
+}
+export const getSessionId = (state) => {
+  return fromSession.getId(state.session)
+}
+export const getSessionToken = (state) => {
+  return fromSession.getToken(state.session)
 }
 
 export const getStream = (state, streamId) => {

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router'
 
 import { fetchToken } from 'app/actions'
 import Session from 'app/components/Session'
+import { getSessionId } from 'app/reducers'
 
 class Room extends React.Component {
   componentDidMount() {
@@ -21,7 +22,7 @@ class Room extends React.Component {
 
 const mapStateToProps = (state, ownProps) => ({
   name: ownProps.params.roomName,
-  sessionId: state.sessionId,
+  sessionId: getSessionId(state),
 })
 
 const mapDispatchToProps = {

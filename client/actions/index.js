@@ -2,7 +2,13 @@ import OT from 'opentok-client-sdk'
 import superagent from 'superagent'
 import { v4 } from 'uuid'
 
-import { getStreamNodeId } from 'app/reducers'
+import {
+  getSession,
+  getSessionId,
+  getSessionToken,
+  getStreamNodeId,
+  getTokboxApiKey,
+} from 'app/reducers'
 
 export const decrement = () => ({
   type: 'DECREMENT'
@@ -39,8 +45,11 @@ export const fetchToken = (room) => {
 
 export const connectToSession = () => {
   return (dispatch, getState) => {
-    // Pull values from the state
-    const { tokboxApiKey, sessionId, token } = getState()
+    // Get values from the state
+    const state = getState()
+    const sessionId = getSessionId(state)
+    const tokboxApiKey = getTokboxApiKey(state)
+    const token = getSessionToken(state)
 
     // Initialize the session
     const session = OT.initSession(tokboxApiKey, sessionId)
@@ -59,7 +68,7 @@ export const connectToSession = () => {
 export const publishToSession = (publishAudio=false, publishVideo=false) => {
   return (dispatch, getState) => {
     // Pull session from the state
-    const { session } = getState()
+    const session = getSession(getState())
 
     // Initialize the publisher
     const publisher = OT.initPublisher(
@@ -97,7 +106,7 @@ export const removeStream = (event) => {
 
 export const sendMessage = (messageContent) => {
   return (dispatch, getState) => {
-    const { session } = getState()
+    const session = getSession(getState())
 
     const message = {
       content: messageContent,
@@ -116,19 +125,16 @@ export const sendMessage = (messageContent) => {
   }
 }
 
-export const receiveMessage = (event) => {
-  console.log(event)
-  return {
-    message: event.data,
-    type: 'RECEIVE_MESSAGE',
-  }
-}
+export const receiveMessage = (event) => ({
+  message: event.data,
+  type: 'RECEIVE_MESSAGE',
+})
 
 export const subscribeToStream = (stream, options={}) => {
 
   return (dispatch, getState) => {
     const state = getState()
-    const session = state.session
+    const session = getSession(state)
 
     // Passed options take precedence over defaults
     const defaultOptions = {
