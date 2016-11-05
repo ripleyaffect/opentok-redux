@@ -1,10 +1,11 @@
 import React from 'react'
 
-import Navbar from 'app/components/Navbar'
+import styles from './styles.less'
+
+console.log(styles)
 
 const App = ({ children }) => {
-  return <div>
-    <Navbar />
+  return <div className={styles.app}>
     {children}
   </div>
 }

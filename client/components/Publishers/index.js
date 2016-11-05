@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 
 import { publishToSession } from 'app/actions'
 
-class Publisher extends React.Component {
+import styles from './styles.less'
+
+class Publishers extends React.Component {
   componentDidMount() {
     this.props.dispatchPublishToSession()
   }
@@ -11,7 +13,8 @@ class Publisher extends React.Component {
   render() {
     const { publisher } = this.props
 
-    return publisher ? <h1>publisher!</h1> : <div />
+    return <div id="publisher-container" className={styles.publisher}>
+    </div>
   }
 }
 
@@ -23,4 +26,4 @@ const mapDispatchToProps = {
   dispatchPublishToSession: publishToSession,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Publisher)
+export default connect(mapStateToProps, mapDispatchToProps)(Publishers)

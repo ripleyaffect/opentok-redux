@@ -1,10 +1,10 @@
 const OpenTok = require('opentok')
 const { Router } = require('express')
 
-const { OPENTOK_API_KEY, OPENTOK_SECRET } = require('../config')
+const { TOKBOX_API_KEY, TOKBOX_SECRET } = require('../config')
 
 const router = Router()
-const opentok = OpenTok(OPENTOK_API_KEY, OPENTOK_SECRET)
+const opentok = OpenTok(TOKBOX_API_KEY, TOKBOX_SECRET)
 
 let sessionIdByRoom = {}
 
@@ -28,7 +28,7 @@ router.get('/rooms/:roomName/token', (req, res) => {
         sessionIdByRoom[roomName] = sessionId;
         console.log(`Created sessionId for ${roomName}: ${sessionId}`);
         res.send({
-          apiKey: OPENTOK_API_KEY,
+          tokboxApiKey: TOKBOX_API_KEY,
           sessionId,
           token: opentok.generateToken(sessionId, {
             expireTime : (new Date().getTime() / 1000)+(7 * 24 * 60 * 60),
@@ -40,7 +40,7 @@ router.get('/rooms/:roomName/token', (req, res) => {
   else {
     console.log(`Found sessionId for ${roomName}: ${sessionId}`);
     res.send({
-      apiKey: OPENTOK_API_KEY,
+      tokboxApiKey: TOKBOX_API_KEY,
       sessionId,
       token: opentok.generateToken(sessionId, {
         expireTime : (new Date().getTime() / 1000)+(7 * 24 * 60 * 60),

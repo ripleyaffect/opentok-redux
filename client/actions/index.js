@@ -1,5 +1,6 @@
 import OT from 'opentok-client-sdk'
 import superagent from 'superagent'
+import { v4 } from 'uuid'
 
 export const decrement = () => ({
   type: 'DECREMENT'
@@ -22,10 +23,10 @@ export const fetchToken = (room) => {
           console.log(`An error occured: ${error}`)
         }
         else {
-          const { apiKey, sessionId, token } = response.body
+          const { tokboxApiKey, sessionId, token } = response.body
           dispatch({
             type: 'FETCH_TOKEN_SUCCESS',
-            apiKey,
+            tokboxApiKey,
             sessionId,
             token,
           })
@@ -37,10 +38,10 @@ export const fetchToken = (room) => {
 export const connectToSession = () => {
   return (dispatch, getState) => {
     // Pull values from the state
-    const { apiKey, sessionId, token } = getState()
+    const { tokboxApiKey, sessionId, token } = getState()
 
     // Initialize the session
-    const session = OT.initSession(apiKey, sessionId)
+    const session = OT.initSession(tokboxApiKey, sessionId)
 
     // Connect to the session
     session.connect(token, (error) => {
@@ -53,18 +54,16 @@ export const connectToSession = () => {
   }
 }
 
-export const publishToSession = () => {
+export const publishToSession = (publishAudio=false, publishVideo=false) => {
   return (dispatch, getState) => {
     // Pull session from the state
     const { session } = getState()
 
     // Initialize the publisher
     const publisher = OT.initPublisher(
-      'publisher',
-      {
-        insertMode: 'append',
+      'publisher-container', {
         width: '100%',
-        height: '100%',
+        height: 'calc(100vh - 45px)',
       })
 
     // Publish to the session
@@ -78,25 +77,47 @@ export const publishToSession = () => {
   }
 }
 
-export const subscribeToStream = (event) => {
-return (dispatch, getState) => {
-    // Pull session from the state
+export const addStream = (event) => {
+  console.log(event)
+  return {
+    type: 'ADD_STREAM',
+    stream: event.stream,
+  }
+}
+
+export const removeStream = (event) => {
+  console.log(event)
+  return {
+    type: 'REMOVE_STREAM',
+    stream: event.stream,
+  }
+}
+
+export const sendMessage = (messageContent) => {
+  return (dispatch, getState) => {
     const { session } = getState()
 
-    // Initialize the publisher
-    session.subscribe(
-      event.stream,
-      'subscriber',
-      {
-        insertMode: 'append',
-        width: '100%',
-        height: '100%',
-      })
+    const message = {
+      content: messageContent,
+      id: v4()
+    }
 
-    // Dispatch the publisher
-    dispatch({
-      type: 'SUBSCRIBE_TO_STREAM_SUCCESS',
-      session: Object.assign({}, session),
+    session.signal({
+      data: message,
+      type: 'message',
     })
+
+    dispatch({
+      message,
+      type: 'RECEIVE_MESSAGE',
+    })
+  }
+}
+
+export const receiveMessage = (event) => {
+  console.log(event)
+  return {
+    message: event.data,
+    type: 'RECEIVE_MESSAGE',
   }
 }

@@ -1,8 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { connectToSession, subscribeToStream } from 'app/actions'
-import Publisher from 'app/components/Publisher'
+import {
+  addStream,
+  connectToSession,
+  removeStream,
+  receiveMessage,
+} from 'app/actions'
+import MessageBar from 'app/components/MessageBar'
+import Messages from 'app/components/Messages'
+import Publishers from 'app/components/Publishers'
+import Streams from 'app/components/Streams'
 
 class Session extends React.Component {
   componentDidMount() {
@@ -14,7 +22,9 @@ class Session extends React.Component {
 
     // Register handlers if session
     if (!this.props.session && session) {
-      session.on('streamCreated', this.props.dispatchSubscribeToStream)
+      session.on('streamCreated', this.props.dispatchAddStream)
+      session.on('streamDestroyed', this.props.dispatchRemoveStream)
+      session.on('signal:message', this.props.dispatchReceiveMessage)
     }
   }
 
@@ -23,8 +33,10 @@ class Session extends React.Component {
 
     return session ?
       <div>
-        <h1>session!</h1>
-        <Publisher />
+        <Publishers />
+        <MessageBar />
+        <Messages />
+        <Streams />
       </div>
     : <div />
   }
@@ -36,7 +48,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = {
   dispatchConnectToSession: connectToSession,
-  dispatchSubscribeToStream: subscribeToStream,
+  dispatchAddStream: addStream,
+  dispatchRemoveStream: removeStream,
+  dispatchReceiveMessage: receiveMessage,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Session)

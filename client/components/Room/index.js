@@ -14,7 +14,6 @@ class Room extends React.Component {
     const { name, sessionId } = this.props
 
     return <div className="page about-page">
-      <h1>{name}</h1>
       {sessionId && <Session />}
     </div>
   }

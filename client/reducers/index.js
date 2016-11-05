@@ -1,5 +1,9 @@
-
 import { combineReducers } from 'redux'
+
+import messages, * as fromMessages from './messages'
+import publishers from './publishers'
+import streams, * as fromStreams from './streams'
+import subscribers from './subscribers'
 
 export const value = (state=0, action) => {
   switch (action.type) {
@@ -13,21 +17,12 @@ export const value = (state=0, action) => {
 }
 
 
-export const apiKey = (state=null, action) => {
+export const tokboxApiKey = (state=null, action) => {
   switch (action.type) {
     case 'FETCH_TOKEN_REQUEST':
       return null
     case 'FETCH_TOKEN_SUCCESS':
-      return action.apiKey
-    default:
-      return state
-  }
-}
-
-export const publisher = (state=null, action) => {
-  switch (action.type) {
-    case 'PUBLISH_TO_SESSION_SUCCESS':
-      return action.publisher
+      return action.tokboxApiKey
     default:
       return state
   }
@@ -67,10 +62,25 @@ export const token = (state=null, action) => {
 }
 
 export const app = combineReducers({
-  apiKey,
-  publisher,
+  messages,
+  publishers,
+  streams,
+  subscribers,
   session,
   sessionId,
+  tokboxApiKey,
   token,
-  value,
 })
+
+// Selectors
+
+export const getAllMessages = (state) => {
+  return fromMessages.getAll(state.messages)
+}
+
+export const getStream = (state, streamId) => {
+  return fromStreams.get(state.streams, streamId)
+}
+export const getAllStreams = (state) => {
+  return fromStreams.getAll(state.streams)
+}
