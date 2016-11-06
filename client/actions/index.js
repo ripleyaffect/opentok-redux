@@ -3,6 +3,7 @@ import superagent from 'superagent'
 import { v4 } from 'uuid'
 
 import {
+  getActiveConnectionId,
   getActiveConnectionTimestamp,
   getCurrentUser,
   getIsActiveConnection,
@@ -11,6 +12,7 @@ import {
   getSessionId,
   getSessionToken,
   getStreamNodeId,
+  getStreamSubscriber,
   getTokboxApiKey,
 } from 'app/reducers'
 
@@ -121,12 +123,34 @@ export const unsubscribeFromStream = (stream) => {
     const session = getSession(state)
     const subscriber = getStreamSubscriber(state, stream)
 
-    session.usubscribe(subscriber)
+    if (subscriber) {
+      session.unsubscribe(subscriber)
+    }
 
     dispatch({
       type: 'REMOVE_SUBSCRIBER',
       stream,
     })
+  }
+}
+
+export const addMessage = (message) => ({
+  message,
+  type: 'ADD_MESSAGE'
+})
+
+export const handleSignalActiveConnectionPing = (event) => {
+  return (dispatch, getState) => {
+    const activeConnectionId = getActiveConnectionId(getState())
+
+    if (event.data.connectionId != activeConnectionId) {
+      dispatch(handleSignalSetActiveConnectionId(event))
+      dispatch(addMessage({
+        id: v4(),
+        type: 'activeConnectionNotice',
+        user: event.data.user,
+      }))
+    }
   }
 }
 
@@ -138,7 +162,7 @@ export const handleConnectionCreated = (event) => {
     const session = getSession(state)
     const user = getCurrentUser(state)
 
-    // Short circuit if no connection Id
+    // Short circuit if no connectionId
     if (!connectionId) {
       console.log('Cannot identify without a connectionId')
       return
@@ -155,13 +179,7 @@ export const handleConnectionCreated = (event) => {
 
     // Tell new connection if this connection is the active one
     if (isActiveConnection) {
-      session.signal({
-        type: 'setActiveConnectionId',
-        data: {
-          connectionId,
-          timestamp: getActiveConnectionTimestamp(state),
-        }
-      })
+      dispatch(signalActiveConnectionPing(event.connection))
     }
 
     dispatch({
@@ -181,10 +199,9 @@ export const handleSignalIdentify = (event) => ({
   type: 'ADD_USER',
 })
 
-export const handleSignalMessage = (event) => ({
-  ...event.data,
-  type: 'ADD_MESSAGE',
-})
+export const handleSignalMessage = (event) => {
+  return (dispatch) => dispatch(addMessage(event.data.message))
+}
 
 export const handleSignalSetActiveConnectionId = (event) => ({
   ...event.data,
@@ -202,6 +219,32 @@ export const handleStreamDestroyed = (event) => ({
   stream: event.stream,
   type: 'REMOVE_STREAM',
 })
+
+export const signalActiveConnectionPing = (to) => {
+  console.log('sweeeeeee')
+  return (dispatch, getState) => {
+    const state = getState()
+    const connectionId = getSessionConnectionId(state)
+    const session = getSession(state)
+    const timestamp = getActiveConnectionTimestamp(state)
+    const user = getCurrentUser(state)
+
+    const signalData = {
+      type: 'activeConnectionPing',
+      data: {
+        connectionId,
+        timestamp,
+        user,
+      }
+    }
+
+    if (to) {
+      signalData.to = to
+    }
+
+    session.signal(signalData)
+  }
+}
 
 export const signalJoinPing = () => {
   return (dispatch) => {

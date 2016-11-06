@@ -5,6 +5,7 @@ import {
   connectToSession,
   handleConnectionCreated,
   handleConnectionDestroyed,
+  handleSignalActiveConnectionPing,
   handleSignalIdentify,
   handleSignalMessage,
   handleSignalSetActiveConnectionId,
@@ -30,6 +31,7 @@ class Session extends React.Component {
         connectionDestroyed: this.props.dispatchHandleConnectionDestroyed,
         streamCreated: this.props.dispatchHandleStreamCreated,
         streamDestroyed: this.props.dispatchHandleStreamDestroyed,
+        'signal:activeConnectionPing': this.props.dispatchHandleSignalActiveConnectionPing,
         'signal:message': this.props.dispatchHandleSignalMessage,
         'signal:identify': this.props.dispatchHandleSignalIdentify,
         'signal:setActiveConnectionId': this.props.dispatchHandleSignalSetActiveConnectionId,
@@ -55,10 +57,11 @@ const mapDispatchToProps = {
   dispatchConnectToSession: connectToSession,
   dispatchHandleConnectionCreated: handleConnectionCreated,
   dispatchHandleConnectionDestroyed: handleConnectionDestroyed,
-  dispatchHandleStreamCreated: handleStreamCreated,
+  dispatchHandleSignalActiveConnectionPing: handleSignalActiveConnectionPing,
   dispatchHandleSignalMessage: handleSignalMessage,
   dispatchHandleSignalSetActiveConnectionId: handleSignalSetActiveConnectionId,
   dispatchHandleSignalIdentify: handleSignalIdentify,
+  dispatchHandleStreamCreated: handleStreamCreated,
   dispatchHandleStreamDestroyed: handleStreamDestroyed,
 }
 

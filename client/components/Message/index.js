@@ -11,6 +11,10 @@ const getMessageHeaderExtraText = (type) => {
       return 'joined the room'
     case 'leavePing':
       return 'left the room'
+    case 'activeConnectionNotice':
+      return 'has the stage'
+    case 'activeConnectionTakenNotice':
+      return 'took the stage'
     default:
       return ''
   }

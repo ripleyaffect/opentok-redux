@@ -4,11 +4,10 @@ import { combineReducers } from 'redux'
 const activeId = (state=null, action) => {
   switch (action.type) {
     case 'SET_ACTIVE_CONNECTION':
-      console.log(state, action)
       return !state || (action.timestamp > state.timestamp) ?
         _.pick(action, ['connectionId', 'timestamp']) : state
-    case 'REMOVE_ACTIVE_CONNECTION':
-      return null
+    case 'REMOVE_CONNECTION':
+      return (state && action.connection.id === state.connectionId) ? null : state
     default:
       return state
   }

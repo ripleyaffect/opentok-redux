@@ -12,10 +12,16 @@ const composeEnhancers = addDevTools ?
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
 : compose;
 
+const loggerMiddleware = (store) => (next) => (action) => {
+  console.log(action)
+  next(action)
+  console.log(store.getState())
+}
+
 export default () => {
   return createStore(
     app,
     {},
-    composeEnhancers(applyMiddleware(thunkMiddleware))
+    composeEnhancers(applyMiddleware(thunkMiddleware, loggerMiddleware))
   )
 }
