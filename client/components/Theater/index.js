@@ -7,8 +7,8 @@ import Streams from 'app/components/Streams'
 
 import styles from './styles.less'
 
-const Feed = () => {
-  return <div className={styles.feed}>
+const Theater = () => {
+  return <div className={styles.theater}>
     <SessionBar />
     <Streams />
     <Publishers />
@@ -16,4 +16,4 @@ const Feed = () => {
   </div>
 }
 
-export default Feed;
+export default Theater;

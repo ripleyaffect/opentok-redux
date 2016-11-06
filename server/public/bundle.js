@@ -61,7 +61,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 304);
+/******/ 	return __webpack_require__(__webpack_require__.s = 314);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -431,7 +431,7 @@ module.exports = reactProdInvariant;
 "use strict";
 'use strict';
 
-module.exports = __webpack_require__(224);
+module.exports = __webpack_require__(234);
 
 
 /***/ },
@@ -545,7 +545,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var _prodInvariant = __webpack_require__(3);
 
 var DOMProperty = __webpack_require__(27);
-var ReactDOMComponentFlags = __webpack_require__(111);
+var ReactDOMComponentFlags = __webpack_require__(112);
 
 var invariant = __webpack_require__(1);
 
@@ -771,7 +771,7 @@ exports.__esModule = true;
 exports.default = routerWarning;
 exports._resetWarned = _resetWarned;
 
-var _warning = __webpack_require__(302);
+var _warning = __webpack_require__(312);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -882,7 +882,7 @@ module.exports = invariant;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(245);
+  var ReactDebugTool = __webpack_require__(255);
   debugTool = ReactDebugTool;
 }
 
@@ -953,7 +953,7 @@ module.exports = emptyFunction;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactCurrentOwner = __webpack_require__(19);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -1302,7 +1302,7 @@ module.exports = ReactComponentTreeHook;
 
 var _assign = __webpack_require__(5);
 
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactCurrentOwner = __webpack_require__(19);
 
 var warning = __webpack_require__(2);
 var canDefineProperty = __webpack_require__(75);
@@ -1710,6 +1710,29 @@ module.exports = warning;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
+'use strict';
+
+exports.__esModule = true;
+exports.connect = exports.Provider = undefined;
+
+var _Provider = __webpack_require__(196);
+
+var _Provider2 = _interopRequireDefault(_Provider);
+
+var _connect = __webpack_require__(197);
+
+var _connect2 = _interopRequireDefault(_connect);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+exports.Provider = _Provider2["default"];
+exports.connect = _connect2["default"];
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1726,11 +1749,11 @@ module.exports = warning;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
-var CallbackQueue = __webpack_require__(107);
-var PooledClass = __webpack_require__(22);
-var ReactFeatureFlags = __webpack_require__(115);
-var ReactReconciler = __webpack_require__(31);
-var Transaction = __webpack_require__(39);
+var CallbackQueue = __webpack_require__(108);
+var PooledClass = __webpack_require__(24);
+var ReactFeatureFlags = __webpack_require__(116);
+var ReactReconciler = __webpack_require__(33);
+var Transaction = __webpack_require__(40);
 
 var invariant = __webpack_require__(1);
 
@@ -1964,7 +1987,43 @@ module.exports = ReactUpdates;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 16 */
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(135);
+
+
+
+
+
+
+
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
+function isCrushed() {}
+
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
+
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2067,7 +2126,7 @@ var EventConstants = {
 module.exports = EventConstants;
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -2104,7 +2163,7 @@ var ReactCurrentOwner = {
 module.exports = ReactCurrentOwner;
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2123,7 +2182,7 @@ module.exports = ReactCurrentOwner;
 
 var _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(22);
+var PooledClass = __webpack_require__(24);
 
 var emptyFunction = __webpack_require__(11);
 var warning = __webpack_require__(2);
@@ -2379,7 +2438,87 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 19 */
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__connections__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__messages__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__publishers__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__session__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__streams__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__subscribers__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__users__ = __webpack_require__(159);
+/* harmony export (binding) */ __webpack_require__.d(exports, "k", function() { return app; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "g", function() { return getCurrentUser; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "h", function() { return getAllMessages; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getTokboxApiKey; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "f", function() { return getSessionConnectionId; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return getSession; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return getSessionId; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "c", function() { return getSessionToken; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "i", function() { return getStream; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "j", function() { return getAllStreams; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "e", function() { return getStreamNodeId; });
+
+
+
+
+
+
+
+
+
+
+var app = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
+  connections: __WEBPACK_IMPORTED_MODULE_1__connections__["a" /* default */],
+  messages: __WEBPACK_IMPORTED_MODULE_2__messages__["a" /* default */],
+  publishers: __WEBPACK_IMPORTED_MODULE_3__publishers__["a" /* default */],
+  session: __WEBPACK_IMPORTED_MODULE_4__session__["a" /* default */],
+  streams: __WEBPACK_IMPORTED_MODULE_5__streams__["a" /* default */],
+  subscribers: __WEBPACK_IMPORTED_MODULE_6__subscribers__["a" /* default */],
+  users: __WEBPACK_IMPORTED_MODULE_7__users__["a" /* default */]
+});
+
+// Selectors
+
+var getCurrentUser = function getCurrentUser(state) {
+  return __WEBPACK_IMPORTED_MODULE_7__users__["b" /* getCurrentUser */](state.users);
+};
+
+var getAllMessages = function getAllMessages(state) {
+  return __WEBPACK_IMPORTED_MODULE_2__messages__["b" /* getAll */](state.messages);
+};
+
+var getTokboxApiKey = function getTokboxApiKey(state) {
+  return __WEBPACK_IMPORTED_MODULE_4__session__["b" /* getTokboxApiKey */](state.session);
+};
+var getSessionConnectionId = function getSessionConnectionId(state) {
+  return __WEBPACK_IMPORTED_MODULE_4__session__["c" /* getConnectionId */](state.session);
+};
+var getSession = function getSession(state) {
+  return __WEBPACK_IMPORTED_MODULE_4__session__["d" /* get */](state.session);
+};
+var getSessionId = function getSessionId(state) {
+  return __WEBPACK_IMPORTED_MODULE_4__session__["e" /* getId */](state.session);
+};
+var getSessionToken = function getSessionToken(state) {
+  return __WEBPACK_IMPORTED_MODULE_4__session__["f" /* getToken */](state.session);
+};
+
+var getStream = function getStream(state, streamId) {
+  return __WEBPACK_IMPORTED_MODULE_5__streams__["b" /* get */](state.streams, streamId);
+};
+var getAllStreams = function getAllStreams(state) {
+  return __WEBPACK_IMPORTED_MODULE_5__streams__["c" /* getAll */](state.streams);
+};
+var getStreamNodeId = function getStreamNodeId(state, stream) {
+  return __WEBPACK_IMPORTED_MODULE_5__streams__["d" /* getNodeId */](state.streams, stream);
+};
+
+/***/ },
+/* 22 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -2419,30 +2558,7 @@ var keyOf = function keyOf(oneKeyObj) {
 module.exports = keyOf;
 
 /***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-'use strict';
-
-exports.__esModule = true;
-exports.connect = exports.Provider = undefined;
-
-var _Provider = __webpack_require__(186);
-
-var _Provider2 = _interopRequireDefault(_Provider);
-
-var _connect = __webpack_require__(187);
-
-var _connect2 = _interopRequireDefault(_connect);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-exports.Provider = _Provider2["default"];
-exports.connect = _connect2["default"];
-
-/***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2541,7 +2657,7 @@ function createRoutes(routes) {
 }
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2667,122 +2783,6 @@ var PooledClass = {
 
 module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(134);
-
-
-
-
-
-
-
-/*
-* This is a dummy function to check if the function name has been altered by minification.
-* If the function has been minified and NODE_ENV !== 'production', warn the user.
-*/
-function isCrushed() {}
-
-if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
-}
-
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__connections__ = __webpack_require__(318);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__messages__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__publishers__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__session__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__streams__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__subscribers__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__users__ = __webpack_require__(310);
-/* harmony export (binding) */ __webpack_require__.d(exports, "k", function() { return app; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "g", function() { return getCurrentUser; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "h", function() { return getAllMessages; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getTokboxApiKey; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "f", function() { return getSessionConnectionId; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return getSession; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return getSessionId; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "c", function() { return getSessionToken; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "i", function() { return getStream; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "j", function() { return getAllStreams; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "e", function() { return getStreamNodeId; });
-
-
-
-
-
-
-
-
-
-
-var app = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
-  connections: __WEBPACK_IMPORTED_MODULE_1__connections__["a" /* default */],
-  messages: __WEBPACK_IMPORTED_MODULE_2__messages__["a" /* default */],
-  publishers: __WEBPACK_IMPORTED_MODULE_3__publishers__["a" /* default */],
-  session: __WEBPACK_IMPORTED_MODULE_4__session__["a" /* default */],
-  streams: __WEBPACK_IMPORTED_MODULE_5__streams__["a" /* default */],
-  subscribers: __WEBPACK_IMPORTED_MODULE_6__subscribers__["a" /* default */],
-  users: __WEBPACK_IMPORTED_MODULE_7__users__["a" /* default */]
-});
-
-// Selectors
-
-var getCurrentUser = function getCurrentUser(state) {
-  return __WEBPACK_IMPORTED_MODULE_7__users__["b" /* getCurrentUser */](state.users);
-};
-
-var getAllMessages = function getAllMessages(state) {
-  return __WEBPACK_IMPORTED_MODULE_2__messages__["b" /* getAll */](state.messages);
-};
-
-var getTokboxApiKey = function getTokboxApiKey(state) {
-  return __WEBPACK_IMPORTED_MODULE_4__session__["b" /* getTokboxApiKey */](state.session);
-};
-var getSessionConnectionId = function getSessionConnectionId(state) {
-  return __WEBPACK_IMPORTED_MODULE_4__session__["c" /* getConnectionId */](state.session);
-};
-var getSession = function getSession(state) {
-  return __WEBPACK_IMPORTED_MODULE_4__session__["d" /* get */](state.session);
-};
-var getSessionId = function getSessionId(state) {
-  return __WEBPACK_IMPORTED_MODULE_4__session__["e" /* getId */](state.session);
-};
-var getSessionToken = function getSessionToken(state) {
-  return __WEBPACK_IMPORTED_MODULE_4__session__["f" /* getToken */](state.session);
-};
-
-var getStream = function getStream(state, streamId) {
-  return __WEBPACK_IMPORTED_MODULE_5__streams__["b" /* get */](state.streams, streamId);
-};
-var getAllStreams = function getAllStreams(state) {
-  return __WEBPACK_IMPORTED_MODULE_5__streams__["c" /* getAll */](state.streams);
-};
-var getStreamNodeId = function getStreamNodeId(state, stream) {
-  return __WEBPACK_IMPORTED_MODULE_5__streams__["d" /* getNodeId */](state.streams, stream);
-};
 
 /***/ },
 /* 25 */
@@ -3091,571 +3091,16 @@ module.exports = DOMProperty;
 
 /***/ },
 /* 28 */
-/***/ function(module, exports) {
-
-"use strict";
-/**
- * Indicates that navigation was caused by a call to history.push.
- */
-'use strict';
-
-exports.__esModule = true;
-var PUSH = 'PUSH';
-
-exports.PUSH = PUSH;
-/**
- * Indicates that navigation was caused by a call to history.replace.
- */
-var REPLACE = 'REPLACE';
-
-exports.REPLACE = REPLACE;
-/**
- * Indicates that navigation was caused by some other action such
- * as using a browser's back/forward buttons and/or manually manipulating
- * the URL in a browser's location bar. This is the default.
- *
- * See https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
- * for more information.
- */
-var POP = 'POP';
-
-exports.POP = POP;
-exports['default'] = {
-  PUSH: PUSH,
-  REPLACE: REPLACE,
-  POP: POP
-};
-
-/***/ },
-/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-exports.__esModule = true;
-exports.compilePattern = compilePattern;
-exports.matchPattern = matchPattern;
-exports.getParamNames = getParamNames;
-exports.getParams = getParams;
-exports.formatPattern = formatPattern;
-
-var _invariant = __webpack_require__(9);
-
-var _invariant2 = _interopRequireDefault(_invariant);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function _compilePattern(pattern) {
-  var regexpSource = '';
-  var paramNames = [];
-  var tokens = [];
-
-  var match = void 0,
-      lastIndex = 0,
-      matcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|\*\*|\*|\(|\)/g;
-  while (match = matcher.exec(pattern)) {
-    if (match.index !== lastIndex) {
-      tokens.push(pattern.slice(lastIndex, match.index));
-      regexpSource += escapeRegExp(pattern.slice(lastIndex, match.index));
-    }
-
-    if (match[1]) {
-      regexpSource += '([^/]+)';
-      paramNames.push(match[1]);
-    } else if (match[0] === '**') {
-      regexpSource += '(.*)';
-      paramNames.push('splat');
-    } else if (match[0] === '*') {
-      regexpSource += '(.*?)';
-      paramNames.push('splat');
-    } else if (match[0] === '(') {
-      regexpSource += '(?:';
-    } else if (match[0] === ')') {
-      regexpSource += ')?';
-    }
-
-    tokens.push(match[0]);
-
-    lastIndex = matcher.lastIndex;
-  }
-
-  if (lastIndex !== pattern.length) {
-    tokens.push(pattern.slice(lastIndex, pattern.length));
-    regexpSource += escapeRegExp(pattern.slice(lastIndex, pattern.length));
-  }
-
-  return {
-    pattern: pattern,
-    regexpSource: regexpSource,
-    paramNames: paramNames,
-    tokens: tokens
-  };
-}
-
-var CompiledPatternsCache = Object.create(null);
-
-function compilePattern(pattern) {
-  if (!CompiledPatternsCache[pattern]) CompiledPatternsCache[pattern] = _compilePattern(pattern);
-
-  return CompiledPatternsCache[pattern];
-}
-
-/**
- * Attempts to match a pattern on the given pathname. Patterns may use
- * the following special characters:
- *
- * - :paramName     Matches a URL segment up to the next /, ?, or #. The
- *                  captured string is considered a "param"
- * - ()             Wraps a segment of the URL that is optional
- * - *              Consumes (non-greedy) all characters up to the next
- *                  character in the pattern, or to the end of the URL if
- *                  there is none
- * - **             Consumes (greedy) all characters up to the next character
- *                  in the pattern, or to the end of the URL if there is none
- *
- *  The function calls callback(error, matched) when finished.
- * The return value is an object with the following properties:
- *
- * - remainingPathname
- * - paramNames
- * - paramValues
- */
-function matchPattern(pattern, pathname) {
-  // Ensure pattern starts with leading slash for consistency with pathname.
-  if (pattern.charAt(0) !== '/') {
-    pattern = '/' + pattern;
-  }
-
-  var _compilePattern2 = compilePattern(pattern);
-
-  var regexpSource = _compilePattern2.regexpSource;
-  var paramNames = _compilePattern2.paramNames;
-  var tokens = _compilePattern2.tokens;
-
-
-  if (pattern.charAt(pattern.length - 1) !== '/') {
-    regexpSource += '/?'; // Allow optional path separator at end.
-  }
-
-  // Special-case patterns like '*' for catch-all routes.
-  if (tokens[tokens.length - 1] === '*') {
-    regexpSource += '$';
-  }
-
-  var match = pathname.match(new RegExp('^' + regexpSource, 'i'));
-  if (match == null) {
-    return null;
-  }
-
-  var matchedPath = match[0];
-  var remainingPathname = pathname.substr(matchedPath.length);
-
-  if (remainingPathname) {
-    // Require that the match ends at a path separator, if we didn't match
-    // the full path, so any remaining pathname is a new path segment.
-    if (matchedPath.charAt(matchedPath.length - 1) !== '/') {
-      return null;
-    }
-
-    // If there is a remaining pathname, treat the path separator as part of
-    // the remaining pathname for properly continuing the match.
-    remainingPathname = '/' + remainingPathname;
-  }
-
-  return {
-    remainingPathname: remainingPathname,
-    paramNames: paramNames,
-    paramValues: match.slice(1).map(function (v) {
-      return v && decodeURIComponent(v);
-    })
-  };
-}
-
-function getParamNames(pattern) {
-  return compilePattern(pattern).paramNames;
-}
-
-function getParams(pattern, pathname) {
-  var match = matchPattern(pattern, pathname);
-  if (!match) {
-    return null;
-  }
-
-  var paramNames = match.paramNames;
-  var paramValues = match.paramValues;
-
-  var params = {};
-
-  paramNames.forEach(function (paramName, index) {
-    params[paramName] = paramValues[index];
-  });
-
-  return params;
-}
-
-/**
- * Returns a version of the given pattern with params interpolated. Throws
- * if there is a dynamic segment of the pattern for which there is no param.
- */
-function formatPattern(pattern, params) {
-  params = params || {};
-
-  var _compilePattern3 = compilePattern(pattern);
-
-  var tokens = _compilePattern3.tokens;
-
-  var parenCount = 0,
-      pathname = '',
-      splatIndex = 0;
-
-  var token = void 0,
-      paramName = void 0,
-      paramValue = void 0;
-  for (var i = 0, len = tokens.length; i < len; ++i) {
-    token = tokens[i];
-
-    if (token === '*' || token === '**') {
-      paramValue = Array.isArray(params.splat) ? params.splat[splatIndex++] : params.splat;
-
-      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
-
-      if (paramValue != null) pathname += encodeURI(paramValue);
-    } else if (token === '(') {
-      parenCount += 1;
-    } else if (token === ')') {
-      parenCount -= 1;
-    } else if (token.charAt(0) === ':') {
-      paramName = token.substring(1);
-      paramValue = params[paramName];
-
-      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
-
-      if (paramValue != null) pathname += encodeURIComponent(paramValue);
-    } else {
-      pathname += token;
-    }
-  }
-
-  return pathname.replace(/\/+/g, '/');
-}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule DOMLazyTree
- */
-
-'use strict';
-
-var DOMNamespaces = __webpack_require__(64);
-var setInnerHTML = __webpack_require__(52);
-
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(76);
-var setTextContent = __webpack_require__(131);
-
-var ELEMENT_NODE_TYPE = 1;
-var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
-
-/**
- * In IE (8-11) and Edge, appending nodes with no children is dramatically
- * faster than appending a full subtree, so we essentially queue up the
- * .appendChild calls here and apply them so each node is added to its parent
- * before any children are added.
- *
- * In other browsers, doing so is slower or neutral compared to the other order
- * (in Firefox, twice as slow) so we only do this inversion in IE.
- *
- * See https://github.com/spicyj/innerhtml-vs-createelement-vs-clonenode.
- */
-var enableLazy = typeof document !== 'undefined' && typeof document.documentMode === 'number' || typeof navigator !== 'undefined' && typeof navigator.userAgent === 'string' && /\bEdge\/\d/.test(navigator.userAgent);
-
-function insertTreeChildren(tree) {
-  if (!enableLazy) {
-    return;
-  }
-  var node = tree.node;
-  var children = tree.children;
-  if (children.length) {
-    for (var i = 0; i < children.length; i++) {
-      insertTreeBefore(node, children[i], null);
-    }
-  } else if (tree.html != null) {
-    setInnerHTML(node, tree.html);
-  } else if (tree.text != null) {
-    setTextContent(node, tree.text);
-  }
-}
-
-var insertTreeBefore = createMicrosoftUnsafeLocalFunction(function (parentNode, tree, referenceNode) {
-  // DocumentFragments aren't actually part of the DOM after insertion so
-  // appending children won't update the DOM. We need to ensure the fragment
-  // is properly populated first, breaking out of our lazy approach for just
-  // this level. Also, some <object> plugins (like Flash Player) will read
-  // <param> nodes immediately upon insertion into the DOM, so <object>
-  // must also be populated prior to insertion into the DOM.
-  if (tree.node.nodeType === DOCUMENT_FRAGMENT_NODE_TYPE || tree.node.nodeType === ELEMENT_NODE_TYPE && tree.node.nodeName.toLowerCase() === 'object' && (tree.node.namespaceURI == null || tree.node.namespaceURI === DOMNamespaces.html)) {
-    insertTreeChildren(tree);
-    parentNode.insertBefore(tree.node, referenceNode);
-  } else {
-    parentNode.insertBefore(tree.node, referenceNode);
-    insertTreeChildren(tree);
-  }
-});
-
-function replaceChildWithTree(oldNode, newTree) {
-  oldNode.parentNode.replaceChild(newTree.node, oldNode);
-  insertTreeChildren(newTree);
-}
-
-function queueChild(parentTree, childTree) {
-  if (enableLazy) {
-    parentTree.children.push(childTree);
-  } else {
-    parentTree.node.appendChild(childTree.node);
-  }
-}
-
-function queueHTML(tree, html) {
-  if (enableLazy) {
-    tree.html = html;
-  } else {
-    setInnerHTML(tree.node, html);
-  }
-}
-
-function queueText(tree, text) {
-  if (enableLazy) {
-    tree.text = text;
-  } else {
-    setTextContent(tree.node, text);
-  }
-}
-
-function toString() {
-  return this.node.nodeName;
-}
-
-function DOMLazyTree(node) {
-  return {
-    node: node,
-    children: [],
-    html: null,
-    text: null,
-    toString: toString
-  };
-}
-
-DOMLazyTree.insertTreeBefore = insertTreeBefore;
-DOMLazyTree.replaceChildWithTree = replaceChildWithTree;
-DOMLazyTree.queueChild = queueChild;
-DOMLazyTree.queueHTML = queueHTML;
-DOMLazyTree.queueText = queueText;
-
-module.exports = DOMLazyTree;
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule ReactReconciler
- */
-
-'use strict';
-
-var ReactRef = __webpack_require__(258);
-var ReactInstrumentation = __webpack_require__(10);
-
-var warning = __webpack_require__(2);
-
-/**
- * Helper to call ReactRef.attachRefs with this composite component, split out
- * to avoid allocations in the transaction mount-ready queue.
- */
-function attachRefs() {
-  ReactRef.attachRefs(this, this._currentElement);
-}
-
-var ReactReconciler = {
-
-  /**
-   * Initializes the component, renders markup, and registers event listeners.
-   *
-   * @param {ReactComponent} internalInstance
-   * @param {ReactReconcileTransaction|ReactServerRenderingTransaction} transaction
-   * @param {?object} the containing host component instance
-   * @param {?object} info about the host container
-   * @return {?string} Rendered markup to be inserted into the DOM.
-   * @final
-   * @internal
-   */
-  mountComponent: function (internalInstance, transaction, hostParent, hostContainerInfo, context, parentDebugID // 0 in production and for roots
-  ) {
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onBeforeMountComponent(internalInstance._debugID, internalInstance._currentElement, parentDebugID);
-      }
-    }
-    var markup = internalInstance.mountComponent(transaction, hostParent, hostContainerInfo, context, parentDebugID);
-    if (internalInstance._currentElement && internalInstance._currentElement.ref != null) {
-      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);
-    }
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onMountComponent(internalInstance._debugID);
-      }
-    }
-    return markup;
-  },
-
-  /**
-   * Returns a value that can be passed to
-   * ReactComponentEnvironment.replaceNodeWithMarkup.
-   */
-  getHostNode: function (internalInstance) {
-    return internalInstance.getHostNode();
-  },
-
-  /**
-   * Releases any resources allocated by `mountComponent`.
-   *
-   * @final
-   * @internal
-   */
-  unmountComponent: function (internalInstance, safely) {
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onBeforeUnmountComponent(internalInstance._debugID);
-      }
-    }
-    ReactRef.detachRefs(internalInstance, internalInstance._currentElement);
-    internalInstance.unmountComponent(safely);
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onUnmountComponent(internalInstance._debugID);
-      }
-    }
-  },
-
-  /**
-   * Update a component using a new element.
-   *
-   * @param {ReactComponent} internalInstance
-   * @param {ReactElement} nextElement
-   * @param {ReactReconcileTransaction} transaction
-   * @param {object} context
-   * @internal
-   */
-  receiveComponent: function (internalInstance, nextElement, transaction, context) {
-    var prevElement = internalInstance._currentElement;
-
-    if (nextElement === prevElement && context === internalInstance._context) {
-      // Since elements are immutable after the owner is rendered,
-      // we can do a cheap identity compare here to determine if this is a
-      // superfluous reconcile. It's possible for state to be mutable but such
-      // change should trigger an update of the owner which would recreate
-      // the element. We explicitly check for the existence of an owner since
-      // it's possible for an element created outside a composite to be
-      // deeply mutated and reused.
-
-      // TODO: Bailing out early is just a perf optimization right?
-      // TODO: Removing the return statement should affect correctness?
-      return;
-    }
-
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, nextElement);
-      }
-    }
-
-    var refsChanged = ReactRef.shouldUpdateRefs(prevElement, nextElement);
-
-    if (refsChanged) {
-      ReactRef.detachRefs(internalInstance, prevElement);
-    }
-
-    internalInstance.receiveComponent(nextElement, transaction, context);
-
-    if (refsChanged && internalInstance._currentElement && internalInstance._currentElement.ref != null) {
-      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);
-    }
-
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);
-      }
-    }
-  },
-
-  /**
-   * Flush any dirty changes in a component.
-   *
-   * @param {ReactComponent} internalInstance
-   * @param {ReactReconcileTransaction} transaction
-   * @internal
-   */
-  performUpdateIfNecessary: function (internalInstance, transaction, updateBatchNumber) {
-    if (internalInstance._updateBatchNumber !== updateBatchNumber) {
-      // The component's enqueued batch number should always be the current
-      // batch or the following one.
-      process.env.NODE_ENV !== 'production' ? warning(internalInstance._updateBatchNumber == null || internalInstance._updateBatchNumber === updateBatchNumber + 1, 'performUpdateIfNecessary: Unexpected batch number (current %s, ' + 'pending %s)', updateBatchNumber, internalInstance._updateBatchNumber) : void 0;
-      return;
-    }
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, internalInstance._currentElement);
-      }
-    }
-    internalInstance.performUpdateIfNecessary(transaction);
-    if (process.env.NODE_ENV !== 'production') {
-      if (internalInstance._debugID !== 0) {
-        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);
-      }
-    }
-  }
-
-};
-
-module.exports = ReactReconciler;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_opentok_client_sdk__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_opentok_client_sdk__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_opentok_client_sdk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_opentok_client_sdk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_superagent__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_superagent__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_superagent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_superagent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_uuid__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_uuid__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(exports, "l", function() { return fetchSessionToken; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "e", function() { return connectToSession; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return publishToSession; });
@@ -3881,7 +3326,7 @@ var signalMessage = function signalMessage(options) {
 };
 
 /***/ },
-/* 33 */
+/* 29 */
 /***/ function(module, exports) {
 
 /*
@@ -3937,554 +3382,387 @@ module.exports = function() {
 
 
 /***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- */
-
-'use strict';
-
-var emptyObject = {};
-
-if (process.env.NODE_ENV !== 'production') {
-  Object.freeze(emptyObject);
-}
-
-module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule EventPluginHub
- */
-
-'use strict';
-
-var _prodInvariant = __webpack_require__(3);
-
-var EventPluginRegistry = __webpack_require__(47);
-var EventPluginUtils = __webpack_require__(65);
-var ReactErrorUtils = __webpack_require__(70);
-
-var accumulateInto = __webpack_require__(124);
-var forEachAccumulated = __webpack_require__(126);
-var invariant = __webpack_require__(1);
-
-/**
- * Internal store for event listeners
- */
-var listenerBank = {};
-
-/**
- * Internal queue of events that have accumulated their dispatches and are
- * waiting to have their dispatches executed.
- */
-var eventQueue = null;
-
-/**
- * Dispatches an event and releases it back into the pool, unless persistent.
- *
- * @param {?object} event Synthetic event to be dispatched.
- * @param {boolean} simulated If the event is simulated (changes exn behavior)
- * @private
- */
-var executeDispatchesAndRelease = function (event, simulated) {
-  if (event) {
-    EventPluginUtils.executeDispatchesInOrder(event, simulated);
-
-    if (!event.isPersistent()) {
-      event.constructor.release(event);
-    }
-  }
-};
-var executeDispatchesAndReleaseSimulated = function (e) {
-  return executeDispatchesAndRelease(e, true);
-};
-var executeDispatchesAndReleaseTopLevel = function (e) {
-  return executeDispatchesAndRelease(e, false);
-};
-
-var getDictionaryKey = function (inst) {
-  // Prevents V8 performance issue:
-  // https://github.com/facebook/react/pull/7232
-  return '.' + inst._rootNodeID;
-};
-
-/**
- * This is a unified interface for event plugins to be installed and configured.
- *
- * Event plugins can implement the following properties:
- *
- *   `extractEvents` {function(string, DOMEventTarget, string, object): *}
- *     Required. When a top-level event is fired, this method is expected to
- *     extract synthetic events that will in turn be queued and dispatched.
- *
- *   `eventTypes` {object}
- *     Optional, plugins that fire events must publish a mapping of registration
- *     names that are used to register listeners. Values of this mapping must
- *     be objects that contain `registrationName` or `phasedRegistrationNames`.
- *
- *   `executeDispatch` {function(object, function, string)}
- *     Optional, allows plugins to override how an event gets dispatched. By
- *     default, the listener is simply invoked.
- *
- * Each plugin that is injected into `EventsPluginHub` is immediately operable.
- *
- * @public
- */
-var EventPluginHub = {
-
-  /**
-   * Methods for injecting dependencies.
-   */
-  injection: {
-
-    /**
-     * @param {array} InjectedEventPluginOrder
-     * @public
-     */
-    injectEventPluginOrder: EventPluginRegistry.injectEventPluginOrder,
-
-    /**
-     * @param {object} injectedNamesToPlugins Map from names to plugin modules.
-     */
-    injectEventPluginsByName: EventPluginRegistry.injectEventPluginsByName
-
-  },
-
-  /**
-   * Stores `listener` at `listenerBank[registrationName][key]`. Is idempotent.
-   *
-   * @param {object} inst The instance, which is the source of events.
-   * @param {string} registrationName Name of listener (e.g. `onClick`).
-   * @param {function} listener The callback to store.
-   */
-  putListener: function (inst, registrationName, listener) {
-    !(typeof listener === 'function') ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected %s listener to be a function, instead got type %s', registrationName, typeof listener) : _prodInvariant('94', registrationName, typeof listener) : void 0;
-
-    var key = getDictionaryKey(inst);
-    var bankForRegistrationName = listenerBank[registrationName] || (listenerBank[registrationName] = {});
-    bankForRegistrationName[key] = listener;
-
-    var PluginModule = EventPluginRegistry.registrationNameModules[registrationName];
-    if (PluginModule && PluginModule.didPutListener) {
-      PluginModule.didPutListener(inst, registrationName, listener);
-    }
-  },
-
-  /**
-   * @param {object} inst The instance, which is the source of events.
-   * @param {string} registrationName Name of listener (e.g. `onClick`).
-   * @return {?function} The stored callback.
-   */
-  getListener: function (inst, registrationName) {
-    var bankForRegistrationName = listenerBank[registrationName];
-    var key = getDictionaryKey(inst);
-    return bankForRegistrationName && bankForRegistrationName[key];
-  },
-
-  /**
-   * Deletes a listener from the registration bank.
-   *
-   * @param {object} inst The instance, which is the source of events.
-   * @param {string} registrationName Name of listener (e.g. `onClick`).
-   */
-  deleteListener: function (inst, registrationName) {
-    var PluginModule = EventPluginRegistry.registrationNameModules[registrationName];
-    if (PluginModule && PluginModule.willDeleteListener) {
-      PluginModule.willDeleteListener(inst, registrationName);
-    }
-
-    var bankForRegistrationName = listenerBank[registrationName];
-    // TODO: This should never be null -- when is it?
-    if (bankForRegistrationName) {
-      var key = getDictionaryKey(inst);
-      delete bankForRegistrationName[key];
-    }
-  },
-
-  /**
-   * Deletes all listeners for the DOM element with the supplied ID.
-   *
-   * @param {object} inst The instance, which is the source of events.
-   */
-  deleteAllListeners: function (inst) {
-    var key = getDictionaryKey(inst);
-    for (var registrationName in listenerBank) {
-      if (!listenerBank.hasOwnProperty(registrationName)) {
-        continue;
-      }
-
-      if (!listenerBank[registrationName][key]) {
-        continue;
-      }
-
-      var PluginModule = EventPluginRegistry.registrationNameModules[registrationName];
-      if (PluginModule && PluginModule.willDeleteListener) {
-        PluginModule.willDeleteListener(inst, registrationName);
-      }
-
-      delete listenerBank[registrationName][key];
-    }
-  },
-
-  /**
-   * Allows registered plugins an opportunity to extract events from top-level
-   * native browser events.
-   *
-   * @return {*} An accumulation of synthetic events.
-   * @internal
-   */
-  extractEvents: function (topLevelType, targetInst, nativeEvent, nativeEventTarget) {
-    var events;
-    var plugins = EventPluginRegistry.plugins;
-    for (var i = 0; i < plugins.length; i++) {
-      // Not every plugin in the ordering may be loaded at runtime.
-      var possiblePlugin = plugins[i];
-      if (possiblePlugin) {
-        var extractedEvents = possiblePlugin.extractEvents(topLevelType, targetInst, nativeEvent, nativeEventTarget);
-        if (extractedEvents) {
-          events = accumulateInto(events, extractedEvents);
-        }
-      }
-    }
-    return events;
-  },
-
-  /**
-   * Enqueues a synthetic event that should be dispatched when
-   * `processEventQueue` is invoked.
-   *
-   * @param {*} events An accumulation of synthetic events.
-   * @internal
-   */
-  enqueueEvents: function (events) {
-    if (events) {
-      eventQueue = accumulateInto(eventQueue, events);
-    }
-  },
-
-  /**
-   * Dispatches all synthetic events on the event queue.
-   *
-   * @internal
-   */
-  processEventQueue: function (simulated) {
-    // Set `eventQueue` to null before processing it so that we can tell if more
-    // events get enqueued while processing.
-    var processingEventQueue = eventQueue;
-    eventQueue = null;
-    if (simulated) {
-      forEachAccumulated(processingEventQueue, executeDispatchesAndReleaseSimulated);
-    } else {
-      forEachAccumulated(processingEventQueue, executeDispatchesAndReleaseTopLevel);
-    }
-    !!eventQueue ? process.env.NODE_ENV !== 'production' ? invariant(false, 'processEventQueue(): Additional events were enqueued while processing an event queue. Support for this has not yet been implemented.') : _prodInvariant('95') : void 0;
-    // This would be a good time to rethrow if any of the event handlers threw.
-    ReactErrorUtils.rethrowCaughtError();
-  },
-
-  /**
-   * These are needed for tests only. Do not use!
-   */
-  __purge: function () {
-    listenerBank = {};
-  },
-
-  __getListenerBank: function () {
-    return listenerBank;
-  }
-
-};
-
-module.exports = EventPluginHub;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule EventPropagators
- */
-
-'use strict';
-
-var EventConstants = __webpack_require__(16);
-var EventPluginHub = __webpack_require__(35);
-var EventPluginUtils = __webpack_require__(65);
-
-var accumulateInto = __webpack_require__(124);
-var forEachAccumulated = __webpack_require__(126);
-var warning = __webpack_require__(2);
-
-var PropagationPhases = EventConstants.PropagationPhases;
-var getListener = EventPluginHub.getListener;
-
-/**
- * Some event types have a notion of different registration names for different
- * "phases" of propagation. This finds listeners by a given phase.
- */
-function listenerAtPhase(inst, event, propagationPhase) {
-  var registrationName = event.dispatchConfig.phasedRegistrationNames[propagationPhase];
-  return getListener(inst, registrationName);
-}
-
-/**
- * Tags a `SyntheticEvent` with dispatched listeners. Creating this function
- * here, allows us to not have to bind or create functions for each event.
- * Mutating the event's members allows us to not have to create a wrapping
- * "dispatch" object that pairs the event with the listener.
- */
-function accumulateDirectionalDispatches(inst, upwards, event) {
-  if (process.env.NODE_ENV !== 'production') {
-    process.env.NODE_ENV !== 'production' ? warning(inst, 'Dispatching inst must not be null') : void 0;
-  }
-  var phase = upwards ? PropagationPhases.bubbled : PropagationPhases.captured;
-  var listener = listenerAtPhase(inst, event, phase);
-  if (listener) {
-    event._dispatchListeners = accumulateInto(event._dispatchListeners, listener);
-    event._dispatchInstances = accumulateInto(event._dispatchInstances, inst);
-  }
-}
-
-/**
- * Collect dispatches (must be entirely collected before dispatching - see unit
- * tests). Lazily allocate the array to conserve memory.  We must loop through
- * each event and perform the traversal for each one. We cannot perform a
- * single traversal for the entire collection of events because each event may
- * have a different target.
- */
-function accumulateTwoPhaseDispatchesSingle(event) {
-  if (event && event.dispatchConfig.phasedRegistrationNames) {
-    EventPluginUtils.traverseTwoPhase(event._targetInst, accumulateDirectionalDispatches, event);
-  }
-}
-
-/**
- * Same as `accumulateTwoPhaseDispatchesSingle`, but skips over the targetID.
- */
-function accumulateTwoPhaseDispatchesSingleSkipTarget(event) {
-  if (event && event.dispatchConfig.phasedRegistrationNames) {
-    var targetInst = event._targetInst;
-    var parentInst = targetInst ? EventPluginUtils.getParentInstance(targetInst) : null;
-    EventPluginUtils.traverseTwoPhase(parentInst, accumulateDirectionalDispatches, event);
-  }
-}
-
-/**
- * Accumulates without regard to direction, does not look for phased
- * registration names. Same as `accumulateDirectDispatchesSingle` but without
- * requiring that the `dispatchMarker` be the same as the dispatched ID.
- */
-function accumulateDispatches(inst, ignoredDirection, event) {
-  if (event && event.dispatchConfig.registrationName) {
-    var registrationName = event.dispatchConfig.registrationName;
-    var listener = getListener(inst, registrationName);
-    if (listener) {
-      event._dispatchListeners = accumulateInto(event._dispatchListeners, listener);
-      event._dispatchInstances = accumulateInto(event._dispatchInstances, inst);
-    }
-  }
-}
-
-/**
- * Accumulates dispatches on an `SyntheticEvent`, but only for the
- * `dispatchMarker`.
- * @param {SyntheticEvent} event
- */
-function accumulateDirectDispatchesSingle(event) {
-  if (event && event.dispatchConfig.registrationName) {
-    accumulateDispatches(event._targetInst, null, event);
-  }
-}
-
-function accumulateTwoPhaseDispatches(events) {
-  forEachAccumulated(events, accumulateTwoPhaseDispatchesSingle);
-}
-
-function accumulateTwoPhaseDispatchesSkipTarget(events) {
-  forEachAccumulated(events, accumulateTwoPhaseDispatchesSingleSkipTarget);
-}
-
-function accumulateEnterLeaveDispatches(leave, enter, from, to) {
-  EventPluginUtils.traverseEnterLeave(from, to, accumulateDispatches, leave, enter);
-}
-
-function accumulateDirectDispatches(events) {
-  forEachAccumulated(events, accumulateDirectDispatchesSingle);
-}
-
-/**
- * A small set of propagation patterns, each of which will accept a small amount
- * of information, and generate a set of "dispatch ready event objects" - which
- * are sets of events that have already been annotated with a set of dispatched
- * listener functions/ids. The API is designed this way to discourage these
- * propagation strategies from actually executing the dispatches, since we
- * always want to collect the entire set of dispatches before executing event a
- * single one.
- *
- * @constructor EventPropagators
- */
-var EventPropagators = {
-  accumulateTwoPhaseDispatches: accumulateTwoPhaseDispatches,
-  accumulateTwoPhaseDispatchesSkipTarget: accumulateTwoPhaseDispatchesSkipTarget,
-  accumulateDirectDispatches: accumulateDirectDispatches,
-  accumulateEnterLeaveDispatches: accumulateEnterLeaveDispatches
-};
-
-module.exports = EventPropagators;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 37 */
+/* 30 */
 /***/ function(module, exports) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule ReactInstanceMap
+ * Indicates that navigation was caused by a call to history.push.
  */
-
 'use strict';
 
+exports.__esModule = true;
+var PUSH = 'PUSH';
+
+exports.PUSH = PUSH;
 /**
- * `ReactInstanceMap` maintains a mapping from a public facing stateful
- * instance (key) and the internal representation (value). This allows public
- * methods to accept the user facing instance as an argument and map them back
- * to internal methods.
+ * Indicates that navigation was caused by a call to history.replace.
  */
+var REPLACE = 'REPLACE';
 
-// TODO: Replace this with ES6: var ReactInstanceMap = new Map();
+exports.REPLACE = REPLACE;
+/**
+ * Indicates that navigation was caused by some other action such
+ * as using a browser's back/forward buttons and/or manually manipulating
+ * the URL in a browser's location bar. This is the default.
+ *
+ * See https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+ * for more information.
+ */
+var POP = 'POP';
 
-var ReactInstanceMap = {
-
-  /**
-   * This API should be called `delete` but we'd have to make sure to always
-   * transform these to strings for IE support. When this transform is fully
-   * supported we can rename it.
-   */
-  remove: function (key) {
-    key._reactInternalInstance = undefined;
-  },
-
-  get: function (key) {
-    return key._reactInternalInstance;
-  },
-
-  has: function (key) {
-    return key._reactInternalInstance !== undefined;
-  },
-
-  set: function (key, value) {
-    key._reactInternalInstance = value;
-  }
-
+exports.POP = POP;
+exports['default'] = {
+  PUSH: PUSH,
+  REPLACE: REPLACE,
+  POP: POP
 };
 
-module.exports = ReactInstanceMap;
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+exports.__esModule = true;
+exports.compilePattern = compilePattern;
+exports.matchPattern = matchPattern;
+exports.getParamNames = getParamNames;
+exports.getParams = getParams;
+exports.formatPattern = formatPattern;
+
+var _invariant = __webpack_require__(9);
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function _compilePattern(pattern) {
+  var regexpSource = '';
+  var paramNames = [];
+  var tokens = [];
+
+  var match = void 0,
+      lastIndex = 0,
+      matcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|\*\*|\*|\(|\)/g;
+  while (match = matcher.exec(pattern)) {
+    if (match.index !== lastIndex) {
+      tokens.push(pattern.slice(lastIndex, match.index));
+      regexpSource += escapeRegExp(pattern.slice(lastIndex, match.index));
+    }
+
+    if (match[1]) {
+      regexpSource += '([^/]+)';
+      paramNames.push(match[1]);
+    } else if (match[0] === '**') {
+      regexpSource += '(.*)';
+      paramNames.push('splat');
+    } else if (match[0] === '*') {
+      regexpSource += '(.*?)';
+      paramNames.push('splat');
+    } else if (match[0] === '(') {
+      regexpSource += '(?:';
+    } else if (match[0] === ')') {
+      regexpSource += ')?';
+    }
+
+    tokens.push(match[0]);
+
+    lastIndex = matcher.lastIndex;
+  }
+
+  if (lastIndex !== pattern.length) {
+    tokens.push(pattern.slice(lastIndex, pattern.length));
+    regexpSource += escapeRegExp(pattern.slice(lastIndex, pattern.length));
+  }
+
+  return {
+    pattern: pattern,
+    regexpSource: regexpSource,
+    paramNames: paramNames,
+    tokens: tokens
+  };
+}
+
+var CompiledPatternsCache = Object.create(null);
+
+function compilePattern(pattern) {
+  if (!CompiledPatternsCache[pattern]) CompiledPatternsCache[pattern] = _compilePattern(pattern);
+
+  return CompiledPatternsCache[pattern];
+}
+
+/**
+ * Attempts to match a pattern on the given pathname. Patterns may use
+ * the following special characters:
+ *
+ * - :paramName     Matches a URL segment up to the next /, ?, or #. The
+ *                  captured string is considered a "param"
+ * - ()             Wraps a segment of the URL that is optional
+ * - *              Consumes (non-greedy) all characters up to the next
+ *                  character in the pattern, or to the end of the URL if
+ *                  there is none
+ * - **             Consumes (greedy) all characters up to the next character
+ *                  in the pattern, or to the end of the URL if there is none
+ *
+ *  The function calls callback(error, matched) when finished.
+ * The return value is an object with the following properties:
+ *
+ * - remainingPathname
+ * - paramNames
+ * - paramValues
+ */
+function matchPattern(pattern, pathname) {
+  // Ensure pattern starts with leading slash for consistency with pathname.
+  if (pattern.charAt(0) !== '/') {
+    pattern = '/' + pattern;
+  }
+
+  var _compilePattern2 = compilePattern(pattern);
+
+  var regexpSource = _compilePattern2.regexpSource;
+  var paramNames = _compilePattern2.paramNames;
+  var tokens = _compilePattern2.tokens;
+
+
+  if (pattern.charAt(pattern.length - 1) !== '/') {
+    regexpSource += '/?'; // Allow optional path separator at end.
+  }
+
+  // Special-case patterns like '*' for catch-all routes.
+  if (tokens[tokens.length - 1] === '*') {
+    regexpSource += '$';
+  }
+
+  var match = pathname.match(new RegExp('^' + regexpSource, 'i'));
+  if (match == null) {
+    return null;
+  }
+
+  var matchedPath = match[0];
+  var remainingPathname = pathname.substr(matchedPath.length);
+
+  if (remainingPathname) {
+    // Require that the match ends at a path separator, if we didn't match
+    // the full path, so any remaining pathname is a new path segment.
+    if (matchedPath.charAt(matchedPath.length - 1) !== '/') {
+      return null;
+    }
+
+    // If there is a remaining pathname, treat the path separator as part of
+    // the remaining pathname for properly continuing the match.
+    remainingPathname = '/' + remainingPathname;
+  }
+
+  return {
+    remainingPathname: remainingPathname,
+    paramNames: paramNames,
+    paramValues: match.slice(1).map(function (v) {
+      return v && decodeURIComponent(v);
+    })
+  };
+}
+
+function getParamNames(pattern) {
+  return compilePattern(pattern).paramNames;
+}
+
+function getParams(pattern, pathname) {
+  var match = matchPattern(pattern, pathname);
+  if (!match) {
+    return null;
+  }
+
+  var paramNames = match.paramNames;
+  var paramValues = match.paramValues;
+
+  var params = {};
+
+  paramNames.forEach(function (paramName, index) {
+    params[paramName] = paramValues[index];
+  });
+
+  return params;
+}
+
+/**
+ * Returns a version of the given pattern with params interpolated. Throws
+ * if there is a dynamic segment of the pattern for which there is no param.
+ */
+function formatPattern(pattern, params) {
+  params = params || {};
+
+  var _compilePattern3 = compilePattern(pattern);
+
+  var tokens = _compilePattern3.tokens;
+
+  var parenCount = 0,
+      pathname = '',
+      splatIndex = 0;
+
+  var token = void 0,
+      paramName = void 0,
+      paramValue = void 0;
+  for (var i = 0, len = tokens.length; i < len; ++i) {
+    token = tokens[i];
+
+    if (token === '*' || token === '**') {
+      paramValue = Array.isArray(params.splat) ? params.splat[splatIndex++] : params.splat;
+
+      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
+
+      if (paramValue != null) pathname += encodeURI(paramValue);
+    } else if (token === '(') {
+      parenCount += 1;
+    } else if (token === ')') {
+      parenCount -= 1;
+    } else if (token.charAt(0) === ':') {
+      paramName = token.substring(1);
+      paramValue = params[paramName];
+
+      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
+
+      if (paramValue != null) pathname += encodeURIComponent(paramValue);
+    } else {
+      pathname += token;
+    }
+  }
+
+  return pathname.replace(/\/+/g, '/');
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 38 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
+ * Copyright 2015-present, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- * @providesModule SyntheticUIEvent
+ * @providesModule DOMLazyTree
  */
 
 'use strict';
 
-var SyntheticEvent = __webpack_require__(18);
+var DOMNamespaces = __webpack_require__(64);
+var setInnerHTML = __webpack_require__(53);
 
-var getEventTarget = __webpack_require__(79);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(76);
+var setTextContent = __webpack_require__(132);
+
+var ELEMENT_NODE_TYPE = 1;
+var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
 
 /**
- * @interface UIEvent
- * @see http://www.w3.org/TR/DOM-Level-3-Events/
+ * In IE (8-11) and Edge, appending nodes with no children is dramatically
+ * faster than appending a full subtree, so we essentially queue up the
+ * .appendChild calls here and apply them so each node is added to its parent
+ * before any children are added.
+ *
+ * In other browsers, doing so is slower or neutral compared to the other order
+ * (in Firefox, twice as slow) so we only do this inversion in IE.
+ *
+ * See https://github.com/spicyj/innerhtml-vs-createelement-vs-clonenode.
  */
-var UIEventInterface = {
-  view: function (event) {
-    if (event.view) {
-      return event.view;
-    }
+var enableLazy = typeof document !== 'undefined' && typeof document.documentMode === 'number' || typeof navigator !== 'undefined' && typeof navigator.userAgent === 'string' && /\bEdge\/\d/.test(navigator.userAgent);
 
-    var target = getEventTarget(event);
-    if (target.window === target) {
-      // target is a window object
-      return target;
-    }
-
-    var doc = target.ownerDocument;
-    // TODO: Figure out why `ownerDocument` is sometimes undefined in IE8.
-    if (doc) {
-      return doc.defaultView || doc.parentWindow;
-    } else {
-      return window;
-    }
-  },
-  detail: function (event) {
-    return event.detail || 0;
+function insertTreeChildren(tree) {
+  if (!enableLazy) {
+    return;
   }
-};
-
-/**
- * @param {object} dispatchConfig Configuration used to dispatch this event.
- * @param {string} dispatchMarker Marker identifying the event target.
- * @param {object} nativeEvent Native browser event.
- * @extends {SyntheticEvent}
- */
-function SyntheticUIEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
-  return SyntheticEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
+  var node = tree.node;
+  var children = tree.children;
+  if (children.length) {
+    for (var i = 0; i < children.length; i++) {
+      insertTreeBefore(node, children[i], null);
+    }
+  } else if (tree.html != null) {
+    setInnerHTML(node, tree.html);
+  } else if (tree.text != null) {
+    setTextContent(node, tree.text);
+  }
 }
 
-SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
+var insertTreeBefore = createMicrosoftUnsafeLocalFunction(function (parentNode, tree, referenceNode) {
+  // DocumentFragments aren't actually part of the DOM after insertion so
+  // appending children won't update the DOM. We need to ensure the fragment
+  // is properly populated first, breaking out of our lazy approach for just
+  // this level. Also, some <object> plugins (like Flash Player) will read
+  // <param> nodes immediately upon insertion into the DOM, so <object>
+  // must also be populated prior to insertion into the DOM.
+  if (tree.node.nodeType === DOCUMENT_FRAGMENT_NODE_TYPE || tree.node.nodeType === ELEMENT_NODE_TYPE && tree.node.nodeName.toLowerCase() === 'object' && (tree.node.namespaceURI == null || tree.node.namespaceURI === DOMNamespaces.html)) {
+    insertTreeChildren(tree);
+    parentNode.insertBefore(tree.node, referenceNode);
+  } else {
+    parentNode.insertBefore(tree.node, referenceNode);
+    insertTreeChildren(tree);
+  }
+});
 
-module.exports = SyntheticUIEvent;
+function replaceChildWithTree(oldNode, newTree) {
+  oldNode.parentNode.replaceChild(newTree.node, oldNode);
+  insertTreeChildren(newTree);
+}
+
+function queueChild(parentTree, childTree) {
+  if (enableLazy) {
+    parentTree.children.push(childTree);
+  } else {
+    parentTree.node.appendChild(childTree.node);
+  }
+}
+
+function queueHTML(tree, html) {
+  if (enableLazy) {
+    tree.html = html;
+  } else {
+    setInnerHTML(tree.node, html);
+  }
+}
+
+function queueText(tree, text) {
+  if (enableLazy) {
+    tree.text = text;
+  } else {
+    setTextContent(tree.node, text);
+  }
+}
+
+function toString() {
+  return this.node.nodeName;
+}
+
+function DOMLazyTree(node) {
+  return {
+    node: node,
+    children: [],
+    html: null,
+    text: null,
+    toString: toString
+  };
+}
+
+DOMLazyTree.insertTreeBefore = insertTreeBefore;
+DOMLazyTree.replaceChildWithTree = replaceChildWithTree;
+DOMLazyTree.queueChild = queueChild;
+DOMLazyTree.queueHTML = queueHTML;
+DOMLazyTree.queueText = queueText;
+
+module.exports = DOMLazyTree;
 
 /***/ },
-/* 39 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4496,235 +3774,170 @@ module.exports = SyntheticUIEvent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- * @providesModule Transaction
+ * @providesModule ReactReconciler
  */
 
 'use strict';
 
-var _prodInvariant = __webpack_require__(3);
+var ReactRef = __webpack_require__(268);
+var ReactInstrumentation = __webpack_require__(10);
 
-var invariant = __webpack_require__(1);
+var warning = __webpack_require__(2);
 
 /**
- * `Transaction` creates a black box that is able to wrap any method such that
- * certain invariants are maintained before and after the method is invoked
- * (Even if an exception is thrown while invoking the wrapped method). Whoever
- * instantiates a transaction can provide enforcers of the invariants at
- * creation time. The `Transaction` class itself will supply one additional
- * automatic invariant for you - the invariant that any transaction instance
- * should not be run while it is already being run. You would typically create a
- * single instance of a `Transaction` for reuse multiple times, that potentially
- * is used to wrap several different methods. Wrappers are extremely simple -
- * they only require implementing two methods.
- *
- * <pre>
- *                       wrappers (injected at creation time)
- *                                      +        +
- *                                      |        |
- *                    +-----------------|--------|--------------+
- *                    |                 v        |              |
- *                    |      +---------------+   |              |
- *                    |   +--|    wrapper1   |---|----+         |
- *                    |   |  +---------------+   v    |         |
- *                    |   |          +-------------+  |         |
- *                    |   |     +----|   wrapper2  |--------+   |
- *                    |   |     |    +-------------+  |     |   |
- *                    |   |     |                     |     |   |
- *                    |   v     v                     v     v   | wrapper
- *                    | +---+ +---+   +---------+   +---+ +---+ | invariants
- * perform(anyMethod) | |   | |   |   |         |   |   | |   | | maintained
- * +----------------->|-|---|-|---|-->|anyMethod|---|---|-|---|-|-------->
- *                    | |   | |   |   |         |   |   | |   | |
- *                    | |   | |   |   |         |   |   | |   | |
- *                    | |   | |   |   |         |   |   | |   | |
- *                    | +---+ +---+   +---------+   +---+ +---+ |
- *                    |  initialize                    close    |
- *                    +-----------------------------------------+
- * </pre>
- *
- * Use cases:
- * - Preserving the input selection ranges before/after reconciliation.
- *   Restoring selection even in the event of an unexpected error.
- * - Deactivating events while rearranging the DOM, preventing blurs/focuses,
- *   while guaranteeing that afterwards, the event system is reactivated.
- * - Flushing a queue of collected DOM mutations to the main UI thread after a
- *   reconciliation takes place in a worker thread.
- * - Invoking any collected `componentDidUpdate` callbacks after rendering new
- *   content.
- * - (Future use case): Wrapping particular flushes of the `ReactWorker` queue
- *   to preserve the `scrollTop` (an automatic scroll aware DOM).
- * - (Future use case): Layout calculations before and after DOM updates.
- *
- * Transactional plugin API:
- * - A module that has an `initialize` method that returns any precomputation.
- * - and a `close` method that accepts the precomputation. `close` is invoked
- *   when the wrapped process is completed, or has failed.
- *
- * @param {Array<TransactionalWrapper>} transactionWrapper Wrapper modules
- * that implement `initialize` and `close`.
- * @return {Transaction} Single transaction for reuse in thread.
- *
- * @class Transaction
+ * Helper to call ReactRef.attachRefs with this composite component, split out
+ * to avoid allocations in the transaction mount-ready queue.
  */
-var Mixin = {
-  /**
-   * Sets up this instance so that it is prepared for collecting metrics. Does
-   * so such that this setup method may be used on an instance that is already
-   * initialized, in a way that does not consume additional memory upon reuse.
-   * That can be useful if you decide to make your subclass of this mixin a
-   * "PooledClass".
-   */
-  reinitializeTransaction: function () {
-    this.transactionWrappers = this.getTransactionWrappers();
-    if (this.wrapperInitData) {
-      this.wrapperInitData.length = 0;
-    } else {
-      this.wrapperInitData = [];
-    }
-    this._isInTransaction = false;
-  },
+function attachRefs() {
+  ReactRef.attachRefs(this, this._currentElement);
+}
 
-  _isInTransaction: false,
+var ReactReconciler = {
 
   /**
-   * @abstract
-   * @return {Array<TransactionWrapper>} Array of transaction wrappers.
-   */
-  getTransactionWrappers: null,
-
-  isInTransaction: function () {
-    return !!this._isInTransaction;
-  },
-
-  /**
-   * Executes the function within a safety window. Use this for the top level
-   * methods that result in large amounts of computation/mutations that would
-   * need to be safety checked. The optional arguments helps prevent the need
-   * to bind in many cases.
+   * Initializes the component, renders markup, and registers event listeners.
    *
-   * @param {function} method Member of scope to call.
-   * @param {Object} scope Scope to invoke from.
-   * @param {Object?=} a Argument to pass to the method.
-   * @param {Object?=} b Argument to pass to the method.
-   * @param {Object?=} c Argument to pass to the method.
-   * @param {Object?=} d Argument to pass to the method.
-   * @param {Object?=} e Argument to pass to the method.
-   * @param {Object?=} f Argument to pass to the method.
-   *
-   * @return {*} Return value from `method`.
+   * @param {ReactComponent} internalInstance
+   * @param {ReactReconcileTransaction|ReactServerRenderingTransaction} transaction
+   * @param {?object} the containing host component instance
+   * @param {?object} info about the host container
+   * @return {?string} Rendered markup to be inserted into the DOM.
+   * @final
+   * @internal
    */
-  perform: function (method, scope, a, b, c, d, e, f) {
-    !!this.isInTransaction() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Transaction.perform(...): Cannot initialize a transaction when there is already an outstanding transaction.') : _prodInvariant('27') : void 0;
-    var errorThrown;
-    var ret;
-    try {
-      this._isInTransaction = true;
-      // Catching errors makes debugging more difficult, so we start with
-      // errorThrown set to true before setting it to false after calling
-      // close -- if it's still set to true in the finally block, it means
-      // one of these calls threw.
-      errorThrown = true;
-      this.initializeAll(0);
-      ret = method.call(scope, a, b, c, d, e, f);
-      errorThrown = false;
-    } finally {
-      try {
-        if (errorThrown) {
-          // If `method` throws, prefer to show that stack trace over any thrown
-          // by invoking `closeAll`.
-          try {
-            this.closeAll(0);
-          } catch (err) {}
-        } else {
-          // Since `method` didn't throw, we don't want to silence the exception
-          // here.
-          this.closeAll(0);
-        }
-      } finally {
-        this._isInTransaction = false;
+  mountComponent: function (internalInstance, transaction, hostParent, hostContainerInfo, context, parentDebugID // 0 in production and for roots
+  ) {
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onBeforeMountComponent(internalInstance._debugID, internalInstance._currentElement, parentDebugID);
       }
     }
-    return ret;
+    var markup = internalInstance.mountComponent(transaction, hostParent, hostContainerInfo, context, parentDebugID);
+    if (internalInstance._currentElement && internalInstance._currentElement.ref != null) {
+      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);
+    }
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onMountComponent(internalInstance._debugID);
+      }
+    }
+    return markup;
   },
 
-  initializeAll: function (startIndex) {
-    var transactionWrappers = this.transactionWrappers;
-    for (var i = startIndex; i < transactionWrappers.length; i++) {
-      var wrapper = transactionWrappers[i];
-      try {
-        // Catching errors makes debugging more difficult, so we start with the
-        // OBSERVED_ERROR state before overwriting it with the real return value
-        // of initialize -- if it's still set to OBSERVED_ERROR in the finally
-        // block, it means wrapper.initialize threw.
-        this.wrapperInitData[i] = Transaction.OBSERVED_ERROR;
-        this.wrapperInitData[i] = wrapper.initialize ? wrapper.initialize.call(this) : null;
-      } finally {
-        if (this.wrapperInitData[i] === Transaction.OBSERVED_ERROR) {
-          // The initializer for wrapper i threw an error; initialize the
-          // remaining wrappers but silence any exceptions from them to ensure
-          // that the first error is the one to bubble up.
-          try {
-            this.initializeAll(i + 1);
-          } catch (err) {}
-        }
+  /**
+   * Returns a value that can be passed to
+   * ReactComponentEnvironment.replaceNodeWithMarkup.
+   */
+  getHostNode: function (internalInstance) {
+    return internalInstance.getHostNode();
+  },
+
+  /**
+   * Releases any resources allocated by `mountComponent`.
+   *
+   * @final
+   * @internal
+   */
+  unmountComponent: function (internalInstance, safely) {
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onBeforeUnmountComponent(internalInstance._debugID);
+      }
+    }
+    ReactRef.detachRefs(internalInstance, internalInstance._currentElement);
+    internalInstance.unmountComponent(safely);
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onUnmountComponent(internalInstance._debugID);
       }
     }
   },
 
   /**
-   * Invokes each of `this.transactionWrappers.close[i]` functions, passing into
-   * them the respective return values of `this.transactionWrappers.init[i]`
-   * (`close`rs that correspond to initializers that failed will not be
-   * invoked).
+   * Update a component using a new element.
+   *
+   * @param {ReactComponent} internalInstance
+   * @param {ReactElement} nextElement
+   * @param {ReactReconcileTransaction} transaction
+   * @param {object} context
+   * @internal
    */
-  closeAll: function (startIndex) {
-    !this.isInTransaction() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are open.') : _prodInvariant('28') : void 0;
-    var transactionWrappers = this.transactionWrappers;
-    for (var i = startIndex; i < transactionWrappers.length; i++) {
-      var wrapper = transactionWrappers[i];
-      var initData = this.wrapperInitData[i];
-      var errorThrown;
-      try {
-        // Catching errors makes debugging more difficult, so we start with
-        // errorThrown set to true before setting it to false after calling
-        // close -- if it's still set to true in the finally block, it means
-        // wrapper.close threw.
-        errorThrown = true;
-        if (initData !== Transaction.OBSERVED_ERROR && wrapper.close) {
-          wrapper.close.call(this, initData);
-        }
-        errorThrown = false;
-      } finally {
-        if (errorThrown) {
-          // The closer for wrapper i threw an error; close the remaining
-          // wrappers but silence any exceptions from them to ensure that the
-          // first error is the one to bubble up.
-          try {
-            this.closeAll(i + 1);
-          } catch (e) {}
-        }
+  receiveComponent: function (internalInstance, nextElement, transaction, context) {
+    var prevElement = internalInstance._currentElement;
+
+    if (nextElement === prevElement && context === internalInstance._context) {
+      // Since elements are immutable after the owner is rendered,
+      // we can do a cheap identity compare here to determine if this is a
+      // superfluous reconcile. It's possible for state to be mutable but such
+      // change should trigger an update of the owner which would recreate
+      // the element. We explicitly check for the existence of an owner since
+      // it's possible for an element created outside a composite to be
+      // deeply mutated and reused.
+
+      // TODO: Bailing out early is just a perf optimization right?
+      // TODO: Removing the return statement should affect correctness?
+      return;
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, nextElement);
       }
     }
-    this.wrapperInitData.length = 0;
+
+    var refsChanged = ReactRef.shouldUpdateRefs(prevElement, nextElement);
+
+    if (refsChanged) {
+      ReactRef.detachRefs(internalInstance, prevElement);
+    }
+
+    internalInstance.receiveComponent(nextElement, transaction, context);
+
+    if (refsChanged && internalInstance._currentElement && internalInstance._currentElement.ref != null) {
+      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);
+      }
+    }
+  },
+
+  /**
+   * Flush any dirty changes in a component.
+   *
+   * @param {ReactComponent} internalInstance
+   * @param {ReactReconcileTransaction} transaction
+   * @internal
+   */
+  performUpdateIfNecessary: function (internalInstance, transaction, updateBatchNumber) {
+    if (internalInstance._updateBatchNumber !== updateBatchNumber) {
+      // The component's enqueued batch number should always be the current
+      // batch or the following one.
+      process.env.NODE_ENV !== 'production' ? warning(internalInstance._updateBatchNumber == null || internalInstance._updateBatchNumber === updateBatchNumber + 1, 'performUpdateIfNecessary: Unexpected batch number (current %s, ' + 'pending %s)', updateBatchNumber, internalInstance._updateBatchNumber) : void 0;
+      return;
+    }
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, internalInstance._currentElement);
+      }
+    }
+    internalInstance.performUpdateIfNecessary(transaction);
+    if (process.env.NODE_ENV !== 'production') {
+      if (internalInstance._debugID !== 0) {
+        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);
+      }
+    }
   }
-};
-
-var Transaction = {
-
-  Mixin: Mixin,
-
-  /**
-   * Token to look for to determine if an error occurred.
-   */
-  OBSERVED_ERROR: {}
 
 };
 
-module.exports = Transaction;
+module.exports = ReactReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 40 */
+/* 34 */
 /***/ function(module, exports) {
 
 /*
@@ -4976,6 +4189,793 @@ function updateLink(linkElement, obj) {
 
 
 /***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ */
+
+'use strict';
+
+var emptyObject = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  Object.freeze(emptyObject);
+}
+
+module.exports = emptyObject;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule EventPluginHub
+ */
+
+'use strict';
+
+var _prodInvariant = __webpack_require__(3);
+
+var EventPluginRegistry = __webpack_require__(48);
+var EventPluginUtils = __webpack_require__(65);
+var ReactErrorUtils = __webpack_require__(70);
+
+var accumulateInto = __webpack_require__(125);
+var forEachAccumulated = __webpack_require__(127);
+var invariant = __webpack_require__(1);
+
+/**
+ * Internal store for event listeners
+ */
+var listenerBank = {};
+
+/**
+ * Internal queue of events that have accumulated their dispatches and are
+ * waiting to have their dispatches executed.
+ */
+var eventQueue = null;
+
+/**
+ * Dispatches an event and releases it back into the pool, unless persistent.
+ *
+ * @param {?object} event Synthetic event to be dispatched.
+ * @param {boolean} simulated If the event is simulated (changes exn behavior)
+ * @private
+ */
+var executeDispatchesAndRelease = function (event, simulated) {
+  if (event) {
+    EventPluginUtils.executeDispatchesInOrder(event, simulated);
+
+    if (!event.isPersistent()) {
+      event.constructor.release(event);
+    }
+  }
+};
+var executeDispatchesAndReleaseSimulated = function (e) {
+  return executeDispatchesAndRelease(e, true);
+};
+var executeDispatchesAndReleaseTopLevel = function (e) {
+  return executeDispatchesAndRelease(e, false);
+};
+
+var getDictionaryKey = function (inst) {
+  // Prevents V8 performance issue:
+  // https://github.com/facebook/react/pull/7232
+  return '.' + inst._rootNodeID;
+};
+
+/**
+ * This is a unified interface for event plugins to be installed and configured.
+ *
+ * Event plugins can implement the following properties:
+ *
+ *   `extractEvents` {function(string, DOMEventTarget, string, object): *}
+ *     Required. When a top-level event is fired, this method is expected to
+ *     extract synthetic events that will in turn be queued and dispatched.
+ *
+ *   `eventTypes` {object}
+ *     Optional, plugins that fire events must publish a mapping of registration
+ *     names that are used to register listeners. Values of this mapping must
+ *     be objects that contain `registrationName` or `phasedRegistrationNames`.
+ *
+ *   `executeDispatch` {function(object, function, string)}
+ *     Optional, allows plugins to override how an event gets dispatched. By
+ *     default, the listener is simply invoked.
+ *
+ * Each plugin that is injected into `EventsPluginHub` is immediately operable.
+ *
+ * @public
+ */
+var EventPluginHub = {
+
+  /**
+   * Methods for injecting dependencies.
+   */
+  injection: {
+
+    /**
+     * @param {array} InjectedEventPluginOrder
+     * @public
+     */
+    injectEventPluginOrder: EventPluginRegistry.injectEventPluginOrder,
+
+    /**
+     * @param {object} injectedNamesToPlugins Map from names to plugin modules.
+     */
+    injectEventPluginsByName: EventPluginRegistry.injectEventPluginsByName
+
+  },
+
+  /**
+   * Stores `listener` at `listenerBank[registrationName][key]`. Is idempotent.
+   *
+   * @param {object} inst The instance, which is the source of events.
+   * @param {string} registrationName Name of listener (e.g. `onClick`).
+   * @param {function} listener The callback to store.
+   */
+  putListener: function (inst, registrationName, listener) {
+    !(typeof listener === 'function') ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected %s listener to be a function, instead got type %s', registrationName, typeof listener) : _prodInvariant('94', registrationName, typeof listener) : void 0;
+
+    var key = getDictionaryKey(inst);
+    var bankForRegistrationName = listenerBank[registrationName] || (listenerBank[registrationName] = {});
+    bankForRegistrationName[key] = listener;
+
+    var PluginModule = EventPluginRegistry.registrationNameModules[registrationName];
+    if (PluginModule && PluginModule.didPutListener) {
+      PluginModule.didPutListener(inst, registrationName, listener);
+    }
+  },
+
+  /**
+   * @param {object} inst The instance, which is the source of events.
+   * @param {string} registrationName Name of listener (e.g. `onClick`).
+   * @return {?function} The stored callback.
+   */
+  getListener: function (inst, registrationName) {
+    var bankForRegistrationName = listenerBank[registrationName];
+    var key = getDictionaryKey(inst);
+    return bankForRegistrationName && bankForRegistrationName[key];
+  },
+
+  /**
+   * Deletes a listener from the registration bank.
+   *
+   * @param {object} inst The instance, which is the source of events.
+   * @param {string} registrationName Name of listener (e.g. `onClick`).
+   */
+  deleteListener: function (inst, registrationName) {
+    var PluginModule = EventPluginRegistry.registrationNameModules[registrationName];
+    if (PluginModule && PluginModule.willDeleteListener) {
+      PluginModule.willDeleteListener(inst, registrationName);
+    }
+
+    var bankForRegistrationName = listenerBank[registrationName];
+    // TODO: This should never be null -- when is it?
+    if (bankForRegistrationName) {
+      var key = getDictionaryKey(inst);
+      delete bankForRegistrationName[key];
+    }
+  },
+
+  /**
+   * Deletes all listeners for the DOM element with the supplied ID.
+   *
+   * @param {object} inst The instance, which is the source of events.
+   */
+  deleteAllListeners: function (inst) {
+    var key = getDictionaryKey(inst);
+    for (var registrationName in listenerBank) {
+      if (!listenerBank.hasOwnProperty(registrationName)) {
+        continue;
+      }
+
+      if (!listenerBank[registrationName][key]) {
+        continue;
+      }
+
+      var PluginModule = EventPluginRegistry.registrationNameModules[registrationName];
+      if (PluginModule && PluginModule.willDeleteListener) {
+        PluginModule.willDeleteListener(inst, registrationName);
+      }
+
+      delete listenerBank[registrationName][key];
+    }
+  },
+
+  /**
+   * Allows registered plugins an opportunity to extract events from top-level
+   * native browser events.
+   *
+   * @return {*} An accumulation of synthetic events.
+   * @internal
+   */
+  extractEvents: function (topLevelType, targetInst, nativeEvent, nativeEventTarget) {
+    var events;
+    var plugins = EventPluginRegistry.plugins;
+    for (var i = 0; i < plugins.length; i++) {
+      // Not every plugin in the ordering may be loaded at runtime.
+      var possiblePlugin = plugins[i];
+      if (possiblePlugin) {
+        var extractedEvents = possiblePlugin.extractEvents(topLevelType, targetInst, nativeEvent, nativeEventTarget);
+        if (extractedEvents) {
+          events = accumulateInto(events, extractedEvents);
+        }
+      }
+    }
+    return events;
+  },
+
+  /**
+   * Enqueues a synthetic event that should be dispatched when
+   * `processEventQueue` is invoked.
+   *
+   * @param {*} events An accumulation of synthetic events.
+   * @internal
+   */
+  enqueueEvents: function (events) {
+    if (events) {
+      eventQueue = accumulateInto(eventQueue, events);
+    }
+  },
+
+  /**
+   * Dispatches all synthetic events on the event queue.
+   *
+   * @internal
+   */
+  processEventQueue: function (simulated) {
+    // Set `eventQueue` to null before processing it so that we can tell if more
+    // events get enqueued while processing.
+    var processingEventQueue = eventQueue;
+    eventQueue = null;
+    if (simulated) {
+      forEachAccumulated(processingEventQueue, executeDispatchesAndReleaseSimulated);
+    } else {
+      forEachAccumulated(processingEventQueue, executeDispatchesAndReleaseTopLevel);
+    }
+    !!eventQueue ? process.env.NODE_ENV !== 'production' ? invariant(false, 'processEventQueue(): Additional events were enqueued while processing an event queue. Support for this has not yet been implemented.') : _prodInvariant('95') : void 0;
+    // This would be a good time to rethrow if any of the event handlers threw.
+    ReactErrorUtils.rethrowCaughtError();
+  },
+
+  /**
+   * These are needed for tests only. Do not use!
+   */
+  __purge: function () {
+    listenerBank = {};
+  },
+
+  __getListenerBank: function () {
+    return listenerBank;
+  }
+
+};
+
+module.exports = EventPluginHub;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule EventPropagators
+ */
+
+'use strict';
+
+var EventConstants = __webpack_require__(18);
+var EventPluginHub = __webpack_require__(36);
+var EventPluginUtils = __webpack_require__(65);
+
+var accumulateInto = __webpack_require__(125);
+var forEachAccumulated = __webpack_require__(127);
+var warning = __webpack_require__(2);
+
+var PropagationPhases = EventConstants.PropagationPhases;
+var getListener = EventPluginHub.getListener;
+
+/**
+ * Some event types have a notion of different registration names for different
+ * "phases" of propagation. This finds listeners by a given phase.
+ */
+function listenerAtPhase(inst, event, propagationPhase) {
+  var registrationName = event.dispatchConfig.phasedRegistrationNames[propagationPhase];
+  return getListener(inst, registrationName);
+}
+
+/**
+ * Tags a `SyntheticEvent` with dispatched listeners. Creating this function
+ * here, allows us to not have to bind or create functions for each event.
+ * Mutating the event's members allows us to not have to create a wrapping
+ * "dispatch" object that pairs the event with the listener.
+ */
+function accumulateDirectionalDispatches(inst, upwards, event) {
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(inst, 'Dispatching inst must not be null') : void 0;
+  }
+  var phase = upwards ? PropagationPhases.bubbled : PropagationPhases.captured;
+  var listener = listenerAtPhase(inst, event, phase);
+  if (listener) {
+    event._dispatchListeners = accumulateInto(event._dispatchListeners, listener);
+    event._dispatchInstances = accumulateInto(event._dispatchInstances, inst);
+  }
+}
+
+/**
+ * Collect dispatches (must be entirely collected before dispatching - see unit
+ * tests). Lazily allocate the array to conserve memory.  We must loop through
+ * each event and perform the traversal for each one. We cannot perform a
+ * single traversal for the entire collection of events because each event may
+ * have a different target.
+ */
+function accumulateTwoPhaseDispatchesSingle(event) {
+  if (event && event.dispatchConfig.phasedRegistrationNames) {
+    EventPluginUtils.traverseTwoPhase(event._targetInst, accumulateDirectionalDispatches, event);
+  }
+}
+
+/**
+ * Same as `accumulateTwoPhaseDispatchesSingle`, but skips over the targetID.
+ */
+function accumulateTwoPhaseDispatchesSingleSkipTarget(event) {
+  if (event && event.dispatchConfig.phasedRegistrationNames) {
+    var targetInst = event._targetInst;
+    var parentInst = targetInst ? EventPluginUtils.getParentInstance(targetInst) : null;
+    EventPluginUtils.traverseTwoPhase(parentInst, accumulateDirectionalDispatches, event);
+  }
+}
+
+/**
+ * Accumulates without regard to direction, does not look for phased
+ * registration names. Same as `accumulateDirectDispatchesSingle` but without
+ * requiring that the `dispatchMarker` be the same as the dispatched ID.
+ */
+function accumulateDispatches(inst, ignoredDirection, event) {
+  if (event && event.dispatchConfig.registrationName) {
+    var registrationName = event.dispatchConfig.registrationName;
+    var listener = getListener(inst, registrationName);
+    if (listener) {
+      event._dispatchListeners = accumulateInto(event._dispatchListeners, listener);
+      event._dispatchInstances = accumulateInto(event._dispatchInstances, inst);
+    }
+  }
+}
+
+/**
+ * Accumulates dispatches on an `SyntheticEvent`, but only for the
+ * `dispatchMarker`.
+ * @param {SyntheticEvent} event
+ */
+function accumulateDirectDispatchesSingle(event) {
+  if (event && event.dispatchConfig.registrationName) {
+    accumulateDispatches(event._targetInst, null, event);
+  }
+}
+
+function accumulateTwoPhaseDispatches(events) {
+  forEachAccumulated(events, accumulateTwoPhaseDispatchesSingle);
+}
+
+function accumulateTwoPhaseDispatchesSkipTarget(events) {
+  forEachAccumulated(events, accumulateTwoPhaseDispatchesSingleSkipTarget);
+}
+
+function accumulateEnterLeaveDispatches(leave, enter, from, to) {
+  EventPluginUtils.traverseEnterLeave(from, to, accumulateDispatches, leave, enter);
+}
+
+function accumulateDirectDispatches(events) {
+  forEachAccumulated(events, accumulateDirectDispatchesSingle);
+}
+
+/**
+ * A small set of propagation patterns, each of which will accept a small amount
+ * of information, and generate a set of "dispatch ready event objects" - which
+ * are sets of events that have already been annotated with a set of dispatched
+ * listener functions/ids. The API is designed this way to discourage these
+ * propagation strategies from actually executing the dispatches, since we
+ * always want to collect the entire set of dispatches before executing event a
+ * single one.
+ *
+ * @constructor EventPropagators
+ */
+var EventPropagators = {
+  accumulateTwoPhaseDispatches: accumulateTwoPhaseDispatches,
+  accumulateTwoPhaseDispatchesSkipTarget: accumulateTwoPhaseDispatchesSkipTarget,
+  accumulateDirectDispatches: accumulateDirectDispatches,
+  accumulateEnterLeaveDispatches: accumulateEnterLeaveDispatches
+};
+
+module.exports = EventPropagators;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule ReactInstanceMap
+ */
+
+'use strict';
+
+/**
+ * `ReactInstanceMap` maintains a mapping from a public facing stateful
+ * instance (key) and the internal representation (value). This allows public
+ * methods to accept the user facing instance as an argument and map them back
+ * to internal methods.
+ */
+
+// TODO: Replace this with ES6: var ReactInstanceMap = new Map();
+
+var ReactInstanceMap = {
+
+  /**
+   * This API should be called `delete` but we'd have to make sure to always
+   * transform these to strings for IE support. When this transform is fully
+   * supported we can rename it.
+   */
+  remove: function (key) {
+    key._reactInternalInstance = undefined;
+  },
+
+  get: function (key) {
+    return key._reactInternalInstance;
+  },
+
+  has: function (key) {
+    return key._reactInternalInstance !== undefined;
+  },
+
+  set: function (key, value) {
+    key._reactInternalInstance = value;
+  }
+
+};
+
+module.exports = ReactInstanceMap;
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule SyntheticUIEvent
+ */
+
+'use strict';
+
+var SyntheticEvent = __webpack_require__(20);
+
+var getEventTarget = __webpack_require__(79);
+
+/**
+ * @interface UIEvent
+ * @see http://www.w3.org/TR/DOM-Level-3-Events/
+ */
+var UIEventInterface = {
+  view: function (event) {
+    if (event.view) {
+      return event.view;
+    }
+
+    var target = getEventTarget(event);
+    if (target.window === target) {
+      // target is a window object
+      return target;
+    }
+
+    var doc = target.ownerDocument;
+    // TODO: Figure out why `ownerDocument` is sometimes undefined in IE8.
+    if (doc) {
+      return doc.defaultView || doc.parentWindow;
+    } else {
+      return window;
+    }
+  },
+  detail: function (event) {
+    return event.detail || 0;
+  }
+};
+
+/**
+ * @param {object} dispatchConfig Configuration used to dispatch this event.
+ * @param {string} dispatchMarker Marker identifying the event target.
+ * @param {object} nativeEvent Native browser event.
+ * @extends {SyntheticEvent}
+ */
+function SyntheticUIEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
+  return SyntheticEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
+}
+
+SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
+
+module.exports = SyntheticUIEvent;
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule Transaction
+ */
+
+'use strict';
+
+var _prodInvariant = __webpack_require__(3);
+
+var invariant = __webpack_require__(1);
+
+/**
+ * `Transaction` creates a black box that is able to wrap any method such that
+ * certain invariants are maintained before and after the method is invoked
+ * (Even if an exception is thrown while invoking the wrapped method). Whoever
+ * instantiates a transaction can provide enforcers of the invariants at
+ * creation time. The `Transaction` class itself will supply one additional
+ * automatic invariant for you - the invariant that any transaction instance
+ * should not be run while it is already being run. You would typically create a
+ * single instance of a `Transaction` for reuse multiple times, that potentially
+ * is used to wrap several different methods. Wrappers are extremely simple -
+ * they only require implementing two methods.
+ *
+ * <pre>
+ *                       wrappers (injected at creation time)
+ *                                      +        +
+ *                                      |        |
+ *                    +-----------------|--------|--------------+
+ *                    |                 v        |              |
+ *                    |      +---------------+   |              |
+ *                    |   +--|    wrapper1   |---|----+         |
+ *                    |   |  +---------------+   v    |         |
+ *                    |   |          +-------------+  |         |
+ *                    |   |     +----|   wrapper2  |--------+   |
+ *                    |   |     |    +-------------+  |     |   |
+ *                    |   |     |                     |     |   |
+ *                    |   v     v                     v     v   | wrapper
+ *                    | +---+ +---+   +---------+   +---+ +---+ | invariants
+ * perform(anyMethod) | |   | |   |   |         |   |   | |   | | maintained
+ * +----------------->|-|---|-|---|-->|anyMethod|---|---|-|---|-|-------->
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | +---+ +---+   +---------+   +---+ +---+ |
+ *                    |  initialize                    close    |
+ *                    +-----------------------------------------+
+ * </pre>
+ *
+ * Use cases:
+ * - Preserving the input selection ranges before/after reconciliation.
+ *   Restoring selection even in the event of an unexpected error.
+ * - Deactivating events while rearranging the DOM, preventing blurs/focuses,
+ *   while guaranteeing that afterwards, the event system is reactivated.
+ * - Flushing a queue of collected DOM mutations to the main UI thread after a
+ *   reconciliation takes place in a worker thread.
+ * - Invoking any collected `componentDidUpdate` callbacks after rendering new
+ *   content.
+ * - (Future use case): Wrapping particular flushes of the `ReactWorker` queue
+ *   to preserve the `scrollTop` (an automatic scroll aware DOM).
+ * - (Future use case): Layout calculations before and after DOM updates.
+ *
+ * Transactional plugin API:
+ * - A module that has an `initialize` method that returns any precomputation.
+ * - and a `close` method that accepts the precomputation. `close` is invoked
+ *   when the wrapped process is completed, or has failed.
+ *
+ * @param {Array<TransactionalWrapper>} transactionWrapper Wrapper modules
+ * that implement `initialize` and `close`.
+ * @return {Transaction} Single transaction for reuse in thread.
+ *
+ * @class Transaction
+ */
+var Mixin = {
+  /**
+   * Sets up this instance so that it is prepared for collecting metrics. Does
+   * so such that this setup method may be used on an instance that is already
+   * initialized, in a way that does not consume additional memory upon reuse.
+   * That can be useful if you decide to make your subclass of this mixin a
+   * "PooledClass".
+   */
+  reinitializeTransaction: function () {
+    this.transactionWrappers = this.getTransactionWrappers();
+    if (this.wrapperInitData) {
+      this.wrapperInitData.length = 0;
+    } else {
+      this.wrapperInitData = [];
+    }
+    this._isInTransaction = false;
+  },
+
+  _isInTransaction: false,
+
+  /**
+   * @abstract
+   * @return {Array<TransactionWrapper>} Array of transaction wrappers.
+   */
+  getTransactionWrappers: null,
+
+  isInTransaction: function () {
+    return !!this._isInTransaction;
+  },
+
+  /**
+   * Executes the function within a safety window. Use this for the top level
+   * methods that result in large amounts of computation/mutations that would
+   * need to be safety checked. The optional arguments helps prevent the need
+   * to bind in many cases.
+   *
+   * @param {function} method Member of scope to call.
+   * @param {Object} scope Scope to invoke from.
+   * @param {Object?=} a Argument to pass to the method.
+   * @param {Object?=} b Argument to pass to the method.
+   * @param {Object?=} c Argument to pass to the method.
+   * @param {Object?=} d Argument to pass to the method.
+   * @param {Object?=} e Argument to pass to the method.
+   * @param {Object?=} f Argument to pass to the method.
+   *
+   * @return {*} Return value from `method`.
+   */
+  perform: function (method, scope, a, b, c, d, e, f) {
+    !!this.isInTransaction() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Transaction.perform(...): Cannot initialize a transaction when there is already an outstanding transaction.') : _prodInvariant('27') : void 0;
+    var errorThrown;
+    var ret;
+    try {
+      this._isInTransaction = true;
+      // Catching errors makes debugging more difficult, so we start with
+      // errorThrown set to true before setting it to false after calling
+      // close -- if it's still set to true in the finally block, it means
+      // one of these calls threw.
+      errorThrown = true;
+      this.initializeAll(0);
+      ret = method.call(scope, a, b, c, d, e, f);
+      errorThrown = false;
+    } finally {
+      try {
+        if (errorThrown) {
+          // If `method` throws, prefer to show that stack trace over any thrown
+          // by invoking `closeAll`.
+          try {
+            this.closeAll(0);
+          } catch (err) {}
+        } else {
+          // Since `method` didn't throw, we don't want to silence the exception
+          // here.
+          this.closeAll(0);
+        }
+      } finally {
+        this._isInTransaction = false;
+      }
+    }
+    return ret;
+  },
+
+  initializeAll: function (startIndex) {
+    var transactionWrappers = this.transactionWrappers;
+    for (var i = startIndex; i < transactionWrappers.length; i++) {
+      var wrapper = transactionWrappers[i];
+      try {
+        // Catching errors makes debugging more difficult, so we start with the
+        // OBSERVED_ERROR state before overwriting it with the real return value
+        // of initialize -- if it's still set to OBSERVED_ERROR in the finally
+        // block, it means wrapper.initialize threw.
+        this.wrapperInitData[i] = Transaction.OBSERVED_ERROR;
+        this.wrapperInitData[i] = wrapper.initialize ? wrapper.initialize.call(this) : null;
+      } finally {
+        if (this.wrapperInitData[i] === Transaction.OBSERVED_ERROR) {
+          // The initializer for wrapper i threw an error; initialize the
+          // remaining wrappers but silence any exceptions from them to ensure
+          // that the first error is the one to bubble up.
+          try {
+            this.initializeAll(i + 1);
+          } catch (err) {}
+        }
+      }
+    }
+  },
+
+  /**
+   * Invokes each of `this.transactionWrappers.close[i]` functions, passing into
+   * them the respective return values of `this.transactionWrappers.init[i]`
+   * (`close`rs that correspond to initializers that failed will not be
+   * invoked).
+   */
+  closeAll: function (startIndex) {
+    !this.isInTransaction() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are open.') : _prodInvariant('28') : void 0;
+    var transactionWrappers = this.transactionWrappers;
+    for (var i = startIndex; i < transactionWrappers.length; i++) {
+      var wrapper = transactionWrappers[i];
+      var initData = this.wrapperInitData[i];
+      var errorThrown;
+      try {
+        // Catching errors makes debugging more difficult, so we start with
+        // errorThrown set to true before setting it to false after calling
+        // close -- if it's still set to true in the finally block, it means
+        // wrapper.close threw.
+        errorThrown = true;
+        if (initData !== Transaction.OBSERVED_ERROR && wrapper.close) {
+          wrapper.close.call(this, initData);
+        }
+        errorThrown = false;
+      } finally {
+        if (errorThrown) {
+          // The closer for wrapper i threw an error; close the remaining
+          // wrappers but silence any exceptions from them to ensure that the
+          // first error is the one to bubble up.
+          try {
+            this.closeAll(i + 1);
+          } catch (e) {}
+        }
+      }
+    }
+    this.wrapperInitData.length = 0;
+  }
+};
+
+var Transaction = {
+
+  Mixin: Mixin,
+
+  /**
+   * Token to look for to determine if an error occurred.
+   */
+  OBSERVED_ERROR: {}
+
+};
+
+module.exports = Transaction;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -5057,15 +5057,15 @@ var _warning = __webpack_require__(14);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _queryString = __webpack_require__(185);
+var _queryString = __webpack_require__(195);
 
-var _runTransitionHook = __webpack_require__(57);
+var _runTransitionHook = __webpack_require__(58);
 
 var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
 var _PathUtils = __webpack_require__(25);
 
-var _deprecate = __webpack_require__(56);
+var _deprecate = __webpack_require__(57);
 
 var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -5225,1472 +5225,6 @@ module.exports = exports['default'];
 
 /***/ },
 /* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-exports.__esModule = true;
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _invariant = __webpack_require__(9);
-
-var _invariant2 = _interopRequireDefault(_invariant);
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _deprecateObjectProperties = __webpack_require__(45);
-
-var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
-
-var _getRouteParams = __webpack_require__(208);
-
-var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
-
-var _RouteUtils = __webpack_require__(21);
-
-var _routerWarning = __webpack_require__(8);
-
-var _routerWarning2 = _interopRequireDefault(_routerWarning);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _React$PropTypes = _react2.default.PropTypes;
-var array = _React$PropTypes.array;
-var func = _React$PropTypes.func;
-var object = _React$PropTypes.object;
-
-/**
- * A <RouterContext> renders the component tree for a given router state
- * and sets the history object and the current location in context.
- */
-
-var RouterContext = _react2.default.createClass({
-  displayName: 'RouterContext',
-
-
-  propTypes: {
-    history: object,
-    router: object.isRequired,
-    location: object.isRequired,
-    routes: array.isRequired,
-    params: object.isRequired,
-    components: array.isRequired,
-    createElement: func.isRequired
-  },
-
-  getDefaultProps: function getDefaultProps() {
-    return {
-      createElement: _react2.default.createElement
-    };
-  },
-
-
-  childContextTypes: {
-    history: object,
-    location: object.isRequired,
-    router: object.isRequired
-  },
-
-  getChildContext: function getChildContext() {
-    var _props = this.props;
-    var router = _props.router;
-    var history = _props.history;
-    var location = _props.location;
-
-    if (!router) {
-      process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, '`<RouterContext>` expects a `router` rather than a `history`') : void 0;
-
-      router = _extends({}, history, {
-        setRouteLeaveHook: history.listenBeforeLeavingRoute
-      });
-      delete router.listenBeforeLeavingRoute;
-    }
-
-    if (process.env.NODE_ENV !== 'production') {
-      location = (0, _deprecateObjectProperties2.default)(location, '`context.location` is deprecated, please use a route component\'s `props.location` instead. http://tiny.cc/router-accessinglocation');
-    }
-
-    return { history: history, location: location, router: router };
-  },
-  createElement: function createElement(component, props) {
-    return component == null ? null : this.props.createElement(component, props);
-  },
-  render: function render() {
-    var _this = this;
-
-    var _props2 = this.props;
-    var history = _props2.history;
-    var location = _props2.location;
-    var routes = _props2.routes;
-    var params = _props2.params;
-    var components = _props2.components;
-
-    var element = null;
-
-    if (components) {
-      element = components.reduceRight(function (element, components, index) {
-        if (components == null) return element; // Don't create new children; use the grandchildren.
-
-        var route = routes[index];
-        var routeParams = (0, _getRouteParams2.default)(route, params);
-        var props = {
-          history: history,
-          location: location,
-          params: params,
-          route: route,
-          routeParams: routeParams,
-          routes: routes
-        };
-
-        if ((0, _RouteUtils.isReactChildren)(element)) {
-          props.children = element;
-        } else if (element) {
-          for (var prop in element) {
-            if (Object.prototype.hasOwnProperty.call(element, prop)) props[prop] = element[prop];
-          }
-        }
-
-        if ((typeof components === 'undefined' ? 'undefined' : _typeof(components)) === 'object') {
-          var elements = {};
-
-          for (var key in components) {
-            if (Object.prototype.hasOwnProperty.call(components, key)) {
-              // Pass through the key as a prop to createElement to allow
-              // custom createElement functions to know which named component
-              // they're rendering, for e.g. matching up to fetched data.
-              elements[key] = _this.createElement(components[key], _extends({
-                key: key }, props));
-            }
-          }
-
-          return elements;
-        }
-
-        return _this.createElement(components, props);
-      }, element);
-    }
-
-    !(element === null || element === false || _react2.default.isValidElement(element)) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'The root route must render a single element') : (0, _invariant2.default)(false) : void 0;
-
-    return element;
-  }
-});
-
-exports.default = RouterContext;
-module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 45 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-exports.__esModule = true;
-exports.canUseMembrane = undefined;
-
-var _routerWarning = __webpack_require__(8);
-
-var _routerWarning2 = _interopRequireDefault(_routerWarning);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var canUseMembrane = exports.canUseMembrane = false;
-
-// No-op by default.
-var deprecateObjectProperties = function deprecateObjectProperties(object) {
-  return object;
-};
-
-if (process.env.NODE_ENV !== 'production') {
-  try {
-    if (Object.defineProperty({}, 'x', {
-      get: function get() {
-        return true;
-      }
-    }).x) {
-      exports.canUseMembrane = canUseMembrane = true;
-    }
-    /* eslint-disable no-empty */
-  } catch (e) {}
-  /* eslint-enable no-empty */
-
-  if (canUseMembrane) {
-    deprecateObjectProperties = function deprecateObjectProperties(object, message) {
-      // Wrap the deprecated object in a membrane to warn on property access.
-      var membrane = {};
-
-      var _loop = function _loop(prop) {
-        if (!Object.prototype.hasOwnProperty.call(object, prop)) {
-          return 'continue';
-        }
-
-        if (typeof object[prop] === 'function') {
-          // Can't use fat arrow here because of use of arguments below.
-          membrane[prop] = function () {
-            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, message) : void 0;
-            return object[prop].apply(object, arguments);
-          };
-          return 'continue';
-        }
-
-        // These properties are non-enumerable to prevent React dev tools from
-        // seeing them and causing spurious warnings when accessing them. In
-        // principle this could be done with a proxy, but support for the
-        // ownKeys trap on proxies is not universal, even among browsers that
-        // otherwise support proxies.
-        Object.defineProperty(membrane, prop, {
-          get: function get() {
-            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, message) : void 0;
-            return object[prop];
-          }
-        });
-      };
-
-      for (var prop in object) {
-        var _ret = _loop(prop);
-
-        if (_ret === 'continue') continue;
-      }
-
-      return membrane;
-    };
-  }
-}
-
-exports.default = deprecateObjectProperties;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 46 */
-/***/ function(module, exports) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule DisabledInputUtils
- */
-
-'use strict';
-
-var disableableMouseListenerNames = {
-  onClick: true,
-  onDoubleClick: true,
-  onMouseDown: true,
-  onMouseMove: true,
-  onMouseUp: true,
-
-  onClickCapture: true,
-  onDoubleClickCapture: true,
-  onMouseDownCapture: true,
-  onMouseMoveCapture: true,
-  onMouseUpCapture: true
-};
-
-/**
- * Implements a host component that does not receive mouse events
- * when `disabled` is set.
- */
-var DisabledInputUtils = {
-  getHostProps: function (inst, props) {
-    if (!props.disabled) {
-      return props;
-    }
-
-    // Copy the props, except the mouse listeners
-    var hostProps = {};
-    for (var key in props) {
-      if (!disableableMouseListenerNames[key] && props.hasOwnProperty(key)) {
-        hostProps[key] = props[key];
-      }
-    }
-
-    return hostProps;
-  }
-};
-
-module.exports = DisabledInputUtils;
-
-/***/ },
-/* 47 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule EventPluginRegistry
- */
-
-'use strict';
-
-var _prodInvariant = __webpack_require__(3);
-
-var invariant = __webpack_require__(1);
-
-/**
- * Injectable ordering of event plugins.
- */
-var EventPluginOrder = null;
-
-/**
- * Injectable mapping from names to event plugin modules.
- */
-var namesToPlugins = {};
-
-/**
- * Recomputes the plugin list using the injected plugins and plugin ordering.
- *
- * @private
- */
-function recomputePluginOrdering() {
-  if (!EventPluginOrder) {
-    // Wait until an `EventPluginOrder` is injected.
-    return;
-  }
-  for (var pluginName in namesToPlugins) {
-    var PluginModule = namesToPlugins[pluginName];
-    var pluginIndex = EventPluginOrder.indexOf(pluginName);
-    !(pluginIndex > -1) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugins that do not exist in the plugin ordering, `%s`.', pluginName) : _prodInvariant('96', pluginName) : void 0;
-    if (EventPluginRegistry.plugins[pluginIndex]) {
-      continue;
-    }
-    !PluginModule.extractEvents ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Event plugins must implement an `extractEvents` method, but `%s` does not.', pluginName) : _prodInvariant('97', pluginName) : void 0;
-    EventPluginRegistry.plugins[pluginIndex] = PluginModule;
-    var publishedEvents = PluginModule.eventTypes;
-    for (var eventName in publishedEvents) {
-      !publishEventForPlugin(publishedEvents[eventName], PluginModule, eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Failed to publish event `%s` for plugin `%s`.', eventName, pluginName) : _prodInvariant('98', eventName, pluginName) : void 0;
-    }
-  }
-}
-
-/**
- * Publishes an event so that it can be dispatched by the supplied plugin.
- *
- * @param {object} dispatchConfig Dispatch configuration for the event.
- * @param {object} PluginModule Plugin publishing the event.
- * @return {boolean} True if the event was successfully published.
- * @private
- */
-function publishEventForPlugin(dispatchConfig, PluginModule, eventName) {
-  !!EventPluginRegistry.eventNameDispatchConfigs.hasOwnProperty(eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same event name, `%s`.', eventName) : _prodInvariant('99', eventName) : void 0;
-  EventPluginRegistry.eventNameDispatchConfigs[eventName] = dispatchConfig;
-
-  var phasedRegistrationNames = dispatchConfig.phasedRegistrationNames;
-  if (phasedRegistrationNames) {
-    for (var phaseName in phasedRegistrationNames) {
-      if (phasedRegistrationNames.hasOwnProperty(phaseName)) {
-        var phasedRegistrationName = phasedRegistrationNames[phaseName];
-        publishRegistrationName(phasedRegistrationName, PluginModule, eventName);
-      }
-    }
-    return true;
-  } else if (dispatchConfig.registrationName) {
-    publishRegistrationName(dispatchConfig.registrationName, PluginModule, eventName);
-    return true;
-  }
-  return false;
-}
-
-/**
- * Publishes a registration name that is used to identify dispatched events and
- * can be used with `EventPluginHub.putListener` to register listeners.
- *
- * @param {string} registrationName Registration name to add.
- * @param {object} PluginModule Plugin publishing the event.
- * @private
- */
-function publishRegistrationName(registrationName, PluginModule, eventName) {
-  !!EventPluginRegistry.registrationNameModules[registrationName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same registration name, `%s`.', registrationName) : _prodInvariant('100', registrationName) : void 0;
-  EventPluginRegistry.registrationNameModules[registrationName] = PluginModule;
-  EventPluginRegistry.registrationNameDependencies[registrationName] = PluginModule.eventTypes[eventName].dependencies;
-
-  if (process.env.NODE_ENV !== 'production') {
-    var lowerCasedName = registrationName.toLowerCase();
-    EventPluginRegistry.possibleRegistrationNames[lowerCasedName] = registrationName;
-
-    if (registrationName === 'onDoubleClick') {
-      EventPluginRegistry.possibleRegistrationNames.ondblclick = registrationName;
-    }
-  }
-}
-
-/**
- * Registers plugins so that they can extract and dispatch events.
- *
- * @see {EventPluginHub}
- */
-var EventPluginRegistry = {
-
-  /**
-   * Ordered list of injected plugins.
-   */
-  plugins: [],
-
-  /**
-   * Mapping from event name to dispatch config
-   */
-  eventNameDispatchConfigs: {},
-
-  /**
-   * Mapping from registration name to plugin module
-   */
-  registrationNameModules: {},
-
-  /**
-   * Mapping from registration name to event name
-   */
-  registrationNameDependencies: {},
-
-  /**
-   * Mapping from lowercase registration names to the properly cased version,
-   * used to warn in the case of missing event handlers. Available
-   * only in __DEV__.
-   * @type {Object}
-   */
-  possibleRegistrationNames: process.env.NODE_ENV !== 'production' ? {} : null,
-
-  /**
-   * Injects an ordering of plugins (by plugin name). This allows the ordering
-   * to be decoupled from injection of the actual plugins so that ordering is
-   * always deterministic regardless of packaging, on-the-fly injection, etc.
-   *
-   * @param {array} InjectedEventPluginOrder
-   * @internal
-   * @see {EventPluginHub.injection.injectEventPluginOrder}
-   */
-  injectEventPluginOrder: function (InjectedEventPluginOrder) {
-    !!EventPluginOrder ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugin ordering more than once. You are likely trying to load more than one copy of React.') : _prodInvariant('101') : void 0;
-    // Clone the ordering so it cannot be dynamically mutated.
-    EventPluginOrder = Array.prototype.slice.call(InjectedEventPluginOrder);
-    recomputePluginOrdering();
-  },
-
-  /**
-   * Injects plugins to be used by `EventPluginHub`. The plugin names must be
-   * in the ordering injected by `injectEventPluginOrder`.
-   *
-   * Plugins can be injected as part of page initialization or on-the-fly.
-   *
-   * @param {object} injectedNamesToPlugins Map from names to plugin modules.
-   * @internal
-   * @see {EventPluginHub.injection.injectEventPluginsByName}
-   */
-  injectEventPluginsByName: function (injectedNamesToPlugins) {
-    var isOrderingDirty = false;
-    for (var pluginName in injectedNamesToPlugins) {
-      if (!injectedNamesToPlugins.hasOwnProperty(pluginName)) {
-        continue;
-      }
-      var PluginModule = injectedNamesToPlugins[pluginName];
-      if (!namesToPlugins.hasOwnProperty(pluginName) || namesToPlugins[pluginName] !== PluginModule) {
-        !!namesToPlugins[pluginName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject two different event plugins using the same name, `%s`.', pluginName) : _prodInvariant('102', pluginName) : void 0;
-        namesToPlugins[pluginName] = PluginModule;
-        isOrderingDirty = true;
-      }
-    }
-    if (isOrderingDirty) {
-      recomputePluginOrdering();
-    }
-  },
-
-  /**
-   * Looks up the plugin for the supplied event.
-   *
-   * @param {object} event A synthetic event.
-   * @return {?object} The plugin that created the supplied event.
-   * @internal
-   */
-  getPluginModuleForEvent: function (event) {
-    var dispatchConfig = event.dispatchConfig;
-    if (dispatchConfig.registrationName) {
-      return EventPluginRegistry.registrationNameModules[dispatchConfig.registrationName] || null;
-    }
-    for (var phase in dispatchConfig.phasedRegistrationNames) {
-      if (!dispatchConfig.phasedRegistrationNames.hasOwnProperty(phase)) {
-        continue;
-      }
-      var PluginModule = EventPluginRegistry.registrationNameModules[dispatchConfig.phasedRegistrationNames[phase]];
-      if (PluginModule) {
-        return PluginModule;
-      }
-    }
-    return null;
-  },
-
-  /**
-   * Exposed for unit testing.
-   * @private
-   */
-  _resetEventPlugins: function () {
-    EventPluginOrder = null;
-    for (var pluginName in namesToPlugins) {
-      if (namesToPlugins.hasOwnProperty(pluginName)) {
-        delete namesToPlugins[pluginName];
-      }
-    }
-    EventPluginRegistry.plugins.length = 0;
-
-    var eventNameDispatchConfigs = EventPluginRegistry.eventNameDispatchConfigs;
-    for (var eventName in eventNameDispatchConfigs) {
-      if (eventNameDispatchConfigs.hasOwnProperty(eventName)) {
-        delete eventNameDispatchConfigs[eventName];
-      }
-    }
-
-    var registrationNameModules = EventPluginRegistry.registrationNameModules;
-    for (var registrationName in registrationNameModules) {
-      if (registrationNameModules.hasOwnProperty(registrationName)) {
-        delete registrationNameModules[registrationName];
-      }
-    }
-
-    if (process.env.NODE_ENV !== 'production') {
-      var possibleRegistrationNames = EventPluginRegistry.possibleRegistrationNames;
-      for (var lowerCasedName in possibleRegistrationNames) {
-        if (possibleRegistrationNames.hasOwnProperty(lowerCasedName)) {
-          delete possibleRegistrationNames[lowerCasedName];
-        }
-      }
-    }
-  }
-
-};
-
-module.exports = EventPluginRegistry;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule ReactBrowserEventEmitter
- */
-
-'use strict';
-
-var _assign = __webpack_require__(5);
-
-var EventConstants = __webpack_require__(16);
-var EventPluginRegistry = __webpack_require__(47);
-var ReactEventEmitterMixin = __webpack_require__(248);
-var ViewportMetrics = __webpack_require__(123);
-
-var getVendorPrefixedEventName = __webpack_require__(280);
-var isEventSupported = __webpack_require__(81);
-
-/**
- * Summary of `ReactBrowserEventEmitter` event handling:
- *
- *  - Top-level delegation is used to trap most native browser events. This
- *    may only occur in the main thread and is the responsibility of
- *    ReactEventListener, which is injected and can therefore support pluggable
- *    event sources. This is the only work that occurs in the main thread.
- *
- *  - We normalize and de-duplicate events to account for browser quirks. This
- *    may be done in the worker thread.
- *
- *  - Forward these native events (with the associated top-level type used to
- *    trap it) to `EventPluginHub`, which in turn will ask plugins if they want
- *    to extract any synthetic events.
- *
- *  - The `EventPluginHub` will then process each event by annotating them with
- *    "dispatches", a sequence of listeners and IDs that care about that event.
- *
- *  - The `EventPluginHub` then dispatches the events.
- *
- * Overview of React and the event system:
- *
- * +------------+    .
- * |    DOM     |    .
- * +------------+    .
- *       |           .
- *       v           .
- * +------------+    .
- * | ReactEvent |    .
- * |  Listener  |    .
- * +------------+    .                         +-----------+
- *       |           .               +--------+|SimpleEvent|
- *       |           .               |         |Plugin     |
- * +-----|------+    .               v         +-----------+
- * |     |      |    .    +--------------+                    +------------+
- * |     +-----------.--->|EventPluginHub|                    |    Event   |
- * |            |    .    |              |     +-----------+  | Propagators|
- * | ReactEvent |    .    |              |     |TapEvent   |  |------------|
- * |  Emitter   |    .    |              |<---+|Plugin     |  |other plugin|
- * |            |    .    |              |     +-----------+  |  utilities |
- * |     +-----------.--->|              |                    +------------+
- * |     |      |    .    +--------------+
- * +-----|------+    .                ^        +-----------+
- *       |           .                |        |Enter/Leave|
- *       +           .                +-------+|Plugin     |
- * +-------------+   .                         +-----------+
- * | application |   .
- * |-------------|   .
- * |             |   .
- * |             |   .
- * +-------------+   .
- *                   .
- *    React Core     .  General Purpose Event Plugin System
- */
-
-var hasEventPageXY;
-var alreadyListeningTo = {};
-var isMonitoringScrollValue = false;
-var reactTopListenersCounter = 0;
-
-// For events like 'submit' which don't consistently bubble (which we trap at a
-// lower node than `document`), binding at `document` would cause duplicate
-// events so we don't include them here
-var topEventMapping = {
-  topAbort: 'abort',
-  topAnimationEnd: getVendorPrefixedEventName('animationend') || 'animationend',
-  topAnimationIteration: getVendorPrefixedEventName('animationiteration') || 'animationiteration',
-  topAnimationStart: getVendorPrefixedEventName('animationstart') || 'animationstart',
-  topBlur: 'blur',
-  topCanPlay: 'canplay',
-  topCanPlayThrough: 'canplaythrough',
-  topChange: 'change',
-  topClick: 'click',
-  topCompositionEnd: 'compositionend',
-  topCompositionStart: 'compositionstart',
-  topCompositionUpdate: 'compositionupdate',
-  topContextMenu: 'contextmenu',
-  topCopy: 'copy',
-  topCut: 'cut',
-  topDoubleClick: 'dblclick',
-  topDrag: 'drag',
-  topDragEnd: 'dragend',
-  topDragEnter: 'dragenter',
-  topDragExit: 'dragexit',
-  topDragLeave: 'dragleave',
-  topDragOver: 'dragover',
-  topDragStart: 'dragstart',
-  topDrop: 'drop',
-  topDurationChange: 'durationchange',
-  topEmptied: 'emptied',
-  topEncrypted: 'encrypted',
-  topEnded: 'ended',
-  topError: 'error',
-  topFocus: 'focus',
-  topInput: 'input',
-  topKeyDown: 'keydown',
-  topKeyPress: 'keypress',
-  topKeyUp: 'keyup',
-  topLoadedData: 'loadeddata',
-  topLoadedMetadata: 'loadedmetadata',
-  topLoadStart: 'loadstart',
-  topMouseDown: 'mousedown',
-  topMouseMove: 'mousemove',
-  topMouseOut: 'mouseout',
-  topMouseOver: 'mouseover',
-  topMouseUp: 'mouseup',
-  topPaste: 'paste',
-  topPause: 'pause',
-  topPlay: 'play',
-  topPlaying: 'playing',
-  topProgress: 'progress',
-  topRateChange: 'ratechange',
-  topScroll: 'scroll',
-  topSeeked: 'seeked',
-  topSeeking: 'seeking',
-  topSelectionChange: 'selectionchange',
-  topStalled: 'stalled',
-  topSuspend: 'suspend',
-  topTextInput: 'textInput',
-  topTimeUpdate: 'timeupdate',
-  topTouchCancel: 'touchcancel',
-  topTouchEnd: 'touchend',
-  topTouchMove: 'touchmove',
-  topTouchStart: 'touchstart',
-  topTransitionEnd: getVendorPrefixedEventName('transitionend') || 'transitionend',
-  topVolumeChange: 'volumechange',
-  topWaiting: 'waiting',
-  topWheel: 'wheel'
-};
-
-/**
- * To ensure no conflicts with other potential React instances on the page
- */
-var topListenersIDKey = '_reactListenersID' + String(Math.random()).slice(2);
-
-function getListeningForDocument(mountAt) {
-  // In IE8, `mountAt` is a host object and doesn't have `hasOwnProperty`
-  // directly.
-  if (!Object.prototype.hasOwnProperty.call(mountAt, topListenersIDKey)) {
-    mountAt[topListenersIDKey] = reactTopListenersCounter++;
-    alreadyListeningTo[mountAt[topListenersIDKey]] = {};
-  }
-  return alreadyListeningTo[mountAt[topListenersIDKey]];
-}
-
-/**
- * `ReactBrowserEventEmitter` is used to attach top-level event listeners. For
- * example:
- *
- *   EventPluginHub.putListener('myID', 'onClick', myFunction);
- *
- * This would allocate a "registration" of `('onClick', myFunction)` on 'myID'.
- *
- * @internal
- */
-var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
-
-  /**
-   * Injectable event backend
-   */
-  ReactEventListener: null,
-
-  injection: {
-    /**
-     * @param {object} ReactEventListener
-     */
-    injectReactEventListener: function (ReactEventListener) {
-      ReactEventListener.setHandleTopLevel(ReactBrowserEventEmitter.handleTopLevel);
-      ReactBrowserEventEmitter.ReactEventListener = ReactEventListener;
-    }
-  },
-
-  /**
-   * Sets whether or not any created callbacks should be enabled.
-   *
-   * @param {boolean} enabled True if callbacks should be enabled.
-   */
-  setEnabled: function (enabled) {
-    if (ReactBrowserEventEmitter.ReactEventListener) {
-      ReactBrowserEventEmitter.ReactEventListener.setEnabled(enabled);
-    }
-  },
-
-  /**
-   * @return {boolean} True if callbacks are enabled.
-   */
-  isEnabled: function () {
-    return !!(ReactBrowserEventEmitter.ReactEventListener && ReactBrowserEventEmitter.ReactEventListener.isEnabled());
-  },
-
-  /**
-   * We listen for bubbled touch events on the document object.
-   *
-   * Firefox v8.01 (and possibly others) exhibited strange behavior when
-   * mounting `onmousemove` events at some node that was not the document
-   * element. The symptoms were that if your mouse is not moving over something
-   * contained within that mount point (for example on the background) the
-   * top-level listeners for `onmousemove` won't be called. However, if you
-   * register the `mousemove` on the document object, then it will of course
-   * catch all `mousemove`s. This along with iOS quirks, justifies restricting
-   * top-level listeners to the document object only, at least for these
-   * movement types of events and possibly all events.
-   *
-   * @see http://www.quirksmode.org/blog/archives/2010/09/click_event_del.html
-   *
-   * Also, `keyup`/`keypress`/`keydown` do not bubble to the window on IE, but
-   * they bubble to document.
-   *
-   * @param {string} registrationName Name of listener (e.g. `onClick`).
-   * @param {object} contentDocumentHandle Document which owns the container
-   */
-  listenTo: function (registrationName, contentDocumentHandle) {
-    var mountAt = contentDocumentHandle;
-    var isListening = getListeningForDocument(mountAt);
-    var dependencies = EventPluginRegistry.registrationNameDependencies[registrationName];
-
-    var topLevelTypes = EventConstants.topLevelTypes;
-    for (var i = 0; i < dependencies.length; i++) {
-      var dependency = dependencies[i];
-      if (!(isListening.hasOwnProperty(dependency) && isListening[dependency])) {
-        if (dependency === topLevelTypes.topWheel) {
-          if (isEventSupported('wheel')) {
-            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'wheel', mountAt);
-          } else if (isEventSupported('mousewheel')) {
-            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'mousewheel', mountAt);
-          } else {
-            // Firefox needs to capture a different mouse scroll event.
-            // @see http://www.quirksmode.org/dom/events/tests/scroll.html
-            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'DOMMouseScroll', mountAt);
-          }
-        } else if (dependency === topLevelTypes.topScroll) {
-
-          if (isEventSupported('scroll', true)) {
-            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topScroll, 'scroll', mountAt);
-          } else {
-            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topScroll, 'scroll', ReactBrowserEventEmitter.ReactEventListener.WINDOW_HANDLE);
-          }
-        } else if (dependency === topLevelTypes.topFocus || dependency === topLevelTypes.topBlur) {
-
-          if (isEventSupported('focus', true)) {
-            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topFocus, 'focus', mountAt);
-            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topBlur, 'blur', mountAt);
-          } else if (isEventSupported('focusin')) {
-            // IE has `focusin` and `focusout` events which bubble.
-            // @see http://www.quirksmode.org/blog/archives/2008/04/delegating_the.html
-            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topFocus, 'focusin', mountAt);
-            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topBlur, 'focusout', mountAt);
-          }
-
-          // to make sure blur and focus event listeners are only attached once
-          isListening[topLevelTypes.topBlur] = true;
-          isListening[topLevelTypes.topFocus] = true;
-        } else if (topEventMapping.hasOwnProperty(dependency)) {
-          ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(dependency, topEventMapping[dependency], mountAt);
-        }
-
-        isListening[dependency] = true;
-      }
-    }
-  },
-
-  trapBubbledEvent: function (topLevelType, handlerBaseName, handle) {
-    return ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelType, handlerBaseName, handle);
-  },
-
-  trapCapturedEvent: function (topLevelType, handlerBaseName, handle) {
-    return ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelType, handlerBaseName, handle);
-  },
-
-  /**
-   * Protect against document.createEvent() returning null
-   * Some popup blocker extensions appear to do this:
-   * https://github.com/facebook/react/issues/6887
-   */
-  supportsEventPageXY: function () {
-    if (!document.createEvent) {
-      return false;
-    }
-    var ev = document.createEvent('MouseEvent');
-    return ev != null && 'pageX' in ev;
-  },
-
-  /**
-   * Listens to window scroll and resize events. We cache scroll values so that
-   * application code can access them without triggering reflows.
-   *
-   * ViewportMetrics is only used by SyntheticMouse/TouchEvent and only when
-   * pageX/pageY isn't supported (legacy browsers).
-   *
-   * NOTE: Scroll events do not bubble.
-   *
-   * @see http://www.quirksmode.org/dom/events/scroll.html
-   */
-  ensureScrollValueMonitoring: function () {
-    if (hasEventPageXY === undefined) {
-      hasEventPageXY = ReactBrowserEventEmitter.supportsEventPageXY();
-    }
-    if (!hasEventPageXY && !isMonitoringScrollValue) {
-      var refresh = ViewportMetrics.refreshScrollValues;
-      ReactBrowserEventEmitter.ReactEventListener.monitorScrollValue(refresh);
-      isMonitoringScrollValue = true;
-    }
-  }
-
-});
-
-module.exports = ReactBrowserEventEmitter;
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule ReactPropTypeLocations
- */
-
-'use strict';
-
-var keyMirror = __webpack_require__(41);
-
-var ReactPropTypeLocations = keyMirror({
-  prop: null,
-  context: null,
-  childContext: null
-});
-
-module.exports = ReactPropTypeLocations;
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule SyntheticMouseEvent
- */
-
-'use strict';
-
-var SyntheticUIEvent = __webpack_require__(38);
-var ViewportMetrics = __webpack_require__(123);
-
-var getEventModifierState = __webpack_require__(78);
-
-/**
- * @interface MouseEvent
- * @see http://www.w3.org/TR/DOM-Level-3-Events/
- */
-var MouseEventInterface = {
-  screenX: null,
-  screenY: null,
-  clientX: null,
-  clientY: null,
-  ctrlKey: null,
-  shiftKey: null,
-  altKey: null,
-  metaKey: null,
-  getModifierState: getEventModifierState,
-  button: function (event) {
-    // Webkit, Firefox, IE9+
-    // which:  1 2 3
-    // button: 0 1 2 (standard)
-    var button = event.button;
-    if ('which' in event) {
-      return button;
-    }
-    // IE<9
-    // which:  undefined
-    // button: 0 0 0
-    // button: 1 4 2 (onmouseup)
-    return button === 2 ? 2 : button === 4 ? 1 : 0;
-  },
-  buttons: null,
-  relatedTarget: function (event) {
-    return event.relatedTarget || (event.fromElement === event.srcElement ? event.toElement : event.fromElement);
-  },
-  // "Proprietary" Interface.
-  pageX: function (event) {
-    return 'pageX' in event ? event.pageX : event.clientX + ViewportMetrics.currentScrollLeft;
-  },
-  pageY: function (event) {
-    return 'pageY' in event ? event.pageY : event.clientY + ViewportMetrics.currentScrollTop;
-  }
-};
-
-/**
- * @param {object} dispatchConfig Configuration used to dispatch this event.
- * @param {string} dispatchMarker Marker identifying the event target.
- * @param {object} nativeEvent Native browser event.
- * @extends {SyntheticUIEvent}
- */
-function SyntheticMouseEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
-  return SyntheticUIEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
-}
-
-SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
-
-module.exports = SyntheticMouseEvent;
-
-/***/ },
-/* 51 */
-/***/ function(module, exports) {
-
-"use strict";
-/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * Based on the escape-html library, which is used under the MIT License below:
- *
- * Copyright (c) 2012-2013 TJ Holowaychuk
- * Copyright (c) 2015 Andreas Lubbe
- * Copyright (c) 2015 Tiancheng "Timothy" Gu
- *
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * 'Software'), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * @providesModule escapeTextContentForBrowser
- */
-
-'use strict';
-
-// code copied and modified from escape-html
-/**
- * Module variables.
- * @private
- */
-
-var matchHtmlRegExp = /["'&<>]/;
-
-/**
- * Escape special characters in the given string of html.
- *
- * @param  {string} string The string to escape for inserting into HTML
- * @return {string}
- * @public
- */
-
-function escapeHtml(string) {
-  var str = '' + string;
-  var match = matchHtmlRegExp.exec(str);
-
-  if (!match) {
-    return str;
-  }
-
-  var escape;
-  var html = '';
-  var index = 0;
-  var lastIndex = 0;
-
-  for (index = match.index; index < str.length; index++) {
-    switch (str.charCodeAt(index)) {
-      case 34:
-        // "
-        escape = '&quot;';
-        break;
-      case 38:
-        // &
-        escape = '&amp;';
-        break;
-      case 39:
-        // '
-        escape = '&#x27;'; // modified from escape-html; used to be '&#39'
-        break;
-      case 60:
-        // <
-        escape = '&lt;';
-        break;
-      case 62:
-        // >
-        escape = '&gt;';
-        break;
-      default:
-        continue;
-    }
-
-    if (lastIndex !== index) {
-      html += str.substring(lastIndex, index);
-    }
-
-    lastIndex = index + 1;
-    html += escape;
-  }
-
-  return lastIndex !== index ? html + str.substring(lastIndex, index) : html;
-}
-// end code copied and modified from escape-html
-
-
-/**
- * Escapes text to prevent scripting attacks.
- *
- * @param {*} text Text value to escape.
- * @return {string} An escaped string.
- */
-function escapeTextContentForBrowser(text) {
-  if (typeof text === 'boolean' || typeof text === 'number') {
-    // this shortcircuit helps perf for types that we know will never have
-    // special characters, especially given that this function is used often
-    // for numeric dom ids.
-    return '' + text;
-  }
-  return escapeHtml(text);
-}
-
-module.exports = escapeTextContentForBrowser;
-
-/***/ },
-/* 52 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule setInnerHTML
- */
-
-'use strict';
-
-var ExecutionEnvironment = __webpack_require__(7);
-var DOMNamespaces = __webpack_require__(64);
-
-var WHITESPACE_TEST = /^[ \r\n\t\f]/;
-var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
-
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(76);
-
-// SVG temp container for IE lacking innerHTML
-var reusableSVGContainer;
-
-/**
- * Set the innerHTML property of a node, ensuring that whitespace is preserved
- * even in IE8.
- *
- * @param {DOMElement} node
- * @param {string} html
- * @internal
- */
-var setInnerHTML = createMicrosoftUnsafeLocalFunction(function (node, html) {
-  // IE does not have innerHTML for SVG nodes, so instead we inject the
-  // new markup in a temp node and then move the child nodes across into
-  // the target node
-  if (node.namespaceURI === DOMNamespaces.svg && !('innerHTML' in node)) {
-    reusableSVGContainer = reusableSVGContainer || document.createElement('div');
-    reusableSVGContainer.innerHTML = '<svg>' + html + '</svg>';
-    var svgNode = reusableSVGContainer.firstChild;
-    while (svgNode.firstChild) {
-      node.appendChild(svgNode.firstChild);
-    }
-  } else {
-    node.innerHTML = html;
-  }
-});
-
-if (ExecutionEnvironment.canUseDOM) {
-  // IE8: When updating a just created node with innerHTML only leading
-  // whitespace is removed. When updating an existing node with innerHTML
-  // whitespace in root TextNodes is also collapsed.
-  // @see quirksmode.org/bugreports/archives/2004/11/innerhtml_and_t.html
-
-  // Feature detection; only IE8 is known to behave improperly like this.
-  var testElement = document.createElement('div');
-  testElement.innerHTML = ' ';
-  if (testElement.innerHTML === '') {
-    setInnerHTML = function (node, html) {
-      // Magic theory: IE8 supposedly differentiates between added and updated
-      // nodes when processing innerHTML, innerHTML on updated nodes suffers
-      // from worse whitespace behavior. Re-adding a node like this triggers
-      // the initial and more favorable whitespace behavior.
-      // TODO: What to do on a detached node?
-      if (node.parentNode) {
-        node.parentNode.replaceChild(node, node);
-      }
-
-      // We also implement a workaround for non-visible tags disappearing into
-      // thin air on IE8, this only happens if there is no visible text
-      // in-front of the non-visible tags. Piggyback on the whitespace fix
-      // and simply check if any non-visible tags appear in the source.
-      if (WHITESPACE_TEST.test(html) || html[0] === '<' && NONVISIBLE_TEST.test(html)) {
-        // Recover leading whitespace by temporarily prepending any character.
-        // \uFEFF has the potential advantage of being zero-width/invisible.
-        // UglifyJS drops U+FEFF chars when parsing, so use String.fromCharCode
-        // in hopes that this is preserved even if "\uFEFF" is transformed to
-        // the actual Unicode character (by Babel, for example).
-        // https://github.com/mishoo/UglifyJS2/blob/v2.4.20/lib/parse.js#L216
-        node.innerHTML = String.fromCharCode(0xFEFF) + html;
-
-        // deleteData leaves an empty `TextNode` which offsets the index of all
-        // children. Definitely want to avoid this.
-        var textNode = node.firstChild;
-        if (textNode.data.length === 1) {
-          node.removeChild(textNode);
-        } else {
-          textNode.deleteData(0, 1);
-        }
-      } else {
-        node.innerHTML = html;
-      }
-    };
-  }
-  testElement = null;
-}
-
-module.exports = setInnerHTML;
-
-/***/ },
-/* 53 */
-/***/ function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() { return this; })();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ },
-/* 54 */
-/***/ function(module, exports) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @typechecks
- * 
- */
-
-/*eslint-disable no-self-compare */
-
-'use strict';
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-/**
- * inlined Object.is polyfill to avoid requiring consumers ship their own
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
- */
-function is(x, y) {
-  // SameValue algorithm
-  if (x === y) {
-    // Steps 1-5, 7-10
-    // Steps 6.b-6.e: +0 != -0
-    // Added the nonzero y check to make Flow happy, but it is redundant
-    return x !== 0 || y !== 0 || 1 / x === 1 / y;
-  } else {
-    // Step 6.a: NaN == NaN
-    return x !== x && y !== y;
-  }
-}
-
-/**
- * Performs equality by iterating through keys on an object and returning false
- * when any key has values which are not strictly equal between the arguments.
- * Returns true when the values of all keys are strictly equal.
- */
-function shallowEqual(objA, objB) {
-  if (is(objA, objB)) {
-    return true;
-  }
-
-  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
-    return false;
-  }
-
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
-
-  if (keysA.length !== keysB.length) {
-    return false;
-  }
-
-  // Test for A's keys different from B.
-  for (var i = 0; i < keysA.length; i++) {
-    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-module.exports = shallowEqual;
-
-/***/ },
-/* 55 */
-/***/ function(module, exports) {
-
-"use strict";
-'use strict';
-
-exports.__esModule = true;
-exports.addEventListener = addEventListener;
-exports.removeEventListener = removeEventListener;
-exports.getHashPath = getHashPath;
-exports.replaceHashPath = replaceHashPath;
-exports.getWindowPath = getWindowPath;
-exports.go = go;
-exports.getUserConfirmation = getUserConfirmation;
-exports.supportsHistory = supportsHistory;
-exports.supportsGoWithoutReloadUsingHash = supportsGoWithoutReloadUsingHash;
-
-function addEventListener(node, event, listener) {
-  if (node.addEventListener) {
-    node.addEventListener(event, listener, false);
-  } else {
-    node.attachEvent('on' + event, listener);
-  }
-}
-
-function removeEventListener(node, event, listener) {
-  if (node.removeEventListener) {
-    node.removeEventListener(event, listener, false);
-  } else {
-    node.detachEvent('on' + event, listener);
-  }
-}
-
-function getHashPath() {
-  // We can't use window.location.hash here because it's not
-  // consistent across browsers - Firefox will pre-decode it!
-  return window.location.href.split('#')[1] || '';
-}
-
-function replaceHashPath(path) {
-  window.location.replace(window.location.pathname + window.location.search + '#' + path);
-}
-
-function getWindowPath() {
-  return window.location.pathname + window.location.search + window.location.hash;
-}
-
-function go(n) {
-  if (n) window.history.go(n);
-}
-
-function getUserConfirmation(message, callback) {
-  callback(window.confirm(message));
-}
-
-/**
- * Returns true if the HTML5 history API is supported. Taken from Modernizr.
- *
- * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
- * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
- * changed to avoid false negatives for Windows Phones: https://github.com/rackt/react-router/issues/586
- */
-
-function supportsHistory() {
-  var ua = navigator.userAgent;
-  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) {
-    return false;
-  }
-  return window.history && 'pushState' in window.history;
-}
-
-/**
- * Returns false if using go(n) with hash history causes a full page reload.
- */
-
-function supportsGoWithoutReloadUsingHash() {
-  var ua = navigator.userAgent;
-  return ua.indexOf('Firefox') === -1;
-}
-
-/***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-exports.__esModule = true;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _warning = __webpack_require__(14);
-
-var _warning2 = _interopRequireDefault(_warning);
-
-function deprecate(fn, message) {
-  return function () {
-    process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] ' + message) : undefined;
-    return fn.apply(this, arguments);
-  };
-}
-
-exports['default'] = deprecate;
-module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-exports.__esModule = true;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _warning = __webpack_require__(14);
-
-var _warning2 = _interopRequireDefault(_warning);
-
-function runTransitionHook(hook, location, callback) {
-  var result = hook(location, callback);
-
-  if (hook.length < 2) {
-    // Assume the hook runs synchronously and automatically
-    // call the callback with the return value.
-    callback(result);
-  } else {
-    process.env.NODE_ENV !== 'production' ? _warning2['default'](result === undefined, 'You should not "return" in a transition hook with a callback argument; call the callback instead') : undefined;
-  }
-}
-
-exports['default'] = runTransitionHook;
-module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ },
-/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -23712,7 +22246,1473 @@ module.exports = exports['default'];
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(136)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54), __webpack_require__(138)(module)))
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+exports.__esModule = true;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _invariant = __webpack_require__(9);
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _deprecateObjectProperties = __webpack_require__(46);
+
+var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
+
+var _getRouteParams = __webpack_require__(218);
+
+var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
+
+var _RouteUtils = __webpack_require__(23);
+
+var _routerWarning = __webpack_require__(8);
+
+var _routerWarning2 = _interopRequireDefault(_routerWarning);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _React$PropTypes = _react2.default.PropTypes;
+var array = _React$PropTypes.array;
+var func = _React$PropTypes.func;
+var object = _React$PropTypes.object;
+
+/**
+ * A <RouterContext> renders the component tree for a given router state
+ * and sets the history object and the current location in context.
+ */
+
+var RouterContext = _react2.default.createClass({
+  displayName: 'RouterContext',
+
+
+  propTypes: {
+    history: object,
+    router: object.isRequired,
+    location: object.isRequired,
+    routes: array.isRequired,
+    params: object.isRequired,
+    components: array.isRequired,
+    createElement: func.isRequired
+  },
+
+  getDefaultProps: function getDefaultProps() {
+    return {
+      createElement: _react2.default.createElement
+    };
+  },
+
+
+  childContextTypes: {
+    history: object,
+    location: object.isRequired,
+    router: object.isRequired
+  },
+
+  getChildContext: function getChildContext() {
+    var _props = this.props;
+    var router = _props.router;
+    var history = _props.history;
+    var location = _props.location;
+
+    if (!router) {
+      process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, '`<RouterContext>` expects a `router` rather than a `history`') : void 0;
+
+      router = _extends({}, history, {
+        setRouteLeaveHook: history.listenBeforeLeavingRoute
+      });
+      delete router.listenBeforeLeavingRoute;
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      location = (0, _deprecateObjectProperties2.default)(location, '`context.location` is deprecated, please use a route component\'s `props.location` instead. http://tiny.cc/router-accessinglocation');
+    }
+
+    return { history: history, location: location, router: router };
+  },
+  createElement: function createElement(component, props) {
+    return component == null ? null : this.props.createElement(component, props);
+  },
+  render: function render() {
+    var _this = this;
+
+    var _props2 = this.props;
+    var history = _props2.history;
+    var location = _props2.location;
+    var routes = _props2.routes;
+    var params = _props2.params;
+    var components = _props2.components;
+
+    var element = null;
+
+    if (components) {
+      element = components.reduceRight(function (element, components, index) {
+        if (components == null) return element; // Don't create new children; use the grandchildren.
+
+        var route = routes[index];
+        var routeParams = (0, _getRouteParams2.default)(route, params);
+        var props = {
+          history: history,
+          location: location,
+          params: params,
+          route: route,
+          routeParams: routeParams,
+          routes: routes
+        };
+
+        if ((0, _RouteUtils.isReactChildren)(element)) {
+          props.children = element;
+        } else if (element) {
+          for (var prop in element) {
+            if (Object.prototype.hasOwnProperty.call(element, prop)) props[prop] = element[prop];
+          }
+        }
+
+        if ((typeof components === 'undefined' ? 'undefined' : _typeof(components)) === 'object') {
+          var elements = {};
+
+          for (var key in components) {
+            if (Object.prototype.hasOwnProperty.call(components, key)) {
+              // Pass through the key as a prop to createElement to allow
+              // custom createElement functions to know which named component
+              // they're rendering, for e.g. matching up to fetched data.
+              elements[key] = _this.createElement(components[key], _extends({
+                key: key }, props));
+            }
+          }
+
+          return elements;
+        }
+
+        return _this.createElement(components, props);
+      }, element);
+    }
+
+    !(element === null || element === false || _react2.default.isValidElement(element)) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'The root route must render a single element') : (0, _invariant2.default)(false) : void 0;
+
+    return element;
+  }
+});
+
+exports.default = RouterContext;
+module.exports = exports['default'];
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+exports.__esModule = true;
+exports.canUseMembrane = undefined;
+
+var _routerWarning = __webpack_require__(8);
+
+var _routerWarning2 = _interopRequireDefault(_routerWarning);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var canUseMembrane = exports.canUseMembrane = false;
+
+// No-op by default.
+var deprecateObjectProperties = function deprecateObjectProperties(object) {
+  return object;
+};
+
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    if (Object.defineProperty({}, 'x', {
+      get: function get() {
+        return true;
+      }
+    }).x) {
+      exports.canUseMembrane = canUseMembrane = true;
+    }
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+
+  if (canUseMembrane) {
+    deprecateObjectProperties = function deprecateObjectProperties(object, message) {
+      // Wrap the deprecated object in a membrane to warn on property access.
+      var membrane = {};
+
+      var _loop = function _loop(prop) {
+        if (!Object.prototype.hasOwnProperty.call(object, prop)) {
+          return 'continue';
+        }
+
+        if (typeof object[prop] === 'function') {
+          // Can't use fat arrow here because of use of arguments below.
+          membrane[prop] = function () {
+            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, message) : void 0;
+            return object[prop].apply(object, arguments);
+          };
+          return 'continue';
+        }
+
+        // These properties are non-enumerable to prevent React dev tools from
+        // seeing them and causing spurious warnings when accessing them. In
+        // principle this could be done with a proxy, but support for the
+        // ownKeys trap on proxies is not universal, even among browsers that
+        // otherwise support proxies.
+        Object.defineProperty(membrane, prop, {
+          get: function get() {
+            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, message) : void 0;
+            return object[prop];
+          }
+        });
+      };
+
+      for (var prop in object) {
+        var _ret = _loop(prop);
+
+        if (_ret === 'continue') continue;
+      }
+
+      return membrane;
+    };
+  }
+}
+
+exports.default = deprecateObjectProperties;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule DisabledInputUtils
+ */
+
+'use strict';
+
+var disableableMouseListenerNames = {
+  onClick: true,
+  onDoubleClick: true,
+  onMouseDown: true,
+  onMouseMove: true,
+  onMouseUp: true,
+
+  onClickCapture: true,
+  onDoubleClickCapture: true,
+  onMouseDownCapture: true,
+  onMouseMoveCapture: true,
+  onMouseUpCapture: true
+};
+
+/**
+ * Implements a host component that does not receive mouse events
+ * when `disabled` is set.
+ */
+var DisabledInputUtils = {
+  getHostProps: function (inst, props) {
+    if (!props.disabled) {
+      return props;
+    }
+
+    // Copy the props, except the mouse listeners
+    var hostProps = {};
+    for (var key in props) {
+      if (!disableableMouseListenerNames[key] && props.hasOwnProperty(key)) {
+        hostProps[key] = props[key];
+      }
+    }
+
+    return hostProps;
+  }
+};
+
+module.exports = DisabledInputUtils;
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule EventPluginRegistry
+ */
+
+'use strict';
+
+var _prodInvariant = __webpack_require__(3);
+
+var invariant = __webpack_require__(1);
+
+/**
+ * Injectable ordering of event plugins.
+ */
+var EventPluginOrder = null;
+
+/**
+ * Injectable mapping from names to event plugin modules.
+ */
+var namesToPlugins = {};
+
+/**
+ * Recomputes the plugin list using the injected plugins and plugin ordering.
+ *
+ * @private
+ */
+function recomputePluginOrdering() {
+  if (!EventPluginOrder) {
+    // Wait until an `EventPluginOrder` is injected.
+    return;
+  }
+  for (var pluginName in namesToPlugins) {
+    var PluginModule = namesToPlugins[pluginName];
+    var pluginIndex = EventPluginOrder.indexOf(pluginName);
+    !(pluginIndex > -1) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugins that do not exist in the plugin ordering, `%s`.', pluginName) : _prodInvariant('96', pluginName) : void 0;
+    if (EventPluginRegistry.plugins[pluginIndex]) {
+      continue;
+    }
+    !PluginModule.extractEvents ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Event plugins must implement an `extractEvents` method, but `%s` does not.', pluginName) : _prodInvariant('97', pluginName) : void 0;
+    EventPluginRegistry.plugins[pluginIndex] = PluginModule;
+    var publishedEvents = PluginModule.eventTypes;
+    for (var eventName in publishedEvents) {
+      !publishEventForPlugin(publishedEvents[eventName], PluginModule, eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Failed to publish event `%s` for plugin `%s`.', eventName, pluginName) : _prodInvariant('98', eventName, pluginName) : void 0;
+    }
+  }
+}
+
+/**
+ * Publishes an event so that it can be dispatched by the supplied plugin.
+ *
+ * @param {object} dispatchConfig Dispatch configuration for the event.
+ * @param {object} PluginModule Plugin publishing the event.
+ * @return {boolean} True if the event was successfully published.
+ * @private
+ */
+function publishEventForPlugin(dispatchConfig, PluginModule, eventName) {
+  !!EventPluginRegistry.eventNameDispatchConfigs.hasOwnProperty(eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same event name, `%s`.', eventName) : _prodInvariant('99', eventName) : void 0;
+  EventPluginRegistry.eventNameDispatchConfigs[eventName] = dispatchConfig;
+
+  var phasedRegistrationNames = dispatchConfig.phasedRegistrationNames;
+  if (phasedRegistrationNames) {
+    for (var phaseName in phasedRegistrationNames) {
+      if (phasedRegistrationNames.hasOwnProperty(phaseName)) {
+        var phasedRegistrationName = phasedRegistrationNames[phaseName];
+        publishRegistrationName(phasedRegistrationName, PluginModule, eventName);
+      }
+    }
+    return true;
+  } else if (dispatchConfig.registrationName) {
+    publishRegistrationName(dispatchConfig.registrationName, PluginModule, eventName);
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Publishes a registration name that is used to identify dispatched events and
+ * can be used with `EventPluginHub.putListener` to register listeners.
+ *
+ * @param {string} registrationName Registration name to add.
+ * @param {object} PluginModule Plugin publishing the event.
+ * @private
+ */
+function publishRegistrationName(registrationName, PluginModule, eventName) {
+  !!EventPluginRegistry.registrationNameModules[registrationName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same registration name, `%s`.', registrationName) : _prodInvariant('100', registrationName) : void 0;
+  EventPluginRegistry.registrationNameModules[registrationName] = PluginModule;
+  EventPluginRegistry.registrationNameDependencies[registrationName] = PluginModule.eventTypes[eventName].dependencies;
+
+  if (process.env.NODE_ENV !== 'production') {
+    var lowerCasedName = registrationName.toLowerCase();
+    EventPluginRegistry.possibleRegistrationNames[lowerCasedName] = registrationName;
+
+    if (registrationName === 'onDoubleClick') {
+      EventPluginRegistry.possibleRegistrationNames.ondblclick = registrationName;
+    }
+  }
+}
+
+/**
+ * Registers plugins so that they can extract and dispatch events.
+ *
+ * @see {EventPluginHub}
+ */
+var EventPluginRegistry = {
+
+  /**
+   * Ordered list of injected plugins.
+   */
+  plugins: [],
+
+  /**
+   * Mapping from event name to dispatch config
+   */
+  eventNameDispatchConfigs: {},
+
+  /**
+   * Mapping from registration name to plugin module
+   */
+  registrationNameModules: {},
+
+  /**
+   * Mapping from registration name to event name
+   */
+  registrationNameDependencies: {},
+
+  /**
+   * Mapping from lowercase registration names to the properly cased version,
+   * used to warn in the case of missing event handlers. Available
+   * only in __DEV__.
+   * @type {Object}
+   */
+  possibleRegistrationNames: process.env.NODE_ENV !== 'production' ? {} : null,
+
+  /**
+   * Injects an ordering of plugins (by plugin name). This allows the ordering
+   * to be decoupled from injection of the actual plugins so that ordering is
+   * always deterministic regardless of packaging, on-the-fly injection, etc.
+   *
+   * @param {array} InjectedEventPluginOrder
+   * @internal
+   * @see {EventPluginHub.injection.injectEventPluginOrder}
+   */
+  injectEventPluginOrder: function (InjectedEventPluginOrder) {
+    !!EventPluginOrder ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugin ordering more than once. You are likely trying to load more than one copy of React.') : _prodInvariant('101') : void 0;
+    // Clone the ordering so it cannot be dynamically mutated.
+    EventPluginOrder = Array.prototype.slice.call(InjectedEventPluginOrder);
+    recomputePluginOrdering();
+  },
+
+  /**
+   * Injects plugins to be used by `EventPluginHub`. The plugin names must be
+   * in the ordering injected by `injectEventPluginOrder`.
+   *
+   * Plugins can be injected as part of page initialization or on-the-fly.
+   *
+   * @param {object} injectedNamesToPlugins Map from names to plugin modules.
+   * @internal
+   * @see {EventPluginHub.injection.injectEventPluginsByName}
+   */
+  injectEventPluginsByName: function (injectedNamesToPlugins) {
+    var isOrderingDirty = false;
+    for (var pluginName in injectedNamesToPlugins) {
+      if (!injectedNamesToPlugins.hasOwnProperty(pluginName)) {
+        continue;
+      }
+      var PluginModule = injectedNamesToPlugins[pluginName];
+      if (!namesToPlugins.hasOwnProperty(pluginName) || namesToPlugins[pluginName] !== PluginModule) {
+        !!namesToPlugins[pluginName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject two different event plugins using the same name, `%s`.', pluginName) : _prodInvariant('102', pluginName) : void 0;
+        namesToPlugins[pluginName] = PluginModule;
+        isOrderingDirty = true;
+      }
+    }
+    if (isOrderingDirty) {
+      recomputePluginOrdering();
+    }
+  },
+
+  /**
+   * Looks up the plugin for the supplied event.
+   *
+   * @param {object} event A synthetic event.
+   * @return {?object} The plugin that created the supplied event.
+   * @internal
+   */
+  getPluginModuleForEvent: function (event) {
+    var dispatchConfig = event.dispatchConfig;
+    if (dispatchConfig.registrationName) {
+      return EventPluginRegistry.registrationNameModules[dispatchConfig.registrationName] || null;
+    }
+    for (var phase in dispatchConfig.phasedRegistrationNames) {
+      if (!dispatchConfig.phasedRegistrationNames.hasOwnProperty(phase)) {
+        continue;
+      }
+      var PluginModule = EventPluginRegistry.registrationNameModules[dispatchConfig.phasedRegistrationNames[phase]];
+      if (PluginModule) {
+        return PluginModule;
+      }
+    }
+    return null;
+  },
+
+  /**
+   * Exposed for unit testing.
+   * @private
+   */
+  _resetEventPlugins: function () {
+    EventPluginOrder = null;
+    for (var pluginName in namesToPlugins) {
+      if (namesToPlugins.hasOwnProperty(pluginName)) {
+        delete namesToPlugins[pluginName];
+      }
+    }
+    EventPluginRegistry.plugins.length = 0;
+
+    var eventNameDispatchConfigs = EventPluginRegistry.eventNameDispatchConfigs;
+    for (var eventName in eventNameDispatchConfigs) {
+      if (eventNameDispatchConfigs.hasOwnProperty(eventName)) {
+        delete eventNameDispatchConfigs[eventName];
+      }
+    }
+
+    var registrationNameModules = EventPluginRegistry.registrationNameModules;
+    for (var registrationName in registrationNameModules) {
+      if (registrationNameModules.hasOwnProperty(registrationName)) {
+        delete registrationNameModules[registrationName];
+      }
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      var possibleRegistrationNames = EventPluginRegistry.possibleRegistrationNames;
+      for (var lowerCasedName in possibleRegistrationNames) {
+        if (possibleRegistrationNames.hasOwnProperty(lowerCasedName)) {
+          delete possibleRegistrationNames[lowerCasedName];
+        }
+      }
+    }
+  }
+
+};
+
+module.exports = EventPluginRegistry;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule ReactBrowserEventEmitter
+ */
+
+'use strict';
+
+var _assign = __webpack_require__(5);
+
+var EventConstants = __webpack_require__(18);
+var EventPluginRegistry = __webpack_require__(48);
+var ReactEventEmitterMixin = __webpack_require__(258);
+var ViewportMetrics = __webpack_require__(124);
+
+var getVendorPrefixedEventName = __webpack_require__(290);
+var isEventSupported = __webpack_require__(81);
+
+/**
+ * Summary of `ReactBrowserEventEmitter` event handling:
+ *
+ *  - Top-level delegation is used to trap most native browser events. This
+ *    may only occur in the main thread and is the responsibility of
+ *    ReactEventListener, which is injected and can therefore support pluggable
+ *    event sources. This is the only work that occurs in the main thread.
+ *
+ *  - We normalize and de-duplicate events to account for browser quirks. This
+ *    may be done in the worker thread.
+ *
+ *  - Forward these native events (with the associated top-level type used to
+ *    trap it) to `EventPluginHub`, which in turn will ask plugins if they want
+ *    to extract any synthetic events.
+ *
+ *  - The `EventPluginHub` will then process each event by annotating them with
+ *    "dispatches", a sequence of listeners and IDs that care about that event.
+ *
+ *  - The `EventPluginHub` then dispatches the events.
+ *
+ * Overview of React and the event system:
+ *
+ * +------------+    .
+ * |    DOM     |    .
+ * +------------+    .
+ *       |           .
+ *       v           .
+ * +------------+    .
+ * | ReactEvent |    .
+ * |  Listener  |    .
+ * +------------+    .                         +-----------+
+ *       |           .               +--------+|SimpleEvent|
+ *       |           .               |         |Plugin     |
+ * +-----|------+    .               v         +-----------+
+ * |     |      |    .    +--------------+                    +------------+
+ * |     +-----------.--->|EventPluginHub|                    |    Event   |
+ * |            |    .    |              |     +-----------+  | Propagators|
+ * | ReactEvent |    .    |              |     |TapEvent   |  |------------|
+ * |  Emitter   |    .    |              |<---+|Plugin     |  |other plugin|
+ * |            |    .    |              |     +-----------+  |  utilities |
+ * |     +-----------.--->|              |                    +------------+
+ * |     |      |    .    +--------------+
+ * +-----|------+    .                ^        +-----------+
+ *       |           .                |        |Enter/Leave|
+ *       +           .                +-------+|Plugin     |
+ * +-------------+   .                         +-----------+
+ * | application |   .
+ * |-------------|   .
+ * |             |   .
+ * |             |   .
+ * +-------------+   .
+ *                   .
+ *    React Core     .  General Purpose Event Plugin System
+ */
+
+var hasEventPageXY;
+var alreadyListeningTo = {};
+var isMonitoringScrollValue = false;
+var reactTopListenersCounter = 0;
+
+// For events like 'submit' which don't consistently bubble (which we trap at a
+// lower node than `document`), binding at `document` would cause duplicate
+// events so we don't include them here
+var topEventMapping = {
+  topAbort: 'abort',
+  topAnimationEnd: getVendorPrefixedEventName('animationend') || 'animationend',
+  topAnimationIteration: getVendorPrefixedEventName('animationiteration') || 'animationiteration',
+  topAnimationStart: getVendorPrefixedEventName('animationstart') || 'animationstart',
+  topBlur: 'blur',
+  topCanPlay: 'canplay',
+  topCanPlayThrough: 'canplaythrough',
+  topChange: 'change',
+  topClick: 'click',
+  topCompositionEnd: 'compositionend',
+  topCompositionStart: 'compositionstart',
+  topCompositionUpdate: 'compositionupdate',
+  topContextMenu: 'contextmenu',
+  topCopy: 'copy',
+  topCut: 'cut',
+  topDoubleClick: 'dblclick',
+  topDrag: 'drag',
+  topDragEnd: 'dragend',
+  topDragEnter: 'dragenter',
+  topDragExit: 'dragexit',
+  topDragLeave: 'dragleave',
+  topDragOver: 'dragover',
+  topDragStart: 'dragstart',
+  topDrop: 'drop',
+  topDurationChange: 'durationchange',
+  topEmptied: 'emptied',
+  topEncrypted: 'encrypted',
+  topEnded: 'ended',
+  topError: 'error',
+  topFocus: 'focus',
+  topInput: 'input',
+  topKeyDown: 'keydown',
+  topKeyPress: 'keypress',
+  topKeyUp: 'keyup',
+  topLoadedData: 'loadeddata',
+  topLoadedMetadata: 'loadedmetadata',
+  topLoadStart: 'loadstart',
+  topMouseDown: 'mousedown',
+  topMouseMove: 'mousemove',
+  topMouseOut: 'mouseout',
+  topMouseOver: 'mouseover',
+  topMouseUp: 'mouseup',
+  topPaste: 'paste',
+  topPause: 'pause',
+  topPlay: 'play',
+  topPlaying: 'playing',
+  topProgress: 'progress',
+  topRateChange: 'ratechange',
+  topScroll: 'scroll',
+  topSeeked: 'seeked',
+  topSeeking: 'seeking',
+  topSelectionChange: 'selectionchange',
+  topStalled: 'stalled',
+  topSuspend: 'suspend',
+  topTextInput: 'textInput',
+  topTimeUpdate: 'timeupdate',
+  topTouchCancel: 'touchcancel',
+  topTouchEnd: 'touchend',
+  topTouchMove: 'touchmove',
+  topTouchStart: 'touchstart',
+  topTransitionEnd: getVendorPrefixedEventName('transitionend') || 'transitionend',
+  topVolumeChange: 'volumechange',
+  topWaiting: 'waiting',
+  topWheel: 'wheel'
+};
+
+/**
+ * To ensure no conflicts with other potential React instances on the page
+ */
+var topListenersIDKey = '_reactListenersID' + String(Math.random()).slice(2);
+
+function getListeningForDocument(mountAt) {
+  // In IE8, `mountAt` is a host object and doesn't have `hasOwnProperty`
+  // directly.
+  if (!Object.prototype.hasOwnProperty.call(mountAt, topListenersIDKey)) {
+    mountAt[topListenersIDKey] = reactTopListenersCounter++;
+    alreadyListeningTo[mountAt[topListenersIDKey]] = {};
+  }
+  return alreadyListeningTo[mountAt[topListenersIDKey]];
+}
+
+/**
+ * `ReactBrowserEventEmitter` is used to attach top-level event listeners. For
+ * example:
+ *
+ *   EventPluginHub.putListener('myID', 'onClick', myFunction);
+ *
+ * This would allocate a "registration" of `('onClick', myFunction)` on 'myID'.
+ *
+ * @internal
+ */
+var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
+
+  /**
+   * Injectable event backend
+   */
+  ReactEventListener: null,
+
+  injection: {
+    /**
+     * @param {object} ReactEventListener
+     */
+    injectReactEventListener: function (ReactEventListener) {
+      ReactEventListener.setHandleTopLevel(ReactBrowserEventEmitter.handleTopLevel);
+      ReactBrowserEventEmitter.ReactEventListener = ReactEventListener;
+    }
+  },
+
+  /**
+   * Sets whether or not any created callbacks should be enabled.
+   *
+   * @param {boolean} enabled True if callbacks should be enabled.
+   */
+  setEnabled: function (enabled) {
+    if (ReactBrowserEventEmitter.ReactEventListener) {
+      ReactBrowserEventEmitter.ReactEventListener.setEnabled(enabled);
+    }
+  },
+
+  /**
+   * @return {boolean} True if callbacks are enabled.
+   */
+  isEnabled: function () {
+    return !!(ReactBrowserEventEmitter.ReactEventListener && ReactBrowserEventEmitter.ReactEventListener.isEnabled());
+  },
+
+  /**
+   * We listen for bubbled touch events on the document object.
+   *
+   * Firefox v8.01 (and possibly others) exhibited strange behavior when
+   * mounting `onmousemove` events at some node that was not the document
+   * element. The symptoms were that if your mouse is not moving over something
+   * contained within that mount point (for example on the background) the
+   * top-level listeners for `onmousemove` won't be called. However, if you
+   * register the `mousemove` on the document object, then it will of course
+   * catch all `mousemove`s. This along with iOS quirks, justifies restricting
+   * top-level listeners to the document object only, at least for these
+   * movement types of events and possibly all events.
+   *
+   * @see http://www.quirksmode.org/blog/archives/2010/09/click_event_del.html
+   *
+   * Also, `keyup`/`keypress`/`keydown` do not bubble to the window on IE, but
+   * they bubble to document.
+   *
+   * @param {string} registrationName Name of listener (e.g. `onClick`).
+   * @param {object} contentDocumentHandle Document which owns the container
+   */
+  listenTo: function (registrationName, contentDocumentHandle) {
+    var mountAt = contentDocumentHandle;
+    var isListening = getListeningForDocument(mountAt);
+    var dependencies = EventPluginRegistry.registrationNameDependencies[registrationName];
+
+    var topLevelTypes = EventConstants.topLevelTypes;
+    for (var i = 0; i < dependencies.length; i++) {
+      var dependency = dependencies[i];
+      if (!(isListening.hasOwnProperty(dependency) && isListening[dependency])) {
+        if (dependency === topLevelTypes.topWheel) {
+          if (isEventSupported('wheel')) {
+            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'wheel', mountAt);
+          } else if (isEventSupported('mousewheel')) {
+            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'mousewheel', mountAt);
+          } else {
+            // Firefox needs to capture a different mouse scroll event.
+            // @see http://www.quirksmode.org/dom/events/tests/scroll.html
+            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'DOMMouseScroll', mountAt);
+          }
+        } else if (dependency === topLevelTypes.topScroll) {
+
+          if (isEventSupported('scroll', true)) {
+            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topScroll, 'scroll', mountAt);
+          } else {
+            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topScroll, 'scroll', ReactBrowserEventEmitter.ReactEventListener.WINDOW_HANDLE);
+          }
+        } else if (dependency === topLevelTypes.topFocus || dependency === topLevelTypes.topBlur) {
+
+          if (isEventSupported('focus', true)) {
+            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topFocus, 'focus', mountAt);
+            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topBlur, 'blur', mountAt);
+          } else if (isEventSupported('focusin')) {
+            // IE has `focusin` and `focusout` events which bubble.
+            // @see http://www.quirksmode.org/blog/archives/2008/04/delegating_the.html
+            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topFocus, 'focusin', mountAt);
+            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topBlur, 'focusout', mountAt);
+          }
+
+          // to make sure blur and focus event listeners are only attached once
+          isListening[topLevelTypes.topBlur] = true;
+          isListening[topLevelTypes.topFocus] = true;
+        } else if (topEventMapping.hasOwnProperty(dependency)) {
+          ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(dependency, topEventMapping[dependency], mountAt);
+        }
+
+        isListening[dependency] = true;
+      }
+    }
+  },
+
+  trapBubbledEvent: function (topLevelType, handlerBaseName, handle) {
+    return ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelType, handlerBaseName, handle);
+  },
+
+  trapCapturedEvent: function (topLevelType, handlerBaseName, handle) {
+    return ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelType, handlerBaseName, handle);
+  },
+
+  /**
+   * Protect against document.createEvent() returning null
+   * Some popup blocker extensions appear to do this:
+   * https://github.com/facebook/react/issues/6887
+   */
+  supportsEventPageXY: function () {
+    if (!document.createEvent) {
+      return false;
+    }
+    var ev = document.createEvent('MouseEvent');
+    return ev != null && 'pageX' in ev;
+  },
+
+  /**
+   * Listens to window scroll and resize events. We cache scroll values so that
+   * application code can access them without triggering reflows.
+   *
+   * ViewportMetrics is only used by SyntheticMouse/TouchEvent and only when
+   * pageX/pageY isn't supported (legacy browsers).
+   *
+   * NOTE: Scroll events do not bubble.
+   *
+   * @see http://www.quirksmode.org/dom/events/scroll.html
+   */
+  ensureScrollValueMonitoring: function () {
+    if (hasEventPageXY === undefined) {
+      hasEventPageXY = ReactBrowserEventEmitter.supportsEventPageXY();
+    }
+    if (!hasEventPageXY && !isMonitoringScrollValue) {
+      var refresh = ViewportMetrics.refreshScrollValues;
+      ReactBrowserEventEmitter.ReactEventListener.monitorScrollValue(refresh);
+      isMonitoringScrollValue = true;
+    }
+  }
+
+});
+
+module.exports = ReactBrowserEventEmitter;
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule ReactPropTypeLocations
+ */
+
+'use strict';
+
+var keyMirror = __webpack_require__(41);
+
+var ReactPropTypeLocations = keyMirror({
+  prop: null,
+  context: null,
+  childContext: null
+});
+
+module.exports = ReactPropTypeLocations;
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule SyntheticMouseEvent
+ */
+
+'use strict';
+
+var SyntheticUIEvent = __webpack_require__(39);
+var ViewportMetrics = __webpack_require__(124);
+
+var getEventModifierState = __webpack_require__(78);
+
+/**
+ * @interface MouseEvent
+ * @see http://www.w3.org/TR/DOM-Level-3-Events/
+ */
+var MouseEventInterface = {
+  screenX: null,
+  screenY: null,
+  clientX: null,
+  clientY: null,
+  ctrlKey: null,
+  shiftKey: null,
+  altKey: null,
+  metaKey: null,
+  getModifierState: getEventModifierState,
+  button: function (event) {
+    // Webkit, Firefox, IE9+
+    // which:  1 2 3
+    // button: 0 1 2 (standard)
+    var button = event.button;
+    if ('which' in event) {
+      return button;
+    }
+    // IE<9
+    // which:  undefined
+    // button: 0 0 0
+    // button: 1 4 2 (onmouseup)
+    return button === 2 ? 2 : button === 4 ? 1 : 0;
+  },
+  buttons: null,
+  relatedTarget: function (event) {
+    return event.relatedTarget || (event.fromElement === event.srcElement ? event.toElement : event.fromElement);
+  },
+  // "Proprietary" Interface.
+  pageX: function (event) {
+    return 'pageX' in event ? event.pageX : event.clientX + ViewportMetrics.currentScrollLeft;
+  },
+  pageY: function (event) {
+    return 'pageY' in event ? event.pageY : event.clientY + ViewportMetrics.currentScrollTop;
+  }
+};
+
+/**
+ * @param {object} dispatchConfig Configuration used to dispatch this event.
+ * @param {string} dispatchMarker Marker identifying the event target.
+ * @param {object} nativeEvent Native browser event.
+ * @extends {SyntheticUIEvent}
+ */
+function SyntheticMouseEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
+  return SyntheticUIEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);
+}
+
+SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
+
+module.exports = SyntheticMouseEvent;
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+"use strict";
+/**
+ * Copyright 2016-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * Based on the escape-html library, which is used under the MIT License below:
+ *
+ * Copyright (c) 2012-2013 TJ Holowaychuk
+ * Copyright (c) 2015 Andreas Lubbe
+ * Copyright (c) 2015 Tiancheng "Timothy" Gu
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * 'Software'), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * @providesModule escapeTextContentForBrowser
+ */
+
+'use strict';
+
+// code copied and modified from escape-html
+/**
+ * Module variables.
+ * @private
+ */
+
+var matchHtmlRegExp = /["'&<>]/;
+
+/**
+ * Escape special characters in the given string of html.
+ *
+ * @param  {string} string The string to escape for inserting into HTML
+ * @return {string}
+ * @public
+ */
+
+function escapeHtml(string) {
+  var str = '' + string;
+  var match = matchHtmlRegExp.exec(str);
+
+  if (!match) {
+    return str;
+  }
+
+  var escape;
+  var html = '';
+  var index = 0;
+  var lastIndex = 0;
+
+  for (index = match.index; index < str.length; index++) {
+    switch (str.charCodeAt(index)) {
+      case 34:
+        // "
+        escape = '&quot;';
+        break;
+      case 38:
+        // &
+        escape = '&amp;';
+        break;
+      case 39:
+        // '
+        escape = '&#x27;'; // modified from escape-html; used to be '&#39'
+        break;
+      case 60:
+        // <
+        escape = '&lt;';
+        break;
+      case 62:
+        // >
+        escape = '&gt;';
+        break;
+      default:
+        continue;
+    }
+
+    if (lastIndex !== index) {
+      html += str.substring(lastIndex, index);
+    }
+
+    lastIndex = index + 1;
+    html += escape;
+  }
+
+  return lastIndex !== index ? html + str.substring(lastIndex, index) : html;
+}
+// end code copied and modified from escape-html
+
+
+/**
+ * Escapes text to prevent scripting attacks.
+ *
+ * @param {*} text Text value to escape.
+ * @return {string} An escaped string.
+ */
+function escapeTextContentForBrowser(text) {
+  if (typeof text === 'boolean' || typeof text === 'number') {
+    // this shortcircuit helps perf for types that we know will never have
+    // special characters, especially given that this function is used often
+    // for numeric dom ids.
+    return '' + text;
+  }
+  return escapeHtml(text);
+}
+
+module.exports = escapeTextContentForBrowser;
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @providesModule setInnerHTML
+ */
+
+'use strict';
+
+var ExecutionEnvironment = __webpack_require__(7);
+var DOMNamespaces = __webpack_require__(64);
+
+var WHITESPACE_TEST = /^[ \r\n\t\f]/;
+var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
+
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(76);
+
+// SVG temp container for IE lacking innerHTML
+var reusableSVGContainer;
+
+/**
+ * Set the innerHTML property of a node, ensuring that whitespace is preserved
+ * even in IE8.
+ *
+ * @param {DOMElement} node
+ * @param {string} html
+ * @internal
+ */
+var setInnerHTML = createMicrosoftUnsafeLocalFunction(function (node, html) {
+  // IE does not have innerHTML for SVG nodes, so instead we inject the
+  // new markup in a temp node and then move the child nodes across into
+  // the target node
+  if (node.namespaceURI === DOMNamespaces.svg && !('innerHTML' in node)) {
+    reusableSVGContainer = reusableSVGContainer || document.createElement('div');
+    reusableSVGContainer.innerHTML = '<svg>' + html + '</svg>';
+    var svgNode = reusableSVGContainer.firstChild;
+    while (svgNode.firstChild) {
+      node.appendChild(svgNode.firstChild);
+    }
+  } else {
+    node.innerHTML = html;
+  }
+});
+
+if (ExecutionEnvironment.canUseDOM) {
+  // IE8: When updating a just created node with innerHTML only leading
+  // whitespace is removed. When updating an existing node with innerHTML
+  // whitespace in root TextNodes is also collapsed.
+  // @see quirksmode.org/bugreports/archives/2004/11/innerhtml_and_t.html
+
+  // Feature detection; only IE8 is known to behave improperly like this.
+  var testElement = document.createElement('div');
+  testElement.innerHTML = ' ';
+  if (testElement.innerHTML === '') {
+    setInnerHTML = function (node, html) {
+      // Magic theory: IE8 supposedly differentiates between added and updated
+      // nodes when processing innerHTML, innerHTML on updated nodes suffers
+      // from worse whitespace behavior. Re-adding a node like this triggers
+      // the initial and more favorable whitespace behavior.
+      // TODO: What to do on a detached node?
+      if (node.parentNode) {
+        node.parentNode.replaceChild(node, node);
+      }
+
+      // We also implement a workaround for non-visible tags disappearing into
+      // thin air on IE8, this only happens if there is no visible text
+      // in-front of the non-visible tags. Piggyback on the whitespace fix
+      // and simply check if any non-visible tags appear in the source.
+      if (WHITESPACE_TEST.test(html) || html[0] === '<' && NONVISIBLE_TEST.test(html)) {
+        // Recover leading whitespace by temporarily prepending any character.
+        // \uFEFF has the potential advantage of being zero-width/invisible.
+        // UglifyJS drops U+FEFF chars when parsing, so use String.fromCharCode
+        // in hopes that this is preserved even if "\uFEFF" is transformed to
+        // the actual Unicode character (by Babel, for example).
+        // https://github.com/mishoo/UglifyJS2/blob/v2.4.20/lib/parse.js#L216
+        node.innerHTML = String.fromCharCode(0xFEFF) + html;
+
+        // deleteData leaves an empty `TextNode` which offsets the index of all
+        // children. Definitely want to avoid this.
+        var textNode = node.firstChild;
+        if (textNode.data.length === 1) {
+          node.removeChild(textNode);
+        } else {
+          textNode.deleteData(0, 1);
+        }
+      } else {
+        node.innerHTML = html;
+      }
+    };
+  }
+  testElement = null;
+}
+
+module.exports = setInnerHTML;
+
+/***/ },
+/* 54 */
+/***/ function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() { return this; })();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ },
+/* 55 */
+/***/ function(module, exports) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @typechecks
+ * 
+ */
+
+/*eslint-disable no-self-compare */
+
+'use strict';
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  // SameValue algorithm
+  if (x === y) {
+    // Steps 1-5, 7-10
+    // Steps 6.b-6.e: +0 != -0
+    // Added the nonzero y check to make Flow happy, but it is redundant
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    // Step 6.a: NaN == NaN
+    return x !== x && y !== y;
+  }
+}
+
+/**
+ * Performs equality by iterating through keys on an object and returning false
+ * when any key has values which are not strictly equal between the arguments.
+ * Returns true when the values of all keys are strictly equal.
+ */
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) {
+    return true;
+  }
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  // Test for A's keys different from B.
+  for (var i = 0; i < keysA.length; i++) {
+    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+module.exports = shallowEqual;
+
+/***/ },
+/* 56 */
+/***/ function(module, exports) {
+
+"use strict";
+'use strict';
+
+exports.__esModule = true;
+exports.addEventListener = addEventListener;
+exports.removeEventListener = removeEventListener;
+exports.getHashPath = getHashPath;
+exports.replaceHashPath = replaceHashPath;
+exports.getWindowPath = getWindowPath;
+exports.go = go;
+exports.getUserConfirmation = getUserConfirmation;
+exports.supportsHistory = supportsHistory;
+exports.supportsGoWithoutReloadUsingHash = supportsGoWithoutReloadUsingHash;
+
+function addEventListener(node, event, listener) {
+  if (node.addEventListener) {
+    node.addEventListener(event, listener, false);
+  } else {
+    node.attachEvent('on' + event, listener);
+  }
+}
+
+function removeEventListener(node, event, listener) {
+  if (node.removeEventListener) {
+    node.removeEventListener(event, listener, false);
+  } else {
+    node.detachEvent('on' + event, listener);
+  }
+}
+
+function getHashPath() {
+  // We can't use window.location.hash here because it's not
+  // consistent across browsers - Firefox will pre-decode it!
+  return window.location.href.split('#')[1] || '';
+}
+
+function replaceHashPath(path) {
+  window.location.replace(window.location.pathname + window.location.search + '#' + path);
+}
+
+function getWindowPath() {
+  return window.location.pathname + window.location.search + window.location.hash;
+}
+
+function go(n) {
+  if (n) window.history.go(n);
+}
+
+function getUserConfirmation(message, callback) {
+  callback(window.confirm(message));
+}
+
+/**
+ * Returns true if the HTML5 history API is supported. Taken from Modernizr.
+ *
+ * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+ * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
+ * changed to avoid false negatives for Windows Phones: https://github.com/rackt/react-router/issues/586
+ */
+
+function supportsHistory() {
+  var ua = navigator.userAgent;
+  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) {
+    return false;
+  }
+  return window.history && 'pushState' in window.history;
+}
+
+/**
+ * Returns false if using go(n) with hash history causes a full page reload.
+ */
+
+function supportsGoWithoutReloadUsingHash() {
+  var ua = navigator.userAgent;
+  return ua.indexOf('Firefox') === -1;
+}
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+exports.__esModule = true;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _warning = __webpack_require__(14);
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function deprecate(fn, message) {
+  return function () {
+    process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] ' + message) : undefined;
+    return fn.apply(this, arguments);
+  };
+}
+
+exports['default'] = deprecate;
+module.exports = exports['default'];
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+exports.__esModule = true;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _warning = __webpack_require__(14);
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function runTransitionHook(hook, location, callback) {
+  var result = hook(location, callback);
+
+  if (hook.length < 2) {
+    // Assume the hook runs synchronously and automatically
+    // call the callback with the return value.
+    callback(result);
+  } else {
+    process.env.NODE_ENV !== 'production' ? _warning2['default'](result === undefined, 'You should not "return" in a transition hook with a callback argument; call the callback instead') : undefined;
+  }
+}
+
+exports['default'] = runTransitionHook;
+module.exports = exports['default'];
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
 /* 59 */
@@ -23820,7 +23820,7 @@ exports.router = exports.routes = exports.route = exports.components = exports.c
 
 var _react = __webpack_require__(4);
 
-var _deprecateObjectProperties = __webpack_require__(45);
+var _deprecateObjectProperties = __webpack_require__(46);
 
 var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 
@@ -23933,21 +23933,21 @@ var _routerWarning = __webpack_require__(8);
 
 var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-var _computeChangedRoutes2 = __webpack_require__(206);
+var _computeChangedRoutes2 = __webpack_require__(216);
 
 var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 
-var _TransitionUtils = __webpack_require__(203);
+var _TransitionUtils = __webpack_require__(213);
 
-var _isActive2 = __webpack_require__(210);
+var _isActive2 = __webpack_require__(220);
 
 var _isActive3 = _interopRequireDefault(_isActive2);
 
-var _getComponents = __webpack_require__(207);
+var _getComponents = __webpack_require__(217);
 
 var _getComponents2 = _interopRequireDefault(_getComponents);
 
-var _matchRoutes = __webpack_require__(212);
+var _matchRoutes = __webpack_require__(222);
 
 var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 
@@ -24235,7 +24235,7 @@ module.exports = exports['default'];
 exports.__esModule = true;
 exports.createMemoryHistory = exports.hashHistory = exports.browserHistory = exports.applyRouterMiddleware = exports.formatPattern = exports.useRouterHistory = exports.match = exports.routerShape = exports.locationShape = exports.PropTypes = exports.RoutingContext = exports.RouterContext = exports.createRoutes = exports.useRoutes = exports.RouteContext = exports.Lifecycle = exports.History = exports.Route = exports.Redirect = exports.IndexRoute = exports.IndexRedirect = exports.withRouter = exports.IndexLink = exports.Link = exports.Router = undefined;
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
 Object.defineProperty(exports, 'createRoutes', {
   enumerable: true,
@@ -24259,7 +24259,7 @@ Object.defineProperty(exports, 'routerShape', {
   }
 });
 
-var _PatternUtils = __webpack_require__(29);
+var _PatternUtils = __webpack_require__(31);
 
 Object.defineProperty(exports, 'formatPattern', {
   enumerable: true,
@@ -24268,85 +24268,85 @@ Object.defineProperty(exports, 'formatPattern', {
   }
 });
 
-var _Router2 = __webpack_require__(201);
+var _Router2 = __webpack_require__(211);
 
 var _Router3 = _interopRequireDefault(_Router2);
 
-var _Link2 = __webpack_require__(99);
+var _Link2 = __webpack_require__(100);
 
 var _Link3 = _interopRequireDefault(_Link2);
 
-var _IndexLink2 = __webpack_require__(195);
+var _IndexLink2 = __webpack_require__(205);
 
 var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 
-var _withRouter2 = __webpack_require__(214);
+var _withRouter2 = __webpack_require__(224);
 
 var _withRouter3 = _interopRequireDefault(_withRouter2);
 
-var _IndexRedirect2 = __webpack_require__(196);
+var _IndexRedirect2 = __webpack_require__(206);
 
 var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 
-var _IndexRoute2 = __webpack_require__(197);
+var _IndexRoute2 = __webpack_require__(207);
 
 var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 
-var _Redirect2 = __webpack_require__(100);
+var _Redirect2 = __webpack_require__(101);
 
 var _Redirect3 = _interopRequireDefault(_Redirect2);
 
-var _Route2 = __webpack_require__(199);
+var _Route2 = __webpack_require__(209);
 
 var _Route3 = _interopRequireDefault(_Route2);
 
-var _History2 = __webpack_require__(194);
+var _History2 = __webpack_require__(204);
 
 var _History3 = _interopRequireDefault(_History2);
 
-var _Lifecycle2 = __webpack_require__(198);
+var _Lifecycle2 = __webpack_require__(208);
 
 var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
 
-var _RouteContext2 = __webpack_require__(200);
+var _RouteContext2 = __webpack_require__(210);
 
 var _RouteContext3 = _interopRequireDefault(_RouteContext2);
 
-var _useRoutes2 = __webpack_require__(213);
+var _useRoutes2 = __webpack_require__(223);
 
 var _useRoutes3 = _interopRequireDefault(_useRoutes2);
 
-var _RouterContext2 = __webpack_require__(44);
+var _RouterContext2 = __webpack_require__(45);
 
 var _RouterContext3 = _interopRequireDefault(_RouterContext2);
 
-var _RoutingContext2 = __webpack_require__(202);
+var _RoutingContext2 = __webpack_require__(212);
 
 var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
 
 var _PropTypes3 = _interopRequireDefault(_PropTypes2);
 
-var _match2 = __webpack_require__(211);
+var _match2 = __webpack_require__(221);
 
 var _match3 = _interopRequireDefault(_match2);
 
-var _useRouterHistory2 = __webpack_require__(105);
+var _useRouterHistory2 = __webpack_require__(106);
 
 var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 
-var _applyRouterMiddleware2 = __webpack_require__(204);
+var _applyRouterMiddleware2 = __webpack_require__(214);
 
 var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
 
-var _browserHistory2 = __webpack_require__(205);
+var _browserHistory2 = __webpack_require__(215);
 
 var _browserHistory3 = _interopRequireDefault(_browserHistory2);
 
-var _hashHistory2 = __webpack_require__(209);
+var _hashHistory2 = __webpack_require__(219);
 
 var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 
-var _createMemoryHistory2 = __webpack_require__(102);
+var _createMemoryHistory2 = __webpack_require__(103);
 
 var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 
@@ -24405,15 +24405,15 @@ exports.createMemoryHistory = _createMemoryHistory3.default;
 
 'use strict';
 
-var DOMLazyTree = __webpack_require__(30);
-var Danger = __webpack_require__(219);
-var ReactMultiChildUpdateTypes = __webpack_require__(119);
+var DOMLazyTree = __webpack_require__(32);
+var Danger = __webpack_require__(229);
+var ReactMultiChildUpdateTypes = __webpack_require__(120);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(10);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(76);
-var setInnerHTML = __webpack_require__(52);
-var setTextContent = __webpack_require__(131);
+var setInnerHTML = __webpack_require__(53);
+var setTextContent = __webpack_require__(132);
 
 function getNodeAfter(parentNode, node) {
   // Special case for text components, which return [open, close] comments
@@ -24634,7 +24634,7 @@ module.exports = DOMNamespaces;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventConstants = __webpack_require__(16);
+var EventConstants = __webpack_require__(18);
 var ReactErrorUtils = __webpack_require__(70);
 
 var invariant = __webpack_require__(1);
@@ -24935,8 +24935,8 @@ module.exports = KeyEscapeUtils;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypes = __webpack_require__(121);
-var ReactPropTypeLocations = __webpack_require__(49);
+var ReactPropTypes = __webpack_require__(122);
+var ReactPropTypeLocations = __webpack_require__(50);
 var ReactPropTypesSecret = __webpack_require__(73);
 
 var invariant = __webpack_require__(1);
@@ -25081,7 +25081,7 @@ var _prodInvariant = __webpack_require__(3);
 var ReactNoopUpdateQueue = __webpack_require__(71);
 
 var canDefineProperty = __webpack_require__(75);
-var emptyObject = __webpack_require__(34);
+var emptyObject = __webpack_require__(35);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -25494,10 +25494,10 @@ module.exports = ReactPropTypesSecret;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactCurrentOwner = __webpack_require__(17);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactCurrentOwner = __webpack_require__(19);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -26103,7 +26103,7 @@ module.exports = shouldUpdateReactComponent;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactCurrentOwner = __webpack_require__(19);
 var ReactElement = __webpack_require__(13);
 
 var getIteratorFn = __webpack_require__(80);
@@ -26735,7 +26735,7 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_less__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_less__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_less__);
 
 
@@ -26755,6 +26755,45 @@ var App = function App(_ref) {
 
 /***/ },
 /* 87 */
+/***/ function(module, exports) {
+
+var charenc = {
+  // UTF-8 encoding
+  utf8: {
+    // Convert a string to a byte array
+    stringToBytes: function(str) {
+      return charenc.bin.stringToBytes(unescape(encodeURIComponent(str)));
+    },
+
+    // Convert a byte array to a string
+    bytesToString: function(bytes) {
+      return decodeURIComponent(escape(charenc.bin.bytesToString(bytes)));
+    }
+  },
+
+  // Binary encoding
+  bin: {
+    // Convert a string to a byte array
+    stringToBytes: function(str) {
+      for (var bytes = [], i = 0; i < str.length; i++)
+        bytes.push(str.charCodeAt(i) & 0xFF);
+      return bytes;
+    },
+
+    // Convert a byte array to a string
+    bytesToString: function(bytes) {
+      for (var str = [], i = 0; i < bytes.length; i++)
+        str.push(String.fromCharCode(bytes[i]));
+      return str.join('');
+    }
+  }
+};
+
+module.exports = charenc;
+
+
+/***/ },
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26844,7 +26883,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -26876,7 +26915,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -26916,7 +26955,7 @@ function getActiveElement() /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26996,7 +27035,7 @@ function readState(key) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27014,9 +27053,9 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _ExecutionEnvironment = __webpack_require__(42);
 
-var _DOMUtils = __webpack_require__(55);
+var _DOMUtils = __webpack_require__(56);
 
-var _createHistory = __webpack_require__(93);
+var _createHistory = __webpack_require__(94);
 
 var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -27043,7 +27082,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27063,17 +27102,17 @@ var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _Actions = __webpack_require__(28);
+var _Actions = __webpack_require__(30);
 
 var _PathUtils = __webpack_require__(25);
 
 var _ExecutionEnvironment = __webpack_require__(42);
 
-var _DOMUtils = __webpack_require__(55);
+var _DOMUtils = __webpack_require__(56);
 
-var _DOMStateStorage = __webpack_require__(90);
+var _DOMStateStorage = __webpack_require__(91);
 
-var _createDOMHistory = __webpack_require__(91);
+var _createDOMHistory = __webpack_require__(92);
 
 var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -27296,7 +27335,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 93 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27312,25 +27351,25 @@ var _warning = __webpack_require__(14);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _deepEqual = __webpack_require__(160);
+var _deepEqual = __webpack_require__(168);
 
 var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
 var _PathUtils = __webpack_require__(25);
 
-var _AsyncUtils = __webpack_require__(177);
+var _AsyncUtils = __webpack_require__(185);
 
-var _Actions = __webpack_require__(28);
+var _Actions = __webpack_require__(30);
 
-var _createLocation2 = __webpack_require__(179);
+var _createLocation2 = __webpack_require__(187);
 
 var _createLocation3 = _interopRequireDefault(_createLocation2);
 
-var _runTransitionHook = __webpack_require__(57);
+var _runTransitionHook = __webpack_require__(58);
 
 var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-var _deprecate = __webpack_require__(56);
+var _deprecate = __webpack_require__(57);
 
 var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -27591,7 +27630,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27611,11 +27650,11 @@ var _ExecutionEnvironment = __webpack_require__(42);
 
 var _PathUtils = __webpack_require__(25);
 
-var _runTransitionHook = __webpack_require__(57);
+var _runTransitionHook = __webpack_require__(58);
 
 var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-var _deprecate = __webpack_require__(56);
+var _deprecate = __webpack_require__(57);
 
 var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -27756,7 +27795,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -27813,12 +27852,12 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__getPrototype_js__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isObjectLike_js__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__getPrototype_js__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__isObjectLike_js__ = __webpack_require__(192);
 
 
 
@@ -27890,7 +27929,7 @@ function isPlainObject(value) {
 
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27907,7 +27946,7 @@ exports["default"] = _react.PropTypes.shape({
 });
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -27937,7 +27976,7 @@ function warning(message) {
 }
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28120,7 +28159,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 100 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28136,9 +28175,9 @@ var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
-var _PatternUtils = __webpack_require__(29);
+var _PatternUtils = __webpack_require__(31);
 
 var _InternalPropTypes = __webpack_require__(26);
 
@@ -28229,7 +28268,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 101 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28242,7 +28281,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 exports.createRouterObject = createRouterObject;
 exports.createRoutingHistory = createRoutingHistory;
 
-var _deprecateObjectProperties = __webpack_require__(45);
+var _deprecateObjectProperties = __webpack_require__(46);
 
 var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 
@@ -28268,7 +28307,7 @@ function createRoutingHistory(history, transitionManager) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28281,11 +28320,11 @@ var _useQueries = __webpack_require__(43);
 
 var _useQueries2 = _interopRequireDefault(_useQueries);
 
-var _useBasename = __webpack_require__(94);
+var _useBasename = __webpack_require__(95);
 
 var _useBasename2 = _interopRequireDefault(_useBasename);
 
-var _createMemoryHistory = __webpack_require__(180);
+var _createMemoryHistory = __webpack_require__(188);
 
 var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
@@ -28306,7 +28345,7 @@ function createMemoryHistory(options) {
 module.exports = exports['default'];
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28320,7 +28359,7 @@ exports.default = function (createHistory) {
   return history;
 };
 
-var _useRouterHistory = __webpack_require__(105);
+var _useRouterHistory = __webpack_require__(106);
 
 var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 
@@ -28331,7 +28370,7 @@ var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.do
 module.exports = exports['default'];
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28343,7 +28382,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports.default = makeStateWithLocation;
 
-var _deprecateObjectProperties = __webpack_require__(45);
+var _deprecateObjectProperties = __webpack_require__(46);
 
 var _routerWarning = __webpack_require__(8);
 
@@ -28387,7 +28426,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 105 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28400,7 +28439,7 @@ var _useQueries = __webpack_require__(43);
 
 var _useQueries2 = _interopRequireDefault(_useQueries);
 
-var _useBasename = __webpack_require__(94);
+var _useBasename = __webpack_require__(95);
 
 var _useBasename2 = _interopRequireDefault(_useBasename);
 
@@ -28416,7 +28455,7 @@ function useRouterHistory(createHistory) {
 module.exports = exports['default'];
 
 /***/ },
-/* 106 */
+/* 107 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -28570,7 +28609,7 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28590,7 +28629,7 @@ module.exports = CSSProperty;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(22);
+var PooledClass = __webpack_require__(24);
 
 var invariant = __webpack_require__(1);
 
@@ -28683,7 +28722,7 @@ module.exports = CallbackQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 108 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28704,7 +28743,7 @@ var DOMProperty = __webpack_require__(27);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(10);
 
-var quoteAttributeValueForBrowser = __webpack_require__(282);
+var quoteAttributeValueForBrowser = __webpack_require__(292);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -28911,7 +28950,7 @@ module.exports = DOMPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 109 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28928,7 +28967,7 @@ module.exports = DOMPropertyOperations;
 
 'use strict';
 
-var PooledClass = __webpack_require__(22);
+var PooledClass = __webpack_require__(24);
 var ReactElement = __webpack_require__(13);
 
 var emptyFunction = __webpack_require__(11);
@@ -29108,7 +29147,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ },
-/* 110 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29130,14 +29169,14 @@ var _prodInvariant = __webpack_require__(3),
 
 var ReactComponent = __webpack_require__(68);
 var ReactElement = __webpack_require__(13);
-var ReactPropTypeLocations = __webpack_require__(49);
+var ReactPropTypeLocations = __webpack_require__(50);
 var ReactPropTypeLocationNames = __webpack_require__(72);
 var ReactNoopUpdateQueue = __webpack_require__(71);
 
-var emptyObject = __webpack_require__(34);
+var emptyObject = __webpack_require__(35);
 var invariant = __webpack_require__(1);
 var keyMirror = __webpack_require__(41);
-var keyOf = __webpack_require__(19);
+var keyOf = __webpack_require__(22);
 var warning = __webpack_require__(2);
 
 var MIXINS_KEY = keyOf({ mixins: null });
@@ -29847,7 +29886,7 @@ module.exports = ReactClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 111 */
+/* 112 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -29871,7 +29910,7 @@ var ReactDOMComponentFlags = {
 module.exports = ReactDOMComponentFlags;
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29890,10 +29929,10 @@ module.exports = ReactDOMComponentFlags;
 
 var _assign = __webpack_require__(5);
 
-var DisabledInputUtils = __webpack_require__(46);
+var DisabledInputUtils = __webpack_require__(47);
 var LinkedValueUtils = __webpack_require__(67);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var warning = __webpack_require__(2);
 
@@ -30079,7 +30118,7 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 113 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30103,12 +30142,12 @@ module.exports = ReactDOMSelect;
 
 'use strict';
 
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactCurrentOwner = __webpack_require__(19);
 var ReactComponentTreeHook = __webpack_require__(12);
 var ReactElement = __webpack_require__(13);
-var ReactPropTypeLocations = __webpack_require__(49);
+var ReactPropTypeLocations = __webpack_require__(50);
 
-var checkReactTypeSpec = __webpack_require__(125);
+var checkReactTypeSpec = __webpack_require__(126);
 
 var canDefineProperty = __webpack_require__(75);
 var getIteratorFn = __webpack_require__(80);
@@ -30314,7 +30353,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 114 */
+/* 115 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -30350,7 +30389,7 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ },
-/* 115 */
+/* 116 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -30378,7 +30417,7 @@ var ReactFeatureFlags = {
 module.exports = ReactFeatureFlags;
 
 /***/ },
-/* 116 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30461,7 +30500,7 @@ module.exports = ReactHostComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 117 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30478,11 +30517,11 @@ module.exports = ReactHostComponent;
 
 'use strict';
 
-var ReactDOMSelection = __webpack_require__(240);
+var ReactDOMSelection = __webpack_require__(250);
 
-var containsNode = __webpack_require__(165);
-var focusNode = __webpack_require__(88);
-var getActiveElement = __webpack_require__(89);
+var containsNode = __webpack_require__(173);
+var focusNode = __webpack_require__(89);
+var getActiveElement = __webpack_require__(90);
 
 function isInDocument(node) {
   return containsNode(document.documentElement, node);
@@ -30591,7 +30630,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ },
-/* 118 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30610,26 +30649,26 @@ module.exports = ReactInputSelection;
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(32);
 var DOMProperty = __webpack_require__(27);
-var ReactBrowserEventEmitter = __webpack_require__(48);
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactBrowserEventEmitter = __webpack_require__(49);
+var ReactCurrentOwner = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMContainerInfo = __webpack_require__(232);
-var ReactDOMFeatureFlags = __webpack_require__(235);
+var ReactDOMContainerInfo = __webpack_require__(242);
+var ReactDOMFeatureFlags = __webpack_require__(245);
 var ReactElement = __webpack_require__(13);
-var ReactFeatureFlags = __webpack_require__(115);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactFeatureFlags = __webpack_require__(116);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactMarkupChecksum = __webpack_require__(253);
-var ReactReconciler = __webpack_require__(31);
+var ReactMarkupChecksum = __webpack_require__(263);
+var ReactReconciler = __webpack_require__(33);
 var ReactUpdateQueue = __webpack_require__(74);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
-var emptyObject = __webpack_require__(34);
-var instantiateReactComponent = __webpack_require__(129);
+var emptyObject = __webpack_require__(35);
+var instantiateReactComponent = __webpack_require__(130);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(52);
+var setInnerHTML = __webpack_require__(53);
 var shouldUpdateReactComponent = __webpack_require__(82);
 var warning = __webpack_require__(2);
 
@@ -31132,7 +31171,7 @@ module.exports = ReactMount;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 119 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31170,7 +31209,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 module.exports = ReactMultiChildUpdateTypes;
 
 /***/ },
-/* 120 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31217,7 +31256,7 @@ module.exports = ReactNodeTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 121 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31655,7 +31694,7 @@ module.exports = ReactPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 122 */
+/* 123 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -31675,7 +31714,7 @@ module.exports = ReactPropTypes;
 module.exports = '15.3.2';
 
 /***/ },
-/* 123 */
+/* 124 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -31708,7 +31747,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ },
-/* 124 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31773,7 +31812,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 125 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31867,7 +31906,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 126 */
+/* 127 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -31904,7 +31943,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ },
-/* 127 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31921,7 +31960,7 @@ module.exports = forEachAccumulated;
 
 'use strict';
 
-var ReactNodeTypes = __webpack_require__(120);
+var ReactNodeTypes = __webpack_require__(121);
 
 function getHostComponentFromComposite(inst) {
   var type;
@@ -31940,7 +31979,7 @@ function getHostComponentFromComposite(inst) {
 module.exports = getHostComponentFromComposite;
 
 /***/ },
-/* 128 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31979,7 +32018,7 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ },
-/* 129 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31999,9 +32038,9 @@ module.exports = getTextContentAccessor;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
-var ReactCompositeComponent = __webpack_require__(228);
-var ReactEmptyComponent = __webpack_require__(114);
-var ReactHostComponent = __webpack_require__(116);
+var ReactCompositeComponent = __webpack_require__(238);
+var ReactEmptyComponent = __webpack_require__(115);
+var ReactHostComponent = __webpack_require__(117);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -32105,7 +32144,7 @@ module.exports = instantiateReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 130 */
+/* 131 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -32162,7 +32201,7 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ },
-/* 131 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32180,8 +32219,8 @@ module.exports = isTextInputElement;
 'use strict';
 
 var ExecutionEnvironment = __webpack_require__(7);
-var escapeTextContentForBrowser = __webpack_require__(51);
-var setInnerHTML = __webpack_require__(52);
+var escapeTextContentForBrowser = __webpack_require__(52);
+var setInnerHTML = __webpack_require__(53);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -32216,7 +32255,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setTextContent;
 
 /***/ },
-/* 132 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32257,12 +32296,12 @@ function compose() {
 }
 
 /***/ },
-/* 133 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(308);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ exports["b"] = createStore;
@@ -32516,7 +32555,7 @@ function createStore(reducer, preloadedState, enhancer) {
 }
 
 /***/ },
-/* 134 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32544,7 +32583,7 @@ function warning(message) {
 }
 
 /***/ },
-/* 135 */
+/* 136 */
 /***/ function(module, exports) {
 
 /**
@@ -32563,7 +32602,196 @@ module.exports = isObject;
 
 
 /***/ },
-/* 136 */
+/* 137 */
+/***/ function(module, exports, __webpack_require__) {
+
+//     uuid.js
+//
+//     Copyright (c) 2010-2012 Robert Kieffer
+//     MIT License - http://opensource.org/licenses/mit-license.php
+
+// Unique ID creation requires a high quality random # generator.  We feature
+// detect to determine the best RNG source, normalizing to a function that
+// returns 128-bits of randomness, since that's what's usually required
+var _rng = __webpack_require__(311);
+
+// Maps for number <-> hex string conversion
+var _byteToHex = [];
+var _hexToByte = {};
+for (var i = 0; i < 256; i++) {
+  _byteToHex[i] = (i + 0x100).toString(16).substr(1);
+  _hexToByte[_byteToHex[i]] = i;
+}
+
+// **`parse()` - Parse a UUID into it's component bytes**
+function parse(s, buf, offset) {
+  var i = (buf && offset) || 0, ii = 0;
+
+  buf = buf || [];
+  s.toLowerCase().replace(/[0-9a-f]{2}/g, function(oct) {
+    if (ii < 16) { // Don't overflow!
+      buf[i + ii++] = _hexToByte[oct];
+    }
+  });
+
+  // Zero out remaining bytes if string was short
+  while (ii < 16) {
+    buf[i + ii++] = 0;
+  }
+
+  return buf;
+}
+
+// **`unparse()` - Convert UUID byte array (ala parse()) into a string**
+function unparse(buf, offset) {
+  var i = offset || 0, bth = _byteToHex;
+  return  bth[buf[i++]] + bth[buf[i++]] +
+          bth[buf[i++]] + bth[buf[i++]] + '-' +
+          bth[buf[i++]] + bth[buf[i++]] + '-' +
+          bth[buf[i++]] + bth[buf[i++]] + '-' +
+          bth[buf[i++]] + bth[buf[i++]] + '-' +
+          bth[buf[i++]] + bth[buf[i++]] +
+          bth[buf[i++]] + bth[buf[i++]] +
+          bth[buf[i++]] + bth[buf[i++]];
+}
+
+// **`v1()` - Generate time-based UUID**
+//
+// Inspired by https://github.com/LiosK/UUID.js
+// and http://docs.python.org/library/uuid.html
+
+// random #'s we need to init node and clockseq
+var _seedBytes = _rng();
+
+// Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+var _nodeId = [
+  _seedBytes[0] | 0x01,
+  _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
+];
+
+// Per 4.2.2, randomize (14 bit) clockseq
+var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
+
+// Previous uuid creation time
+var _lastMSecs = 0, _lastNSecs = 0;
+
+// See https://github.com/broofa/node-uuid for API details
+function v1(options, buf, offset) {
+  var i = buf && offset || 0;
+  var b = buf || [];
+
+  options = options || {};
+
+  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
+
+  // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+  var msecs = options.msecs !== undefined ? options.msecs : new Date().getTime();
+
+  // Per 4.2.1.2, use count of uuid's generated during the current clock
+  // cycle to simulate higher resolution clock
+  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
+
+  // Time since last uuid creation (in msecs)
+  var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
+
+  // Per 4.2.1.2, Bump clockseq on clock regression
+  if (dt < 0 && options.clockseq === undefined) {
+    clockseq = clockseq + 1 & 0x3fff;
+  }
+
+  // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+  // time interval
+  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+    nsecs = 0;
+  }
+
+  // Per 4.2.1.2 Throw error if too many uuids are requested
+  if (nsecs >= 10000) {
+    throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
+  }
+
+  _lastMSecs = msecs;
+  _lastNSecs = nsecs;
+  _clockseq = clockseq;
+
+  // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+  msecs += 12219292800000;
+
+  // `time_low`
+  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+  b[i++] = tl >>> 24 & 0xff;
+  b[i++] = tl >>> 16 & 0xff;
+  b[i++] = tl >>> 8 & 0xff;
+  b[i++] = tl & 0xff;
+
+  // `time_mid`
+  var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
+  b[i++] = tmh >>> 8 & 0xff;
+  b[i++] = tmh & 0xff;
+
+  // `time_high_and_version`
+  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+  b[i++] = tmh >>> 16 & 0xff;
+
+  // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+  b[i++] = clockseq >>> 8 | 0x80;
+
+  // `clock_seq_low`
+  b[i++] = clockseq & 0xff;
+
+  // `node`
+  var node = options.node || _nodeId;
+  for (var n = 0; n < 6; n++) {
+    b[i + n] = node[n];
+  }
+
+  return buf ? buf : unparse(b);
+}
+
+// **`v4()` - Generate random UUID**
+
+// See https://github.com/broofa/node-uuid for API details
+function v4(options, buf, offset) {
+  // Deprecated - 'format' argument, as supported in v1.2
+  var i = buf && offset || 0;
+
+  if (typeof(options) == 'string') {
+    buf = options == 'binary' ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
+
+  var rnds = options.random || (options.rng || _rng)();
+
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii < 16; ii++) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || unparse(rnds);
+}
+
+// Export public API
+var uuid = v4;
+uuid.v1 = v1;
+uuid.v4 = v4;
+uuid.parse = parse;
+uuid.unparse = unparse;
+
+module.exports = uuid;
+
+
+/***/ },
+/* 138 */
 /***/ function(module, exports) {
 
 module.exports = function(module) {
@@ -32589,18 +32817,18 @@ module.exports = function(module) {
 
 
 /***/ },
-/* 137 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_configureRoutes__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_configureStore__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_configureRoutes__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_configureStore__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_components_App__ = __webpack_require__(86);
 
 
@@ -32621,28 +32849,27 @@ var Root = function Root() {
 /* harmony default export */ exports["a"] = Root;
 
 /***/ },
-/* 138 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 'use strict';
 
-module.exports = __webpack_require__(229);
+module.exports = __webpack_require__(239);
 
 
 /***/ },
-/* 139 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_components_Messages__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_Publishers__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_components_SessionBar__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_components_Streams__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_less__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_reducers__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_less__);
 
 
 
@@ -32650,32 +32877,78 @@ module.exports = __webpack_require__(229);
 
 
 
+var getMessageHeaderExtraText = function getMessageHeaderExtraText(type) {
+  switch (type) {
+    case 'joinPing':
+      return 'joined the room';
+    case 'leavePing':
+      return 'left the room';
+    default:
+      return '';
+  }
+};
 
+var MessageHeader = function MessageHeader(_ref) {
+  var currentUser = _ref.currentUser;
+  var id = _ref.id;
+  var type = _ref.type;
+  var user = _ref.user;
 
-var Feed = function Feed() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
-    { className: __WEBPACK_IMPORTED_MODULE_5__styles_less___default.a.feed },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_app_components_SessionBar__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_app_components_Streams__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_app_components_Publishers__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_app_components_Messages__["a" /* default */], null)
+    { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.header },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.userImg, src: user.imageUrl, alt: user.name }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'span',
+      { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.userName },
+      currentUser && currentUser.id == user.id ? 'You' : user.name
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'span',
+      { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.extraText },
+      getMessageHeaderExtraText(type)
+    )
   );
 };
 
-/* harmony default export */ exports["a"] = Feed;
+var Message = function Message(_ref2) {
+  var content = _ref2.content;
+  var currentUser = _ref2.currentUser;
+  var id = _ref2.id;
+  var type = _ref2.type;
+  var user = _ref2.user;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.message },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MessageHeader, { currentUser: currentUser, id: id, type: type, user: user }),
+    content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.content },
+      content
+    )
+  );
+};
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    currentUser: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_app_reducers__["g" /* getCurrentUser */])(state)
+  };
+};
+
+/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps)(Message);
 
 /***/ },
-/* 140 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_less__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32749,17 +33022,17 @@ var mapDispatchToProps = {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(MessageBar);
 
 /***/ },
-/* 141 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_Message__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_less__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_Message__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_less__ = __webpack_require__(302);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_less__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -32792,16 +33065,16 @@ var mapStateToProps = function mapStateToProps(state) {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps)(Messages);
 
 /***/ },
-/* 142 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less__ = __webpack_require__(303);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_less__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32858,19 +33131,19 @@ var mapDispatchToProps = {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(Publishers);
 
 /***/ },
-/* 143 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_actions__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_components_Session__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_reducers__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_actions__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_components_Session__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_reducers__ = __webpack_require__(21);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32935,18 +33208,18 @@ var mapDispatchToProps = {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_react_router__["withRouter"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(Room));
 
 /***/ },
-/* 144 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_components_Feed__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_components_MessageBar__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_reducers__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_components_Theater__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_components_MessageBar__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_reducers__ = __webpack_require__(21);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32982,7 +33255,7 @@ var Session = function (_React$Component) {
     value: function componentWillReceiveProps(newProps) {
       var session = newProps.session;
 
-      // Register handlers if session
+      // Register handlers on session creation
 
       if (!this.props.session && session) {
         session.on({
@@ -33004,7 +33277,7 @@ var Session = function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        session && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_app_components_Feed__["a" /* default */], null),
+        session && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_app_components_Theater__["a" /* default */], null),
         session && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_app_components_MessageBar__["a" /* default */], null)
       );
     }
@@ -33032,16 +33305,73 @@ var mapDispatchToProps = {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(Session);
 
 /***/ },
-/* 145 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_Subscriber__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(28);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var SessionBar = function (_React$Component) {
+  _inherits(SessionBar, _React$Component);
+
+  function SessionBar() {
+    _classCallCheck(this, SessionBar);
+
+    return _possibleConstructorReturn(this, (SessionBar.__proto__ || Object.getPrototypeOf(SessionBar)).apply(this, arguments));
+  }
+
+  _createClass(SessionBar, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.props.dispatchSignalJoinPing();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null);
+    }
+  }]);
+
+  return SessionBar;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {};
+};
+
+var mapDispatchToProps = {
+  dispatchSignalJoinPing: __WEBPACK_IMPORTED_MODULE_2_app_actions__["b" /* signalJoinPing */]
+};
+
+/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(SessionBar);
+
+/***/ },
+/* 148 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_Subscriber__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(21);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33093,16 +33423,16 @@ var mapStateToProps = function mapStateToProps(state) {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps)(Streams);
 
 /***/ },
-/* 146 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_reducers__ = __webpack_require__(21);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33160,7 +33490,42 @@ var mapDispatchToProps = {
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(Subscriber);
 
 /***/ },
-/* 147 */
+/* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_components_Messages__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_Publishers__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_components_SessionBar__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_components_Streams__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_less__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_less__);
+
+
+
+
+
+
+
+
+
+var Theater = function Theater() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_5__styles_less___default.a.theater },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_app_components_SessionBar__["a" /* default */], null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_app_components_Streams__["a" /* default */], null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_app_components_Publishers__["a" /* default */], null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_app_components_Messages__["a" /* default */], null)
+  );
+};
+
+/* harmony default export */ exports["a"] = Theater;
+
+/***/ },
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33169,7 +33534,7 @@ var mapDispatchToProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_components_App__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_components_Room__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_components_Room__ = __webpack_require__(145);
 
 
 
@@ -33185,14 +33550,14 @@ var mapDispatchToProps = {
 };
 
 /***/ },
-/* 148 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_thunk__ = __webpack_require__(284);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_thunk__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_thunk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reducers__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reducers__ = __webpack_require__(21);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 
@@ -33210,13 +33575,72 @@ var composeEnhancers = addDevTools ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 149 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(17);
+/* unused harmony export get */
+/* unused harmony export getByUserId */
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var byId = function byId() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'ADD_CONNECTION':
+      return _extends({}, state, _defineProperty({}, action.connection.id, action.connection));
+    case 'REMOVE_CONNECTION':
+      return _.omit(state, action.connection.id);
+    default:
+      return state;
+  }
+};
+
+var idByUserId = function idByUserId() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'ADD_USER':
+      return _extends({}, state, _defineProperty({}, action.user.id, action.connectionId));
+    case 'REMOVE_CONNECTION':
+      return _.omitBy(state, function (value) {
+        return value !== action.connection.id;
+      });
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
+  byId: byId,
+  idByUserId: idByUserId
+});
+
+// Selectors
+
+var get = function get(state, id) {
+  return state.byId[id] || null;
+};
+
+var getByUserId = function getByUserId(state, userId) {
+  return get(state, state.idByUserId[userId]);
+};
+
+/***/ },
+/* 154 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__(17);
 /* unused harmony export byId */
 /* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getAll; });
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -33249,11 +33673,11 @@ var getAll = function getAll(state) {
 };
 
 /***/ },
-/* 150 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(17);
 /* unused harmony export byId */
 /* unused harmony export get */
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -33285,11 +33709,11 @@ var get = function get(state, id) {
 };
 
 /***/ },
-/* 151 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(17);
 /* unused harmony export tokboxApiKey */
 /* unused harmony export token */
 /* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return get; });
@@ -33388,13 +33812,13 @@ var getToken = function getToken(state) {
 };
 
 /***/ },
-/* 152 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__(17);
 /* unused harmony export byId */
 /* unused harmony export idsByConnectionId */
 /* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return get; });
@@ -33474,13 +33898,13 @@ var getNodeId = function getNodeId(state, stream) {
 };
 
 /***/ },
-/* 153 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__(17);
 /* unused harmony export byId */
 /* unused harmony export get */
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -33515,7 +33939,77 @@ var get = function get(state, id) {
 };
 
 /***/ },
-/* 154 */
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_md5__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_md5__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_uuid__);
+/* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getCurrentUser; });
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var createName = function createName() {
+  var firstNames = ['Hank', 'Phil', 'Jamie', 'Krissy', 'Jemma', 'Cat', 'Doug', 'Gina', 'Marc', 'Sammie'];
+  var lastNames = ['Paulson', 'Kaperty', 'Shmitzz', 'Sorrell', 'the Great', 'Buffington', 'Wiserty', 'Camillo', 'Grobby', 'Cruncher'];
+  var firstName = firstNames[__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.random(0, firstNames.length - 1)];
+  var lastName = lastNames[__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.random(0, lastNames.length - 1)];
+  return firstName + ' ' + lastName;
+};
+
+var createUser = function createUser() {
+  var id = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_uuid__["v4"])();
+
+  return {
+    id: id,
+    imageUrl: 'https://gravatar.com/avatar/' + __WEBPACK_IMPORTED_MODULE_1_md5___default()(id) + '?d=monsterid&f=y',
+    name: createName()
+  };
+};
+
+var currentUser = function currentUser() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : createUser();
+  var action = arguments[1];
+
+  return state;
+};
+
+var byId = function byId() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'ADD_USER':
+      return _extends({}, state, _defineProperty({}, action.user.id, action.user));
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_redux__["combineReducers"])({
+  byId: byId,
+  currentUser: currentUser
+});
+
+// Selectors
+
+var getCurrentUser = function getCurrentUser(state) {
+  return state.currentUser;
+};
+
+/***/ },
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 
@@ -33684,10 +34178,112 @@ Emitter.prototype.hasListeners = function(event){
 
 
 /***/ },
-/* 155 */
+/* 161 */
+/***/ function(module, exports) {
+
+(function() {
+  var base64map
+      = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
+
+  crypt = {
+    // Bit-wise rotation left
+    rotl: function(n, b) {
+      return (n << b) | (n >>> (32 - b));
+    },
+
+    // Bit-wise rotation right
+    rotr: function(n, b) {
+      return (n << (32 - b)) | (n >>> b);
+    },
+
+    // Swap big-endian to little-endian and vice versa
+    endian: function(n) {
+      // If number given, swap endian
+      if (n.constructor == Number) {
+        return crypt.rotl(n, 8) & 0x00FF00FF | crypt.rotl(n, 24) & 0xFF00FF00;
+      }
+
+      // Else, assume array and swap all items
+      for (var i = 0; i < n.length; i++)
+        n[i] = crypt.endian(n[i]);
+      return n;
+    },
+
+    // Generate an array of any length of random bytes
+    randomBytes: function(n) {
+      for (var bytes = []; n > 0; n--)
+        bytes.push(Math.floor(Math.random() * 256));
+      return bytes;
+    },
+
+    // Convert a byte array to big-endian 32-bit words
+    bytesToWords: function(bytes) {
+      for (var words = [], i = 0, b = 0; i < bytes.length; i++, b += 8)
+        words[b >>> 5] |= bytes[i] << (24 - b % 32);
+      return words;
+    },
+
+    // Convert big-endian 32-bit words to a byte array
+    wordsToBytes: function(words) {
+      for (var bytes = [], b = 0; b < words.length * 32; b += 8)
+        bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF);
+      return bytes;
+    },
+
+    // Convert a byte array to a hex string
+    bytesToHex: function(bytes) {
+      for (var hex = [], i = 0; i < bytes.length; i++) {
+        hex.push((bytes[i] >>> 4).toString(16));
+        hex.push((bytes[i] & 0xF).toString(16));
+      }
+      return hex.join('');
+    },
+
+    // Convert a hex string to a byte array
+    hexToBytes: function(hex) {
+      for (var bytes = [], c = 0; c < hex.length; c += 2)
+        bytes.push(parseInt(hex.substr(c, 2), 16));
+      return bytes;
+    },
+
+    // Convert a byte array to a base-64 string
+    bytesToBase64: function(bytes) {
+      for (var base64 = [], i = 0; i < bytes.length; i += 3) {
+        var triplet = (bytes[i] << 16) | (bytes[i + 1] << 8) | bytes[i + 2];
+        for (var j = 0; j < 4; j++)
+          if (i * 8 + j * 6 <= bytes.length * 8)
+            base64.push(base64map.charAt((triplet >>> 6 * (3 - j)) & 0x3F));
+          else
+            base64.push('=');
+      }
+      return base64.join('');
+    },
+
+    // Convert a base-64 string to a byte array
+    base64ToBytes: function(base64) {
+      // Remove non-base-64 characters
+      base64 = base64.replace(/[^A-Z0-9+\/]/ig, '');
+
+      for (var bytes = [], i = 0, imod4 = 0; i < base64.length;
+          imod4 = ++i % 4) {
+        if (imod4 == 0) continue;
+        bytes.push(((base64map.indexOf(base64.charAt(i - 1))
+            & (Math.pow(2, -2 * imod4 + 8) - 1)) << (imod4 * 2))
+            | (base64map.indexOf(base64.charAt(i)) >>> (6 - imod4 * 2)));
+      }
+      return bytes;
+    }
+  };
+
+  module.exports = crypt;
+})();
+
+
+/***/ },
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(33)();
+exports = module.exports = __webpack_require__(29)();
 // imports
 
 
@@ -33700,26 +34296,31 @@ exports.locals = {
 };
 
 /***/ },
-/* 156 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(33)();
+exports = module.exports = __webpack_require__(29)();
 // imports
 
 
 // module
-exports.push([module.i, ".styles__feed___ugUfm {\n  position: relative;\n  height: calc(100vh - 75px);\n  max-height: 100%;\n  width: 100%;\n  margin-bottom: 15px;\n  box-shadow: 0 1px 2px #666;\n  border-radius: 5px;\n  background-color: #fff;\n}\n.styles__feed___ugUfm video {\n  border-radius: 5px;\n}\n", ""]);
+exports.push([module.i, ".styles__message___1HQ_9 {\n  width: 320px;\n  padding: 10px;\n  margin-bottom: 15px;\n  background-color: rgba(240, 240, 240, 0.5);\n  border-radius: 5px;\n}\n.styles__message___1HQ_9:hover {\n  background-color: rgba(240, 240, 240, 0.9);\n}\n.styles__header___3sM1s {\n  position: relative;\n  font-size: 12px;\n  font-weight: 600;\n}\n.styles__userImg___396rs {\n  height: 20px;\n  width: 20px;\n  border-radius: 100%;\n  margin-right: 2px;\n}\n.styles__userName___2bxc4 {\n  display: inline-block;\n  position: relative;\n  bottom: 6px;\n  margin-left: 5px;\n}\n.styles__extraText___3XZo4 {\n  display: inline-block;\n  position: relative;\n  bottom: 6px;\n  margin-left: 5px;\n}\n.styles__content___2h995 {\n  margin-left: 28px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"feed": "styles__feed___ugUfm"
+	"message": "styles__message___1HQ_9",
+	"header": "styles__header___3sM1s",
+	"userImg": "styles__userImg___396rs",
+	"userName": "styles__userName___2bxc4",
+	"extraText": "styles__extraText___3XZo4",
+	"content": "styles__content___2h995"
 };
 
 /***/ },
-/* 157 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(33)();
+exports = module.exports = __webpack_require__(29)();
 // imports
 
 
@@ -33733,10 +34334,10 @@ exports.locals = {
 };
 
 /***/ },
-/* 158 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(33)();
+exports = module.exports = __webpack_require__(29)();
 // imports
 
 
@@ -33749,10 +34350,10 @@ exports.locals = {
 };
 
 /***/ },
-/* 159 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(33)();
+exports = module.exports = __webpack_require__(29)();
 // imports
 
 
@@ -33765,12 +34366,28 @@ exports.locals = {
 };
 
 /***/ },
-/* 160 */
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(29)();
+// imports
+
+
+// module
+exports.push([module.i, ".styles__theater___3dk9o {\n  position: relative;\n  height: calc(100vh - 75px);\n  max-height: 100%;\n  width: 100%;\n  margin-bottom: 15px;\n  box-shadow: 0 1px 2px #666;\n  border-radius: 5px;\n  background-color: #fff;\n}\n.styles__theater___3dk9o video {\n  border-radius: 5px;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"theater": "styles__theater___3dk9o"
+};
+
+/***/ },
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 var pSlice = Array.prototype.slice;
-var objectKeys = __webpack_require__(162);
-var isArguments = __webpack_require__(161);
+var objectKeys = __webpack_require__(170);
+var isArguments = __webpack_require__(169);
 
 var deepEqual = module.exports = function (actual, expected, opts) {
   if (!opts) opts = {};
@@ -33865,7 +34482,7 @@ function objEquiv(a, b, opts) {
 
 
 /***/ },
-/* 161 */
+/* 169 */
 /***/ function(module, exports) {
 
 var supportsArgumentsClass = (function(){
@@ -33891,7 +34508,7 @@ function unsupported(object){
 
 
 /***/ },
-/* 162 */
+/* 170 */
 /***/ function(module, exports) {
 
 exports = module.exports = typeof Object.keys === 'function'
@@ -33906,7 +34523,7 @@ function shim (obj) {
 
 
 /***/ },
-/* 163 */
+/* 171 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -33943,7 +34560,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ },
-/* 164 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33960,7 +34577,7 @@ module.exports = camelize;
 
 'use strict';
 
-var camelize = __webpack_require__(163);
+var camelize = __webpack_require__(171);
 
 var msPattern = /^-ms-/;
 
@@ -33988,7 +34605,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ },
-/* 165 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34005,7 +34622,7 @@ module.exports = camelizeStyleName;
  * 
  */
 
-var isTextNode = __webpack_require__(173);
+var isTextNode = __webpack_require__(181);
 
 /*eslint-disable no-bitwise */
 
@@ -34033,7 +34650,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ },
-/* 166 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34166,7 +34783,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 167 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34187,8 +34804,8 @@ module.exports = createArrayFromMixed;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createArrayFromMixed = __webpack_require__(166);
-var getMarkupWrap = __webpack_require__(168);
+var createArrayFromMixed = __webpack_require__(174);
+var getMarkupWrap = __webpack_require__(176);
 var invariant = __webpack_require__(1);
 
 /**
@@ -34256,7 +34873,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 168 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34357,7 +34974,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 169 */
+/* 177 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -34401,7 +35018,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ },
-/* 170 */
+/* 178 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -34439,7 +35056,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ },
-/* 171 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34456,7 +35073,7 @@ module.exports = hyphenate;
 
 'use strict';
 
-var hyphenate = __webpack_require__(170);
+var hyphenate = __webpack_require__(178);
 
 var msPattern = /^ms-/;
 
@@ -34483,7 +35100,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ },
-/* 172 */
+/* 180 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -34511,7 +35128,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ },
-/* 173 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34528,7 +35145,7 @@ module.exports = isNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(172);
+var isNode = __webpack_require__(180);
 
 /**
  * @param {*} object The object to check.
@@ -34541,7 +35158,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ },
-/* 174 */
+/* 182 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -34576,7 +35193,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ },
-/* 175 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34604,7 +35221,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ },
-/* 176 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34621,7 +35238,7 @@ module.exports = performance || {};
  * @typechecks
  */
 
-var performance = __webpack_require__(175);
+var performance = __webpack_require__(183);
 
 var performanceNow;
 
@@ -34643,7 +35260,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ },
-/* 177 */
+/* 185 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -34707,7 +35324,7 @@ function loopAsync(turns, work, callback) {
 }
 
 /***/ },
-/* 178 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34723,17 +35340,17 @@ var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _Actions = __webpack_require__(28);
+var _Actions = __webpack_require__(30);
 
 var _PathUtils = __webpack_require__(25);
 
 var _ExecutionEnvironment = __webpack_require__(42);
 
-var _DOMUtils = __webpack_require__(55);
+var _DOMUtils = __webpack_require__(56);
 
-var _DOMStateStorage = __webpack_require__(90);
+var _DOMStateStorage = __webpack_require__(91);
 
-var _createDOMHistory = __webpack_require__(91);
+var _createDOMHistory = __webpack_require__(92);
 
 var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -34894,7 +35511,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 179 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34910,7 +35527,7 @@ var _warning = __webpack_require__(14);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _Actions = __webpack_require__(28);
+var _Actions = __webpack_require__(30);
 
 var _PathUtils = __webpack_require__(25);
 
@@ -34952,7 +35569,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 180 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34974,9 +35591,9 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _PathUtils = __webpack_require__(25);
 
-var _Actions = __webpack_require__(28);
+var _Actions = __webpack_require__(30);
 
-var _createHistory = __webpack_require__(93);
+var _createHistory = __webpack_require__(94);
 
 var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -35113,11 +35730,38 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 181 */
+/* 189 */
+/***/ function(module, exports) {
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+
+// The _isBuffer check is for Safari 5-7 support, because it's missing
+// Object.prototype.constructor. Remove this eventually
+module.exports = function (obj) {
+  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
+}
+
+function isBuffer (obj) {
+  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+// For Node v0.10 support. Remove this eventually.
+function isSlowBuffer (obj) {
+  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
+}
+
+
+/***/ },
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(191);
 
 
 /** Built-in value references. */
@@ -35127,7 +35771,7 @@ var getPrototype = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__overArg_js
 
 
 /***/ },
-/* 182 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35149,7 +35793,7 @@ function overArg(func, transform) {
 
 
 /***/ },
-/* 183 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35185,7 +35829,173 @@ function isObjectLike(value) {
 
 
 /***/ },
-/* 184 */
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+(function(){
+  var crypt = __webpack_require__(161),
+      utf8 = __webpack_require__(87).utf8,
+      isBuffer = __webpack_require__(189),
+      bin = __webpack_require__(87).bin,
+
+  // The core
+  md5 = function (message, options) {
+    // Convert to byte array
+    if (message.constructor == String)
+      if (options && options.encoding === 'binary')
+        message = bin.stringToBytes(message);
+      else
+        message = utf8.stringToBytes(message);
+    else if (isBuffer(message))
+      message = Array.prototype.slice.call(message, 0);
+    else if (!Array.isArray(message))
+      message = message.toString();
+    // else, assume byte array already
+
+    var m = crypt.bytesToWords(message),
+        l = message.length * 8,
+        a =  1732584193,
+        b = -271733879,
+        c = -1732584194,
+        d =  271733878;
+
+    // Swap endian
+    for (var i = 0; i < m.length; i++) {
+      m[i] = ((m[i] <<  8) | (m[i] >>> 24)) & 0x00FF00FF |
+             ((m[i] << 24) | (m[i] >>>  8)) & 0xFF00FF00;
+    }
+
+    // Padding
+    m[l >>> 5] |= 0x80 << (l % 32);
+    m[(((l + 64) >>> 9) << 4) + 14] = l;
+
+    // Method shortcuts
+    var FF = md5._ff,
+        GG = md5._gg,
+        HH = md5._hh,
+        II = md5._ii;
+
+    for (var i = 0; i < m.length; i += 16) {
+
+      var aa = a,
+          bb = b,
+          cc = c,
+          dd = d;
+
+      a = FF(a, b, c, d, m[i+ 0],  7, -680876936);
+      d = FF(d, a, b, c, m[i+ 1], 12, -389564586);
+      c = FF(c, d, a, b, m[i+ 2], 17,  606105819);
+      b = FF(b, c, d, a, m[i+ 3], 22, -1044525330);
+      a = FF(a, b, c, d, m[i+ 4],  7, -176418897);
+      d = FF(d, a, b, c, m[i+ 5], 12,  1200080426);
+      c = FF(c, d, a, b, m[i+ 6], 17, -1473231341);
+      b = FF(b, c, d, a, m[i+ 7], 22, -45705983);
+      a = FF(a, b, c, d, m[i+ 8],  7,  1770035416);
+      d = FF(d, a, b, c, m[i+ 9], 12, -1958414417);
+      c = FF(c, d, a, b, m[i+10], 17, -42063);
+      b = FF(b, c, d, a, m[i+11], 22, -1990404162);
+      a = FF(a, b, c, d, m[i+12],  7,  1804603682);
+      d = FF(d, a, b, c, m[i+13], 12, -40341101);
+      c = FF(c, d, a, b, m[i+14], 17, -1502002290);
+      b = FF(b, c, d, a, m[i+15], 22,  1236535329);
+
+      a = GG(a, b, c, d, m[i+ 1],  5, -165796510);
+      d = GG(d, a, b, c, m[i+ 6],  9, -1069501632);
+      c = GG(c, d, a, b, m[i+11], 14,  643717713);
+      b = GG(b, c, d, a, m[i+ 0], 20, -373897302);
+      a = GG(a, b, c, d, m[i+ 5],  5, -701558691);
+      d = GG(d, a, b, c, m[i+10],  9,  38016083);
+      c = GG(c, d, a, b, m[i+15], 14, -660478335);
+      b = GG(b, c, d, a, m[i+ 4], 20, -405537848);
+      a = GG(a, b, c, d, m[i+ 9],  5,  568446438);
+      d = GG(d, a, b, c, m[i+14],  9, -1019803690);
+      c = GG(c, d, a, b, m[i+ 3], 14, -187363961);
+      b = GG(b, c, d, a, m[i+ 8], 20,  1163531501);
+      a = GG(a, b, c, d, m[i+13],  5, -1444681467);
+      d = GG(d, a, b, c, m[i+ 2],  9, -51403784);
+      c = GG(c, d, a, b, m[i+ 7], 14,  1735328473);
+      b = GG(b, c, d, a, m[i+12], 20, -1926607734);
+
+      a = HH(a, b, c, d, m[i+ 5],  4, -378558);
+      d = HH(d, a, b, c, m[i+ 8], 11, -2022574463);
+      c = HH(c, d, a, b, m[i+11], 16,  1839030562);
+      b = HH(b, c, d, a, m[i+14], 23, -35309556);
+      a = HH(a, b, c, d, m[i+ 1],  4, -1530992060);
+      d = HH(d, a, b, c, m[i+ 4], 11,  1272893353);
+      c = HH(c, d, a, b, m[i+ 7], 16, -155497632);
+      b = HH(b, c, d, a, m[i+10], 23, -1094730640);
+      a = HH(a, b, c, d, m[i+13],  4,  681279174);
+      d = HH(d, a, b, c, m[i+ 0], 11, -358537222);
+      c = HH(c, d, a, b, m[i+ 3], 16, -722521979);
+      b = HH(b, c, d, a, m[i+ 6], 23,  76029189);
+      a = HH(a, b, c, d, m[i+ 9],  4, -640364487);
+      d = HH(d, a, b, c, m[i+12], 11, -421815835);
+      c = HH(c, d, a, b, m[i+15], 16,  530742520);
+      b = HH(b, c, d, a, m[i+ 2], 23, -995338651);
+
+      a = II(a, b, c, d, m[i+ 0],  6, -198630844);
+      d = II(d, a, b, c, m[i+ 7], 10,  1126891415);
+      c = II(c, d, a, b, m[i+14], 15, -1416354905);
+      b = II(b, c, d, a, m[i+ 5], 21, -57434055);
+      a = II(a, b, c, d, m[i+12],  6,  1700485571);
+      d = II(d, a, b, c, m[i+ 3], 10, -1894986606);
+      c = II(c, d, a, b, m[i+10], 15, -1051523);
+      b = II(b, c, d, a, m[i+ 1], 21, -2054922799);
+      a = II(a, b, c, d, m[i+ 8],  6,  1873313359);
+      d = II(d, a, b, c, m[i+15], 10, -30611744);
+      c = II(c, d, a, b, m[i+ 6], 15, -1560198380);
+      b = II(b, c, d, a, m[i+13], 21,  1309151649);
+      a = II(a, b, c, d, m[i+ 4],  6, -145523070);
+      d = II(d, a, b, c, m[i+11], 10, -1120210379);
+      c = II(c, d, a, b, m[i+ 2], 15,  718787259);
+      b = II(b, c, d, a, m[i+ 9], 21, -343485551);
+
+      a = (a + aa) >>> 0;
+      b = (b + bb) >>> 0;
+      c = (c + cc) >>> 0;
+      d = (d + dd) >>> 0;
+    }
+
+    return crypt.endian([a, b, c, d]);
+  };
+
+  // Auxiliary functions
+  md5._ff  = function (a, b, c, d, x, s, t) {
+    var n = a + (b & c | ~b & d) + (x >>> 0) + t;
+    return ((n << s) | (n >>> (32 - s))) + b;
+  };
+  md5._gg  = function (a, b, c, d, x, s, t) {
+    var n = a + (b & d | c & ~d) + (x >>> 0) + t;
+    return ((n << s) | (n >>> (32 - s))) + b;
+  };
+  md5._hh  = function (a, b, c, d, x, s, t) {
+    var n = a + (b ^ c ^ d) + (x >>> 0) + t;
+    return ((n << s) | (n >>> (32 - s))) + b;
+  };
+  md5._ii  = function (a, b, c, d, x, s, t) {
+    var n = a + (c ^ (b | ~d)) + (x >>> 0) + t;
+    return ((n << s) | (n >>> (32 - s))) + b;
+  };
+
+  // Package private blocksize
+  md5._blocksize = 16;
+  md5._digestsize = 16;
+
+  module.exports = function (message, options) {
+    if (message === undefined || message === null)
+      throw new Error('Illegal argument ' + message);
+
+    var digestbytes = crypt.wordsToBytes(md5(message, options));
+    return options && options.asBytes ? digestbytes :
+        options && options.asString ? bin.bytesToString(digestbytes) :
+        crypt.bytesToHex(digestbytes);
+  };
+
+})();
+
+
+/***/ },
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -35247,7 +36057,7 @@ gb18030:[19970,19972,19973,19974,19983,19986,19991,19999,2e4,20001,20003,20006,2
 jis0212:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,728,711,184,729,733,175,731,730,65374,900,901,null,null,null,null,null,null,null,null,161,166,191,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,186,170,169,174,8482,164,8470,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,902,904,905,906,938,null,908,null,910,939,null,911,null,null,null,null,940,941,942,943,970,912,972,962,973,971,944,974,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1038,1039,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1106,1107,1108,1109,1110,1111,1112,1113,1114,1115,1116,1118,1119,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,198,272,null,294,null,306,null,321,319,null,330,216,338,null,358,222,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,230,273,240,295,305,307,312,322,320,329,331,248,339,223,359,254,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,193,192,196,194,258,461,256,260,197,195,262,264,268,199,266,270,201,200,203,202,282,278,274,280,null,284,286,290,288,292,205,204,207,206,463,304,298,302,296,308,310,313,317,315,323,327,325,209,211,210,214,212,465,336,332,213,340,344,342,346,348,352,350,356,354,218,217,220,219,364,467,368,362,370,366,360,471,475,473,469,372,221,376,374,377,381,379,null,null,null,null,null,null,null,225,224,228,226,259,462,257,261,229,227,263,265,269,231,267,271,233,232,235,234,283,279,275,281,501,285,287,null,289,293,237,236,239,238,464,null,299,303,297,309,311,314,318,316,324,328,326,241,243,242,246,244,466,337,333,245,341,345,343,347,349,353,351,357,355,250,249,252,251,365,468,369,363,371,367,361,472,476,474,470,373,253,255,375,378,382,380,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,19970,19972,19973,19980,19986,19999,20003,20004,20008,20011,20014,20015,20016,20021,20032,20033,20036,20039,20049,20058,20060,20067,20072,20073,20084,20085,20089,20095,20109,20118,20119,20125,20143,20153,20163,20176,20186,20187,20192,20193,20194,20200,20207,20209,20211,20213,20221,20222,20223,20224,20226,20227,20232,20235,20236,20242,20245,20246,20247,20249,20270,20273,20320,20275,20277,20279,20281,20283,20286,20288,20290,20296,20297,20299,20300,20306,20308,20310,20312,20319,20323,20330,20332,20334,20337,20343,20344,20345,20346,20349,20350,20353,20354,20356,20357,20361,20362,20364,20366,20368,20370,20371,20372,20375,20377,20378,20382,20383,20402,20407,20409,20411,20412,20413,20414,20416,20417,20421,20422,20424,20425,20427,20428,20429,20431,20434,20444,20448,20450,20464,20466,20476,20477,20479,20480,20481,20484,20487,20490,20492,20494,20496,20499,20503,20504,20507,20508,20509,20510,20514,20519,20526,20528,20530,20531,20533,20544,20545,20546,20549,20550,20554,20556,20558,20561,20562,20563,20567,20569,20575,20576,20578,20579,20582,20583,20586,20589,20592,20593,20539,20609,20611,20612,20614,20618,20622,20623,20624,20626,20627,20628,20630,20635,20636,20638,20639,20640,20641,20642,20650,20655,20656,20665,20666,20669,20672,20675,20676,20679,20684,20686,20688,20691,20692,20696,20700,20701,20703,20706,20708,20710,20712,20713,20719,20721,20726,20730,20734,20739,20742,20743,20744,20747,20748,20749,20750,20722,20752,20759,20761,20763,20764,20765,20766,20771,20775,20776,20780,20781,20783,20785,20787,20788,20789,20792,20793,20802,20810,20815,20819,20821,20823,20824,20831,20836,20838,20862,20867,20868,20875,20878,20888,20893,20897,20899,20909,20920,20922,20924,20926,20927,20930,20936,20943,20945,20946,20947,20949,20952,20958,20962,20965,20974,20978,20979,20980,20983,20993,20994,20997,21010,21011,21013,21014,21016,21026,21032,21041,21042,21045,21052,21061,21065,21077,21079,21080,21082,21084,21087,21088,21089,21094,21102,21111,21112,21113,21120,21122,21125,21130,21132,21139,21141,21142,21143,21144,21146,21148,21156,21157,21158,21159,21167,21168,21174,21175,21176,21178,21179,21181,21184,21188,21190,21192,21196,21199,21201,21204,21206,21211,21212,21217,21221,21224,21225,21226,21228,21232,21233,21236,21238,21239,21248,21251,21258,21259,21260,21265,21267,21272,21275,21276,21278,21279,21285,21287,21288,21289,21291,21292,21293,21296,21298,21301,21308,21309,21310,21314,21324,21323,21337,21339,21345,21347,21349,21356,21357,21362,21369,21374,21379,21383,21384,21390,21395,21396,21401,21405,21409,21412,21418,21419,21423,21426,21428,21429,21431,21432,21434,21437,21440,21445,21455,21458,21459,21461,21466,21469,21470,21472,21478,21479,21493,21506,21523,21530,21537,21543,21544,21546,21551,21553,21556,21557,21571,21572,21575,21581,21583,21598,21602,21604,21606,21607,21609,21611,21613,21614,21620,21631,21633,21635,21637,21640,21641,21645,21649,21653,21654,21660,21663,21665,21670,21671,21673,21674,21677,21678,21681,21687,21689,21690,21691,21695,21702,21706,21709,21710,21728,21738,21740,21743,21750,21756,21758,21759,21760,21761,21765,21768,21769,21772,21773,21774,21781,21802,21803,21810,21813,21814,21819,21820,21821,21825,21831,21833,21834,21837,21840,21841,21848,21850,21851,21854,21856,21857,21860,21862,21887,21889,21890,21894,21896,21902,21903,21905,21906,21907,21908,21911,21923,21924,21933,21938,21951,21953,21955,21958,21961,21963,21964,21966,21969,21970,21971,21975,21976,21979,21982,21986,21993,22006,22015,22021,22024,22026,22029,22030,22031,22032,22033,22034,22041,22060,22064,22067,22069,22071,22073,22075,22076,22077,22079,22080,22081,22083,22084,22086,22089,22091,22093,22095,22100,22110,22112,22113,22114,22115,22118,22121,22125,22127,22129,22130,22133,22148,22149,22152,22155,22156,22165,22169,22170,22173,22174,22175,22182,22183,22184,22185,22187,22188,22189,22193,22195,22199,22206,22213,22217,22218,22219,22223,22224,22220,22221,22233,22236,22237,22239,22241,22244,22245,22246,22247,22248,22257,22251,22253,22262,22263,22273,22274,22279,22282,22284,22289,22293,22298,22299,22301,22304,22306,22307,22308,22309,22313,22314,22316,22318,22319,22323,22324,22333,22334,22335,22341,22342,22348,22349,22354,22370,22373,22375,22376,22379,22381,22382,22383,22384,22385,22387,22388,22389,22391,22393,22394,22395,22396,22398,22401,22403,22412,22420,22423,22425,22426,22428,22429,22430,22431,22433,22421,22439,22440,22441,22444,22456,22461,22471,22472,22476,22479,22485,22493,22494,22500,22502,22503,22505,22509,22512,22517,22518,22520,22525,22526,22527,22531,22532,22536,22537,22497,22540,22541,22555,22558,22559,22560,22566,22567,22573,22578,22585,22591,22601,22604,22605,22607,22608,22613,22623,22625,22628,22631,22632,22648,22652,22655,22656,22657,22663,22664,22665,22666,22668,22669,22671,22672,22676,22678,22685,22688,22689,22690,22694,22697,22705,22706,22724,22716,22722,22728,22733,22734,22736,22738,22740,22742,22746,22749,22753,22754,22761,22771,22789,22790,22795,22796,22802,22803,22804,34369,22813,22817,22819,22820,22824,22831,22832,22835,22837,22838,22847,22851,22854,22866,22867,22873,22875,22877,22878,22879,22881,22883,22891,22893,22895,22898,22901,22902,22905,22907,22908,22923,22924,22926,22930,22933,22935,22943,22948,22951,22957,22958,22959,22960,22963,22967,22970,22972,22977,22979,22980,22984,22986,22989,22994,23005,23006,23007,23011,23012,23015,23022,23023,23025,23026,23028,23031,23040,23044,23052,23053,23054,23058,23059,23070,23075,23076,23079,23080,23082,23085,23088,23108,23109,23111,23112,23116,23120,23125,23134,23139,23141,23143,23149,23159,23162,23163,23166,23179,23184,23187,23190,23193,23196,23198,23199,23200,23202,23207,23212,23217,23218,23219,23221,23224,23226,23227,23231,23236,23238,23240,23247,23258,23260,23264,23269,23274,23278,23285,23286,23293,23296,23297,23304,23319,23348,23321,23323,23325,23329,23333,23341,23352,23361,23371,23372,23378,23382,23390,23400,23406,23407,23420,23421,23422,23423,23425,23428,23430,23434,23438,23440,23441,23443,23444,23446,23464,23465,23468,23469,23471,23473,23474,23479,23482,23484,23488,23489,23501,23503,23510,23511,23512,23513,23514,23520,23535,23537,23540,23549,23564,23575,23582,23583,23587,23590,23593,23595,23596,23598,23600,23602,23605,23606,23641,23642,23644,23650,23651,23655,23656,23657,23661,23664,23668,23669,23674,23675,23676,23677,23687,23688,23690,23695,23698,23709,23711,23712,23714,23715,23718,23722,23730,23732,23733,23738,23753,23755,23762,23773,23767,23790,23793,23794,23796,23809,23814,23821,23826,23851,23843,23844,23846,23847,23857,23860,23865,23869,23871,23874,23875,23878,23880,23893,23889,23897,23882,23903,23904,23905,23906,23908,23914,23917,23920,23929,23930,23934,23935,23937,23939,23944,23946,23954,23955,23956,23957,23961,23963,23967,23968,23975,23979,23984,23988,23992,23993,24003,24007,24011,24016,24014,24024,24025,24032,24036,24041,24056,24057,24064,24071,24077,24082,24084,24085,24088,24095,24096,24110,24104,24114,24117,24126,24139,24144,24137,24145,24150,24152,24155,24156,24158,24168,24170,24171,24172,24173,24174,24176,24192,24203,24206,24226,24228,24229,24232,24234,24236,24241,24243,24253,24254,24255,24262,24268,24267,24270,24273,24274,24276,24277,24284,24286,24293,24299,24322,24326,24327,24328,24334,24345,24348,24349,24353,24354,24355,24356,24360,24363,24364,24366,24368,24372,24374,24379,24381,24383,24384,24388,24389,24391,24397,24400,24404,24408,24411,24416,24419,24420,24423,24431,24434,24436,24437,24440,24442,24445,24446,24457,24461,24463,24470,24476,24477,24482,24487,24491,24484,24492,24495,24496,24497,24504,24516,24519,24520,24521,24523,24528,24529,24530,24531,24532,24542,24545,24546,24552,24553,24554,24556,24557,24558,24559,24562,24563,24566,24570,24572,24583,24586,24589,24595,24596,24599,24600,24602,24607,24612,24621,24627,24629,24640,24647,24648,24649,24652,24657,24660,24662,24663,24669,24673,24679,24689,24702,24703,24706,24710,24712,24714,24718,24721,24723,24725,24728,24733,24734,24738,24740,24741,24744,24752,24753,24759,24763,24766,24770,24772,24776,24777,24778,24779,24782,24783,24788,24789,24793,24795,24797,24798,24802,24805,24818,24821,24824,24828,24829,24834,24839,24842,24844,24848,24849,24850,24851,24852,24854,24855,24857,24860,24862,24866,24874,24875,24880,24881,24885,24886,24887,24889,24897,24901,24902,24905,24926,24928,24940,24946,24952,24955,24956,24959,24960,24961,24963,24964,24971,24973,24978,24979,24983,24984,24988,24989,24991,24992,24997,25e3,25002,25005,25016,25017,25020,25024,25025,25026,25038,25039,25045,25052,25053,25054,25055,25057,25058,25063,25065,25061,25068,25069,25071,25089,25091,25092,25095,25107,25109,25116,25120,25122,25123,25127,25129,25131,25145,25149,25154,25155,25156,25158,25164,25168,25169,25170,25172,25174,25178,25180,25188,25197,25199,25203,25210,25213,25229,25230,25231,25232,25254,25256,25267,25270,25271,25274,25278,25279,25284,25294,25301,25302,25306,25322,25330,25332,25340,25341,25347,25348,25354,25355,25357,25360,25363,25366,25368,25385,25386,25389,25397,25398,25401,25404,25409,25410,25411,25412,25414,25418,25419,25422,25426,25427,25428,25432,25435,25445,25446,25452,25453,25457,25460,25461,25464,25468,25469,25471,25474,25476,25479,25482,25488,25492,25493,25497,25498,25502,25508,25510,25517,25518,25519,25533,25537,25541,25544,25550,25553,25555,25556,25557,25564,25568,25573,25578,25580,25586,25587,25589,25592,25593,25609,25610,25616,25618,25620,25624,25630,25632,25634,25636,25637,25641,25642,25647,25648,25653,25661,25663,25675,25679,25681,25682,25683,25684,25690,25691,25692,25693,25695,25696,25697,25699,25709,25715,25716,25723,25725,25733,25735,25743,25744,25745,25752,25753,25755,25757,25759,25761,25763,25766,25768,25772,25779,25789,25790,25791,25796,25801,25802,25803,25804,25806,25808,25809,25813,25815,25828,25829,25833,25834,25837,25840,25845,25847,25851,25855,25857,25860,25864,25865,25866,25871,25875,25876,25878,25881,25883,25886,25887,25890,25894,25897,25902,25905,25914,25916,25917,25923,25927,25929,25936,25938,25940,25951,25952,25959,25963,25978,25981,25985,25989,25994,26002,26005,26008,26013,26016,26019,26022,26030,26034,26035,26036,26047,26050,26056,26057,26062,26064,26068,26070,26072,26079,26096,26098,26100,26101,26105,26110,26111,26112,26116,26120,26121,26125,26129,26130,26133,26134,26141,26142,26145,26146,26147,26148,26150,26153,26154,26155,26156,26158,26160,26161,26163,26169,26167,26176,26181,26182,26186,26188,26193,26190,26199,26200,26201,26203,26204,26208,26209,26363,26218,26219,26220,26238,26227,26229,26239,26231,26232,26233,26235,26240,26236,26251,26252,26253,26256,26258,26265,26266,26267,26268,26271,26272,26276,26285,26289,26290,26293,26299,26303,26304,26306,26307,26312,26316,26318,26319,26324,26331,26335,26344,26347,26348,26350,26362,26373,26375,26382,26387,26393,26396,26400,26402,26419,26430,26437,26439,26440,26444,26452,26453,26461,26470,26476,26478,26484,26486,26491,26497,26500,26510,26511,26513,26515,26518,26520,26521,26523,26544,26545,26546,26549,26555,26556,26557,26617,26560,26562,26563,26565,26568,26569,26578,26583,26585,26588,26593,26598,26608,26610,26614,26615,26706,26644,26649,26653,26655,26664,26663,26668,26669,26671,26672,26673,26675,26683,26687,26692,26693,26698,26700,26709,26711,26712,26715,26731,26734,26735,26736,26737,26738,26741,26745,26746,26747,26748,26754,26756,26758,26760,26774,26776,26778,26780,26785,26787,26789,26793,26794,26798,26802,26811,26821,26824,26828,26831,26832,26833,26835,26838,26841,26844,26845,26853,26856,26858,26859,26860,26861,26864,26865,26869,26870,26875,26876,26877,26886,26889,26890,26896,26897,26899,26902,26903,26929,26931,26933,26936,26939,26946,26949,26953,26958,26967,26971,26979,26980,26981,26982,26984,26985,26988,26992,26993,26994,27002,27003,27007,27008,27021,27026,27030,27032,27041,27045,27046,27048,27051,27053,27055,27063,27064,27066,27068,27077,27080,27089,27094,27095,27106,27109,27118,27119,27121,27123,27125,27134,27136,27137,27139,27151,27153,27157,27162,27165,27168,27172,27176,27184,27186,27188,27191,27195,27198,27199,27205,27206,27209,27210,27214,27216,27217,27218,27221,27222,27227,27236,27239,27242,27249,27251,27262,27265,27267,27270,27271,27273,27275,27281,27291,27293,27294,27295,27301,27307,27311,27312,27313,27316,27325,27326,27327,27334,27337,27336,27340,27344,27348,27349,27350,27356,27357,27364,27367,27372,27376,27377,27378,27388,27389,27394,27395,27398,27399,27401,27407,27408,27409,27415,27419,27422,27428,27432,27435,27436,27439,27445,27446,27451,27455,27462,27466,27469,27474,27478,27480,27485,27488,27495,27499,27502,27504,27509,27517,27518,27522,27525,27543,27547,27551,27552,27554,27555,27560,27561,27564,27565,27566,27568,27576,27577,27581,27582,27587,27588,27593,27596,27606,27610,27617,27619,27622,27623,27630,27633,27639,27641,27647,27650,27652,27653,27657,27661,27662,27664,27666,27673,27679,27686,27687,27688,27692,27694,27699,27701,27702,27706,27707,27711,27722,27723,27725,27727,27730,27732,27737,27739,27740,27755,27757,27759,27764,27766,27768,27769,27771,27781,27782,27783,27785,27796,27797,27799,27800,27804,27807,27824,27826,27828,27842,27846,27853,27855,27856,27857,27858,27860,27862,27866,27868,27872,27879,27881,27883,27884,27886,27890,27892,27908,27911,27914,27918,27919,27921,27923,27930,27942,27943,27944,27751,27950,27951,27953,27961,27964,27967,27991,27998,27999,28001,28005,28007,28015,28016,28028,28034,28039,28049,28050,28052,28054,28055,28056,28074,28076,28084,28087,28089,28093,28095,28100,28104,28106,28110,28111,28118,28123,28125,28127,28128,28130,28133,28137,28143,28144,28148,28150,28156,28160,28164,28190,28194,28199,28210,28214,28217,28219,28220,28228,28229,28232,28233,28235,28239,28241,28242,28243,28244,28247,28252,28253,28254,28258,28259,28264,28275,28283,28285,28301,28307,28313,28320,28327,28333,28334,28337,28339,28347,28351,28352,28353,28355,28359,28360,28362,28365,28366,28367,28395,28397,28398,28409,28411,28413,28420,28424,28426,28428,28429,28438,28440,28442,28443,28454,28457,28458,28463,28464,28467,28470,28475,28476,28461,28495,28497,28498,28499,28503,28505,28506,28509,28510,28513,28514,28520,28524,28541,28542,28547,28551,28552,28555,28556,28557,28560,28562,28563,28564,28566,28570,28575,28576,28581,28582,28583,28584,28590,28591,28592,28597,28598,28604,28613,28615,28616,28618,28634,28638,28648,28649,28656,28661,28665,28668,28669,28672,28677,28678,28679,28685,28695,28704,28707,28719,28724,28727,28729,28732,28739,28740,28744,28745,28746,28747,28756,28757,28765,28766,28750,28772,28773,28780,28782,28789,28790,28798,28801,28805,28806,28820,28821,28822,28823,28824,28827,28836,28843,28848,28849,28852,28855,28874,28881,28883,28884,28885,28886,28888,28892,28900,28922,28931,28932,28933,28934,28935,28939,28940,28943,28958,28960,28971,28973,28975,28976,28977,28984,28993,28997,28998,28999,29002,29003,29008,29010,29015,29018,29020,29022,29024,29032,29049,29056,29061,29063,29068,29074,29082,29083,29088,29090,29103,29104,29106,29107,29114,29119,29120,29121,29124,29131,29132,29139,29142,29145,29146,29148,29176,29182,29184,29191,29192,29193,29203,29207,29210,29213,29215,29220,29227,29231,29236,29240,29241,29249,29250,29251,29253,29262,29263,29264,29267,29269,29270,29274,29276,29278,29280,29283,29288,29291,29294,29295,29297,29303,29304,29307,29308,29311,29316,29321,29325,29326,29331,29339,29352,29357,29358,29361,29364,29374,29377,29383,29385,29388,29397,29398,29400,29407,29413,29427,29428,29434,29435,29438,29442,29444,29445,29447,29451,29453,29458,29459,29464,29465,29470,29474,29476,29479,29480,29484,29489,29490,29493,29498,29499,29501,29507,29517,29520,29522,29526,29528,29533,29534,29535,29536,29542,29543,29545,29547,29548,29550,29551,29553,29559,29561,29564,29568,29569,29571,29573,29574,29582,29584,29587,29589,29591,29592,29596,29598,29599,29600,29602,29605,29606,29610,29611,29613,29621,29623,29625,29628,29629,29631,29637,29638,29641,29643,29644,29647,29650,29651,29654,29657,29661,29665,29667,29670,29671,29673,29684,29685,29687,29689,29690,29691,29693,29695,29696,29697,29700,29703,29706,29713,29722,29723,29732,29734,29736,29737,29738,29739,29740,29741,29742,29743,29744,29745,29753,29760,29763,29764,29766,29767,29771,29773,29777,29778,29783,29789,29794,29798,29799,29800,29803,29805,29806,29809,29810,29824,29825,29829,29830,29831,29833,29839,29840,29841,29842,29848,29849,29850,29852,29855,29856,29857,29859,29862,29864,29865,29866,29867,29870,29871,29873,29874,29877,29881,29883,29887,29896,29897,29900,29904,29907,29912,29914,29915,29918,29919,29924,29928,29930,29931,29935,29940,29946,29947,29948,29951,29958,29970,29974,29975,29984,29985,29988,29991,29993,29994,29999,30006,30009,30013,30014,30015,30016,30019,30023,30024,30030,30032,30034,30039,30046,30047,30049,30063,30065,30073,30074,30075,30076,30077,30078,30081,30085,30096,30098,30099,30101,30105,30108,30114,30116,30132,30138,30143,30144,30145,30148,30150,30156,30158,30159,30167,30172,30175,30176,30177,30180,30183,30188,30190,30191,30193,30201,30208,30210,30211,30212,30215,30216,30218,30220,30223,30226,30227,30229,30230,30233,30235,30236,30237,30238,30243,30245,30246,30249,30253,30258,30259,30261,30264,30265,30266,30268,30282,30272,30273,30275,30276,30277,30281,30283,30293,30297,30303,30308,30309,30317,30318,30319,30321,30324,30337,30341,30348,30349,30357,30363,30364,30365,30367,30368,30370,30371,30372,30373,30374,30375,30376,30378,30381,30397,30401,30405,30409,30411,30412,30414,30420,30425,30432,30438,30440,30444,30448,30449,30454,30457,30460,30464,30470,30474,30478,30482,30484,30485,30487,30489,30490,30492,30498,30504,30509,30510,30511,30516,30517,30518,30521,30525,30526,30530,30533,30534,30538,30541,30542,30543,30546,30550,30551,30556,30558,30559,30560,30562,30564,30567,30570,30572,30576,30578,30579,30580,30586,30589,30592,30596,30604,30605,30612,30613,30614,30618,30623,30626,30631,30634,30638,30639,30641,30645,30654,30659,30665,30673,30674,30677,30681,30686,30687,30688,30692,30694,30698,30700,30704,30705,30708,30712,30715,30725,30726,30729,30733,30734,30737,30749,30753,30754,30755,30765,30766,30768,30773,30775,30787,30788,30791,30792,30796,30798,30802,30812,30814,30816,30817,30819,30820,30824,30826,30830,30842,30846,30858,30863,30868,30872,30881,30877,30878,30879,30884,30888,30892,30893,30896,30897,30898,30899,30907,30909,30911,30919,30920,30921,30924,30926,30930,30931,30933,30934,30948,30939,30943,30944,30945,30950,30954,30962,30963,30976,30966,30967,30970,30971,30975,30982,30988,30992,31002,31004,31006,31007,31008,31013,31015,31017,31021,31025,31028,31029,31035,31037,31039,31044,31045,31046,31050,31051,31055,31057,31060,31064,31067,31068,31079,31081,31083,31090,31097,31099,31100,31102,31115,31116,31121,31123,31124,31125,31126,31128,31131,31132,31137,31144,31145,31147,31151,31153,31156,31160,31163,31170,31172,31175,31176,31178,31183,31188,31190,31194,31197,31198,31200,31202,31205,31210,31211,31213,31217,31224,31228,31234,31235,31239,31241,31242,31244,31249,31253,31259,31262,31265,31271,31275,31277,31279,31280,31284,31285,31288,31289,31290,31300,31301,31303,31304,31308,31317,31318,31321,31324,31325,31327,31328,31333,31335,31338,31341,31349,31352,31358,31360,31362,31365,31366,31370,31371,31376,31377,31380,31390,31392,31395,31404,31411,31413,31417,31419,31420,31430,31433,31436,31438,31441,31451,31464,31465,31467,31468,31473,31476,31483,31485,31486,31495,31508,31519,31523,31527,31529,31530,31531,31533,31534,31535,31536,31537,31540,31549,31551,31552,31553,31559,31566,31573,31584,31588,31590,31593,31594,31597,31599,31602,31603,31607,31620,31625,31630,31632,31633,31638,31643,31646,31648,31653,31660,31663,31664,31666,31669,31670,31674,31675,31676,31677,31682,31685,31688,31690,31700,31702,31703,31705,31706,31707,31720,31722,31730,31732,31733,31736,31737,31738,31740,31742,31745,31746,31747,31748,31750,31753,31755,31756,31758,31759,31769,31771,31776,31781,31782,31784,31788,31793,31795,31796,31798,31801,31802,31814,31818,31829,31825,31826,31827,31833,31834,31835,31836,31837,31838,31841,31843,31847,31849,31853,31854,31856,31858,31865,31868,31869,31878,31879,31887,31892,31902,31904,31910,31920,31926,31927,31930,31931,31932,31935,31940,31943,31944,31945,31949,31951,31955,31956,31957,31959,31961,31962,31965,31974,31977,31979,31989,32003,32007,32008,32009,32015,32017,32018,32019,32022,32029,32030,32035,32038,32042,32045,32049,32060,32061,32062,32064,32065,32071,32072,32077,32081,32083,32087,32089,32090,32092,32093,32101,32103,32106,32112,32120,32122,32123,32127,32129,32130,32131,32133,32134,32136,32139,32140,32141,32145,32150,32151,32157,32158,32166,32167,32170,32179,32182,32183,32185,32194,32195,32196,32197,32198,32204,32205,32206,32215,32217,32256,32226,32229,32230,32234,32235,32237,32241,32245,32246,32249,32250,32264,32272,32273,32277,32279,32284,32285,32288,32295,32296,32300,32301,32303,32307,32310,32319,32324,32325,32327,32334,32336,32338,32344,32351,32353,32354,32357,32363,32366,32367,32371,32376,32382,32385,32390,32391,32394,32397,32401,32405,32408,32410,32413,32414,32572,32571,32573,32574,32575,32579,32580,32583,32591,32594,32595,32603,32604,32605,32609,32611,32612,32613,32614,32621,32625,32637,32638,32639,32640,32651,32653,32655,32656,32657,32662,32663,32668,32673,32674,32678,32682,32685,32692,32700,32703,32704,32707,32712,32718,32719,32731,32735,32739,32741,32744,32748,32750,32751,32754,32762,32765,32766,32767,32775,32776,32778,32781,32782,32783,32785,32787,32788,32790,32797,32798,32799,32800,32804,32806,32812,32814,32816,32820,32821,32823,32825,32826,32828,32830,32832,32836,32864,32868,32870,32877,32881,32885,32897,32904,32910,32924,32926,32934,32935,32939,32952,32953,32968,32973,32975,32978,32980,32981,32983,32984,32992,33005,33006,33008,33010,33011,33014,33017,33018,33022,33027,33035,33046,33047,33048,33052,33054,33056,33060,33063,33068,33072,33077,33082,33084,33093,33095,33098,33100,33106,33111,33120,33121,33127,33128,33129,33133,33135,33143,33153,33168,33156,33157,33158,33163,33166,33174,33176,33179,33182,33186,33198,33202,33204,33211,33227,33219,33221,33226,33230,33231,33237,33239,33243,33245,33246,33249,33252,33259,33260,33264,33265,33266,33269,33270,33272,33273,33277,33279,33280,33283,33295,33299,33300,33305,33306,33309,33313,33314,33320,33330,33332,33338,33347,33348,33349,33350,33355,33358,33359,33361,33366,33372,33376,33379,33383,33389,33396,33403,33405,33407,33408,33409,33411,33412,33415,33417,33418,33422,33425,33428,33430,33432,33434,33435,33440,33441,33443,33444,33447,33448,33449,33450,33454,33456,33458,33460,33463,33466,33468,33470,33471,33478,33488,33493,33498,33504,33506,33508,33512,33514,33517,33519,33526,33527,33533,33534,33536,33537,33543,33544,33546,33547,33620,33563,33565,33566,33567,33569,33570,33580,33581,33582,33584,33587,33591,33594,33596,33597,33602,33603,33604,33607,33613,33614,33617,33621,33622,33623,33648,33656,33661,33663,33664,33666,33668,33670,33677,33682,33684,33685,33688,33689,33691,33692,33693,33702,33703,33705,33708,33726,33727,33728,33735,33737,33743,33744,33745,33748,33757,33619,33768,33770,33782,33784,33785,33788,33793,33798,33802,33807,33809,33813,33817,33709,33839,33849,33861,33863,33864,33866,33869,33871,33873,33874,33878,33880,33881,33882,33884,33888,33892,33893,33895,33898,33904,33907,33908,33910,33912,33916,33917,33921,33925,33938,33939,33941,33950,33958,33960,33961,33962,33967,33969,33972,33978,33981,33982,33984,33986,33991,33992,33996,33999,34003,34012,34023,34026,34031,34032,34033,34034,34039,34098,34042,34043,34045,34050,34051,34055,34060,34062,34064,34076,34078,34082,34083,34084,34085,34087,34090,34091,34095,34099,34100,34102,34111,34118,34127,34128,34129,34130,34131,34134,34137,34140,34141,34142,34143,34144,34145,34146,34148,34155,34159,34169,34170,34171,34173,34175,34177,34181,34182,34185,34187,34188,34191,34195,34200,34205,34207,34208,34210,34213,34215,34228,34230,34231,34232,34236,34237,34238,34239,34242,34247,34250,34251,34254,34221,34264,34266,34271,34272,34278,34280,34285,34291,34294,34300,34303,34304,34308,34309,34317,34318,34320,34321,34322,34328,34329,34331,34334,34337,34343,34345,34358,34360,34362,34364,34365,34368,34370,34374,34386,34387,34390,34391,34392,34393,34397,34400,34401,34402,34403,34404,34409,34412,34415,34421,34422,34423,34426,34445,34449,34454,34456,34458,34460,34465,34470,34471,34472,34477,34481,34483,34484,34485,34487,34488,34489,34495,34496,34497,34499,34501,34513,34514,34517,34519,34522,34524,34528,34531,34533,34535,34440,34554,34556,34557,34564,34565,34567,34571,34574,34575,34576,34579,34580,34585,34590,34591,34593,34595,34600,34606,34607,34609,34610,34617,34618,34620,34621,34622,34624,34627,34629,34637,34648,34653,34657,34660,34661,34671,34673,34674,34683,34691,34692,34693,34694,34695,34696,34697,34699,34700,34704,34707,34709,34711,34712,34713,34718,34720,34723,34727,34732,34733,34734,34737,34741,34750,34751,34753,34760,34761,34762,34766,34773,34774,34777,34778,34780,34783,34786,34787,34788,34794,34795,34797,34801,34803,34808,34810,34815,34817,34819,34822,34825,34826,34827,34832,34841,34834,34835,34836,34840,34842,34843,34844,34846,34847,34856,34861,34862,34864,34866,34869,34874,34876,34881,34883,34885,34888,34889,34890,34891,34894,34897,34901,34902,34904,34906,34908,34911,34912,34916,34921,34929,34937,34939,34944,34968,34970,34971,34972,34975,34976,34984,34986,35002,35005,35006,35008,35018,35019,35020,35021,35022,35025,35026,35027,35035,35038,35047,35055,35056,35057,35061,35063,35073,35078,35085,35086,35087,35093,35094,35096,35097,35098,35100,35104,35110,35111,35112,35120,35121,35122,35125,35129,35130,35134,35136,35138,35141,35142,35145,35151,35154,35159,35162,35163,35164,35169,35170,35171,35179,35182,35184,35187,35189,35194,35195,35196,35197,35209,35213,35216,35220,35221,35227,35228,35231,35232,35237,35248,35252,35253,35254,35255,35260,35284,35285,35286,35287,35288,35301,35305,35307,35309,35313,35315,35318,35321,35325,35327,35332,35333,35335,35343,35345,35346,35348,35349,35358,35360,35362,35364,35366,35371,35372,35375,35381,35383,35389,35390,35392,35395,35397,35399,35401,35405,35406,35411,35414,35415,35416,35420,35421,35425,35429,35431,35445,35446,35447,35449,35450,35451,35454,35455,35456,35459,35462,35467,35471,35472,35474,35478,35479,35481,35487,35495,35497,35502,35503,35507,35510,35511,35515,35518,35523,35526,35528,35529,35530,35537,35539,35540,35541,35543,35549,35551,35564,35568,35572,35573,35574,35580,35583,35589,35590,35595,35601,35612,35614,35615,35594,35629,35632,35639,35644,35650,35651,35652,35653,35654,35656,35666,35667,35668,35673,35661,35678,35683,35693,35702,35704,35705,35708,35710,35713,35716,35717,35723,35725,35727,35732,35733,35740,35742,35743,35896,35897,35901,35902,35909,35911,35913,35915,35919,35921,35923,35924,35927,35928,35931,35933,35929,35939,35940,35942,35944,35945,35949,35955,35957,35958,35963,35966,35974,35975,35979,35984,35986,35987,35993,35995,35996,36004,36025,36026,36037,36038,36041,36043,36047,36054,36053,36057,36061,36065,36072,36076,36079,36080,36082,36085,36087,36088,36094,36095,36097,36099,36105,36114,36119,36123,36197,36201,36204,36206,36223,36226,36228,36232,36237,36240,36241,36245,36254,36255,36256,36262,36267,36268,36271,36274,36277,36279,36281,36283,36288,36293,36294,36295,36296,36298,36302,36305,36308,36309,36311,36313,36324,36325,36327,36332,36336,36284,36337,36338,36340,36349,36353,36356,36357,36358,36363,36369,36372,36374,36384,36385,36386,36387,36390,36391,36401,36403,36406,36407,36408,36409,36413,36416,36417,36427,36429,36430,36431,36436,36443,36444,36445,36446,36449,36450,36457,36460,36461,36463,36464,36465,36473,36474,36475,36482,36483,36489,36496,36498,36501,36506,36507,36509,36510,36514,36519,36521,36525,36526,36531,36533,36538,36539,36544,36545,36547,36548,36551,36559,36561,36564,36572,36584,36590,36592,36593,36599,36601,36602,36589,36608,36610,36615,36616,36623,36624,36630,36631,36632,36638,36640,36641,36643,36645,36647,36648,36652,36653,36654,36660,36661,36662,36663,36666,36672,36673,36675,36679,36687,36689,36690,36691,36692,36693,36696,36701,36702,36709,36765,36768,36769,36772,36773,36774,36789,36790,36792,36798,36800,36801,36806,36810,36811,36813,36816,36818,36819,36821,36832,36835,36836,36840,36846,36849,36853,36854,36859,36862,36866,36868,36872,36876,36888,36891,36904,36905,36911,36906,36908,36909,36915,36916,36919,36927,36931,36932,36940,36955,36957,36962,36966,36967,36972,36976,36980,36985,36997,37e3,37003,37004,37006,37008,37013,37015,37016,37017,37019,37024,37025,37026,37029,37040,37042,37043,37044,37046,37053,37068,37054,37059,37060,37061,37063,37064,37077,37079,37080,37081,37084,37085,37087,37093,37074,37110,37099,37103,37104,37108,37118,37119,37120,37124,37125,37126,37128,37133,37136,37140,37142,37143,37144,37146,37148,37150,37152,37157,37154,37155,37159,37161,37166,37167,37169,37172,37174,37175,37177,37178,37180,37181,37187,37191,37192,37199,37203,37207,37209,37210,37211,37217,37220,37223,37229,37236,37241,37242,37243,37249,37251,37253,37254,37258,37262,37265,37267,37268,37269,37272,37278,37281,37286,37288,37292,37293,37294,37296,37297,37298,37299,37302,37307,37308,37309,37311,37314,37315,37317,37331,37332,37335,37337,37338,37342,37348,37349,37353,37354,37356,37357,37358,37359,37360,37361,37367,37369,37371,37373,37376,37377,37380,37381,37382,37383,37385,37386,37388,37392,37394,37395,37398,37400,37404,37405,37411,37412,37413,37414,37416,37422,37423,37424,37427,37429,37430,37432,37433,37434,37436,37438,37440,37442,37443,37446,37447,37450,37453,37454,37455,37457,37464,37465,37468,37469,37472,37473,37477,37479,37480,37481,37486,37487,37488,37493,37494,37495,37496,37497,37499,37500,37501,37503,37512,37513,37514,37517,37518,37522,37527,37529,37535,37536,37540,37541,37543,37544,37547,37551,37554,37558,37560,37562,37563,37564,37565,37567,37568,37569,37570,37571,37573,37574,37575,37576,37579,37580,37581,37582,37584,37587,37589,37591,37592,37593,37596,37597,37599,37600,37601,37603,37605,37607,37608,37612,37614,37616,37625,37627,37631,37632,37634,37640,37645,37649,37652,37653,37660,37661,37662,37663,37665,37668,37669,37671,37673,37674,37683,37684,37686,37687,37703,37704,37705,37712,37713,37714,37717,37719,37720,37722,37726,37732,37733,37735,37737,37738,37741,37743,37744,37745,37747,37748,37750,37754,37757,37759,37760,37761,37762,37768,37770,37771,37773,37775,37778,37781,37784,37787,37790,37793,37795,37796,37798,37800,37803,37812,37813,37814,37818,37801,37825,37828,37829,37830,37831,37833,37834,37835,37836,37837,37843,37849,37852,37854,37855,37858,37862,37863,37881,37879,37880,37882,37883,37885,37889,37890,37892,37896,37897,37901,37902,37903,37909,37910,37911,37919,37934,37935,37937,37938,37939,37940,37947,37951,37949,37955,37957,37960,37962,37964,37973,37977,37980,37983,37985,37987,37992,37995,37997,37998,37999,38001,38002,38020,38019,38264,38265,38270,38276,38280,38284,38285,38286,38301,38302,38303,38305,38310,38313,38315,38316,38324,38326,38330,38333,38335,38342,38344,38345,38347,38352,38353,38354,38355,38361,38362,38365,38366,38367,38368,38372,38374,38429,38430,38434,38436,38437,38438,38444,38449,38451,38455,38456,38457,38458,38460,38461,38465,38482,38484,38486,38487,38488,38497,38510,38516,38523,38524,38526,38527,38529,38530,38531,38532,38537,38545,38550,38554,38557,38559,38564,38565,38566,38569,38574,38575,38579,38586,38602,38610,23986,38616,38618,38621,38622,38623,38633,38639,38641,38650,38658,38659,38661,38665,38682,38683,38685,38689,38690,38691,38696,38705,38707,38721,38723,38730,38734,38735,38741,38743,38744,38746,38747,38755,38759,38762,38766,38771,38774,38775,38776,38779,38781,38783,38784,38793,38805,38806,38807,38809,38810,38814,38815,38818,38828,38830,38833,38834,38837,38838,38840,38841,38842,38844,38846,38847,38849,38852,38853,38855,38857,38858,38860,38861,38862,38864,38865,38868,38871,38872,38873,38877,38878,38880,38875,38881,38884,38895,38897,38900,38903,38904,38906,38919,38922,38937,38925,38926,38932,38934,38940,38942,38944,38947,38950,38955,38958,38959,38960,38962,38963,38965,38949,38974,38980,38983,38986,38993,38994,38995,38998,38999,39001,39002,39010,39011,39013,39014,39018,39020,39083,39085,39086,39088,39092,39095,39096,39098,39099,39103,39106,39109,39112,39116,39137,39139,39141,39142,39143,39146,39155,39158,39170,39175,39176,39185,39189,39190,39191,39194,39195,39196,39199,39202,39206,39207,39211,39217,39218,39219,39220,39221,39225,39226,39227,39228,39232,39233,39238,39239,39240,39245,39246,39252,39256,39257,39259,39260,39262,39263,39264,39323,39325,39327,39334,39344,39345,39346,39349,39353,39354,39357,39359,39363,39369,39379,39380,39385,39386,39388,39390,39399,39402,39403,39404,39408,39412,39413,39417,39421,39422,39426,39427,39428,39435,39436,39440,39441,39446,39454,39456,39458,39459,39460,39463,39469,39470,39475,39477,39478,39480,39495,39489,39492,39498,39499,39500,39502,39505,39508,39510,39517,39594,39596,39598,39599,39602,39604,39605,39606,39609,39611,39614,39615,39617,39619,39622,39624,39630,39632,39634,39637,39638,39639,39643,39644,39648,39652,39653,39655,39657,39660,39666,39667,39669,39673,39674,39677,39679,39680,39681,39682,39683,39684,39685,39688,39689,39691,39692,39693,39694,39696,39698,39702,39705,39707,39708,39712,39718,39723,39725,39731,39732,39733,39735,39737,39738,39741,39752,39755,39756,39765,39766,39767,39771,39774,39777,39779,39781,39782,39784,39786,39787,39788,39789,39790,39795,39797,39799,39800,39801,39807,39808,39812,39813,39814,39815,39817,39818,39819,39821,39823,39824,39828,39834,39837,39838,39846,39847,39849,39852,39856,39857,39858,39863,39864,39867,39868,39870,39871,39873,39879,39880,39886,39888,39895,39896,39901,39903,39909,39911,39914,39915,39919,39923,39927,39928,39929,39930,39933,39935,39936,39938,39947,39951,39953,39958,39960,39961,39962,39964,39966,39970,39971,39974,39975,39976,39977,39978,39985,39989,39990,39991,39997,40001,40003,40004,40005,40009,40010,40014,40015,40016,40019,40020,40022,40024,40027,40029,40030,40031,40035,40041,40042,40028,40043,40040,40046,40048,40050,40053,40055,40059,40166,40178,40183,40185,40203,40194,40209,40215,40216,40220,40221,40222,40239,40240,40242,40243,40244,40250,40252,40261,40253,40258,40259,40263,40266,40275,40276,40287,40291,40290,40293,40297,40298,40299,40304,40310,40311,40315,40316,40318,40323,40324,40326,40330,40333,40334,40338,40339,40341,40342,40343,40344,40353,40362,40364,40366,40369,40373,40377,40380,40383,40387,40391,40393,40394,40404,40405,40406,40407,40410,40414,40415,40416,40421,40423,40425,40427,40430,40432,40435,40436,40446,40458,40450,40455,40462,40464,40465,40466,40469,40470,40473,40476,40477,40570,40571,40572,40576,40578,40579,40580,40581,40583,40590,40591,40598,40600,40603,40606,40612,40616,40620,40622,40623,40624,40627,40628,40629,40646,40648,40651,40661,40671,40676,40679,40684,40685,40686,40688,40689,40690,40693,40696,40703,40706,40707,40713,40719,40720,40721,40722,40724,40726,40727,40729,40730,40731,40735,40738,40742,40746,40747,40751,40753,40754,40756,40759,40761,40762,40764,40765,40767,40769,40771,40772,40773,40774,40775,40787,40789,40790,40791,40792,40794,40797,40798,40808,40809,40813,40814,40815,40816,40817,40819,40821,40826,40829,40847,40848,40849,40850,40852,40854,40855,40862,40865,40866,40867,40869,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
 ibm866:[1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,9617,9618,9619,9474,9508,9569,9570,9558,9557,9571,9553,9559,9565,9564,9563,9488,9492,9524,9516,9500,9472,9532,9566,9567,9562,9556,9577,9574,9568,9552,9580,9575,9576,9572,9573,9561,9560,9554,9555,9579,9578,9496,9484,9608,9604,9612,9616,9600,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103,1025,1105,1028,1108,1031,1111,1038,1118,176,8729,183,8730,8470,164,9632,160],"iso-8859-2":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,260,728,321,164,317,346,167,168,352,350,356,377,173,381,379,176,261,731,322,180,318,347,711,184,353,351,357,378,733,382,380,340,193,194,258,196,313,262,199,268,201,280,203,282,205,206,270,272,323,327,211,212,336,214,215,344,366,218,368,220,221,354,223,341,225,226,259,228,314,263,231,269,233,281,235,283,237,238,271,273,324,328,243,244,337,246,247,345,367,250,369,252,253,355,729],"iso-8859-3":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,294,728,163,164,null,292,167,168,304,350,286,308,173,null,379,176,295,178,179,180,181,293,183,184,305,351,287,309,189,null,380,192,193,194,null,196,266,264,199,200,201,202,203,204,205,206,207,null,209,210,211,212,288,214,215,284,217,218,219,220,364,348,223,224,225,226,null,228,267,265,231,232,233,234,235,236,237,238,239,null,241,242,243,244,289,246,247,285,249,250,251,252,365,349,729],"iso-8859-4":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,260,312,342,164,296,315,167,168,352,274,290,358,173,381,175,176,261,731,343,180,297,316,711,184,353,275,291,359,330,382,331,256,193,194,195,196,197,198,302,268,201,280,203,278,205,206,298,272,325,332,310,212,213,214,215,216,370,218,219,220,360,362,223,257,225,226,227,228,229,230,303,269,233,281,235,279,237,238,299,273,326,333,311,244,245,246,247,248,371,250,251,252,361,363,729],"iso-8859-5":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,173,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103,8470,1105,1106,1107,1108,1109,1110,1111,1112,1113,1114,1115,1116,167,1118,1119],"iso-8859-6":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,null,null,null,164,null,null,null,null,null,null,null,1548,173,null,null,null,null,null,null,null,null,null,null,null,null,null,1563,null,null,null,1567,null,1569,1570,1571,1572,1573,1574,1575,1576,1577,1578,1579,1580,1581,1582,1583,1584,1585,1586,1587,1588,1589,1590,1591,1592,1593,1594,null,null,null,null,null,1600,1601,1602,1603,1604,1605,1606,1607,1608,1609,1610,1611,1612,1613,1614,1615,1616,1617,1618,null,null,null,null,null,null,null,null,null,null,null,null,null],"iso-8859-7":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,8216,8217,163,8364,8367,166,167,168,169,890,171,172,173,null,8213,176,177,178,179,900,901,902,183,904,905,906,187,908,189,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,null,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,null],"iso-8859-8":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,null,162,163,164,165,166,167,168,169,215,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,247,187,188,189,190,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,8215,1488,1489,1490,1491,1492,1493,1494,1495,1496,1497,1498,1499,1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1513,1514,null,null,8206,8207,null],"iso-8859-10":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,260,274,290,298,296,310,167,315,272,352,358,381,173,362,330,176,261,275,291,299,297,311,183,316,273,353,359,382,8213,363,331,256,193,194,195,196,197,198,302,268,201,280,203,278,205,206,207,208,325,332,211,212,213,214,360,216,370,218,219,220,221,222,223,257,225,226,227,228,229,230,303,269,233,281,235,279,237,238,239,240,326,333,243,244,245,246,361,248,371,250,251,252,253,254,312],"iso-8859-13":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,8221,162,163,164,8222,166,167,216,169,342,171,172,173,174,198,176,177,178,179,8220,181,182,183,248,185,343,187,188,189,190,230,260,302,256,262,196,197,280,274,268,201,377,278,290,310,298,315,352,323,325,211,332,213,214,215,370,321,346,362,220,379,381,223,261,303,257,263,228,229,281,275,269,233,378,279,291,311,299,316,353,324,326,243,333,245,246,247,371,322,347,363,252,380,382,8217],"iso-8859-14":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,7682,7683,163,266,267,7690,167,7808,169,7810,7691,7922,173,174,376,7710,7711,288,289,7744,7745,182,7766,7809,7767,7811,7776,7923,7812,7813,7777,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,372,209,210,211,212,213,214,7786,216,217,218,219,220,221,374,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,373,241,242,243,244,245,246,7787,248,249,250,251,252,253,375,255],"iso-8859-15":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,8364,165,352,167,353,169,170,171,172,173,174,175,176,177,178,179,381,181,182,183,382,185,186,187,338,339,376,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255],"iso-8859-16":[128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,260,261,321,8364,8222,352,167,353,169,536,171,377,173,378,379,176,177,268,322,381,8221,182,183,382,269,537,187,338,339,376,380,192,193,194,258,196,262,198,199,200,201,202,203,204,205,206,207,272,323,210,211,212,336,214,346,368,217,218,219,220,280,538,223,224,225,226,259,228,263,230,231,232,233,234,235,236,237,238,239,273,324,242,243,244,337,246,347,369,249,250,251,252,281,539,255],"koi8-r":[9472,9474,9484,9488,9492,9496,9500,9508,9516,9524,9532,9600,9604,9608,9612,9616,9617,9618,9619,8992,9632,8729,8730,8776,8804,8805,160,8993,176,178,183,247,9552,9553,9554,1105,9555,9556,9557,9558,9559,9560,9561,9562,9563,9564,9565,9566,9567,9568,9569,1025,9570,9571,9572,9573,9574,9575,9576,9577,9578,9579,9580,169,1102,1072,1073,1094,1076,1077,1092,1075,1093,1080,1081,1082,1083,1084,1085,1086,1087,1103,1088,1089,1090,1091,1078,1074,1100,1099,1079,1096,1101,1097,1095,1098,1070,1040,1041,1062,1044,1045,1060,1043,1061,1048,1049,1050,1051,1052,1053,1054,1055,1071,1056,1057,1058,1059,1046,1042,1068,1067,1047,1064,1069,1065,1063,1066],"koi8-u":[9472,9474,9484,9488,9492,9496,9500,9508,9516,9524,9532,9600,9604,9608,9612,9616,9617,9618,9619,8992,9632,8729,8730,8776,8804,8805,160,8993,176,178,183,247,9552,9553,9554,1105,1108,9556,1110,1111,9559,9560,9561,9562,9563,1169,1118,9566,9567,9568,9569,1025,1028,9571,1030,1031,9574,9575,9576,9577,9578,1168,1038,169,1102,1072,1073,1094,1076,1077,1092,1075,1093,1080,1081,1082,1083,1084,1085,1086,1087,1103,1088,1089,1090,1091,1078,1074,1100,1099,1079,1096,1101,1097,1095,1098,1070,1040,1041,1062,1044,1045,1060,1043,1061,1048,1049,1050,1051,1052,1053,1054,1055,1071,1056,1057,1058,1059,1046,1042,1068,1067,1047,1064,1069,1065,1063,1066],macintosh:[196,197,199,201,209,214,220,225,224,226,228,227,229,231,233,232,234,235,237,236,238,239,241,243,242,244,246,245,250,249,251,252,8224,176,162,163,167,8226,182,223,174,169,8482,180,168,8800,198,216,8734,177,8804,8805,165,181,8706,8721,8719,960,8747,170,186,937,230,248,191,161,172,8730,402,8776,8710,171,187,8230,160,192,195,213,338,339,8211,8212,8220,8221,8216,8217,247,9674,255,376,8260,8364,8249,8250,64257,64258,8225,183,8218,8222,8240,194,202,193,203,200,205,206,207,204,211,212,63743,210,218,219,217,305,710,732,175,728,729,730,184,733,731,711],"windows-874":[8364,129,130,131,132,8230,134,135,136,137,138,139,140,141,142,143,144,8216,8217,8220,8221,8226,8211,8212,152,153,154,155,156,157,158,159,160,3585,3586,3587,3588,3589,3590,3591,3592,3593,3594,3595,3596,3597,3598,3599,3600,3601,3602,3603,3604,3605,3606,3607,3608,3609,3610,3611,3612,3613,3614,3615,3616,3617,3618,3619,3620,3621,3622,3623,3624,3625,3626,3627,3628,3629,3630,3631,3632,3633,3634,3635,3636,3637,3638,3639,3640,3641,3642,null,null,null,null,3647,3648,3649,3650,3651,3652,3653,3654,3655,3656,3657,3658,3659,3660,3661,3662,3663,3664,3665,3666,3667,3668,3669,3670,3671,3672,3673,3674,3675,null,null,null,null],"windows-1250":[8364,129,8218,131,8222,8230,8224,8225,136,8240,352,8249,346,356,381,377,144,8216,8217,8220,8221,8226,8211,8212,152,8482,353,8250,347,357,382,378,160,711,728,321,164,260,166,167,168,169,350,171,172,173,174,379,176,177,731,322,180,181,182,183,184,261,351,187,317,733,318,380,340,193,194,258,196,313,262,199,268,201,280,203,282,205,206,270,272,323,327,211,212,336,214,215,344,366,218,368,220,221,354,223,341,225,226,259,228,314,263,231,269,233,281,235,283,237,238,271,273,324,328,243,244,337,246,247,345,367,250,369,252,253,355,729],"windows-1251":[1026,1027,8218,1107,8222,8230,8224,8225,8364,8240,1033,8249,1034,1036,1035,1039,1106,8216,8217,8220,8221,8226,8211,8212,152,8482,1113,8250,1114,1116,1115,1119,160,1038,1118,1032,164,1168,166,167,1025,169,1028,171,172,173,174,1031,176,177,1030,1110,1169,181,182,183,1105,8470,1108,187,1112,1029,1109,1111,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103],"windows-1252":[8364,129,8218,402,8222,8230,8224,8225,710,8240,352,8249,338,141,381,143,144,8216,8217,8220,8221,8226,8211,8212,732,8482,353,8250,339,157,382,376,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255],"windows-1253":[8364,129,8218,402,8222,8230,8224,8225,136,8240,138,8249,140,141,142,143,144,8216,8217,8220,8221,8226,8211,8212,152,8482,154,8250,156,157,158,159,160,901,902,163,164,165,166,167,168,169,null,171,172,173,174,8213,176,177,178,179,900,181,182,183,904,905,906,187,908,189,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,null,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,null],"windows-1254":[8364,129,8218,402,8222,8230,8224,8225,710,8240,352,8249,338,141,142,143,144,8216,8217,8220,8221,8226,8211,8212,732,8482,353,8250,339,157,158,376,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,286,209,210,211,212,213,214,215,216,217,218,219,220,304,350,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,287,241,242,243,244,245,246,247,248,249,250,251,252,305,351,255],"windows-1255":[8364,129,8218,402,8222,8230,8224,8225,710,8240,138,8249,140,141,142,143,144,8216,8217,8220,8221,8226,8211,8212,732,8482,154,8250,156,157,158,159,160,161,162,163,8362,165,166,167,168,169,215,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,247,187,188,189,190,191,1456,1457,1458,1459,1460,1461,1462,1463,1464,1465,null,1467,1468,1469,1470,1471,1472,1473,1474,1475,1520,1521,1522,1523,1524,null,null,null,null,null,null,null,1488,1489,1490,1491,1492,1493,1494,1495,1496,1497,1498,1499,1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1513,1514,null,null,8206,8207,null],"windows-1256":[8364,1662,8218,402,8222,8230,8224,8225,710,8240,1657,8249,338,1670,1688,1672,1711,8216,8217,8220,8221,8226,8211,8212,1705,8482,1681,8250,339,8204,8205,1722,160,1548,162,163,164,165,166,167,168,169,1726,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,1563,187,188,189,190,1567,1729,1569,1570,1571,1572,1573,1574,1575,1576,1577,1578,1579,1580,1581,1582,1583,1584,1585,1586,1587,1588,1589,1590,215,1591,1592,1593,1594,1600,1601,1602,1603,224,1604,226,1605,1606,1607,1608,231,232,233,234,235,1609,1610,238,239,1611,1612,1613,1614,244,1615,1616,247,1617,249,1618,251,252,8206,8207,1746],"windows-1257":[8364,129,8218,131,8222,8230,8224,8225,136,8240,138,8249,140,168,711,184,144,8216,8217,8220,8221,8226,8211,8212,152,8482,154,8250,156,175,731,159,160,null,162,163,164,null,166,167,216,169,342,171,172,173,174,198,176,177,178,179,180,181,182,183,248,185,343,187,188,189,190,230,260,302,256,262,196,197,280,274,268,201,377,278,290,310,298,315,352,323,325,211,332,213,214,215,370,321,346,362,220,379,381,223,261,303,257,263,228,229,281,275,269,233,378,279,291,311,299,316,353,324,326,243,333,245,246,247,371,322,347,363,252,380,382,729],"windows-1258":[8364,129,8218,402,8222,8230,8224,8225,710,8240,138,8249,338,141,142,143,144,8216,8217,8220,8221,8226,8211,8212,732,8482,154,8250,339,157,158,376,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,258,196,197,198,199,200,201,202,203,768,205,206,207,272,209,777,211,212,416,214,215,216,217,218,219,220,431,771,223,224,225,226,259,228,229,230,231,232,233,234,235,769,237,238,239,273,241,803,243,244,417,246,247,248,249,250,251,252,432,8363,255],"x-mac-cyrillic":[1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,8224,176,1168,163,167,8226,182,1030,174,169,8482,1026,1106,8800,1027,1107,8734,177,8804,8805,1110,181,1169,1032,1028,1108,1031,1111,1033,1113,1034,1114,1112,1029,172,8730,402,8776,8710,171,187,8230,160,1035,1115,1036,1116,1109,8211,8212,8220,8221,8216,8217,247,8222,1038,1118,1039,1119,8470,1025,1105,1103,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,8364]}}(this)},{}],107:[function(l,n,e){"undefined"!=typeof n&&n.exports&&(this["encoding-indexes"]=l("./encoding-indexes.js")["encoding-indexes"]),function(l){"use strict";function e(l,n,e){return l>=n&&e>=l}function u(l,n){return-1!==l.indexOf(n)}function t(l){if(void 0===l)return{};if(l===Object(l))return l;throw TypeError("Could not convert argument to dictionary")}function i(l){for(var n=String(l),e=n.length,u=0,t=[];e>u;){var i=n.charCodeAt(u);if(55296>i||i>57343)t.push(i);else if(i>=56320&&57343>=i)t.push(65533);else if(i>=55296&&56319>=i)if(u===e-1)t.push(65533);else{var r=l.charCodeAt(u+1);if(r>=56320&&57343>=r){var o=1023&i,s=1023&r;t.push(65536+(o<<10)+s),u+=1}else t.push(65533)}u+=1}return t}function r(l){for(var n="",e=0;e<l.length;++e){var u=l[e];65535>=u?n+=String.fromCharCode(u):(u-=65536,n+=String.fromCharCode((u>>10)+55296,(1023&u)+56320))}return n}function o(l){return l>=0&&127>=l}function s(l){this.tokens=[].slice.call(l),this.tokens.reverse()}function a(l,n){if(l)throw TypeError("Decoder error");return n||65533}function c(l){throw TypeError("The code point "+l+" could not be encoded.")}function d(){}function f(){}function h(l){return l=String(l).trim().toLowerCase(),Object.prototype.hasOwnProperty.call(Q,l)?Q[l]:null}function p(l,n){return n?n[l]||null:null}function g(l,n){var e=n.indexOf(l);return-1===e?null:e}function v(n){if(!("encoding-indexes"in l))throw Error("Indexes missing. Did you forget to include encoding-indexes.js?");return l["encoding-indexes"][n]}function m(l){if(l>39419&&189e3>l||l>1237575)return null;if(7457===l)return 59335;var n,e=0,u=0,t=v("gb18030");for(n=0;n<t.length;++n){var i=t[n];if(!(i[0]<=l))break;e=i[0],u=i[1]}return u+l-e}function b(l){if(59335===l)return 7457;var n,e=0,u=0,t=v("gb18030");for(n=0;n<t.length;++n){var i=t[n];if(!(i[1]<=l))break;e=i[1],u=i[0]}return u+l-e}function y(l){var n=g(l,v("jis0208"));return null===n||e(n,8272,8835)?null:n}function _(l){var n=v("big5");return 9552===l||9566===l||9569===l||9578===l||21313===l||21317===l?n.lastIndexOf(l):g(l,n)}function w(l,n){if(!(this instanceof w))throw TypeError("Called as a function. Did you forget 'new'?");l=void 0!==l?String(l):X,n=t(n),this._encoding=null,this._decoder=null,this._ignoreBOM=!1,this._BOMseen=!1,this._error_mode="replacement",this._do_not_flush=!1;var e=h(l);if(null===e||"replacement"===e.name)throw RangeError("Unknown encoding: "+l);if(!K[e.name])throw Error("Decoder not present. Did you forget to include encoding-indexes.js?");var u=this;return u._encoding=e,Boolean(n.fatal)&&(u._error_mode="fatal"),Boolean(n.ignoreBOM)&&(u._ignoreBOM=!0),Object.defineProperty||(this.encoding=u._encoding.name.toLowerCase(),this.fatal="fatal"===u._error_mode,this.ignoreBOM=u._ignoreBOM),u}function E(l,n){if(!(this instanceof E))throw TypeError("Called as a function. Did you forget 'new'?");l=void 0!==l?String(l):X,n=t(n),this._encoding=null,this._encoder=null,this._do_not_flush=!1,this._fatal=Boolean(n.fatal)?"fatal":"replacement";var e=h(l);if(null===e||"replacement"===e.name||!u(["UTF-8","UTF-16LE","UTF-16BE"],e.name)&&!Boolean(n.NONSTANDARD_allowLegacyEncoding))throw RangeError("Unknown encoding: "+l);if(!$[e.name])throw Error("Encoder not present. Did you forget to include encoding-indexes.js?");var i=this;return i._encoding=e,Object.defineProperty||(this.encoding=i._encoding.name.toLowerCase()),i}function S(l){var n=l.fatal,u=0,t=0,i=0,r=128,o=191;this.handler=function(l,s){if(s===G&&0!==i)return i=0,a(n);if(s===G)return J;if(0===i){if(e(s,0,127))return s;if(e(s,194,223))i=1,u=s-192;else if(e(s,224,239))224===s&&(r=160),237===s&&(o=159),i=2,u=s-224;else{if(!e(s,240,244))return a(n);240===s&&(r=144),244===s&&(o=143),i=3,u=s-240}return u<<=6*i,null}if(!e(s,r,o))return u=i=t=0,r=128,o=191,l.prepend(s),a(n);if(r=128,o=191,t+=1,u+=s-128<<6*(i-t),t!==i)return null;var c=u;return u=i=t=0,c}}function T(l){l.fatal;this.handler=function(l,n){if(n===G)return J;if(e(n,0,127))return n;var u,t;e(n,128,2047)?(u=1,t=192):e(n,2048,65535)?(u=2,t=224):e(n,65536,1114111)&&(u=3,t=240);for(var i=[(n>>6*u)+t];u>0;){var r=n>>6*(u-1);i.push(128|63&r),u-=1}return i}}function C(l,n){var e=n.fatal;this.handler=function(n,u){if(u===G)return J;if(o(u))return u;var t=l[u-128];return null===t?a(e):t}}function j(l,n){n.fatal;this.handler=function(n,e){if(e===G)return J;if(z(e))return e;var u=g(e,l);return null===u&&c(e),u+128}}function O(l){var n=l.fatal,u=0,t=0,i=0;this.handler=function(l,r){if(r===G&&0===u&&0===t&&0===i)return J;r!==G||0===u&&0===t&&0===i||(u=0,t=0,i=0,a(n));var s;if(0!==i){s=null,e(r,48,57)&&(s=m(10*(126*(10*(u-129)+(t-48))+(i-129))+r-48));var c=[t,i,r];return u=0,t=0,i=0,null===s?(l.prepend(c),a(n)):s}if(0!==t)return e(r,129,254)?(i=r,null):(l.prepend([t,r]),u=0,t=0,a(n));if(0!==u){if(e(r,48,57))return t=r,null;var d=u,f=null;u=0;var h=127>r?64:65;return(e(r,64,126)||e(r,128,254))&&(f=190*(d-129)+(r-h)),s=null===f?null:p(f,v("gb18030")),null===s&&o(r)&&l.prepend(r),null===s?a(n):s}return o(r)?r:128===r?8364:e(r,129,254)?(u=r,null):a(n)}}function R(l,n){l.fatal;this.handler=function(l,e){if(e===G)return J;if(z(e))return e;if(58853===e)return c(e);if(n&&8364===e)return 128;var u=g(e,v("gb18030"));if(null!==u){var t=q(u/190)+129,i=u%190,r=63>i?64:65;return[t,i+r]}if(n)return c(e);u=b(e);var o=q(u/10/126/10);u-=10*o*126*10;var s=q(u/10/126);u-=10*s*126;var a=q(u/10),d=u-10*a;return[o+129,s+48,a+129,d+48]}}function k(l){var n=l.fatal,u=0;this.handler=function(l,t){if(t===G&&0!==u)return u=0,a(n);if(t===G&&0===u)return J;if(0!==u){var i=u,r=null;u=0;var s=127>t?64:98;switch((e(t,64,126)||e(t,161,254))&&(r=157*(i-129)+(t-s)),r){case 1133:return[202,772];case 1135:return[202,780];case 1164:return[234,772];case 1166:return[234,780]}var c=null===r?null:p(r,v("big5"));return null===c&&o(t)&&l.prepend(t),null===c?a(n):c}return o(t)?t:e(t,129,254)?(u=t,null):a(n)}}function A(l){l.fatal;this.handler=function(l,n){if(n===G)return J;if(z(n))return n;var e=_(n);if(null===e)return c(n);var u=q(e/157)+129;if(161>u)return c(n);var t=e%157,i=63>t?64:98;return[u,t+i]}}function I(l){var n=l.fatal,u=!1,t=0;this.handler=function(l,i){if(i===G&&0!==t)return t=0,a(n);if(i===G&&0===t)return J;if(142===t&&e(i,161,223))return t=0,65377+i-161;if(143===t&&e(i,161,254))return u=!0,t=i,null;if(0!==t){var r=t;t=0;var s=null;return e(r,161,254)&&e(i,161,254)&&(s=p(94*(r-161)+(i-161),v(u?"jis0212":"jis0208"))),u=!1,e(i,161,254)||l.prepend(i),null===s?a(n):s}return o(i)?i:142===i||143===i||e(i,161,254)?(t=i,null):a(n)}}function x(l){l.fatal;this.handler=function(l,n){if(n===G)return J;if(z(n))return n;if(165===n)return 92;if(8254===n)return 126;if(e(n,65377,65439))return[142,n-65377+161];8722===n&&(n=65293);var u=g(n,v("jis0208"));if(null===u)return c(n);var t=q(u/94)+161,i=u%94+161;return[t,i]}}function P(l){var n=l.fatal,u={ASCII:0,Roman:1,Katakana:2,LeadByte:3,TrailByte:4,EscapeStart:5,Escape:6},t=u.ASCII,i=u.ASCII,r=0,o=!1;this.handler=function(l,s){switch(t){default:case u.ASCII:return 27===s?(t=u.EscapeStart,null):e(s,0,127)&&14!==s&&15!==s&&27!==s?(o=!1,s):s===G?J:(o=!1,a(n));case u.Roman:return 27===s?(t=u.EscapeStart,null):92===s?(o=!1,165):126===s?(o=!1,8254):e(s,0,127)&&14!==s&&15!==s&&27!==s&&92!==s&&126!==s?(o=!1,s):s===G?J:(o=!1,a(n));case u.Katakana:return 27===s?(t=u.EscapeStart,null):e(s,33,95)?(o=!1,65377+s-33):s===G?J:(o=!1,a(n));case u.LeadByte:return 27===s?(t=u.EscapeStart,null):e(s,33,126)?(o=!1,r=s,t=u.TrailByte,null):s===G?J:(o=!1,a(n));case u.TrailByte:if(27===s)return t=u.EscapeStart,a(n);if(e(s,33,126)){t=u.LeadByte;var c=94*(r-33)+s-33,d=p(c,v("jis0208"));return null===d?a(n):d}return s===G?(t=u.LeadByte,l.prepend(s),a(n)):(t=u.LeadByte,a(n));case u.EscapeStart:return 36===s||40===s?(r=s,t=u.Escape,null):(l.prepend(s),o=!1,t=i,a(n));case u.Escape:var f=r;r=0;var h=null;if(40===f&&66===s&&(h=u.ASCII),40===f&&74===s&&(h=u.Roman),40===f&&73===s&&(h=u.Katakana),36!==f||64!==s&&66!==s||(h=u.LeadByte),null!==h){t=t=h;var g=o;return o=!0,g?a(n):null}return l.prepend([f,s]),o=!1,t=i,a(n)}}}function D(l){var n=(l.fatal,{ASCII:0,Roman:1,jis0208:2}),e=n.ASCII;this.handler=function(l,u){if(u===G&&e!==n.ASCII)return l.prepend(u),e=n.ASCII,[27,40,66];if(u===G&&e===n.ASCII)return J;if(!(e!==n.ASCII&&e!==n.Roman||14!==u&&15!==u&&27!==u))return c(65533);if(e===n.ASCII&&z(u))return u;if(e===n.Roman&&(z(u)&&92!==u&&126!==u||165==u||8254==u)){if(z(u))return u;if(165===u)return 92;if(8254===u)return 126}if(z(u)&&e!==n.ASCII)return l.prepend(u),e=n.ASCII,[27,40,66];if((165===u||8254===u)&&e!==n.Roman)return l.prepend(u),e=n.Roman,[27,40,74];8722===u&&(u=65293);var t=g(u,v("jis0208"));if(null===t)return c(u);if(e!==n.jis0208)return l.prepend(u),e=n.jis0208,[27,36,66];var i=q(t/94)+33,r=t%94+33;return[i,r]}}function N(l){var n=l.fatal,u=0;this.handler=function(l,t){if(t===G&&0!==u)return u=0,a(n);if(t===G&&0===u)return J;if(0!==u){var i=u,r=null;u=0;var s=127>t?64:65,c=160>i?129:193;(e(t,64,126)||e(t,128,252))&&(r=188*(i-c)+t-s);var d=null===r?null:p(r,v("jis0208"));return null===d&&null!==r&&e(r,8836,10528)?57344+r-8836:(null===d&&o(t)&&l.prepend(t),null===d?a(n):d)}return o(t)||128===t?t:e(t,161,223)?65377+t-161:e(t,129,159)||e(t,224,252)?(u=t,null):a(n)}}function L(l){l.fatal;this.handler=function(l,n){if(n===G)return J;if(z(n)||128===n)return n;if(165===n)return 92;if(8254===n)return 126;if(e(n,65377,65439))return n-65377+161;8722===n&&(n=65293);var u=y(n);if(null===u)return c(n);var t=q(u/188),i=31>t?129:193,r=u%188,o=63>r?64:65;return[t+i,r+o]}}function F(l){var n=l.fatal,u=0;this.handler=function(l,t){if(t===G&&0!==u)return u=0,a(n);if(t===G&&0===u)return J;if(0!==u){var i=u,r=null;u=0,e(t,65,254)&&(r=190*(i-129)+(t-65));var s=null===r?null:p(r,v("euc-kr"));return null===r&&o(t)&&l.prepend(t),null===s?a(n):s}return o(t)?t:e(t,129,254)?(u=t,null):a(n)}}function M(l){l.fatal;this.handler=function(l,n){if(n===G)return J;if(z(n))return n;var e=g(n,v("euc-kr"));if(null===e)return c(n);var u=q(e/190)+129,t=e%190+65;return[u,t]}}function U(l,n){var e=l>>8,u=255&l;return n?[e,u]:[u,e]}function B(l,n){var u=n.fatal,t=null,i=null;this.handler=function(n,r){if(r===G&&(null!==t||null!==i))return a(u);if(r===G&&null===t&&null===i)return J;if(null===t)return t=r,null;var o;if(o=l?(t<<8)+r:(r<<8)+t,t=null,null!==i){var s=i;return i=null,e(o,56320,57343)?65536+1024*(s-55296)+(o-56320):(n.prepend(U(o,l)),a(u))}return e(o,55296,56319)?(i=o,null):e(o,56320,57343)?a(u):o}}function V(l,n){n.fatal;this.handler=function(n,u){if(u===G)return J;if(e(u,0,65535))return U(u,l);var t=U((u-65536>>10)+55296,l),i=U((u-65536&1023)+56320,l);return t.concat(i)}}function H(l){l.fatal;this.handler=function(l,n){return n===G?J:o(n)?n:63360+n-128}}function W(l){l.fatal;this.handler=function(l,n){return n===G?J:z(n)?n:e(n,63360,63487)?n-63360+128:c(n)}}var q=Math.floor,z=o,G=-1;s.prototype={endOfStream:function(){return!this.tokens.length},read:function(){return this.tokens.length?this.tokens.pop():G},prepend:function(l){if(Array.isArray(l))for(var n=l;n.length;)this.tokens.push(n.pop());else this.tokens.push(l)},push:function(l){if(Array.isArray(l))for(var n=l;n.length;)this.tokens.unshift(n.shift());else this.tokens.unshift(l)}};var J=-1;d.prototype={handler:function(l,n){}},f.prototype={handler:function(l,n){}};var Y=[{encodings:[{labels:["unicode-1-1-utf-8","utf-8","utf8"],name:"UTF-8"}],heading:"The Encoding"},{encodings:[{labels:["866","cp866","csibm866","ibm866"],name:"IBM866"},{labels:["csisolatin2","iso-8859-2","iso-ir-101","iso8859-2","iso88592","iso_8859-2","iso_8859-2:1987","l2","latin2"],name:"ISO-8859-2"},{labels:["csisolatin3","iso-8859-3","iso-ir-109","iso8859-3","iso88593","iso_8859-3","iso_8859-3:1988","l3","latin3"],name:"ISO-8859-3"},{labels:["csisolatin4","iso-8859-4","iso-ir-110","iso8859-4","iso88594","iso_8859-4","iso_8859-4:1988","l4","latin4"],name:"ISO-8859-4"},{labels:["csisolatincyrillic","cyrillic","iso-8859-5","iso-ir-144","iso8859-5","iso88595","iso_8859-5","iso_8859-5:1988"],name:"ISO-8859-5"},{labels:["arabic","asmo-708","csiso88596e","csiso88596i","csisolatinarabic","ecma-114","iso-8859-6","iso-8859-6-e","iso-8859-6-i","iso-ir-127","iso8859-6","iso88596","iso_8859-6","iso_8859-6:1987"],name:"ISO-8859-6"},{labels:["csisolatingreek","ecma-118","elot_928","greek","greek8","iso-8859-7","iso-ir-126","iso8859-7","iso88597","iso_8859-7","iso_8859-7:1987","sun_eu_greek"],name:"ISO-8859-7"},{labels:["csiso88598e","csisolatinhebrew","hebrew","iso-8859-8","iso-8859-8-e","iso-ir-138","iso8859-8","iso88598","iso_8859-8","iso_8859-8:1988","visual"],name:"ISO-8859-8"},{labels:["csiso88598i","iso-8859-8-i","logical"],name:"ISO-8859-8-i"},{labels:["csisolatin6","iso-8859-10","iso-ir-157","iso8859-10","iso885910","l6","latin6"],name:"ISO-8859-10"},{labels:["iso-8859-13","iso8859-13","iso885913"],name:"ISO-8859-13"},{labels:["iso-8859-14","iso8859-14","iso885914"],name:"ISO-8859-14"},{labels:["csisolatin9","iso-8859-15","iso8859-15","iso885915","iso_8859-15","l9"],name:"ISO-8859-15"},{labels:["iso-8859-16"],name:"ISO-8859-16"},{labels:["cskoi8r","koi","koi8","koi8-r","koi8_r"],name:"KOI8-R"},{labels:["koi8-ru","koi8-u"],name:"KOI8-U"},{labels:["csmacintosh","mac","macintosh","x-mac-roman"],name:"macintosh"},{labels:["dos-874","iso-8859-11","iso8859-11","iso885911","tis-620","windows-874"],name:"windows-874"},{labels:["cp1250","windows-1250","x-cp1250"],name:"windows-1250"},{labels:["cp1251","windows-1251","x-cp1251"],name:"windows-1251"},{labels:["ansi_x3.4-1968","ascii","cp1252","cp819","csisolatin1","ibm819","iso-8859-1","iso-ir-100","iso8859-1","iso88591","iso_8859-1","iso_8859-1:1987","l1","latin1","us-ascii","windows-1252","x-cp1252"],name:"windows-1252"},{labels:["cp1253","windows-1253","x-cp1253"],name:"windows-1253"},{labels:["cp1254","csisolatin5","iso-8859-9","iso-ir-148","iso8859-9","iso88599","iso_8859-9","iso_8859-9:1989","l5","latin5","windows-1254","x-cp1254"],name:"windows-1254"},{labels:["cp1255","windows-1255","x-cp1255"],name:"windows-1255"},{labels:["cp1256","windows-1256","x-cp1256"],name:"windows-1256"},{labels:["cp1257","windows-1257","x-cp1257"],name:"windows-1257"},{labels:["cp1258","windows-1258","x-cp1258"],name:"windows-1258"},{labels:["x-mac-cyrillic","x-mac-ukrainian"],name:"x-mac-cyrillic"}],heading:"Legacy single-byte encodings"},{encodings:[{labels:["chinese","csgb2312","csiso58gb231280","gb2312","gb_2312","gb_2312-80","gbk","iso-ir-58","x-gbk"],name:"GBK"},{labels:["gb18030"],name:"gb18030"}],heading:"Legacy multi-byte Chinese (simplified) encodings"},{encodings:[{labels:["big5","big5-hkscs","cn-big5","csbig5","x-x-big5"],name:"Big5"}],heading:"Legacy multi-byte Chinese (traditional) encodings"},{encodings:[{labels:["cseucpkdfmtjapanese","euc-jp","x-euc-jp"],name:"EUC-JP"},{labels:["csiso2022jp","iso-2022-jp"],name:"ISO-2022-JP"},{labels:["csshiftjis","ms932","ms_kanji","shift-jis","shift_jis","sjis","windows-31j","x-sjis"],name:"Shift_JIS"}],heading:"Legacy multi-byte Japanese encodings"},{encodings:[{labels:["cseuckr","csksc56011987","euc-kr","iso-ir-149","korean","ks_c_5601-1987","ks_c_5601-1989","ksc5601","ksc_5601","windows-949"],name:"EUC-KR"}],heading:"Legacy multi-byte Korean encodings"},{encodings:[{labels:["csiso2022kr","hz-gb-2312","iso-2022-cn","iso-2022-cn-ext","iso-2022-kr"],name:"replacement"},{labels:["utf-16be"],name:"UTF-16BE"},{labels:["utf-16","utf-16le"],name:"UTF-16LE"},{labels:["x-user-defined"],name:"x-user-defined"}],heading:"Legacy miscellaneous encodings"}],Q={};Y.forEach(function(l){l.encodings.forEach(function(l){l.labels.forEach(function(n){Q[n]=l})})});var $={},K={},X="utf-8";Object.defineProperty&&(Object.defineProperty(w.prototype,"encoding",{get:function(){return this._encoding.name.toLowerCase()}}),Object.defineProperty(w.prototype,"fatal",{get:function(){return"fatal"===this._error_mode}}),Object.defineProperty(w.prototype,"ignoreBOM",{get:function(){return this._ignoreBOM}})),w.prototype.decode=function(l,n){function e(l){return!u(["UTF-8","UTF-16LE","UTF-16BE"],this._encoding.name)||this._ignoreBOM||this._BOMseen||(l.length>0&&65279===l[0]?(this._BOMseen=!0,l.shift()):l.length>0&&(this._BOMseen=!0)),r(l)}var i;i="object"==typeof l&&l instanceof ArrayBuffer?new Uint8Array(l):"object"==typeof l&&"buffer"in l&&l.buffer instanceof ArrayBuffer?new Uint8Array(l.buffer,l.byteOffset,l.byteLength):new Uint8Array(0),n=t(n),this._do_not_flush||(this._decoder=K[this._encoding.name]({fatal:"fatal"===this._error_mode}),this._BOMseen=!1),
 this._do_not_flush=Boolean(n.stream);for(var o,a=new s(i),c=[];;){var d=a.read();if(d===G)break;if(o=this._decoder.handler(a,d),o===J)break;null!==o&&(Array.isArray(o)?c.push.apply(c,o):c.push(o))}if(!this._do_not_flush){do{if(o=this._decoder.handler(a,a.read()),o===J)break;null!==o&&(Array.isArray(o)?c.push.apply(c,o):c.push(o))}while(!a.endOfStream());this._decoder=null}return e.call(this,c)},Object.defineProperty&&Object.defineProperty(E.prototype,"encoding",{get:function(){return this._encoding.name.toLowerCase()}}),E.prototype.encode=function(l,n){l=l?String(l):"",n=t(n),this._do_not_flush||(this._encoder=$[this._encoding.name]({fatal:"fatal"===this._fatal})),this._do_not_flush=Boolean(n.stream);for(var e,u=new s(i(l)),r=[];;){var o=u.read();if(o===G)break;if(e=this._encoder.handler(u,o),e===J)break;Array.isArray(e)?r.push.apply(r,e):r.push(e)}if(!this._do_not_flush){for(;;){if(e=this._encoder.handler(u,u.read()),e===J)break;Array.isArray(e)?r.push.apply(r,e):r.push(e)}this._encoder=null}return new Uint8Array(r)},$["UTF-8"]=function(l){return new T(l)},K["UTF-8"]=function(l){return new S(l)},function(){"encoding-indexes"in l&&Y.forEach(function(l){"Legacy single-byte encodings"===l.heading&&l.encodings.forEach(function(l){var n=l.name,e=v(n.toLowerCase());K[n]=function(l){return new C(e,l)},$[n]=function(l){return new j(e,l)}})})}(),K.GBK=function(l){return new O(l)},$.GBK=function(l){return new R(l,!0)},$.gb18030=function(l){return new R(l)},K.gb18030=function(l){return new O(l)},$.Big5=function(l){return new A(l)},K.Big5=function(l){return new k(l)},$["EUC-JP"]=function(l){return new x(l)},K["EUC-JP"]=function(l){return new I(l)},$["ISO-2022-JP"]=function(l){return new D(l)},K["ISO-2022-JP"]=function(l){return new P(l)},$.Shift_JIS=function(l){return new L(l)},K.Shift_JIS=function(l){return new N(l)},$["EUC-KR"]=function(l){return new M(l)},K["EUC-KR"]=function(l){return new F(l)},$["UTF-16BE"]=function(l){return new V(!0,l)},K["UTF-16BE"]=function(l){return new B(!0,l)},$["UTF-16LE"]=function(l){return new V(!1,l)},K["UTF-16LE"]=function(l){return new B(!1,l)},$["x-user-defined"]=function(l){return new W(l)},K["x-user-defined"]=function(l){return new H(l)},l.TextEncoder||(l.TextEncoder=E),l.TextDecoder||(l.TextDecoder=w),"undefined"!=typeof n&&n.exports&&(n.exports={TextEncoder:l.TextEncoder,TextDecoder:l.TextDecoder,EncodingIndexes:l["encoding-indexes"]})}(this)},{"./encoding-indexes.js":106}],108:[function(l,n,e){(function(l){var e;if(l.crypto&&crypto.getRandomValues){var u=new Uint8Array(16);e=function(){return crypto.getRandomValues(u),u}}if(!e){var t=new Array(16);e=function(){for(var l,n=0;16>n;n++)0===(3&n)&&(l=4294967296*Math.random()),t[n]=l>>>((3&n)<<3)&255;return t}}n.exports=e}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}],109:[function(l,n,e){function u(l,n,e){var u=n&&e||0,t=0;for(n=n||[],l.toLowerCase().replace(/[0-9a-f]{2}/g,function(l){16>t&&(n[u+t++]=a[l])});16>t;)n[u+t++]=0;return n}function t(l,n){var e=n||0,u=s;return u[l[e++]]+u[l[e++]]+u[l[e++]]+u[l[e++]]+"-"+u[l[e++]]+u[l[e++]]+"-"+u[l[e++]]+u[l[e++]]+"-"+u[l[e++]]+u[l[e++]]+"-"+u[l[e++]]+u[l[e++]]+u[l[e++]]+u[l[e++]]+u[l[e++]]+u[l[e++]]}function i(l,n,e){var u=n&&e||0,i=n||[];l=l||{};var r=void 0!==l.clockseq?l.clockseq:h,o=void 0!==l.msecs?l.msecs:(new Date).getTime(),s=void 0!==l.nsecs?l.nsecs:g+1,a=o-p+(s-g)/1e4;if(0>a&&void 0===l.clockseq&&(r=r+1&16383),(0>a||o>p)&&void 0===l.nsecs&&(s=0),s>=1e4)throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");p=o,g=s,h=r,o+=122192928e5;var c=(1e4*(268435455&o)+s)%4294967296;i[u++]=c>>>24&255,i[u++]=c>>>16&255,i[u++]=c>>>8&255,i[u++]=255&c;var d=o/4294967296*1e4&268435455;i[u++]=d>>>8&255,i[u++]=255&d,i[u++]=d>>>24&15|16,i[u++]=d>>>16&255,i[u++]=r>>>8|128,i[u++]=255&r;for(var v=l.node||f,m=0;6>m;m++)i[u+m]=v[m];return n?n:t(i)}function r(l,n,e){var u=n&&e||0;"string"==typeof l&&(n="binary"==l?new Array(16):null,l=null),l=l||{};var i=l.random||(l.rng||o)();if(i[6]=15&i[6]|64,i[8]=63&i[8]|128,n)for(var r=0;16>r;r++)n[u+r]=i[r];return n||t(i)}for(var o=l("./rng"),s=[],a={},c=0;256>c;c++)s[c]=(c+256).toString(16).substr(1),a[s[c]]=c;var d=o(),f=[1|d[0],d[1],d[2],d[3],d[4],d[5]],h=16383&(d[6]<<8|d[7]),p=0,g=0,v=r;v.v1=i,v.v4=r,v.parse=u,v.unparse=t,n.exports=v},{"./rng":108}],110:[function(l,n,e){function u(l,n,e){var u;return u=n?new i(l,n):new i(l)}var t=function(){return this}(),i=t.WebSocket||t.MozWebSocket;n.exports=i?u:null,i&&(u.prototype=i.prototype)},{}],111:[function(l,n,e){n.exports={version:"v2.7.5",build:"ccd6792",buildTime:"March 18 10:46:27 2016",debug:"false",websiteURL:"http://www.tokbox.com",cdnURL:"http://static.opentok.com",loggingURL:"http://hlg.tokbox.com/prod",apiURL:"http://anvil.opentok.com",messagingProtocol:"wss",messagingPort:443,supportSSL:"true",cdnURLSSL:"https://static.opentok.com",loggingURLSSL:"https://hlg.tokbox.com/prod",apiURLSSL:"https://anvil.opentok.com",minimumVersion:{firefox:null,chrome:null}}},{}],112:[function(l,n,e){(function(e){"use strict";var u=l("./guid_storage.js"),t=l("../ot/logging.js"),i=l("@opentok/ot-helpers"),r=l("./properties.js");n.exports=function(l){var n="1",o=new i.Analytics(l,t.debug,u.get);this.logError=function(l,t,s,a,c){c||(c={});var d=c.partnerId;u.get(function(u,f){if(!u){var h=i.extend({clientVersion:"js-"+r.version.replace("v",""),guid:f,partnerId:d,source:e.location.href,logVersion:n,clientSystemTime:(new Date).getTime()},c);o.logError(l,t,s,a,h)}})},this.logEvent=function(l,t,s){var a=l.partnerId;l||(l={}),u.get(function(u,c){if(!u){var d=i.extend({clientVersion:"js-"+r.version.replace("v",""),guid:c,partnerId:a,source:e.location.href,logVersion:n,clientSystemTime:(new Date).getTime()},l);o.logEvent(d,!1,t,s)}})},this.logQOS=function(l){var t=l.partnerId;l||(l={}),u.get(function(u,s){if(!u){var a=i.extend({clientVersion:"js-"+r.version.replace("v",""),guid:s,partnerId:t,source:e.location.href,logVersion:n,clientSystemTime:(new Date).getTime(),duration:0},l);o.logQOS(a)}})}}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../ot/logging.js":160,"./guid_storage.js":123,"./properties.js":126,"@opentok/ot-helpers":4}],113:[function(l,n,e){(function(l){"use strict";var e,u=function(){return e=e||new l.AudioContext};n.exports=u}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}],114:[function(l,n,e){"use strict";n.exports=function(l){this.sample=function(n){l(function(l,e){if(!l)for(var u=0;u<e.length;u++){var t=e[u],i=parseFloat(t.audioOutputLevel);if(!isNaN(i))return void n(i/32768)}n(null)})}}},{}],115:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l){var n=this,e=null,t=null,i=null,r=function(n){var e=l.createMediaStreamSource(n),u=l.createAnalyser();return e.connect(u),u};u.defineProperties(n,{webRTCStream:{get:function(){return i},set:function(l){i=l,e=r(i),t=new Uint8Array(e.frequencyBinCount)}}}),this.sample=function(l){if(e){e.getByteTimeDomainData(t);for(var n=0,u=0;u<t.length;u++)n=Math.max(n,Math.abs(t[u]-128));l(n/128)}else l(null)}}},{"@opentok/ot-helpers":4}],116:[function(l,n,e){(function(n){"use strict";var e=l("../ot/logging.js"),u=l("./properties.js"),t=l("@opentok/otplugin.js"),i=l("@opentok/ot-helpers");i.registerCapability("getUserMedia",function(){return"Node"===i.env.name?!1:!!(n.navigator.webkitGetUserMedia||n.navigator.mozGetUserMedia||n.navigator.mediaDevices&&n.navigator.mediaDevices.getUserMedia||t.isInstalled())}),i.registerCapability("PeerConnection",function(){return"Node"===i.env?!1:"function"==typeof n.webkitRTCPeerConnection&&n.webkitRTCPeerConnection.prototype.addStream?!0:"function"==typeof n.RTCPeerConnection?!0:"function"==typeof n.mozRTCPeerConnection&&i.env.version>20?!0:t.isInstalled()}),i.registerCapability("webrtc",function(){if(u){var l=u.minimumVersion||{},n=l[i.env.name.toLowerCase()];if(n&&i.env.versionGreaterThan(n))return e.debug("Support for",i.env.name,"is disabled because we require",n,"but this is",i.env.version),!1}return"Node"===i.env?!0:i.hasCapabilities("getUserMedia","PeerConnection")}),i.registerCapability("bundle",function(){return i.hasCapabilities("webrtc")&&("Chrome"===i.env.name||"Node"===i.env.name||t.isInstalled())}),i.registerCapability("RTCPMux",function(){return i.hasCapabilities("webrtc")&&("Chrome"===i.env.name||"Node"===i.env.name||t.isInstalled())}),i.registerCapability("audioOutputLevelStat",function(){return["Chrome","IE","Opera"].indexOf(i.env.name)>-1}),i.registerCapability("webAudioCapableRemoteStream",function(){return"Firefox"===i.env.name}),i.registerCapability("webAudio",function(){return"AudioContext"in n})}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../ot/logging.js":160,"./properties.js":126,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],117:[function(l,n,e){"use strict";var u=l("../ot/analytics.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n,e,i,r="Initial",o=["Initial","Attempt","Success","Failure"],s=5e3,a=6,c=function(e){r=e;var i=!1;switch(r){case"Attempt":"Initial"!==n&&(i=!0),f();break;case"Success":"Attempt"!==n&&(i=!0),h();break;case"Failure":"Attempt"!==n&&(i=!0),h()}if(i){var o=l?t.clone(l):{};o.action="Internal Error",o.variation="Non-fatal",o.payload={debug:"Invalid sequence: "+l.action+" "+n+" -> "+r},u.logEvent(o)}},d=t.statable(this,o,"Failure",c),f=function(){i=0,e=setInterval(function(){if(a>i){var n=t.extend(l,{variation:"Attempting"});u.logEvent(n)}else h();i++},s)},h=function(){clearInterval(e)};this.setVariation=function(l){n=r,d(l)},this.stop=function(){h()}}},{"../ot/analytics.js":139,"@opentok/ot-helpers":4}],118:[function(l,n,e){(function(e){"use strict";l("./web_rtc_polyfills.js");var u=l("@opentok/otplugin.js"),t=e.webkitRTCPeerConnection||e.RTCPeerConnection||e.mozRTCPeerConnection;n.exports=function(l,n,e,i){if(u.isInstalled())u.initPeerConnection(l,n,e,i);else{var r;try{r=new t(l,n)}catch(o){return void i(o.message)}i(null,r)}}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"./web_rtc_polyfills.js":136,"@opentok/otplugin.js":42}],119:[function(l,n,e){"use strict";n.exports=function(l){var n=document.createElement("link");n.type="text/css",n.media="screen",n.rel="stylesheet",n.href=l;var e=document.head||document.getElementsByTagName("head")[0];e.appendChild(n)}},{}],120:[function(l,n,e){(function(e){"use strict";l("./web_rtc_polyfills.js");var u=l("@opentok/otplugin.js"),t=l("@opentok/ot-helpers"),i={};n.exports=i;var r={audio:"audioInput",video:"videoInput",audioinput:"audioInput",videoinput:"videoInput",audioInput:"audioInput",videoInput:"videoInput"},o=function(){return e.navigator.mediaDevices?e.navigator.mediaDevices.enumerateDevices:t.hasCapabilities("otplugin")?u.mediaDevices.enumerateDevices:e.MediaStreamTrack&&e.MediaStreamTrack.getSources?e.MediaStreamTrack.getSources:void 0},s=function(l){var n=o();return e.navigator.mediaDevices&&t.isFunction(n)?n=function(l){e.navigator.mediaDevices.enumerateDevices().then(function(n){l(void 0,n)})["catch"](function(n){l(n)})}:e.MediaStreamTrack&&e.MediaStreamTrack.getSources&&(n=function(l){e.MediaStreamTrack.getSources(function(n){l(void 0,n)})}),n(l)},a=function(l){setTimeout(l.bind(null,{video:!0,audio:!0}))};t.registerCapability("enumerateDevices",function(){return t.isFunction(o())}),i.getMediaDevices=function(l,n){if(!t.hasCapabilities("enumerateDevices"))return void l(new Error("This browser does not support enumerateDevices APIs"));var e=t.isFunction(n)?n:s;e(function(n,e){if(n)return void l(n);var u=t(e).map(function(l){return{deviceId:l.deviceId||l.id,label:l.label,kind:r[l.kind]}}).filter(function(l){return"audioInput"===l.kind||"videoInput"===l.kind});l(void 0,u.get())})},i.shouldAskForDevices=function(l){t.hasCapabilities("enumerateDevices")?i.getMediaDevices(function(n,e){if(n)return void a(l);var u=e.some(function(l){return"audioInput"===l.kind}),t=e.some(function(l){return"videoInput"===l.kind});l.call(null,{video:t,audio:u})}):(i.shouldAskForDevices=a,i.shouldAskForDevices(l))}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"./web_rtc_polyfills.js":136,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],121:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("./properties.js"),i=l("../ot/logging.js"),r={};n.exports=r;var o=function(l,n,e){var t=l.head||l.getElementsByTagName("head")[0],r=u.createElement("link",{type:"text/css",media:"screen",rel:"stylesheet",href:n});t.appendChild(r),u.on(r,"error",function(l){i.error("Could not load CSS for dialog",n,l&&l.message||l)}),u.on(r,"load",e)},s=function(l,n,e){var u=["//fonts.googleapis.com/css?family=Didact+Gothic",t.cssURL].concat(n),i=u.length;u.forEach(function(n){o(l,n,function(){--i<=0&&e()})})},a=function(l,n,e){var t=u.createElement(e||"div",{"class":l},n,this);return t.on=u.on.bind(u,t),t.off=u.off.bind(u,t),t},c=function(l,n,e){var t=a.call(this,"",null,"input");return t=u(t).on("change",e),t.attr({name:n,id:n,type:"checkbox"}),t.first},d=function(l,n,e){var u=a.call(this,e||"",l,"a");return u.setAttribute("href",n),u};r.Plugin={},r.Plugin.promptToInstall=function(){var l=new u.Modal(function(n,e){function t(){l.trigger("download"),setTimeout(function(){v.querySelector(".OT_dialog-messages-main").innerHTML="To enable audio & video chat on this website, run the installer and then refresh your browser window.";var l=v.querySelectorAll(".OT_dialog-section");u.addClass(l[0],"OT_dialog-hidden"),u.removeClass(l[1],"OT_dialog-hidden")},3e3)}function i(){l.trigger("refresh")}function r(){p.checked?o():f()}function o(){y.enable(),y.on("click",t),w.enable(),w.on("click",i)}function f(){y.disable(),y.off("click",t),w.disable(),w.off("click",i)}var h,p,g,v,m=a.bind(e),b=function(l,n){var e="OT_dialog-button "+(n?"OT_dialog-button-"+n:"OT_dialog-button-large"),t=m(e,l);return t.enable=function(){return u.removeClass(this,"OT_dialog-button-disabled"),this},t.disable=function(){return u.addClass(this,"OT_dialog-button-disabled"),this},t},y=b("Download plugin"),_=b("cancel","small"),w=b("Refresh browser");u.addClass(_,"OT_dialog-no-natural-margin OT_dialog-button-block"),u.addClass(w,"OT_dialog-no-natural-margin"),y.disable(),w.disable(),_.on("click",function(){l.trigger("cancelButtonClicked"),l.close()}),g=m("OT_closeButton","&times;").on("click",function(){l.trigger("closeButtonClicked"),l.close()}).first;var E=n.location.protocol.indexOf("https")>=0?"https":"http";h=d.call(e,"end-user license agreement",E+"://tokbox.com/support/ie-eula"),p=c.call(e,null,"acceptEULA",r),v=m("OT_dialog-centering",[m("OT_dialog-centering-child",[m("OT_root OT_dialog OT_dialog-plugin-prompt",[g,m("OT_dialog-messages",[m("OT_dialog-messages-main","This app requires real-time communication")]),m("OT_dialog-section",[m("OT_dialog-single-button-with-title",[m("OT_dialog-button-title",[p,function(){var l=m("","accept","label");return l.setAttribute("for",p.id),l.style.margin="0 5px",l}(),h]),m("OT_dialog-actions-card",[y,_])])]),m("OT_dialog-section OT_dialog-hidden",[m("OT_dialog-button-title",["You will then be able to continue using this application in Internet Explorer."]),w])])])]),s(e,[],function(){e.body.appendChild(v)})});return l},r.Plugin.promptToReinstall=function(){var l=new u.Modal(function(n,e){var u,t,i,r=a.bind(e);u=r("OT_closeButton","&times;").on("click",function(){l.trigger("closeButtonClicked"),l.close()}).first,t=r("OT_dialog-button OT_dialog-button-large OT_dialog-no-natural-margin","Okay").on("click",function(){l.trigger("okay")}).first,i=r("OT_dialog-centering",[r("OT_dialog-centering-child",[r("OT_ROOT OT_dialog OT_dialog-plugin-reinstall",[u,r("OT_dialog-messages",[r("OT_dialog-messages-main","Reinstall Opentok Plugin"),r("OT_dialog-messages-minor","Uh oh! Try reinstalling the OpenTok plugin again to enable real-time video communication for Internet Explorer.")]),r("OT_dialog-section",[r("OT_dialog-single-button",t)])])])]),s(e,[],function(){e.body.appendChild(i)})});return l},r.Plugin.updateInProgress=function(){var l,n,e=0,t=new u.Modal(function(u,i){var r,o=a.bind(i);n=o("OT_dialog-plugin-upgrade-percentage","0%","strong"),l=o("OT_dialog-progress-bar-fill"),r=o("OT_dialog-centering",[o("OT_dialog-centering-child",[o("OT_ROOT OT_dialog OT_dialog-plugin-upgrading",[o("OT_dialog-messages",[o("OT_dialog-messages-main",["One moment please... ",n]),o("OT_dialog-progress-bar",l),o("OT_dialog-messages-minor OT_dialog-no-natural-margin","Please wait while the OpenTok plugin is updated")])])])]),s(i,[],function(){i.body.appendChild(r),null!=e&&t.setUpdateProgress(e)})});return t.setUpdateProgress=function(t){l&&n?t>99?(u.css(l,"width",""),n.innerHTML="100%"):1>t?(u.css(l,"width","0%"),n.innerHTML="0%"):(u.css(l,"width",t+"%"),n.innerHTML=t+"%"):e=t},t},r.Plugin.updateComplete=function(l){var n=new u.Modal(function(e,u){var t,i,r,o=a.bind(u);t=o("OT_dialog-button OT_dialog-button-large OT_dialog-no-natural-margin","Reload").on("click",function(){n.trigger("reload")}).first,r=l?["Update Failed.",l+""||"NO ERROR"]:["Update Complete.","The OpenTok plugin has been succesfully updated. Please reload your browser."],i=o("OT_dialog-centering",[o("OT_dialog-centering-child",[o("OT_root OT_dialog OT_dialog-plugin-upgraded",[o("OT_dialog-messages",[o("OT_dialog-messages-main",r[0]),o("OT_dialog-messages-minor",r[1])]),o("OT_dialog-single-button",t)])])]),s(u,[],function(){u.body.appendChild(i)})});return n}},{"../ot/logging.js":160,"./properties.js":126,"@opentok/ot-helpers":4}],122:[function(l,n,e){(function(e){"use strict";var u=l("bluebird");l("./web_rtc_polyfills.js");var t,i,r,o,s,a,c,d=l("@opentok/otplugin.js"),f=l("@opentok/ot-helpers"),h=l("../ot/logging.js"),p=l("./throttle_until_complete.js");t=function(){return e.navigator.getUserMedia?e.navigator.getUserMedia.bind(e.navigator):e.navigator.mediaDevices&&e.navigator.mediaDevices.getUserMedia?function(l,n,u){e.navigator.mediaDevices.getUserMedia(l).then(n,u)}:e.navigator.mozGetUserMedia?e.navigator.mozGetUserMedia.bind(e.navigator):e.navigator.webkitGetUserMedia?e.navigator.webkitGetUserMedia.bind(e.navigator):d.isInstalled()?d.getUserMedia.bind(d):void 0}();var g=function(l){return new u.Promise(function(n,e){t(l,n,e)})};r=p(g),o={PERMISSION_DENIED:"PermissionDeniedError",SecurityError:"PermissionDeniedError",NOT_SUPPORTED_ERROR:"NotSupportedError",MANDATORY_UNSATISFIED_ERROR:" ConstraintNotSatisfiedError",NO_DEVICES_FOUND:"NoDevicesFoundError",HARDWARE_UNAVAILABLE:"HardwareUnavailableError",TrackStartError:"HardwareUnavailableError"},s={PermissionDeniedError:"End-user denied permission to hardware devices",PermissionDismissedError:"End-user dismissed permission to hardware devices",NotSupportedError:"A constraint specified is not supported by the browser.",ConstraintNotSatisfiedError:"It's not possible to satisfy one or more constraints passed into the getUserMedia function",OverconstrainedError:"Due to changes in the environment, one or more mandatory constraints can no longer be satisfied.",NoDevicesFoundError:"No voice or video input devices are available on this machine.",HardwareUnavailableError:"The selected voice or video devices are unavailable. Verify that the chosen devices are not in use by another application."},a=function(l,n){var e,u;return e=n.hasOwnProperty(l)?n[l]:l,u=s.hasOwnProperty(e)?s[e]:"Unknown Error while getting user media",{name:e,message:u}},c=function(l){var n;return f.isObject(l)&&l.name?(n=a(l.name,o),n.constraintName=l.constraintName):n="string"==typeof l?a(l,o):{message:"Unknown Error type while getting media"},n};var v=function(l){if(!l||!f.isObject(l))return!0;for(var n in l)if(l.hasOwnProperty(n)&&l[n])return!1;return!0};n.exports=function(l,n,e,u,t,o,s){if(i=r,f.isFunction(s)&&(i=s),v(l))return h.error("Couldn't get UserMedia: All constraints were false"),void e.call(null,{name:"NO_VALID_CONSTRAINTS",message:"Video and Audio was disabled, you need to enabled at least one"});var a=null,d=!1,p=function(){a&&clearTimeout(a),d&&t&&t()},g=function(){a=null,d=!0,u&&u()},m=function(l){p(),n.call(null,l)},b=function(l){p();var n=c(l);"PermissionDeniedError"===n.name||"PermissionDismissedError"===n.name?o.call(null,n):e.call(null,n)};s?i(l,m,b):i(l).then(m)["catch"](b),a=-1===location.protocol.indexOf("https")?setTimeout(g,100):setTimeout(g,500)}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../ot/logging.js":160,"./throttle_until_complete.js":128,"./web_rtc_polyfills.js":136,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42,bluebird:70}],123:[function(l,n,e){"use strict";var u=l("uuid"),t=l("@opentok/ot-helpers"),i=l("../ot/logging.js"),r={};n.exports=r;var o,s,a=function(l){return!(t.isFunction(l.get)&&t.isFunction(l.set))},c=function(l){return s?void l(null,s):void o.get(l)};r.override=function(l){if(a(l))throw new Error("The storageInterface argument does not seem to be valid, it must implement get and set methods");o!==l&&(o=l,s&&o.set(s,function(l){l&&i.error("Failed to send initial Guid value ("+s+") to the newly assigned Guid Storage. The error was: "+l)}))},r.get=function(l){c(function(n,e){return n?void l(n):(e?s||(s=e):(e=u(),o.set(e,function(n){return n?void l(n):void(s=e)})),void l(null,s))})},r.override({get:function(l){l(null,t.getCookie("opentok_client_id"))},set:function(l,n){t.setCookie("opentok_client_id",l),n(null)}}),r.set=function(l){s=l}},{"../ot/logging.js":160,"@opentok/ot-helpers":4,uuid:109}],124:[function(l,n,e){(function(e){"use strict";var u=l("uuid"),t="OT_CANARY_"+u();e[t]={},n.exports=function(){return!e[t]}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{uuid:109}],125:[function(l,n,e){(function(l){"use strict";n.exports=function(){var n=l.OT,e=l.TB;return function(){var u=l.OT;return l.OT=n,l.TB=e,u}}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}],126:[function(l,n,e){(function(e){"use strict";var u=l("lodash.assign"),t=l("lodash.pick"),i=l("@opentok/ot-helpers"),r=l("@opentok/otplugin.js"),o=l("../../conf/current_properties.js"),s=i.clone(o);s.debug="true"===s.debug||s.debug===!0,s.supportSSL="true"===s.supportSSL||s.supportSSL===!0,e.OTProperties&&u(s,t(e.OTProperties,"cdnURL","cdnURLSSL","configURL","assetURL","cssURL")),!s.cdnURLSSL&&e.location&&(s.cdnURLSSL=e.location.protocol+"//"+e.location.host),!s.cdnURL&&e.location&&(s.cdnURL=e.location.protocol+"//"+e.location.host),s.assetURL||(s.supportSSL?s.assetURL=s.cdnURLSSL+"/webrtc/"+s.version:s.assetURL=s.cdnURL+"/webrtc/"+s.version);var a="IE"===i.env.name&&i.env.version<=9;a&&e.location.protocol.indexOf("https")<0||(s.apiURL=s.apiURLSSL,s.loggingURL=s.loggingURLSSL),r.setPathToInstaller(s.assetURL+"/plugin/"),s.hasOwnProperty("cssURL")||(s.cssURL=s.assetURL+"/css/TB.min.css"),n.exports=s}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../../conf/current_properties.js":111,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42,"lodash.assign":82,"lodash.pick":93}],127:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(){var l="Chrome"===u.env.name&&u.env.version<25;return l?"SDES_SRTP":"DTLS_SRTP"}},{"@opentok/ot-helpers":4}],128:[function(l,n,e){"use strict";var u=l("bluebird");n.exports=function(l){var n=u.Promise.resolve();return function(){var e=Array.prototype.slice.call(arguments);return n=n.then(function(){return l.apply(null,e)})}}},{bluebird:70}],129:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l,n){function e(){o||(i===n.videoWidth&&r===n.videoHeight||(l.trigger("videoDimensionsChanged",{width:i,height:r},{width:n.videoWidth,height:n.videoHeight}),i=n.videoWidth,r=n.videoHeight),t())}function t(){l.whenTimeIncrements(function(){u.requestAnimationFrame(e)})}var i=n.videoWidth,r=n.videoHeight,o=!0;l.startObservingSize=function(){o=!1,t()},l.stopObservingSize=function(){o=!0}}},{"@opentok/ot-helpers":4}],130:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t={0:"rotate(0deg)",270:"rotate(90deg)",90:"rotate(-90deg)",180:"rotate(180deg)"};n.exports=function(l,n,e,i){var r=i;u.defineProperties(l,{isRotated:{get:function(){return this.orientation()&&(270===this.orientation().videoOrientation||90===this.orientation().videoOrientation)}},orientation:{get:function(){return r},set:function(l){r=l;var i=t[l.videoOrientation]||t.ROTATED_NORMAL;switch(u.env.name){case"Chrome":case"Safari":n().style.webkitTransform=i;break;case"IE":n().style.msTransform=i;break;default:n().style.transform=i}e(r)}},audioChannelType:{get:function(){return"mozAudioChannelType"in this.domElement?this.domElement.mozAudioChannelType:"unknown"},set:function(l){"mozAudioChannelType"in this.domElement&&(this.domElement.mozAudioChannelType=l)}}})}},{"@opentok/ot-helpers":4}],131:[function(l,n,e){"use strict";l("../web_rtc_polyfills.js");var u=l("@opentok/otplugin.js"),t=l("@opentok/ot-helpers"),i=l("./native_video_element_wrapper"),r=l("./plugin_video_element_wrapper"),o=50;n.exports=function(l){var n,e,s=!1,a=t.defaults(l&&!t.isFunction(l)?l:{},{fallbackText:"Sorry, Web RTC is not available in your browser"}),c=t.isFunction(arguments[arguments.length-1])?arguments[arguments.length-1]:void 0,d=function(l){this.trigger("orientationChanged",l)}.bind(this),f=u.isInstalled()?new r(a,c,d,o):new i(a,c,d,o);t.eventing(this),f.on("videoDimensionsChanged",function(l,n){this.trigger("videoDimensionsChanged",l,n)}.bind(this)),f.on("mediaStopped",function(){this.trigger("mediaStopped")}.bind(this)),t.defineProperties(this,{domElement:{get:function(){return f.domElement()}},videoWidth:{get:function(){return f["video"+(this.isRotated()?"Height":"Width")]()}},videoHeight:{get:function(){return f["video"+(this.isRotated()?"Width":"Height")]()}},aspectRatio:{get:function(){return(this.videoWidth()+0)/this.videoHeight()}},isRotated:{get:function(){return f.isRotated()}},orientation:{get:function(){return f.orientation()},set:function(l){f.orientation(l)}},audioChannelType:{get:function(){return f.audioChannelType()},set:function(l){f.audioChannelType(l)}}}),this.imgData=function(){return f.imgData()},this.appendTo=function(l){return f.appendTo(l),this},this.bindToStream=function(l,u){return s=!1,n=l,f.bindToStream(l,function(l){return l?void u(l):(s=!0,"undefined"!=typeof e&&(this.setAudioVolume(e),e=void 0),f.on("aspectRatioAvailable",this.trigger.bind(this,"aspectRatioAvailable")),void u(null))}.bind(this)),this},this.unbindStream=function(){return n?(n.onended=null,n=null,f.unbindStream(),this):this},this.setAudioVolume=function(l){return s?f.setAudioVolume(t.roundFloat(l/100,2)):e=parseFloat(l),this},this.getAudioVolume=function(){return s?parseInt(100*f.getAudioVolume(),10):"undefined"!=typeof e?e:50},this.getAudioInputLevel=function(){return f.getAudioInputLevel()},this.whenTimeIncrements=function(l,n){return f.whenTimeIncrements(l,n),this},this.destroy=function(){this.off(),f.destroy()}}},{"../web_rtc_polyfills.js":136,"./native_video_element_wrapper":132,"./plugin_video_element_wrapper":133,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],132:[function(l,n,e){(function(e){"use strict";function u(l,n){var e=document.createElement("video");return e.setAttribute("autoplay",""),e.innerHTML=l,n===!0&&(e.muted="true"),e}function t(l){l.onended=null,void 0!==l.srcObject?l.srcObject=null:void 0!==l.mozSrcObject?l.mozSrcObject=null:e.URL.revokeObjectURL(l.src)}function i(l,n,u){var i,r=function(){clearTimeout(i),l.removeEventListener("loadedmetadata",o,!1),l.removeEventListener("error",s,!1),n.onended=null,l.onended=null},o=function(){r(),u(null)},s=function(n){r(),t(l),u("There was an unexpected problem with the Video Stream: "+c(n.target.error.code))},a=function(){r(),t(l),u("Stream ended while trying to bind it to a video element.")};void 0!==l.srcObject?l.srcObject=n:void 0!==l.mozSrcObject?l.mozSrcObject=n:l.src=e.URL.createObjectURL(n),l.addEventListener("loadedmetadata",o,!1),l.addEventListener("error",s,!1),n.onended=a,l.onended=a}var r=l("@opentok/ot-helpers"),o=l("../../ot/logging.js"),s=l("bluebird"),a=l("./can_be_oriented_mixin.js"),c=l("./video_element_error_code_to_str.js"),d=l("../video_content_resizes_mixin.js"),f=l("../audio_context"),h=l("../audio_level_samplers/webaudio_audio_level_sampler");n.exports=function(l,n,e,p){var g,v,m=!1;r.eventing(this);var b=function(l){var e="There was an unexpected problem with the Video Stream: "+c(l.target.error.code);n(e,this,"VideoElement")}.bind(this),y=function(){m||(o.warn("Video element paused, auto-resuming. If you intended to do this, use publishVideo(false) or subscribeToVideo(false) instead."),m=!0),g.play()};g=u(l.fallbackText,l.muted);var _=[];g.addEventListener("timeupdate",function w(){if(!g)return void event.target.removeEventListener("timeupdate",w);var l=g.videoWidth/g.videoHeight;if(!isNaN(l)){g.removeEventListener("timeupdate",w);for(var n;n=_.shift();)n()}}),g.addEventListener("pause",y),d(this,g),a(this,function(){return g},e),this.domElement=function(){return g},this.videoWidth=function(){return g?g.videoWidth:0},this.videoHeight=function(){return g?g.videoHeight:0},this.imgData=function(){var l=r.createElement("canvas",{width:g.videoWidth,height:g.videoHeight,style:{display:"none"}});document.body.appendChild(l);try{l.getContext("2d").drawImage(g,0,0,l.width,l.height)}catch(n){return o.warn("Cannot get image data yet"),null}var e=l.toDataURL("image/png");return r.removeElement(l),e.replace("data:image/png;base64,","").trim()},this.appendTo=function(l){return l.appendChild(g),this},this.bindToStream=function(l,n){var e=this;return i(g,l,function(u){function t(){l.onended=null,g&&(g.onended=null),e.trigger("mediaStopped",e)}return u?void n(u):g?(e.startObservingSize(),l.onended=t,g.onended=t,g.addEventListener("error",b,!1),l.getAudioTracks().length>0&&(v=new h(f()),v.webRTCStream(l)),void n(null)):void n("Can't bind because _domElement no longer exists")}),this},this.unbindStream=function(){return g&&t(g),this.stopObservingSize(),v=null,this},this.setAudioVolume=function(l){g&&(g.volume=l)},this.getAudioVolume=function(){return g?g.volume:p},this.audioChannelType=function(l){return void 0!==l&&(g.mozAudioChannelType=l),"mozAudioChannelType"in g?g.mozAudioChannelType:"unknown"},this.getAudioInputLevel=function(){return new s(function(l){v?v.sample(l):l(null)})},this.whenTimeIncrements=function(l,n){if(g){var e,u;u=function(){g&&(!e||e>=g.currentTime?e=g.currentTime:(g.removeEventListener("timeupdate",u,!1),l.call(n,this)))}.bind(this),g.addEventListener("timeupdate",u,!1)}},this.destroy=function(){this.unbindStream(),g&&(g.removeEventListener("pause",y),r.removeElement(g),g=null)}}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../../ot/logging.js":160,"../audio_context":113,"../audio_level_samplers/webaudio_audio_level_sampler":115,"../video_content_resizes_mixin.js":129,"./can_be_oriented_mixin.js":130,"./video_element_error_code_to_str.js":134,"@opentok/ot-helpers":4,bluebird:70}],133:[function(l,n,e){"use strict";var u=l("bluebird"),t=l("@opentok/ot-helpers"),i=l("./can_be_oriented_mixin.js");n.exports=function(l,n,e,r){var o,s;t.eventing(this),i(this,function(){return o.domElement},e),this.domElement=function(){return o?o.domElement:void 0},this.videoWidth=function(){return o?o.videoWidth():void 0},this.videoHeight=function(){return o?o.videoHeight():void 0},this.imgData=function(){return o?o.getImgData():null},this.appendTo=function(l){return s=l,this},this.bindToStream=function(n,e){return s?(o=n._.render(),
-o.setFitMode(l.fitMode),o.appendTo(s),o.show(function(l){e(l)}),this):void e("The VideoElement must attached to a DOM node before a stream can be bound")},this.unbindStream=function(){return o&&(o.destroy(),s=null,o=null),this},this.setAudioVolume=function(l){o&&o.volume(l)},this.getAudioVolume=function(){return o?o.volume():r},this.audioChannelType=function(){return"unknown"},this.getAudioInputLevel=function(){return u.resolve(o.getAudioInputLevel())},this.whenTimeIncrements=function(l,n){t.callAsync(l.bind(n))},this.destroy=function(){this.unbindStream()}}},{"./can_be_oriented_mixin.js":130,"@opentok/ot-helpers":4,bluebird:70}],134:[function(l,n,e){(function(l){"use strict";var e={};l.MediaError&&(e[l.MediaError.MEDIA_ERR_ABORTED]="The fetching process for the media resource was aborted by the user agent at the user's request.",e[l.MediaError.MEDIA_ERR_NETWORK]="A network error of some description caused the user agent to stop fetching the media resource, after the resource was established to be usable.",e[l.MediaError.MEDIA_ERR_DECODE]="An error of some description occurred while decoding the media resource, after the resource was established to be  usable.",e[l.MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED]="The media resource indicated by the src attribute was not suitable."),n.exports=function(l){return e[parseInt(l,10)]||"An unknown error occurred."}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}],135:[function(l,n,e){"use strict";n.exports={ROTATED_NORMAL:0,ROTATED_LEFT:270,ROTATED_RIGHT:90,ROTATED_UPSIDE_DOWN:180}},{}],136:[function(l,n,e){(function(n){"use strict";var e=l("@opentok/ot-helpers");n&&"undefined"!=typeof navigator&&(navigator.webkitGetUserMedia?(n.webkitMediaStream.prototype.getVideoTracks||(n.webkitMediaStream.prototype.getVideoTracks=function(){return this.videoTracks}),n.webkitMediaStream.prototype.getAudioTracks||(n.webkitMediaStream.prototype.getAudioTracks=function(){return this.audioTracks}),n.webkitRTCPeerConnection.prototype.getLocalStreams||(n.webkitRTCPeerConnection.prototype.getLocalStreams=function(){return this.localStreams}),n.webkitRTCPeerConnection.prototype.getRemoteStreams||(n.webkitRTCPeerConnection.prototype.getRemoteStreams=function(){return this.remoteStreams})):navigator.mozGetUserMedia&&(n.MediaStream.prototype.getVideoTracks||(n.MediaStream.prototype.getVideoTracks=function(){return[]}),n.MediaStream.prototype.getAudioTracks||(n.MediaStream.prototype.getAudioTracks=function(){return[]})),"undefined"!=typeof n.MediaStreamTrack&&(n.MediaStreamTrack.prototype.setEnabled||(n.MediaStreamTrack.prototype.setEnabled=function(l){this.enabled=e.castToBoolean(l)})),!n.URL&&n.webkitURL&&(n.URL=n.webkitURL))}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"@opentok/ot-helpers":4}],137:[function(l,n,e){"use strict";function u(l,n,e){var u=parseInt(n,10),t=parseInt(e,10);d>u||f>t?r.addClass(l,"OT_micro"):r.removeClass(l,"OT_micro"),a>u||c>t?r.addClass(l,"OT_mini"):r.removeClass(l,"OT_mini")}var t=l("uuid"),i=l("@opentok/otplugin.js"),r=l("@opentok/ot-helpers"),o=l("../ot/logging.js"),s=l("./video_element/index.js"),a=128,c=128,d=64,f=64,h=function(l,n){var e,u;if(l&&l.nodeName?(e=l,e.getAttribute("id")&&0!==e.getAttribute("id").length||e.setAttribute("id","OT_"+t()),u=e.getAttribute("id")):l&&(e=r("#"+l).get(0),e&&(u=l)),u||(u="OT_"+t().replace(/-/g,"_")),e)if(null!=n&&"replace"!==n){var i=document.createElement("div");i.id="OT_"+t(),"append"===n?(e.appendChild(i),e=i):"before"===n?(e.parentNode.insertBefore(i,e),e=i):"after"===n&&(e.parentNode.insertBefore(i,e.nextSibling),e=i)}else r.emptyElement(e);else e=r.createElement("div",{id:u}),e.style.backgroundColor="#000000",document.body.appendChild(e);return e},p=function(l,n){var e,t,s,a,c,d,f,g={},v=h(l,n&&n.insertMode),m=document.createElement("div"),b={},y=!0,_=!1,w="cover";return r.eventing(g),n&&(d=n.width,f=n.height,d&&"number"==typeof d&&(d+="px"),f&&"number"==typeof f&&(f+="px"),v.style.width=d?d:"264px",v.style.height=f?f:"198px",v.style.overflow="hidden",u(v,d||"264px",f||"198px"),n.mirror&&r.addClass(v,"OT_mirrored"),"contain"===n.fitMode?w="contain":"cover"!==n.fitMode&&o.warn('Invalid fit value "'+n.fitMode+'" passed. Only "contain" and "cover" can be used.')),n.classNames&&r.addClass(v,n.classNames),r(v).addClass("OT_loading OT_fit-mode-"+w),r.addClass(m,"OT_widget-container"),m.style.width="100%",m.style.height="100%",v.appendChild(m),c=document.createElement("div"),r.addClass(c,"OT_video-loading"),m.appendChild(c),a=document.createElement("div"),r.addClass(a,"OT_video-poster"),m.appendChild(a),b.width=v.offsetWidth,b.height=v.offsetHeight,i.isInstalled()||(e=r(v).observeSize(function(l){var n=l.width,e=l.height;u(v,n,e)})[0],s=r.observeNodeOrChildNodeRemoval(v,function(l){if(t){var n=l.some(function(l){return l===m||"VIDEO"===l.nodeName});n&&(t.destroy(),t=null),m&&(r.removeElement(m),m=null),e&&(e.disconnect(),e=null),s&&(s.disconnect(),s=null)}})),g.destroy=function(){e&&(e.disconnect(),e=null),s&&(s.disconnect(),s=null),t&&(t.destroy(),t=null),v&&(r.removeElement(v),v=null)},g.setBackgroundImageURI=function(l){"http:"!==l.substr(0,5)&&"https:"!==l.substr(0,6)&&"data:image/png;base64,"!==l.substr(0,22)&&(l="data:image/png;base64,"+l),r.css(a,"backgroundImage","url("+l+")"),r.css(a,"backgroundSize","contain"),r.css(a,"opacity","1.0")},n&&n.style&&n.style.backgroundImageURI&&g.setBackgroundImageURI(n.style.backgroundImageURI),g.bindVideo=function(l,n,e){n.fitMode=w,"undefined"!=typeof n.audioVolume&&(n.audioVolume=parseFloat(n.audioVolume)),t&&(t.destroy(),t=null);var u=n&&n.error?n.error:void 0;delete n.error;var i=new p.VideoElementFacade(n,u);return"undefined"!=typeof n.audioVolume&&i.setAudioVolume(n.audioVolume),i.audioChannelType("telephony"),i.appendTo(m).bindToStream(l,function(l){return l?(i.destroy(),void e(l)):(t=i,i.on({videoDimensionsChanged:function(l,n){g.trigger("videoDimensionsChanged",l,n)},mediaStopped:function(){g.trigger("mediaStopped")}}),void e(null,i))}),r.addClass(i.domElement(),"OT_video-element"),i},r.defineProperties(g,{video:{get:function(){return t}},showPoster:{get:function(){return!r.isDisplayNone(a)},set:function(l){l?r.show(a):r.hide(a)}},poster:{get:function(){return r.css(a,"backgroundImage")},set:function(l){r.css(a,"backgroundImage","url("+l+")")}},loading:{get:function(){return y},set:function(l){y=l,y?r.addClass(v,"OT_loading"):r.removeClass(v,"OT_loading")}},audioOnly:{get:function(){return _},set:function(l){_=l,_?r.addClass(v,"OT_audio-only"):r.removeClass(v,"OT_audio-only")}},domId:{get:function(){return v.getAttribute("id")}}}),g.domElement=v,g.addError=function(l,n,e){v.innerHTML="<p>"+l+(n?' <span class="ot-help-message">'+n+"</span>":"")+"</p>",r.addClass(v,e||"OT_subscriber_error"),v.querySelector("p").offsetHeight>v.offsetHeight&&(v.querySelector("span").style.display="none")},g};p.VideoElementFacade=s,n.exports=p},{"../ot/logging.js":160,"./video_element/index.js":131,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42,uuid:109}],138:[function(l,n,e){(function(e){"use strict";var u={};e.OT=u,e.TB=u,n.exports=u;var t=l("@opentok/ot-helpers"),i="Node"!==t.env.name&&"file:"===e.location.protocol&&"undefined"==typeof window.cordova;i&&e.alert("You cannot test a page using WebRTC through the file system due to browser permissions. You must run it over a web server."),t.getUserMedia=l("./helpers/get_user_media.js");var r=l("./helpers/analytics.js"),o=l("./ot/api_key.js"),s=l("./ot/audio_level_transformer"),a=l("./helpers/audio_level_samplers/webaudio_audio_level_sampler"),c=l("./helpers/audio_level_samplers/getstats_audio_output_level_sampler"),d=l("./helpers/css_loader.js"),f=l("./helpers/dialogs.js"),h=l("./ot/environment_loader.js"),p=l("./ot/events.js"),g=l("./helpers/guid_storage.js"),v=l("./ot/session/init.js"),m=l("./ot/logging.js"),b=l("./ot/ot_error.js"),y=l("./helpers/properties.js"),_=l("./ot/screensharing/screen_sharing.js"),w=l("./ot/session/objects.js"),E=l("./ot/system_requirements.js");t.eventing(u),u.$=t,u.APIKEY=o.value,u.AnalyserAudioLevelSampler=a,u.Analytics=r,u.Anvil=l("./ot/anvil.js"),u.Archive=l("./ot/archive.js"),u.ArchiveEvent=p.ArchiveEvent,u.ArchiveUpdatedEvent=p.ArchiveUpdatedEvent,u.AudioLevelTransformer=s,u.AudioLevelUpdatedEvent=p.AudioLevelUpdatedEvent,u.Capabilities=l("./ot/capabilities.js"),u.Chrome=l("./ot/chrome/chrome.js"),u.Connection=l("./ot/connection.js"),u.ConnectionCapabilities=u.Connection.Capabilities,u.ConnectionEvent=p.ConnectionEvent,u.ConnectivityAttemptPinger=l("./helpers/connectivity_attempt_pinger.js"),u.DEBUG=m.DEBUG,u.DestroyedEvent=p.DestroyedEvent,u.Dialogs=f,u.ERROR=m.ERROR,u.EnvLoadedEvent=p.EnvLoadedEvent,u.Error=b,u.Error.on(p.Event.names.EXCEPTION,function(l){if(l.target===u.Error){var n=t.clone(l);n.target=u,u.dispatchEvent(n)}else u.dispatchEvent(l)}),u.Event=p.Event,u.ExceptionCodes=l("./ot/exception_codes.js"),u.ExceptionEvent=p.ExceptionEvent,u.getDevices=l("./ot/get_devices.js"),u.GetStatsAudioLevelSampler=c,u.HAS_REQUIREMENTS=1,u.INFO=m.INFO,u.IntervalRunner=l("./ot/interval_runner.js"),u.IssueReportedEvent=p.IssueReportedEvent,u.LOG=m.LOG,u.MediaStoppedEvent=p.MediaStoppedEvent,u.Microphone=l("./ot/publisher/microphone.js"),u.Modal=t.Modal,u.NONE=m.NONE,u.NOT_HAS_REQUIREMENTS=0,u.PeerConnection=l("./ot/peer_connection/peer_connection.js"),u.PeerConnection.QOS=l("./ot/peer_connection/qos.js"),u.PeerConnections=l("./ot/peer_connection/peer_connections.js"),u.Publisher=l("./ot/publisher"),u.PublisherPeerConnection=l("./ot/peer_connection/publisher_peer_connection.js"),u.PublishingState=l("./ot/publisher/state.js"),u.Raptor=l("./ot/messaging/raptor/legacy_structure.js"),u.Rumor=l("./ot/messaging/rumor/legacy_structure.js"),u.Session=l("./ot/session/handle.js").Session,u.SessionConnectEvent=p.SessionConnectEvent,u.SessionDisconnectEvent=p.SessionDisconnectEvent,u.SessionDispatcher=l("./ot/messaging/raptor/session_dispatcher.js"),u.SessionInfo=l("./ot/session/info.js"),u.Signal=l("./ot/messaging/raptor/signal.js"),u.SignalEvent=p.SignalEvent,u.Stream=l("./ot/stream.js"),u.StreamChannel=l("./ot/stream_channel.js"),u.StreamEvent=p.StreamEvent,u.StreamPropertyChangedEvent=p.StreamPropertyChangedEvent,u.StreamUpdatedEvent=p.StreamUpdatedEvent,u.StylableComponent=l("./ot/stylable_component.js"),u.Subscriber=l("./ot/subscriber"),u.SubscriberPeerConnection=l("./ot/peer_connection/subscriber_peer_connection.js"),u.SubscribingState=l("./ot/subscriber/state.js"),u.VideoDimensionsChangedEvent=p.VideoDimensionsChangedEvent,u.VideoDisableWarningEvent=p.VideoDisableWarningEvent,u.VideoElement=l("./helpers/video_element/index.js"),u.VideoEnabledChangedEvent=p.VideoEnabledChangedEvent,u.VideoOrientation=l("./helpers/video_orientation.js"),u.WARN=m.WARN,u.WidgetView=l("./helpers/widget_view.js"),u._={getClientGuid:g.get},u.analytics=l("./ot/analytics.js"),u.audioContext=l("./helpers/audio_context.js"),u.checkScreenSharingCapability=_.checkCapability,u.checkSystemRequirements=E.check,u.components={},u.debug=m.debug,u.error=m.error,u.generateSimpleStateMachine=l("./ot/generate_simple_state_machine.js"),u.getDevices=l("./ot/get_devices.js"),u.getErrorTitleByCode=b.getTitleByCode,u.getLogs=m.getLogs,u.getStatsAdpater=l("./ot/peer_connection/get_stats_adapter.js"),u.getStatsHelpers=l("./ot/peer_connection/get_stats_helpers.js"),u.handleJsException=b.handleJsException,u.httpTest=l("./ot/qos_testing/http_test.js"),u.info=m.info,u.initPublisher=l("./ot/publisher/init.js"),u.initSession=function(l,n){return null==n&&(n=l,l=null),0===o.value.length&&l&&(o.value=l,u.APIKEY=l),v(l,n)},u.isUnloaded=h.isUnloaded,u.log=m.log,u.onLoad=h.onLoad,u.onUnload=h.onUnload,u.overrideGuidStorage=g.override,u.pickScreenSharingHelper=_.pickHelper,u.properties=y,u.publishers=w.publishers,u.registerScreenSharingExtension=_.registerExtension,u.registerScreenSharingExtensionHelper=_.registerExtensionHelper,u.reportIssue=l("./ot/report_issue.js"),u.sessions=w.sessions,u.setLogLevel=m.setLogLevel,u.shouldLog=m.shouldLog,u.subscribers=w.subscribers,u.upgradeSystemRequirements=E.upgrade,u.warn=m.warn,u.webrtcTest=l("./ot/qos_testing/webrtc_test.js"),l("./helpers/capabilities"),h.onUnload(function(){w.publishers.destroy(),w.subscribers.destroy(),w.sessions.destroy("unloaded")}),y.cssURL&&d(y.cssURL),"function"=="function"&&__webpack_require__(303)&&!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function(){return u}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)),u.noConflict=l("./helpers/no_conflict.js")(),n.exports=u}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"./helpers/analytics.js":112,"./helpers/audio_context.js":113,"./helpers/audio_level_samplers/getstats_audio_output_level_sampler":114,"./helpers/audio_level_samplers/webaudio_audio_level_sampler":115,"./helpers/capabilities":116,"./helpers/connectivity_attempt_pinger.js":117,"./helpers/css_loader.js":119,"./helpers/dialogs.js":121,"./helpers/get_user_media.js":122,"./helpers/guid_storage.js":123,"./helpers/no_conflict.js":125,"./helpers/properties.js":126,"./helpers/video_element/index.js":131,"./helpers/video_orientation.js":135,"./helpers/widget_view.js":137,"./ot/analytics.js":139,"./ot/anvil.js":140,"./ot/api_key.js":141,"./ot/archive.js":142,"./ot/audio_level_transformer":143,"./ot/capabilities.js":144,"./ot/chrome/chrome.js":149,"./ot/connection.js":153,"./ot/environment_loader.js":154,"./ot/events.js":155,"./ot/exception_codes.js":156,"./ot/generate_simple_state_machine.js":157,"./ot/get_devices.js":158,"./ot/interval_runner.js":159,"./ot/logging.js":160,"./ot/messaging/raptor/legacy_structure.js":164,"./ot/messaging/raptor/session_dispatcher.js":170,"./ot/messaging/raptor/signal.js":171,"./ot/messaging/rumor/legacy_structure.js":174,"./ot/ot_error.js":181,"./ot/peer_connection/get_stats_adapter.js":184,"./ot/peer_connection/get_stats_helpers.js":185,"./ot/peer_connection/peer_connection.js":188,"./ot/peer_connection/peer_connections.js":190,"./ot/peer_connection/publisher_peer_connection.js":191,"./ot/peer_connection/qos.js":192,"./ot/peer_connection/subscriber_peer_connection.js":196,"./ot/publisher":197,"./ot/publisher/init.js":198,"./ot/publisher/microphone.js":200,"./ot/publisher/state.js":201,"./ot/qos_testing/http_test.js":202,"./ot/qos_testing/webrtc_test.js":203,"./ot/report_issue.js":204,"./ot/screensharing/screen_sharing.js":208,"./ot/session/handle.js":209,"./ot/session/info.js":210,"./ot/session/init.js":211,"./ot/session/objects.js":212,"./ot/stream.js":214,"./ot/stream_channel.js":215,"./ot/stylable_component.js":216,"./ot/subscriber":218,"./ot/subscriber/state.js":219,"./ot/system_requirements.js":220,"@opentok/ot-helpers":4}],139:[function(l,n,e){"use strict";var u=l("../helpers/analytics.js"),t=l("../helpers/properties.js");n.exports=new u(t.loggingURL)},{"../helpers/analytics.js":112,"../helpers/properties.js":126}],140:[function(l,n,e){"use strict";var u=l("uuid"),t=l("bluebird"),i=l("./exception_codes.js"),r=l("@opentok/ot-helpers"),o=l("../helpers/properties.js"),s={};n.exports=s;var a={400:i.INVALID_SESSION_ID,403:i.AUTHENTICATION_ERROR,404:i.INVALID_SESSION_ID,409:i.TERMS_OF_SERVICE_FAILURE},c={RESPONSE_BADLY_FORMED:{code:null,message:"Unknown error: JSON response was badly formed"},UNEXPECTED_SERVER_RESPONSE:{code:i.UNEXPECTED_SERVER_RESPONSE,message:"Unexpected server response. Try this operation again later."}},d=function(l){var n=r.clone(c.UNEXPECTED_SERVER_RESPONSE);return n.details={originalCode:l.code.toString(),originalMessage:l.message},n};s.getRequestParams=function(l,n){var e,t=o.apiURL+"/"+l,i="js-"+o.version.replace(/^v/,"");return"IE"===r.env.name&&r.env.version<10?(t=t+"&format=json&token="+encodeURIComponent(n)+"&version=1&cache="+u()+"&client_version="+i,e={xdomainrequest:!0}):e={headers:{"X-TB-TOKEN-AUTH":n,"X-TB-VERSION":1,"X-TB-CLIENT-VERSION":i}},{url:t,options:e}},s.getErrorsFromHTTP=function(l){if(!l)return!1;var n={code:l.target&&l.target.status};return n},s.getErrorsFromResponse=function(l){if(!Array.isArray(l))return c.RESPONSE_BADLY_FORMED;var n=r.find(l,function(l){return void 0!==l.error&&null!==l.error});return n?(n=n.error,n.message=n.errorMessage&&n.errorMessage.message,n):!1};var f=function(l,n){return l.code&&!a[l.code]?l=d(l):l.code=a[l.code],0===n.length?(l.code=i.CONNECT_FAILED,n="Response body was empty, probably due to connectivity loss"):l.code||(l=d(l)),l.details||(l.details={}),l.details.responseText=n,l};s.get=function(l,n){var e=s.getRequestParams(l,n);return new t.Promise(function(l,n){r.getJSON(e.url,e.options,function(e,u){var t,i=s.getErrorsFromHTTP(e)||s.getErrorsFromResponse(u);return i?(t=u&&!r.isEmpty(u)?JSON.stringify(u):"",i=f(i,t),void n(new r.Error(i.message,"AnvilError",{code:i.code,details:i.details}))):void l(u[0])})})}},{"../helpers/properties.js":126,"./exception_codes.js":156,"@opentok/ot-helpers":4,bluebird:70,uuid:109}],141:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");if("Node"===u.env.name)n.exports={value:""};else{var t=function(){var l=document.getElementsByTagName("script");return l=l[l.length-1],l=l.getAttribute("src")||l.src}(),i=t.match(/[\?\&]apikey=([^&]+)/i);n.exports={value:i?i[1]:""}}},{"@opentok/ot-helpers":4}],142:[function(l,n,e){"use strict";var u=l("./events.js"),t=l("@opentok/ot-helpers");n.exports=function(l,n,e){this.id=l,this.name=n,this.status=e,this._={},t.eventing(this),this._.update=function(l){for(var n in l)if(l.hasOwnProperty(n)){var e=this[n];this[n]=l[n];var t=new u.ArchiveUpdatedEvent(this,n,e,this[n]);this.dispatchEvent(t)}}.bind(this),this.destroy=function(){}}},{"./events.js":155,"@opentok/ot-helpers":4}],143:[function(l,n,e){"use strict";n.exports=function(){var l=null;this.transform=function(n){l=null===l||n>=l?n:.3*n+.7*l;var e=Math.log(l)/Math.LN10/1.5+1;return Math.min(Math.max(e,0),1)}}},{}],144:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l){this.publish=-1!==l.indexOf("publish")?1:0,this.subscribe=-1!==l.indexOf("subscribe")?1:0,this.forceUnpublish=-1!==l.indexOf("forceunpublish")?1:0,this.forceDisconnect=-1!==l.indexOf("forcedisconnect")?1:0,this.supportsWebRTC=u.hasCapabilities("webrtc")?1:0,this.permittedTo=function(l){return this.hasOwnProperty(l)&&1===this[l]}}},{"@opentok/ot-helpers":4}],145:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n,e,i,r,o,s=this,a=l.archiving,c=l.archivingStarted||"Archiving on",d=l.archivingEnded||"Archiving off",f=!0,h=function(l){r.nodeValue=l,n.setAttribute("title",l)},p=function(){o&&(clearTimeout(o),o=null),a?t.addClass(e,"OT_active"):t.removeClass(e,"OT_active"),t.removeClass(s.domElement,"OT_archiving-"+(a?"off":"on")),t.addClass(s.domElement,"OT_archiving-"+(a?"on":"off")),l.show&&a?(h(c),t.addClass(i,"OT_mode-on"),t.removeClass(i,"OT_mode-auto"),s.setDisplayMode("on"),o=setTimeout(function(){t.addClass(i,"OT_mode-auto"),t.removeClass(i,"OT_mode-on")},5e3)):l.show&&!f?(t.addClass(i,"OT_mode-on"),t.removeClass(i,"OT_mode-auto"),s.setDisplayMode("on"),h(d),o=setTimeout(function(){s.setDisplayMode("off")},5e3)):s.setDisplayMode("off")};u(this,{mode:a&&l.show&&"on"||"off",nodeName:"h1",htmlAttributes:{className:"OT_archiving OT_edge-bar-item OT_edge-bottom"},onCreate:function(){n=t.createElement("div",{className:"OT_archiving-light-box"},""),e=t.createElement("div",{className:"OT_archiving-light"},""),n.appendChild(e),i=t.createElement("div",{className:"OT_archiving-status OT_mode-on OT_edge-bar-item OT_edge-bottom"},""),r=document.createTextNode(""),i.appendChild(r),s.domElement.appendChild(n),s.domElement.appendChild(i),p()}}),this.setShowArchiveStatus=function(n){l.show=n,s.domElement&&p.call(s)},this.setArchiving=function(l){a=l,f=!1,s.domElement&&p.call(s)}}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],146:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){function n(){i=t.createElement("div",{className:"OT_audio-level-meter__bar"},""),o=t.createElement("div",{className:"OT_audio-level-meter__value"},""),r=t.createElement("div",{className:"OT_audio-level-meter__audio-only-img"},""),a.domElement.appendChild(i),a.domElement.appendChild(r),a.domElement.appendChild(o)}function e(){var l=100*s/(c-d);o.style.width=o.style.height=2*l+"%",o.style.top=o.style.right=-l+"%"}var i,r,o,s,a=this,c=l.maxValue||1,d=l.minValue||0,f={mode:l?l.mode:"auto",nodeName:"div",htmlAttributes:{className:"OT_audio-level-meter"},onCreate:n};u(this,f);var h=a.setDisplayMode.bind(a);a.setDisplayMode=function(n){h(n),"off"===n?l.onPassivate&&l.onPassivate():l.onActivate&&l.onActivate()},a.setValue=function(l){s=l,e()}}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],147:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js");n.exports=function(l){function n(){return"on"===e||"on"===t?"on":"mini"===e||"mini"===t?"mini":"mini-auto"===e||"mini-auto"===t?"mini-auto":"auto"===e||"auto"===t?"auto":"off"}var e=l.nameMode,t=l.muteMode;u(this,{mode:n(),nodeName:"div",htmlContent:"",htmlAttributes:{className:"OT_bar OT_edge-bar-item"}}),this.setNameMode=function(l){e=l,this.setDisplayMode(n())},this.setMuteMode=function(l){t=l,this.setDisplayMode(n())}}},{"./behaviour/widget.js":148}],148:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l,n){var e,t=n||{},i="auto";l.setDisplayMode=function(l){var n=l||"auto";e!==n&&(u.removeClass(this.domElement,"OT_mode-"+e),u.addClass(this.domElement,"OT_mode-"+n),"off"===n&&(i=e),e=n)},l.getDisplayMode=function(){return e},l.show=function(){return e!==i&&(this.setDisplayMode(i),t.onShow&&t.onShow()),this},l.showAfterLoading=function(){u.removeClass(this.domElement,"OT_hide-forced")},l.hide=function(){return"off"!==e&&(this.setDisplayMode("off"),t.onHide&&t.onHide()),this},l.hideWhileLoading=function(){u.addClass(this.domElement,"OT_hide-forced")},l.destroy=function(){return t.onDestroy&&t.onDestroy(this.domElement),this.domElement&&u.removeElement(this.domElement),l},l.appendTo=function(n){return this.domElement=u.createElement(t.nodeName||"div",t.htmlAttributes,t.htmlContent),t.onCreate&&t.onCreate(this.domElement),l.setDisplayMode(t.mode),"auto"===t.mode&&(u.addClass(l.domElement,"OT_mode-on-hold"),setTimeout(function(){u.removeClass(l.domElement,"OT_mode-on-hold")},2e3)),n.appendChild(this.domElement),l}}},{"@opentok/ot-helpers":4}],149:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l){var n={},e=function(e,u){u.parent=this,u.appendTo(l.parent),n[e]=u,this[e]=u};l.parent&&(u.eventing(this),this.destroy=function(){this.off(),this.hideWhileLoading();for(var l in n)n.hasOwnProperty(l)&&n[l].destroy()},this.showAfterLoading=function(){for(var l in n)n.hasOwnProperty(l)&&n[l].showAfterLoading()},this.hideWhileLoading=function(){for(var l in n)n.hasOwnProperty(l)&&n[l].hideWhileLoading()},this.set=function(l,n){if("string"==typeof l&&n)e.call(this,l,n);else for(var u in l)l.hasOwnProperty(u)&&e.call(this,u,l[u]);return this})}},{"@opentok/ot-helpers":4}],150:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n,e=l.muted||!1,i=function(){e?t.addClass(this.domElement,"OT_active"):t.removeClass(this.domElement,"OT_active ")}.bind(this),r=function(l){n=s.bind(this),t.on(l,"click",n)},o=function(l){n=null,t.off(l,"click",n)},s=function(){return e=!e,i(),e?this.parent.trigger("muted",this):this.parent.trigger("unmuted",this),!1};t.defineProperties(this,{muted:{get:function(){return e},set:function(l){e=l,i()}}});var a=e?"OT_edge-bar-item OT_mute OT_active":"OT_edge-bar-item OT_mute";u(this,{mode:l.mode,nodeName:"button",htmlContent:"Mute",htmlAttributes:{className:a},onCreate:r.bind(this),onDestroy:o.bind(this)})}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],151:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js");n.exports=function(l){var n=l.name;n&&""!==n.trim().length||(n=null,l.mode="off"),this.setName=function(l){n||this.setDisplayMode("auto"),n=l,this.domElement.innerHTML=n}.bind(this),u(this,{mode:l.mode,nodeName:"h1",htmlContent:n,htmlAttributes:{className:"OT_name OT_edge-bar-item"}})}},{"./behaviour/widget.js":148}],152:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n=!1,e=!1,i=function(l){var u=["auto","on"].indexOf(this.getDisplayMode())>-1;t.removeClass(l,"OT_video-disabled OT_video-disabled-warning OT_active"),u&&(n?t.addClass(l,"OT_video-disabled"):e&&t.addClass(l,"OT_video-disabled-warning"),t.addClass(l,"OT_active"))}.bind(this);this.disableVideo=function(l){n=l,l===!0&&(e=!1),i(this.domElement)},this.setWarning=function(l){e=l,i(this.domElement)},u(this,{mode:l.mode||"auto",nodeName:"div",htmlAttributes:{className:"OT_video-disabled-indicator"}});var r=this.setDisplayMode.bind(this);this.setDisplayMode=function(l){r(l),i(this.domElement)}}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],153:[function(l,n,e){"use strict";var u=l("./capabilities.js"),t=l("./events.js"),i=l("@opentok/ot-helpers"),r=function(l,n,e,o,s){var a;this.id=this.connectionId=l,this.creationTime=n?Number(n):null,this.data=e,this.capabilities=new r.Capabilities(o),this.permissions=new u(s),this.quality=null,i.eventing(this),this.destroy=function(l,n){a=l||"clientDisconnected",n!==!0&&this.dispatchEvent(new t.DestroyedEvent("destroyed",this,a))}.bind(this),this.destroyed=function(){return void 0!==a},this.destroyedReason=function(){return a}};r.fromHash=function(l){return new r(l.id,l.creationTime,l.data,i.extend(l.capablities||{},{supportsWebRTC:!0}),l.permissions||[])},r.Capabilities=function(l){var n=function(l){return l.supportsWebRTC=i.castToBoolean(l.supportsWebRTC),l},e=n(l);this.supportsWebRTC=e.supportsWebRTC},n.exports=r},{"./capabilities.js":144,"./events.js":155,"@opentok/ot-helpers":4}],154:[function(l,n,e){"use strict";function u(){var l=this;r.eventing(l);var n=i.isSupported(),e=n?i.isReady():!0,u=function(){return!r.isDOMUnloaded()&&r.isReady()&&e},s=function(){u()&&l.dispatchEvent(new t.EnvLoadedEvent(t.Event.names.ENV_LOADED))},a=function(){r.onDOMUnload(c),s()},c=function(){l.dispatchEvent(new t.EnvLoadedEvent(t.Event.names.ENV_UNLOADED))},d=function(l){e=!0,l&&o.debug("TB Plugin failed to load or was not installed"),s()};r.onDOMLoad(a),n&&i.ready(d),this.onLoad=function(n,e){return u()?void n.call(e):void l.on(t.Event.names.ENV_LOADED,n,e)},this.onUnload=function(n,e){return this.isUnloaded()?void n.call(e):void l.on(t.Event.names.ENV_UNLOADED,n,e)},this.isUnloaded=function(){return r.isDOMUnloaded()}}var t=l("./events.js"),i=l("@opentok/otplugin.js"),r=l("@opentok/ot-helpers"),o=l("./logging.js");n.exports=new u},{"./events.js":155,"./logging.js":160,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],155:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("./logging.js"),i={};i.Event=u.Event(),i.Event.names={ACTIVE:"active",INACTIVE:"inactive",UNKNOWN:"unknown",PER_SESSION:"perSession",PER_STREAM:"perStream",EXCEPTION:"exception",ISSUE_REPORTED:"issueReported",SESSION_CONNECTED:"sessionConnected",SESSION_RECONNECTING:"sessionReconnecting",SESSION_RECONNECTED:"sessionReconnected",SESSION_DISCONNECTED:"sessionDisconnected",STREAM_CREATED:"streamCreated",STREAM_DESTROYED:"streamDestroyed",CONNECTION_CREATED:"connectionCreated",CONNECTION_DESTROYED:"connectionDestroyed",SIGNAL:"signal",STREAM_PROPERTY_CHANGED:"streamPropertyChanged",MICROPHONE_LEVEL_CHANGED:"microphoneLevelChanged",RESIZE:"resize",SETTINGS_BUTTON_CLICK:"settingsButtonClick",DEVICE_INACTIVE:"deviceInactive",INVALID_DEVICE_NAME:"invalidDeviceName",ACCESS_ALLOWED:"accessAllowed",ACCESS_DENIED:"accessDenied",ACCESS_DIALOG_OPENED:"accessDialogOpened",ACCESS_DIALOG_CLOSED:"accessDialogClosed",ECHO_CANCELLATION_MODE_CHANGED:"echoCancellationModeChanged",MEDIA_STOPPED:"mediaStopped",PUBLISHER_DESTROYED:"destroyed",SUBSCRIBER_DESTROYED:"destroyed",SUBSCRIBER_CONNECTED:"connected",SUBSCRIBER_DISCONNECTED:"disconnected",DEVICES_DETECTED:"devicesDetected",DEVICES_SELECTED:"devicesSelected",CLOSE_BUTTON_CLICK:"closeButtonClick",MICLEVEL:"microphoneActivityLevel",MICGAINCHANGED:"microphoneGainChanged",ENV_LOADED:"envLoaded",ENV_UNLOADED:"envUnloaded",AUDIO_LEVEL_UPDATED:"audioLevelUpdated"},i.ExceptionEvent=function(l,n,e,u,t,r){i.Event.call(this,l),this.message=n,this.title=e,this.code=u,this.component=t,this.target=r},i.IssueReportedEvent=function(l,n){i.Event.call(this,l),this.issueId=n},i.EnvLoadedEvent=function(l){i.Event.call(this,l)};var r=!1;i.ConnectionEvent=function(l,n,e){i.Event.call(this,l,!1),Object.defineProperty(this,"connections",{get:function(){return r||(t.warn("OT.ConnectionEvent connections property is deprecated, use connection instead."),r=!0),[n]}}),this.connection=n,this.reason=e};var o=!1;i.StreamEvent=function(l,n,e,u){i.Event.call(this,l,u),Object.defineProperty(this,"streams",{get:function(){return o||(t.warn("OT.StreamEvent streams property is deprecated, use stream instead."),o=!0),[n]}}),this.stream=n,this.reason=e};var s=!1,a=!1,c=!1;i.SessionConnectEvent=function(l){i.Event.call(this,l,!1),Object.defineProperties(this,{connections:{get:function(){return s||(t.warn("OT.SessionConnectedEvent no longer includes connections. Listen for connectionCreated events instead."),s=!0),[]}},streams:{get:function(){return a||(t.warn("OT.SessionConnectedEvent no longer includes streams. Listen for streamCreated events instead."),s=!0),[]}},archives:{get:function(){return c||(t.warn("OT.SessionConnectedEvent no longer includes archives. Listen for archiveStarted events instead."),c=!0),[]}}})},i.SessionReconnectingEvent=function(){i.Event.call(this,i.Event.names.SESSION_RECONNECTING)},i.SessionReconnectedEvent=function(){i.Event.call(this,i.Event.names.SESSION_RECONNECTED)},i.SessionDisconnectEvent=function(l,n,e){i.Event.call(this,l,e),this.reason=n},i.StreamPropertyChangedEvent=function(l,n,e,u,t){i.Event.call(this,l,!1),this.type=l,this.stream=n,this.changedProperty=e,this.oldValue=u,this.newValue=t},i.VideoDimensionsChangedEvent=function(l,n,e){i.Event.call(this,"videoDimensionsChanged",!1),this.type="videoDimensionsChanged",this.target=l,this.oldValue=n,this.newValue=e},i.ArchiveEvent=function(l,n){i.Event.call(this,l,!1),this.type=l,this.id=n.id,this.name=n.name,this.status=n.status,this.archive=n},i.ArchiveUpdatedEvent=function(l,n,e,u){i.Event.call(this,"updated",!1),this.target=l,this.changedProperty=n,this.oldValue=e,this.newValue=u},i.SignalEvent=function(l,n,e){i.Event.call(this,l?"signal:"+l:i.Event.names.SIGNAL,!1),this.data=n,this.from=e},i.StreamUpdatedEvent=function(l,n,e,u){i.Event.call(this,"updated",!1),this.target=l,this.changedProperty=n,this.oldValue=e,this.newValue=u},i.DestroyedEvent=function(l,n,e){i.Event.call(this,l,!1),this.target=n,this.reason=e},i.ConnectionStateChangedEvent=function(l,n){i.Event.call(this,l,!1),this.target=n},i.VideoEnabledChangedEvent=function(l,n){i.Event.call(this,l,!1),this.reason=n.reason},i.VideoDisableWarningEvent=function(l){i.Event.call(this,l,!1)},i.AudioLevelUpdatedEvent=function(l){i.Event.call(this,i.Event.names.AUDIO_LEVEL_UPDATED,!1),this.audioLevel=l},i.MediaStoppedEvent=function(l){i.Event.call(this,i.Event.names.MEDIA_STOPPED,!0),this.target=l},n.exports=i},{"./logging.js":160,"@opentok/ot-helpers":4}],156:[function(l,n,e){"use strict";n.exports={JS_EXCEPTION:2e3,AUTHENTICATION_ERROR:1004,INVALID_SESSION_ID:1005,CONNECT_FAILED:1006,CONNECT_REJECTED:1007,CONNECTION_TIMEOUT:1008,NOT_CONNECTED:1010,INVALID_PARAMETER:1011,P2P_CONNECTION_FAILED:1013,API_RESPONSE_FAILURE:1014,TERMS_OF_SERVICE_FAILURE:1026,UNABLE_TO_PUBLISH:1500,UNABLE_TO_SUBSCRIBE:1501,UNABLE_TO_FORCE_DISCONNECT:1520,UNABLE_TO_FORCE_UNPUBLISH:1530,PUBLISHER_ICE_WORKFLOW_FAILED:1553,SUBSCRIBER_ICE_WORKFLOW_FAILED:1554,UNEXPECTED_SERVER_RESPONSE:2001,REPORT_ISSUE_ERROR:2011
+o.setFitMode(l.fitMode),o.appendTo(s),o.show(function(l){e(l)}),this):void e("The VideoElement must attached to a DOM node before a stream can be bound")},this.unbindStream=function(){return o&&(o.destroy(),s=null,o=null),this},this.setAudioVolume=function(l){o&&o.volume(l)},this.getAudioVolume=function(){return o?o.volume():r},this.audioChannelType=function(){return"unknown"},this.getAudioInputLevel=function(){return u.resolve(o.getAudioInputLevel())},this.whenTimeIncrements=function(l,n){t.callAsync(l.bind(n))},this.destroy=function(){this.unbindStream()}}},{"./can_be_oriented_mixin.js":130,"@opentok/ot-helpers":4,bluebird:70}],134:[function(l,n,e){(function(l){"use strict";var e={};l.MediaError&&(e[l.MediaError.MEDIA_ERR_ABORTED]="The fetching process for the media resource was aborted by the user agent at the user's request.",e[l.MediaError.MEDIA_ERR_NETWORK]="A network error of some description caused the user agent to stop fetching the media resource, after the resource was established to be usable.",e[l.MediaError.MEDIA_ERR_DECODE]="An error of some description occurred while decoding the media resource, after the resource was established to be  usable.",e[l.MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED]="The media resource indicated by the src attribute was not suitable."),n.exports=function(l){return e[parseInt(l,10)]||"An unknown error occurred."}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}],135:[function(l,n,e){"use strict";n.exports={ROTATED_NORMAL:0,ROTATED_LEFT:270,ROTATED_RIGHT:90,ROTATED_UPSIDE_DOWN:180}},{}],136:[function(l,n,e){(function(n){"use strict";var e=l("@opentok/ot-helpers");n&&"undefined"!=typeof navigator&&(navigator.webkitGetUserMedia?(n.webkitMediaStream.prototype.getVideoTracks||(n.webkitMediaStream.prototype.getVideoTracks=function(){return this.videoTracks}),n.webkitMediaStream.prototype.getAudioTracks||(n.webkitMediaStream.prototype.getAudioTracks=function(){return this.audioTracks}),n.webkitRTCPeerConnection.prototype.getLocalStreams||(n.webkitRTCPeerConnection.prototype.getLocalStreams=function(){return this.localStreams}),n.webkitRTCPeerConnection.prototype.getRemoteStreams||(n.webkitRTCPeerConnection.prototype.getRemoteStreams=function(){return this.remoteStreams})):navigator.mozGetUserMedia&&(n.MediaStream.prototype.getVideoTracks||(n.MediaStream.prototype.getVideoTracks=function(){return[]}),n.MediaStream.prototype.getAudioTracks||(n.MediaStream.prototype.getAudioTracks=function(){return[]})),"undefined"!=typeof n.MediaStreamTrack&&(n.MediaStreamTrack.prototype.setEnabled||(n.MediaStreamTrack.prototype.setEnabled=function(l){this.enabled=e.castToBoolean(l)})),!n.URL&&n.webkitURL&&(n.URL=n.webkitURL))}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"@opentok/ot-helpers":4}],137:[function(l,n,e){"use strict";function u(l,n,e){var u=parseInt(n,10),t=parseInt(e,10);d>u||f>t?r.addClass(l,"OT_micro"):r.removeClass(l,"OT_micro"),a>u||c>t?r.addClass(l,"OT_mini"):r.removeClass(l,"OT_mini")}var t=l("uuid"),i=l("@opentok/otplugin.js"),r=l("@opentok/ot-helpers"),o=l("../ot/logging.js"),s=l("./video_element/index.js"),a=128,c=128,d=64,f=64,h=function(l,n){var e,u;if(l&&l.nodeName?(e=l,e.getAttribute("id")&&0!==e.getAttribute("id").length||e.setAttribute("id","OT_"+t()),u=e.getAttribute("id")):l&&(e=r("#"+l).get(0),e&&(u=l)),u||(u="OT_"+t().replace(/-/g,"_")),e)if(null!=n&&"replace"!==n){var i=document.createElement("div");i.id="OT_"+t(),"append"===n?(e.appendChild(i),e=i):"before"===n?(e.parentNode.insertBefore(i,e),e=i):"after"===n&&(e.parentNode.insertBefore(i,e.nextSibling),e=i)}else r.emptyElement(e);else e=r.createElement("div",{id:u}),e.style.backgroundColor="#000000",document.body.appendChild(e);return e},p=function(l,n){var e,t,s,a,c,d,f,g={},v=h(l,n&&n.insertMode),m=document.createElement("div"),b={},y=!0,_=!1,w="cover";return r.eventing(g),n&&(d=n.width,f=n.height,d&&"number"==typeof d&&(d+="px"),f&&"number"==typeof f&&(f+="px"),v.style.width=d?d:"264px",v.style.height=f?f:"198px",v.style.overflow="hidden",u(v,d||"264px",f||"198px"),n.mirror&&r.addClass(v,"OT_mirrored"),"contain"===n.fitMode?w="contain":"cover"!==n.fitMode&&o.warn('Invalid fit value "'+n.fitMode+'" passed. Only "contain" and "cover" can be used.')),n.classNames&&r.addClass(v,n.classNames),r(v).addClass("OT_loading OT_fit-mode-"+w),r.addClass(m,"OT_widget-container"),m.style.width="100%",m.style.height="100%",v.appendChild(m),c=document.createElement("div"),r.addClass(c,"OT_video-loading"),m.appendChild(c),a=document.createElement("div"),r.addClass(a,"OT_video-poster"),m.appendChild(a),b.width=v.offsetWidth,b.height=v.offsetHeight,i.isInstalled()||(e=r(v).observeSize(function(l){var n=l.width,e=l.height;u(v,n,e)})[0],s=r.observeNodeOrChildNodeRemoval(v,function(l){if(t){var n=l.some(function(l){return l===m||"VIDEO"===l.nodeName});n&&(t.destroy(),t=null),m&&(r.removeElement(m),m=null),e&&(e.disconnect(),e=null),s&&(s.disconnect(),s=null)}})),g.destroy=function(){e&&(e.disconnect(),e=null),s&&(s.disconnect(),s=null),t&&(t.destroy(),t=null),v&&(r.removeElement(v),v=null)},g.setBackgroundImageURI=function(l){"http:"!==l.substr(0,5)&&"https:"!==l.substr(0,6)&&"data:image/png;base64,"!==l.substr(0,22)&&(l="data:image/png;base64,"+l),r.css(a,"backgroundImage","url("+l+")"),r.css(a,"backgroundSize","contain"),r.css(a,"opacity","1.0")},n&&n.style&&n.style.backgroundImageURI&&g.setBackgroundImageURI(n.style.backgroundImageURI),g.bindVideo=function(l,n,e){n.fitMode=w,"undefined"!=typeof n.audioVolume&&(n.audioVolume=parseFloat(n.audioVolume)),t&&(t.destroy(),t=null);var u=n&&n.error?n.error:void 0;delete n.error;var i=new p.VideoElementFacade(n,u);return"undefined"!=typeof n.audioVolume&&i.setAudioVolume(n.audioVolume),i.audioChannelType("telephony"),i.appendTo(m).bindToStream(l,function(l){return l?(i.destroy(),void e(l)):(t=i,i.on({videoDimensionsChanged:function(l,n){g.trigger("videoDimensionsChanged",l,n)},mediaStopped:function(){g.trigger("mediaStopped")}}),void e(null,i))}),r.addClass(i.domElement(),"OT_video-element"),i},r.defineProperties(g,{video:{get:function(){return t}},showPoster:{get:function(){return!r.isDisplayNone(a)},set:function(l){l?r.show(a):r.hide(a)}},poster:{get:function(){return r.css(a,"backgroundImage")},set:function(l){r.css(a,"backgroundImage","url("+l+")")}},loading:{get:function(){return y},set:function(l){y=l,y?r.addClass(v,"OT_loading"):r.removeClass(v,"OT_loading")}},audioOnly:{get:function(){return _},set:function(l){_=l,_?r.addClass(v,"OT_audio-only"):r.removeClass(v,"OT_audio-only")}},domId:{get:function(){return v.getAttribute("id")}}}),g.domElement=v,g.addError=function(l,n,e){v.innerHTML="<p>"+l+(n?' <span class="ot-help-message">'+n+"</span>":"")+"</p>",r.addClass(v,e||"OT_subscriber_error"),v.querySelector("p").offsetHeight>v.offsetHeight&&(v.querySelector("span").style.display="none")},g};p.VideoElementFacade=s,n.exports=p},{"../ot/logging.js":160,"./video_element/index.js":131,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42,uuid:109}],138:[function(l,n,e){(function(e){"use strict";var u={};e.OT=u,e.TB=u,n.exports=u;var t=l("@opentok/ot-helpers"),i="Node"!==t.env.name&&"file:"===e.location.protocol&&"undefined"==typeof window.cordova;i&&e.alert("You cannot test a page using WebRTC through the file system due to browser permissions. You must run it over a web server."),t.getUserMedia=l("./helpers/get_user_media.js");var r=l("./helpers/analytics.js"),o=l("./ot/api_key.js"),s=l("./ot/audio_level_transformer"),a=l("./helpers/audio_level_samplers/webaudio_audio_level_sampler"),c=l("./helpers/audio_level_samplers/getstats_audio_output_level_sampler"),d=l("./helpers/css_loader.js"),f=l("./helpers/dialogs.js"),h=l("./ot/environment_loader.js"),p=l("./ot/events.js"),g=l("./helpers/guid_storage.js"),v=l("./ot/session/init.js"),m=l("./ot/logging.js"),b=l("./ot/ot_error.js"),y=l("./helpers/properties.js"),_=l("./ot/screensharing/screen_sharing.js"),w=l("./ot/session/objects.js"),E=l("./ot/system_requirements.js");t.eventing(u),u.$=t,u.APIKEY=o.value,u.AnalyserAudioLevelSampler=a,u.Analytics=r,u.Anvil=l("./ot/anvil.js"),u.Archive=l("./ot/archive.js"),u.ArchiveEvent=p.ArchiveEvent,u.ArchiveUpdatedEvent=p.ArchiveUpdatedEvent,u.AudioLevelTransformer=s,u.AudioLevelUpdatedEvent=p.AudioLevelUpdatedEvent,u.Capabilities=l("./ot/capabilities.js"),u.Chrome=l("./ot/chrome/chrome.js"),u.Connection=l("./ot/connection.js"),u.ConnectionCapabilities=u.Connection.Capabilities,u.ConnectionEvent=p.ConnectionEvent,u.ConnectivityAttemptPinger=l("./helpers/connectivity_attempt_pinger.js"),u.DEBUG=m.DEBUG,u.DestroyedEvent=p.DestroyedEvent,u.Dialogs=f,u.ERROR=m.ERROR,u.EnvLoadedEvent=p.EnvLoadedEvent,u.Error=b,u.Error.on(p.Event.names.EXCEPTION,function(l){if(l.target===u.Error){var n=t.clone(l);n.target=u,u.dispatchEvent(n)}else u.dispatchEvent(l)}),u.Event=p.Event,u.ExceptionCodes=l("./ot/exception_codes.js"),u.ExceptionEvent=p.ExceptionEvent,u.getDevices=l("./ot/get_devices.js"),u.GetStatsAudioLevelSampler=c,u.HAS_REQUIREMENTS=1,u.INFO=m.INFO,u.IntervalRunner=l("./ot/interval_runner.js"),u.IssueReportedEvent=p.IssueReportedEvent,u.LOG=m.LOG,u.MediaStoppedEvent=p.MediaStoppedEvent,u.Microphone=l("./ot/publisher/microphone.js"),u.Modal=t.Modal,u.NONE=m.NONE,u.NOT_HAS_REQUIREMENTS=0,u.PeerConnection=l("./ot/peer_connection/peer_connection.js"),u.PeerConnection.QOS=l("./ot/peer_connection/qos.js"),u.PeerConnections=l("./ot/peer_connection/peer_connections.js"),u.Publisher=l("./ot/publisher"),u.PublisherPeerConnection=l("./ot/peer_connection/publisher_peer_connection.js"),u.PublishingState=l("./ot/publisher/state.js"),u.Raptor=l("./ot/messaging/raptor/legacy_structure.js"),u.Rumor=l("./ot/messaging/rumor/legacy_structure.js"),u.Session=l("./ot/session/handle.js").Session,u.SessionConnectEvent=p.SessionConnectEvent,u.SessionDisconnectEvent=p.SessionDisconnectEvent,u.SessionDispatcher=l("./ot/messaging/raptor/session_dispatcher.js"),u.SessionInfo=l("./ot/session/info.js"),u.Signal=l("./ot/messaging/raptor/signal.js"),u.SignalEvent=p.SignalEvent,u.Stream=l("./ot/stream.js"),u.StreamChannel=l("./ot/stream_channel.js"),u.StreamEvent=p.StreamEvent,u.StreamPropertyChangedEvent=p.StreamPropertyChangedEvent,u.StreamUpdatedEvent=p.StreamUpdatedEvent,u.StylableComponent=l("./ot/stylable_component.js"),u.Subscriber=l("./ot/subscriber"),u.SubscriberPeerConnection=l("./ot/peer_connection/subscriber_peer_connection.js"),u.SubscribingState=l("./ot/subscriber/state.js"),u.VideoDimensionsChangedEvent=p.VideoDimensionsChangedEvent,u.VideoDisableWarningEvent=p.VideoDisableWarningEvent,u.VideoElement=l("./helpers/video_element/index.js"),u.VideoEnabledChangedEvent=p.VideoEnabledChangedEvent,u.VideoOrientation=l("./helpers/video_orientation.js"),u.WARN=m.WARN,u.WidgetView=l("./helpers/widget_view.js"),u._={getClientGuid:g.get},u.analytics=l("./ot/analytics.js"),u.audioContext=l("./helpers/audio_context.js"),u.checkScreenSharingCapability=_.checkCapability,u.checkSystemRequirements=E.check,u.components={},u.debug=m.debug,u.error=m.error,u.generateSimpleStateMachine=l("./ot/generate_simple_state_machine.js"),u.getDevices=l("./ot/get_devices.js"),u.getErrorTitleByCode=b.getTitleByCode,u.getLogs=m.getLogs,u.getStatsAdpater=l("./ot/peer_connection/get_stats_adapter.js"),u.getStatsHelpers=l("./ot/peer_connection/get_stats_helpers.js"),u.handleJsException=b.handleJsException,u.httpTest=l("./ot/qos_testing/http_test.js"),u.info=m.info,u.initPublisher=l("./ot/publisher/init.js"),u.initSession=function(l,n){return null==n&&(n=l,l=null),0===o.value.length&&l&&(o.value=l,u.APIKEY=l),v(l,n)},u.isUnloaded=h.isUnloaded,u.log=m.log,u.onLoad=h.onLoad,u.onUnload=h.onUnload,u.overrideGuidStorage=g.override,u.pickScreenSharingHelper=_.pickHelper,u.properties=y,u.publishers=w.publishers,u.registerScreenSharingExtension=_.registerExtension,u.registerScreenSharingExtensionHelper=_.registerExtensionHelper,u.reportIssue=l("./ot/report_issue.js"),u.sessions=w.sessions,u.setLogLevel=m.setLogLevel,u.shouldLog=m.shouldLog,u.subscribers=w.subscribers,u.upgradeSystemRequirements=E.upgrade,u.warn=m.warn,u.webrtcTest=l("./ot/qos_testing/webrtc_test.js"),l("./helpers/capabilities"),h.onUnload(function(){w.publishers.destroy(),w.subscribers.destroy(),w.sessions.destroy("unloaded")}),y.cssURL&&d(y.cssURL),"function"=="function"&&__webpack_require__(313)&&!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function(){return u}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)),u.noConflict=l("./helpers/no_conflict.js")(),n.exports=u}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"./helpers/analytics.js":112,"./helpers/audio_context.js":113,"./helpers/audio_level_samplers/getstats_audio_output_level_sampler":114,"./helpers/audio_level_samplers/webaudio_audio_level_sampler":115,"./helpers/capabilities":116,"./helpers/connectivity_attempt_pinger.js":117,"./helpers/css_loader.js":119,"./helpers/dialogs.js":121,"./helpers/get_user_media.js":122,"./helpers/guid_storage.js":123,"./helpers/no_conflict.js":125,"./helpers/properties.js":126,"./helpers/video_element/index.js":131,"./helpers/video_orientation.js":135,"./helpers/widget_view.js":137,"./ot/analytics.js":139,"./ot/anvil.js":140,"./ot/api_key.js":141,"./ot/archive.js":142,"./ot/audio_level_transformer":143,"./ot/capabilities.js":144,"./ot/chrome/chrome.js":149,"./ot/connection.js":153,"./ot/environment_loader.js":154,"./ot/events.js":155,"./ot/exception_codes.js":156,"./ot/generate_simple_state_machine.js":157,"./ot/get_devices.js":158,"./ot/interval_runner.js":159,"./ot/logging.js":160,"./ot/messaging/raptor/legacy_structure.js":164,"./ot/messaging/raptor/session_dispatcher.js":170,"./ot/messaging/raptor/signal.js":171,"./ot/messaging/rumor/legacy_structure.js":174,"./ot/ot_error.js":181,"./ot/peer_connection/get_stats_adapter.js":184,"./ot/peer_connection/get_stats_helpers.js":185,"./ot/peer_connection/peer_connection.js":188,"./ot/peer_connection/peer_connections.js":190,"./ot/peer_connection/publisher_peer_connection.js":191,"./ot/peer_connection/qos.js":192,"./ot/peer_connection/subscriber_peer_connection.js":196,"./ot/publisher":197,"./ot/publisher/init.js":198,"./ot/publisher/microphone.js":200,"./ot/publisher/state.js":201,"./ot/qos_testing/http_test.js":202,"./ot/qos_testing/webrtc_test.js":203,"./ot/report_issue.js":204,"./ot/screensharing/screen_sharing.js":208,"./ot/session/handle.js":209,"./ot/session/info.js":210,"./ot/session/init.js":211,"./ot/session/objects.js":212,"./ot/stream.js":214,"./ot/stream_channel.js":215,"./ot/stylable_component.js":216,"./ot/subscriber":218,"./ot/subscriber/state.js":219,"./ot/system_requirements.js":220,"@opentok/ot-helpers":4}],139:[function(l,n,e){"use strict";var u=l("../helpers/analytics.js"),t=l("../helpers/properties.js");n.exports=new u(t.loggingURL)},{"../helpers/analytics.js":112,"../helpers/properties.js":126}],140:[function(l,n,e){"use strict";var u=l("uuid"),t=l("bluebird"),i=l("./exception_codes.js"),r=l("@opentok/ot-helpers"),o=l("../helpers/properties.js"),s={};n.exports=s;var a={400:i.INVALID_SESSION_ID,403:i.AUTHENTICATION_ERROR,404:i.INVALID_SESSION_ID,409:i.TERMS_OF_SERVICE_FAILURE},c={RESPONSE_BADLY_FORMED:{code:null,message:"Unknown error: JSON response was badly formed"},UNEXPECTED_SERVER_RESPONSE:{code:i.UNEXPECTED_SERVER_RESPONSE,message:"Unexpected server response. Try this operation again later."}},d=function(l){var n=r.clone(c.UNEXPECTED_SERVER_RESPONSE);return n.details={originalCode:l.code.toString(),originalMessage:l.message},n};s.getRequestParams=function(l,n){var e,t=o.apiURL+"/"+l,i="js-"+o.version.replace(/^v/,"");return"IE"===r.env.name&&r.env.version<10?(t=t+"&format=json&token="+encodeURIComponent(n)+"&version=1&cache="+u()+"&client_version="+i,e={xdomainrequest:!0}):e={headers:{"X-TB-TOKEN-AUTH":n,"X-TB-VERSION":1,"X-TB-CLIENT-VERSION":i}},{url:t,options:e}},s.getErrorsFromHTTP=function(l){if(!l)return!1;var n={code:l.target&&l.target.status};return n},s.getErrorsFromResponse=function(l){if(!Array.isArray(l))return c.RESPONSE_BADLY_FORMED;var n=r.find(l,function(l){return void 0!==l.error&&null!==l.error});return n?(n=n.error,n.message=n.errorMessage&&n.errorMessage.message,n):!1};var f=function(l,n){return l.code&&!a[l.code]?l=d(l):l.code=a[l.code],0===n.length?(l.code=i.CONNECT_FAILED,n="Response body was empty, probably due to connectivity loss"):l.code||(l=d(l)),l.details||(l.details={}),l.details.responseText=n,l};s.get=function(l,n){var e=s.getRequestParams(l,n);return new t.Promise(function(l,n){r.getJSON(e.url,e.options,function(e,u){var t,i=s.getErrorsFromHTTP(e)||s.getErrorsFromResponse(u);return i?(t=u&&!r.isEmpty(u)?JSON.stringify(u):"",i=f(i,t),void n(new r.Error(i.message,"AnvilError",{code:i.code,details:i.details}))):void l(u[0])})})}},{"../helpers/properties.js":126,"./exception_codes.js":156,"@opentok/ot-helpers":4,bluebird:70,uuid:109}],141:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");if("Node"===u.env.name)n.exports={value:""};else{var t=function(){var l=document.getElementsByTagName("script");return l=l[l.length-1],l=l.getAttribute("src")||l.src}(),i=t.match(/[\?\&]apikey=([^&]+)/i);n.exports={value:i?i[1]:""}}},{"@opentok/ot-helpers":4}],142:[function(l,n,e){"use strict";var u=l("./events.js"),t=l("@opentok/ot-helpers");n.exports=function(l,n,e){this.id=l,this.name=n,this.status=e,this._={},t.eventing(this),this._.update=function(l){for(var n in l)if(l.hasOwnProperty(n)){var e=this[n];this[n]=l[n];var t=new u.ArchiveUpdatedEvent(this,n,e,this[n]);this.dispatchEvent(t)}}.bind(this),this.destroy=function(){}}},{"./events.js":155,"@opentok/ot-helpers":4}],143:[function(l,n,e){"use strict";n.exports=function(){var l=null;this.transform=function(n){l=null===l||n>=l?n:.3*n+.7*l;var e=Math.log(l)/Math.LN10/1.5+1;return Math.min(Math.max(e,0),1)}}},{}],144:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l){this.publish=-1!==l.indexOf("publish")?1:0,this.subscribe=-1!==l.indexOf("subscribe")?1:0,this.forceUnpublish=-1!==l.indexOf("forceunpublish")?1:0,this.forceDisconnect=-1!==l.indexOf("forcedisconnect")?1:0,this.supportsWebRTC=u.hasCapabilities("webrtc")?1:0,this.permittedTo=function(l){return this.hasOwnProperty(l)&&1===this[l]}}},{"@opentok/ot-helpers":4}],145:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n,e,i,r,o,s=this,a=l.archiving,c=l.archivingStarted||"Archiving on",d=l.archivingEnded||"Archiving off",f=!0,h=function(l){r.nodeValue=l,n.setAttribute("title",l)},p=function(){o&&(clearTimeout(o),o=null),a?t.addClass(e,"OT_active"):t.removeClass(e,"OT_active"),t.removeClass(s.domElement,"OT_archiving-"+(a?"off":"on")),t.addClass(s.domElement,"OT_archiving-"+(a?"on":"off")),l.show&&a?(h(c),t.addClass(i,"OT_mode-on"),t.removeClass(i,"OT_mode-auto"),s.setDisplayMode("on"),o=setTimeout(function(){t.addClass(i,"OT_mode-auto"),t.removeClass(i,"OT_mode-on")},5e3)):l.show&&!f?(t.addClass(i,"OT_mode-on"),t.removeClass(i,"OT_mode-auto"),s.setDisplayMode("on"),h(d),o=setTimeout(function(){s.setDisplayMode("off")},5e3)):s.setDisplayMode("off")};u(this,{mode:a&&l.show&&"on"||"off",nodeName:"h1",htmlAttributes:{className:"OT_archiving OT_edge-bar-item OT_edge-bottom"},onCreate:function(){n=t.createElement("div",{className:"OT_archiving-light-box"},""),e=t.createElement("div",{className:"OT_archiving-light"},""),n.appendChild(e),i=t.createElement("div",{className:"OT_archiving-status OT_mode-on OT_edge-bar-item OT_edge-bottom"},""),r=document.createTextNode(""),i.appendChild(r),s.domElement.appendChild(n),s.domElement.appendChild(i),p()}}),this.setShowArchiveStatus=function(n){l.show=n,s.domElement&&p.call(s)},this.setArchiving=function(l){a=l,f=!1,s.domElement&&p.call(s)}}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],146:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){function n(){i=t.createElement("div",{className:"OT_audio-level-meter__bar"},""),o=t.createElement("div",{className:"OT_audio-level-meter__value"},""),r=t.createElement("div",{className:"OT_audio-level-meter__audio-only-img"},""),a.domElement.appendChild(i),a.domElement.appendChild(r),a.domElement.appendChild(o)}function e(){var l=100*s/(c-d);o.style.width=o.style.height=2*l+"%",o.style.top=o.style.right=-l+"%"}var i,r,o,s,a=this,c=l.maxValue||1,d=l.minValue||0,f={mode:l?l.mode:"auto",nodeName:"div",htmlAttributes:{className:"OT_audio-level-meter"},onCreate:n};u(this,f);var h=a.setDisplayMode.bind(a);a.setDisplayMode=function(n){h(n),"off"===n?l.onPassivate&&l.onPassivate():l.onActivate&&l.onActivate()},a.setValue=function(l){s=l,e()}}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],147:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js");n.exports=function(l){function n(){return"on"===e||"on"===t?"on":"mini"===e||"mini"===t?"mini":"mini-auto"===e||"mini-auto"===t?"mini-auto":"auto"===e||"auto"===t?"auto":"off"}var e=l.nameMode,t=l.muteMode;u(this,{mode:n(),nodeName:"div",htmlContent:"",htmlAttributes:{className:"OT_bar OT_edge-bar-item"}}),this.setNameMode=function(l){e=l,this.setDisplayMode(n())},this.setMuteMode=function(l){t=l,this.setDisplayMode(n())}}},{"./behaviour/widget.js":148}],148:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l,n){var e,t=n||{},i="auto";l.setDisplayMode=function(l){var n=l||"auto";e!==n&&(u.removeClass(this.domElement,"OT_mode-"+e),u.addClass(this.domElement,"OT_mode-"+n),"off"===n&&(i=e),e=n)},l.getDisplayMode=function(){return e},l.show=function(){return e!==i&&(this.setDisplayMode(i),t.onShow&&t.onShow()),this},l.showAfterLoading=function(){u.removeClass(this.domElement,"OT_hide-forced")},l.hide=function(){return"off"!==e&&(this.setDisplayMode("off"),t.onHide&&t.onHide()),this},l.hideWhileLoading=function(){u.addClass(this.domElement,"OT_hide-forced")},l.destroy=function(){return t.onDestroy&&t.onDestroy(this.domElement),this.domElement&&u.removeElement(this.domElement),l},l.appendTo=function(n){return this.domElement=u.createElement(t.nodeName||"div",t.htmlAttributes,t.htmlContent),t.onCreate&&t.onCreate(this.domElement),l.setDisplayMode(t.mode),"auto"===t.mode&&(u.addClass(l.domElement,"OT_mode-on-hold"),setTimeout(function(){u.removeClass(l.domElement,"OT_mode-on-hold")},2e3)),n.appendChild(this.domElement),l}}},{"@opentok/ot-helpers":4}],149:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l){var n={},e=function(e,u){u.parent=this,u.appendTo(l.parent),n[e]=u,this[e]=u};l.parent&&(u.eventing(this),this.destroy=function(){this.off(),this.hideWhileLoading();for(var l in n)n.hasOwnProperty(l)&&n[l].destroy()},this.showAfterLoading=function(){for(var l in n)n.hasOwnProperty(l)&&n[l].showAfterLoading()},this.hideWhileLoading=function(){for(var l in n)n.hasOwnProperty(l)&&n[l].hideWhileLoading()},this.set=function(l,n){if("string"==typeof l&&n)e.call(this,l,n);else for(var u in l)l.hasOwnProperty(u)&&e.call(this,u,l[u]);return this})}},{"@opentok/ot-helpers":4}],150:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n,e=l.muted||!1,i=function(){e?t.addClass(this.domElement,"OT_active"):t.removeClass(this.domElement,"OT_active ")}.bind(this),r=function(l){n=s.bind(this),t.on(l,"click",n)},o=function(l){n=null,t.off(l,"click",n)},s=function(){return e=!e,i(),e?this.parent.trigger("muted",this):this.parent.trigger("unmuted",this),!1};t.defineProperties(this,{muted:{get:function(){return e},set:function(l){e=l,i()}}});var a=e?"OT_edge-bar-item OT_mute OT_active":"OT_edge-bar-item OT_mute";u(this,{mode:l.mode,nodeName:"button",htmlContent:"Mute",htmlAttributes:{className:a},onCreate:r.bind(this),onDestroy:o.bind(this)})}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],151:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js");n.exports=function(l){var n=l.name;n&&""!==n.trim().length||(n=null,l.mode="off"),this.setName=function(l){n||this.setDisplayMode("auto"),n=l,this.domElement.innerHTML=n}.bind(this),u(this,{mode:l.mode,nodeName:"h1",htmlContent:n,htmlAttributes:{className:"OT_name OT_edge-bar-item"}})}},{"./behaviour/widget.js":148}],152:[function(l,n,e){"use strict";var u=l("./behaviour/widget.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n=!1,e=!1,i=function(l){var u=["auto","on"].indexOf(this.getDisplayMode())>-1;t.removeClass(l,"OT_video-disabled OT_video-disabled-warning OT_active"),u&&(n?t.addClass(l,"OT_video-disabled"):e&&t.addClass(l,"OT_video-disabled-warning"),t.addClass(l,"OT_active"))}.bind(this);this.disableVideo=function(l){n=l,l===!0&&(e=!1),i(this.domElement)},this.setWarning=function(l){e=l,i(this.domElement)},u(this,{mode:l.mode||"auto",nodeName:"div",htmlAttributes:{className:"OT_video-disabled-indicator"}});var r=this.setDisplayMode.bind(this);this.setDisplayMode=function(l){r(l),i(this.domElement)}}},{"./behaviour/widget.js":148,"@opentok/ot-helpers":4}],153:[function(l,n,e){"use strict";var u=l("./capabilities.js"),t=l("./events.js"),i=l("@opentok/ot-helpers"),r=function(l,n,e,o,s){var a;this.id=this.connectionId=l,this.creationTime=n?Number(n):null,this.data=e,this.capabilities=new r.Capabilities(o),this.permissions=new u(s),this.quality=null,i.eventing(this),this.destroy=function(l,n){a=l||"clientDisconnected",n!==!0&&this.dispatchEvent(new t.DestroyedEvent("destroyed",this,a))}.bind(this),this.destroyed=function(){return void 0!==a},this.destroyedReason=function(){return a}};r.fromHash=function(l){return new r(l.id,l.creationTime,l.data,i.extend(l.capablities||{},{supportsWebRTC:!0}),l.permissions||[])},r.Capabilities=function(l){var n=function(l){return l.supportsWebRTC=i.castToBoolean(l.supportsWebRTC),l},e=n(l);this.supportsWebRTC=e.supportsWebRTC},n.exports=r},{"./capabilities.js":144,"./events.js":155,"@opentok/ot-helpers":4}],154:[function(l,n,e){"use strict";function u(){var l=this;r.eventing(l);var n=i.isSupported(),e=n?i.isReady():!0,u=function(){return!r.isDOMUnloaded()&&r.isReady()&&e},s=function(){u()&&l.dispatchEvent(new t.EnvLoadedEvent(t.Event.names.ENV_LOADED))},a=function(){r.onDOMUnload(c),s()},c=function(){l.dispatchEvent(new t.EnvLoadedEvent(t.Event.names.ENV_UNLOADED))},d=function(l){e=!0,l&&o.debug("TB Plugin failed to load or was not installed"),s()};r.onDOMLoad(a),n&&i.ready(d),this.onLoad=function(n,e){return u()?void n.call(e):void l.on(t.Event.names.ENV_LOADED,n,e)},this.onUnload=function(n,e){return this.isUnloaded()?void n.call(e):void l.on(t.Event.names.ENV_UNLOADED,n,e)},this.isUnloaded=function(){return r.isDOMUnloaded()}}var t=l("./events.js"),i=l("@opentok/otplugin.js"),r=l("@opentok/ot-helpers"),o=l("./logging.js");n.exports=new u},{"./events.js":155,"./logging.js":160,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],155:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("./logging.js"),i={};i.Event=u.Event(),i.Event.names={ACTIVE:"active",INACTIVE:"inactive",UNKNOWN:"unknown",PER_SESSION:"perSession",PER_STREAM:"perStream",EXCEPTION:"exception",ISSUE_REPORTED:"issueReported",SESSION_CONNECTED:"sessionConnected",SESSION_RECONNECTING:"sessionReconnecting",SESSION_RECONNECTED:"sessionReconnected",SESSION_DISCONNECTED:"sessionDisconnected",STREAM_CREATED:"streamCreated",STREAM_DESTROYED:"streamDestroyed",CONNECTION_CREATED:"connectionCreated",CONNECTION_DESTROYED:"connectionDestroyed",SIGNAL:"signal",STREAM_PROPERTY_CHANGED:"streamPropertyChanged",MICROPHONE_LEVEL_CHANGED:"microphoneLevelChanged",RESIZE:"resize",SETTINGS_BUTTON_CLICK:"settingsButtonClick",DEVICE_INACTIVE:"deviceInactive",INVALID_DEVICE_NAME:"invalidDeviceName",ACCESS_ALLOWED:"accessAllowed",ACCESS_DENIED:"accessDenied",ACCESS_DIALOG_OPENED:"accessDialogOpened",ACCESS_DIALOG_CLOSED:"accessDialogClosed",ECHO_CANCELLATION_MODE_CHANGED:"echoCancellationModeChanged",MEDIA_STOPPED:"mediaStopped",PUBLISHER_DESTROYED:"destroyed",SUBSCRIBER_DESTROYED:"destroyed",SUBSCRIBER_CONNECTED:"connected",SUBSCRIBER_DISCONNECTED:"disconnected",DEVICES_DETECTED:"devicesDetected",DEVICES_SELECTED:"devicesSelected",CLOSE_BUTTON_CLICK:"closeButtonClick",MICLEVEL:"microphoneActivityLevel",MICGAINCHANGED:"microphoneGainChanged",ENV_LOADED:"envLoaded",ENV_UNLOADED:"envUnloaded",AUDIO_LEVEL_UPDATED:"audioLevelUpdated"},i.ExceptionEvent=function(l,n,e,u,t,r){i.Event.call(this,l),this.message=n,this.title=e,this.code=u,this.component=t,this.target=r},i.IssueReportedEvent=function(l,n){i.Event.call(this,l),this.issueId=n},i.EnvLoadedEvent=function(l){i.Event.call(this,l)};var r=!1;i.ConnectionEvent=function(l,n,e){i.Event.call(this,l,!1),Object.defineProperty(this,"connections",{get:function(){return r||(t.warn("OT.ConnectionEvent connections property is deprecated, use connection instead."),r=!0),[n]}}),this.connection=n,this.reason=e};var o=!1;i.StreamEvent=function(l,n,e,u){i.Event.call(this,l,u),Object.defineProperty(this,"streams",{get:function(){return o||(t.warn("OT.StreamEvent streams property is deprecated, use stream instead."),o=!0),[n]}}),this.stream=n,this.reason=e};var s=!1,a=!1,c=!1;i.SessionConnectEvent=function(l){i.Event.call(this,l,!1),Object.defineProperties(this,{connections:{get:function(){return s||(t.warn("OT.SessionConnectedEvent no longer includes connections. Listen for connectionCreated events instead."),s=!0),[]}},streams:{get:function(){return a||(t.warn("OT.SessionConnectedEvent no longer includes streams. Listen for streamCreated events instead."),s=!0),[]}},archives:{get:function(){return c||(t.warn("OT.SessionConnectedEvent no longer includes archives. Listen for archiveStarted events instead."),c=!0),[]}}})},i.SessionReconnectingEvent=function(){i.Event.call(this,i.Event.names.SESSION_RECONNECTING)},i.SessionReconnectedEvent=function(){i.Event.call(this,i.Event.names.SESSION_RECONNECTED)},i.SessionDisconnectEvent=function(l,n,e){i.Event.call(this,l,e),this.reason=n},i.StreamPropertyChangedEvent=function(l,n,e,u,t){i.Event.call(this,l,!1),this.type=l,this.stream=n,this.changedProperty=e,this.oldValue=u,this.newValue=t},i.VideoDimensionsChangedEvent=function(l,n,e){i.Event.call(this,"videoDimensionsChanged",!1),this.type="videoDimensionsChanged",this.target=l,this.oldValue=n,this.newValue=e},i.ArchiveEvent=function(l,n){i.Event.call(this,l,!1),this.type=l,this.id=n.id,this.name=n.name,this.status=n.status,this.archive=n},i.ArchiveUpdatedEvent=function(l,n,e,u){i.Event.call(this,"updated",!1),this.target=l,this.changedProperty=n,this.oldValue=e,this.newValue=u},i.SignalEvent=function(l,n,e){i.Event.call(this,l?"signal:"+l:i.Event.names.SIGNAL,!1),this.data=n,this.from=e},i.StreamUpdatedEvent=function(l,n,e,u){i.Event.call(this,"updated",!1),this.target=l,this.changedProperty=n,this.oldValue=e,this.newValue=u},i.DestroyedEvent=function(l,n,e){i.Event.call(this,l,!1),this.target=n,this.reason=e},i.ConnectionStateChangedEvent=function(l,n){i.Event.call(this,l,!1),this.target=n},i.VideoEnabledChangedEvent=function(l,n){i.Event.call(this,l,!1),this.reason=n.reason},i.VideoDisableWarningEvent=function(l){i.Event.call(this,l,!1)},i.AudioLevelUpdatedEvent=function(l){i.Event.call(this,i.Event.names.AUDIO_LEVEL_UPDATED,!1),this.audioLevel=l},i.MediaStoppedEvent=function(l){i.Event.call(this,i.Event.names.MEDIA_STOPPED,!0),this.target=l},n.exports=i},{"./logging.js":160,"@opentok/ot-helpers":4}],156:[function(l,n,e){"use strict";n.exports={JS_EXCEPTION:2e3,AUTHENTICATION_ERROR:1004,INVALID_SESSION_ID:1005,CONNECT_FAILED:1006,CONNECT_REJECTED:1007,CONNECTION_TIMEOUT:1008,NOT_CONNECTED:1010,INVALID_PARAMETER:1011,P2P_CONNECTION_FAILED:1013,API_RESPONSE_FAILURE:1014,TERMS_OF_SERVICE_FAILURE:1026,UNABLE_TO_PUBLISH:1500,UNABLE_TO_SUBSCRIBE:1501,UNABLE_TO_FORCE_DISCONNECT:1520,UNABLE_TO_FORCE_UNPUBLISH:1530,PUBLISHER_ICE_WORKFLOW_FAILED:1553,SUBSCRIBER_ICE_WORKFLOW_FAILED:1554,UNEXPECTED_SERVER_RESPONSE:2001,REPORT_ISSUE_ERROR:2011
 }},{}],157:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l,n,e){var t=n.slice(),i=u.clone(e),r=function(l){return-1!==t.indexOf(l)},o=function(l,n){return i[l]&&-1!==i[l].indexOf(n)};return function(n){function e(l,e){n({message:l,newState:e,currentState:t,previousState:i})}function u(l){return r(l)?o(t,l)?!0:(e("'"+t+"' cannot transition to '"+l+"'",l),!1):(e("'"+l+"' is not a valid state",l),!1)}var t=l,i=null;this.current=t,this.set=function(l){u(l)&&(i=t,this.current=t=l)}}}},{"@opentok/ot-helpers":4}],158:[function(l,n,e){"use strict";var u=l("../helpers/device_helpers.js").getMediaDevices;n.exports=function(l){u(l)}},{"../helpers/device_helpers.js":120}],159:[function(l,n,e){(function(l){"use strict";n.exports=function(n,e){var u=n,t=e,i=null;this.start=function(){i=l.setInterval(u,1e3/t)},this.stop=function(){l.clearInterval(i),i=null}}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}],160:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("../helpers/properties.js"),i={};n.exports=i,u.useLogHelpers(i);var r=!1,o=i.setLogLevel;i.setLogLevel=function(l){u.setLogLevel(l);var n=o.call(i,l);return i.shouldLog(i.DEBUG)&&!r&&(i.debug("OpenTok JavaScript library "+t.version),i.debug("Release notes: "+t.websiteURL+"/opentok/webrtc/docs/js/release-notes.html"),i.debug("Known issues: "+t.websiteURL+"/opentok/webrtc/docs/js/release-notes.html#knownIssues"),r=!0),i.debug("OT.setLogLevel("+n+")"),n};var s="true"===t.debug||t.debug===!0;i.setLogLevel(s?i.DEBUG:i.ERROR)},{"../helpers/properties.js":126,"@opentok/ot-helpers":4}],161:[function(l,n,e){"use strict";var u=function(l){var n=[];this.enqueue=function(){n.push(Array.prototype.slice.call(arguments))},this.triggerAll=function(){for(var e;e=n.shift();)l.trigger.apply(l,e)}};n.exports=u},{}],162:[function(l,n,e){"use strict";n.exports=function(l){if(0===l.length)return{};var n=JSON.parse(l),e=n.uri.substr(1).split("/");e.shift(),""===e[e.length-1]&&e.pop(),n.params={};for(var u=0,t=e.length;t-1>u;u+=2)n.params[e[u]]=e[u+1];return e.length%2===0?"channel"===e[e.length-2]&&e.length>6?n.resource=e[e.length-4]+"_"+e[e.length-2]:n.resource=e[e.length-2]:"channel"===e[e.length-1]&&e.length>5?n.resource=e[e.length-3]+"_"+e[e.length-1]:n.resource=e[e.length-1],n.signature=n.resource+"#"+n.method,n}},{}],163:[function(l,n,e){"use strict";var u=l("../../ot_error.js"),t=l("@opentok/ot-helpers"),i=l("../../logging.js"),r=l("../rumor/rumor_message_types.js"),o=l("./unbox_from_rumor_message.js"),s=function(){t.eventing(this,!0),this.callbacks={}};n.exports=s,s.prototype.registerCallback=function(l,n){this.callbacks[l]=n},s.prototype.triggerCallback=function(l){if(l){var n=this.callbacks[l];if(n&&t.isFunction(n)){var e=Array.prototype.slice.call(arguments);e.shift(),n.apply(null,e)}delete this.callbacks[l]}},s.prototype.onClose=function(l){this.emit("close",l)},s.prototype.onReconnected=function(){this.emit("reconnected")},s.prototype.onReconnecting=function(){this.emit("reconnecting")},s.prototype.dispatch=function(l){if(l.type===r.STATUS){i.debug("OT.Raptor.dispatch: STATUS"),i.debug(l);var n;return l.isError&&(n=new u(l.status)),void this.triggerCallback(l.transactionId,n,l)}var e=o(l);switch(i.debug("OT.Raptor.dispatch "+e.signature),i.debug(JSON.stringify(e,null,2)),e.resource){case"session":this.dispatchSession(e);break;case"connection":this.dispatchConnection(e);break;case"stream":this.dispatchStream(e);break;case"stream_channel":this.dispatchStreamChannel(e);break;case"subscriber":this.dispatchSubscriber(e);break;case"subscriber_channel":this.dispatchSubscriberChannel(e);break;case"signal":this.dispatchSignal(e);break;case"archive":this.dispatchArchive(e);break;default:i.warn("OT.Raptor.dispatch: Type "+e.resource+" is not currently implemented")}},s.prototype.dispatchSession=function(l){switch(l.method){case"read":this.emit("session#read",l.content,l.transactionId);break;default:i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented")}},s.prototype.dispatchConnection=function(l){switch(l.method){case"created":this.emit("connection#created",l.content);break;case"deleted":this.emit("connection#deleted",l.params.connection,l.reason);break;default:i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented")}},s.prototype.dispatchStream=function(l){switch(l.method){case"created":this.emit("stream#created",l.content,l.transactionId);break;case"deleted":this.emit("stream#deleted",l.params.stream,l.reason);break;case"updated":this.emit("stream#updated",l.params.stream,l.content);break;case"generateoffer":case"answer":case"pranswer":case"offer":case"candidate":this.dispatchJsep(l.method,l);break;default:i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented")}},s.prototype.dispatchStreamChannel=function(l){switch(l.method){case"updated":this.emit("streamChannel#updated",l.params.stream,l.params.channel,l.content);break;default:i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented")}},s.prototype.dispatchJsep=function(l,n){this.emit("jsep#"+l,n.params.stream,n.fromAddress,n)},s.prototype.dispatchSubscriberChannel=function(l){switch(l.method){case"updated":this.emit("subscriberChannel#updated",l.params.stream,l.params.channel,l.content);break;case"update":this.emit("subscriberChannel#update",l.params.subscriber,l.params.stream,l.content);break;default:i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented")}},s.prototype.dispatchSubscriber=function(l){switch(l.method){case"created":this.emit("subscriber#created",l.params.stream,l.fromAddress,l.content.id);break;case"deleted":this.dispatchJsep("unsubscribe",l),this.emit("subscriber#deleted",l.params.stream,l.fromAddress);break;case"generateoffer":case"answer":case"pranswer":case"offer":case"candidate":this.dispatchJsep(l.method,l);break;default:i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented")}},s.prototype.dispatchSignal=function(l){return"signal"!==l.method?void i.warn("OT.Raptor.dispatch: "+l.signature+" is not currently implemented"):void this.emit("signal",l.fromAddress,l.content.type,l.content.data)},s.prototype.dispatchArchive=function(l){switch(l.method){case"created":this.emit("archive#created",l.content);break;case"updated":this.emit("archive#updated",l.params.archive,l.content)}}},{"../../logging.js":160,"../../ot_error.js":181,"../rumor/rumor_message_types.js":178,"./unbox_from_rumor_message.js":172,"@opentok/ot-helpers":4}],164:[function(l,n,e){"use strict";var u=l("./raptor_constants.js"),t={};t.Actions=u.Actions,t.Types=u.Types,t.Dispatcher=l("./dispatcher.js"),t.serializeMessage=l("./serialize_message.js"),t.deserializeMessage=l("./deserialize_message.js"),t.unboxFromRumorMessage=l("./unbox_from_rumor_message.js"),t.parseIceServers=l("./parse_ice_servers.js"),t.Message=l("./message.js"),t.Socket=l("./raptor_socket.js"),n.exports=t},{"./deserialize_message.js":162,"./dispatcher.js":163,"./message.js":165,"./parse_ice_servers.js":166,"./raptor_constants.js":167,"./raptor_socket.js":168,"./serialize_message.js":169,"./unbox_from_rumor_message.js":172}],165:[function(l,n,e){"use strict";var u=l("uuid"),t=l("@opentok/ot-helpers"),i=l("./serialize_message.js"),r=l("../../../helpers/supported_crypto_scheme.js"),o=l("../../../helpers/properties.js"),s={};n.exports=s,s.offer=function(l,n){return i({method:"offer",uri:l,content:{sdp:n}})},s.connections={},s.connections.create=function(l,n,e,u){return i({method:"create",uri:"/v2/partner/"+l+"/session/"+n+"/connection/"+e,content:{userAgent:t.env.userAgent,clientVersion:"js-"+o.version.replace("v",""),capabilities:u||[]}})},s.connections.destroy=function(l,n,e){return i({method:"delete",uri:"/v2/partner/"+l+"/session/"+n+"/connection/"+e,content:{}})},s.sessions={},s.sessions.get=function(l,n){return i({method:"read",uri:"/v2/partner/"+l+"/session/"+n,content:{}})},s.streams={},s.streams.get=function(l,n,e){return i({method:"read",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e,content:{}})},s.streams.channelFromOTChannel=function(l){var n={id:l.id,type:l.type,active:l.active};return"video"===l.type&&(n.width=l.width,n.height=l.height,n.orientation=l.orientation,n.frameRate=l.frameRate,"default"!==l.source&&(n.source=l.source),n.fitMode=l.fitMode),n},s.streams.create=function(l,n,e,u,t,r,o,a){var c={id:e,name:u,audioFallbackEnabled:t,channel:r.map(function(l){return s.streams.channelFromOTChannel(l)})};return o&&(c.minBitrate=o),a&&(c.maxBitrate=a),i({method:"create",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e,content:c})},s.streams.destroy=function(l,n,e){return i({method:"delete",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e,content:{}})},s.streams.answer=function(l,n,e,u){return i({method:"answer",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e,content:{sdp:u}})},s.streams.candidate=function(l,n,e,u){return i({method:"candidate",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e,content:u})},s.streamChannels={},s.streamChannels.update=function(l,n,e,u,t){return i({method:"update",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/channel/"+u,content:t})},s.subscribers={},s.subscribers.uri=function(l,n,e,u){return"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u},s.subscribers.create=function(l,n,e,u,o,s){var a={id:u,connection:o,keyManagementMethod:r(),bundleSupport:t.hasCapabilities("bundle"),rtcpMuxSupport:t.hasCapabilities("RTCPMux")};return s&&(a.channel=s),i({method:"create",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u,content:a})},s.subscribers.destroy=function(l,n,e,u){return i({method:"delete",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u,content:{}})},s.subscribers.update=function(l,n,e,u,t){return i({method:"update",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u,content:t})},s.subscribers.candidate=function(l,n,e,u,t){return i({method:"candidate",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u,content:t})},s.subscribers.answer=function(l,n,e,u,t){return i({method:"answer",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u,content:{sdp:t}})},s.subscriberChannels={},s.subscriberChannels.update=function(l,n,e,u,t,r){return i({method:"update",uri:"/v2/partner/"+l+"/session/"+n+"/stream/"+e+"/subscriber/"+u+"/channel/"+t,content:r})},s.signals={},s.signals.create=function(l,n,e,t,r){var o={};return void 0!==t&&(o.type=t),void 0!==r&&(o.data=r),i({method:"signal",uri:"/v2/partner/"+l+"/session/"+n+(void 0!==e?"/connection/"+e:"")+"/signal/"+u(),content:o})}},{"../../../helpers/properties.js":126,"../../../helpers/supported_crypto_scheme.js":127,"./serialize_message.js":169,"@opentok/ot-helpers":4,uuid:109}],166:[function(l,n,e){"use strict";n.exports=function(l){var n;try{n=JSON.parse(l.data).content.iceServers}catch(e){return[]}return n.map(function(l){return{url:l.url,urls:l.url,username:l.username,credential:l.credential}})}},{}],167:[function(l,n,e){"use strict";n.exports={Actions:{CONNECT:100,CREATE:101,UPDATE:102,DELETE:103,STATE:104,FORCE_DISCONNECT:105,FORCE_UNPUBLISH:106,SIGNAL:107,CREATE_ARCHIVE:108,CLOSE_ARCHIVE:109,START_RECORDING_SESSION:110,STOP_RECORDING_SESSION:111,START_RECORDING_STREAM:112,STOP_RECORDING_STREAM:113,LOAD_ARCHIVE:114,START_PLAYBACK:115,STOP_PLAYBACK:116,APPSTATE_PUT:117,APPSTATE_DELETE:118,OFFER:119,ANSWER:120,PRANSWER:121,CANDIDATE:122,SUBSCRIBE:123,UNSUBSCRIBE:124,QUERY:125,SDP_ANSWER:126,PONG:127,REGISTER:128,QUALITY_CHANGED:129},Types:{RPC_REQUEST:100,RPC_RESPONSE:101,STREAM:102,ARCHIVE:103,CONNECTION:104,APPSTATE:105,CONNECTIONCOUNT:106,MODERATION:107,SIGNAL:108,SUBSCRIBER:110,JSEP:109}}},{}],168:[function(l,n,e){"use strict";function u(l,n){this.code=l,this.message=n,this.reason=n}var t=l("uuid"),i=l("../../analytics.js"),r=l("../../exception_codes.js"),o=l("./dispatcher.js"),s=l("../../logging.js"),a=l("./message.js"),c=l("../../ot_error.js"),d=l("@opentok/ot-helpers"),f=l("./signal.js"),h=l("../rumor/rumor_socket.js"),p=function g(l,n,e,h,p){var v,m,b,y,_,w,E=["disconnected","connecting","connected","error","disconnecting"],S=d.statable(this,E,"disconnected"),T=function(l){S(l?"error":"connected"),w.apply(null,arguments)},C=function(l){var n="clientDisconnected";!this.is("disconnecting")&&y.is("error")&&(n="networkDisconnected"),l&&4001===l.code&&(n="networkTimedout"),S("disconnected"),_.onClose(n)}.bind(this),j=function(l){s.error("OT.Raptor.Socket error:",l)},O=function(){_.onReconnecting()},R=function(){var n={action:"Reconnect",variation:"Success",payload:{retries:y.reconnectRetriesCount(),messageQueueSize:y.messageQueueSize(),socketId:y.socketID()},sessionId:m,partnerId:v,connectionId:l};i.logEvent(n),_.onReconnected()},k=function(){var n={action:"Reconnect",variation:"Attempt",payload:{retries:y.reconnectRetriesCount(),messageQueueSize:y.messageQueueSize(),socketId:y.socketID()},sessionId:m,partnerId:v,connectionId:l};i.logEvent(n)},A=function(l){var n,e,u=[400,403,409];return l.code===r.CONNECT_FAILED?(n=l.code,e=c.getTitleByCode(l.code)):l.code&&u.indexOf(l.code)>-1?(n=r.CONNECT_FAILED,e="Received error response to connection create message."):(n=r.UNEXPECTED_SERVER_RESPONSE,e="Unexpected server response. Try this operation again later."),{errorCode:n,errorMessage:e}},I=function(n){var e=A(n),u={action:"Reconnect",variation:"Failure",payload:{reason:"ConnectToSession",code:e.errorCode,message:e.errorMessage,messageQueueSize:y.messageQueueSize(),socketId:y.socketID()},sessionId:m,partnerId:v,connectionId:l};i.logEvent(u)};this.connect=function(n,u,t){if(!this.is("disconnected","error"))return void s.warn("Cannot connect the Raptor Socket as it is currently connected. You should disconnect first.");S("connecting"),v=u.partnerId,m=u.sessionId,b=n,w=t;var o="/v2/partner/"+v+"/session/"+m;y=new g.RumorSocket({messagingURL:e,notifyDisconnectAddress:h,connectionId:l,enableReconnection:u.reconnection}),y.onClose(C),y.onError(j),y.onReconnecting(O),y.onReconnectAttempt(k),y.onReconnectFailure(I),y.onReconnected(R),y.onMessage(_.dispatch.bind(_)),y.connect(function(n){if(n)return void T({reason:"WebSocketConnection",code:n.code,message:n.message});s.debug("OT.Raptor.Socket connected. Subscribing to "+o+" on "+e),y.subscribe([o]);var t=[];u.renegotiation&&t.push("renegotiation");var c=a.connections.create(v,m,y.id(),t);this.publish(c,{"X-TB-TOKEN-AUTH":b},!0,function(n){if(n){var e=A(n),u={reason:"ConnectToSession",code:e.errorCode,message:e.errorMessage,socketId:y.socketID()},t={action:"Connect",variation:"Failure",payload:u,sessionId:m,partnerId:v,connectionId:l};return i.logEvent(t),void T(u)}this.publish(a.sessions.get(v,m),{},!0,function(n){if(n){var e,u,t=[400,403,409];n.code&&t.indexOf(n.code)>-1?(e=r.CONNECT_FAILED,u="Received error response to session read"):(e=r.UNEXPECTED_SERVER_RESPONSE,u="Unexpected server response. Try this operation again later.");var o={reason:"GetSessionState",code:e,message:u,socketId:y.socketID()},s={action:"Connect",variation:"Failure",payload:o,sessionId:m,partnerId:v,connectionId:l};i.logEvent(s),T(o)}else T.apply(null,arguments)})}.bind(this))}.bind(this))},this.disconnect=function(l){this.is("disconnected")||(S("disconnecting"),y.disconnect(l))},this.publish=function(l,n,e,u){if(y.isNot("connected","reconnecting"))return void s.error("OT.Raptor.Socket: cannot publish until the socket is connected."+l);var i,r=t();return!i&&u&&d.isFunction(u)&&(i=u),i&&_.registerCallback(r,i),s.debug("OT.Raptor.Socket Publish (ID:"+r+")"),s.debug(l),y.publish([h],l,d.extend({},n,{"Content-Type":"application/x-raptor+v2","TRANSACTION-ID":r,"X-TB-FROM-ADDRESS":y.id()}),e),r},this.streamCreate=function(l,n,e,u,t,i,r){var o=a.streams.create(v,m,n,l,e,u,t,i);this.publish(o,{},!0,function(l,e){r(l,n,e)})},this.streamDestroy=function(l){this.publish(a.streams.destroy(v,m,l),{},!0)},this.streamChannelUpdate=function(l,n,e){this.publish(a.streamChannels.update(v,m,l,n,e),{},!0)},this.subscriberCreate=function(l,n,e,u){this.publish(a.subscribers.create(v,m,l,n,y.id(),e),{},!0,u)},this.subscriberDestroy=function(l,n){this.publish(a.subscribers.destroy(v,m,l,n),{},!0)},this.subscriberUpdate=function(l,n,e){this.publish(a.subscribers.update(v,m,l,n,e),{},!0)},this.subscriberChannelUpdate=function(l,n,e,u){this.publish(a.subscriberChannels.update(v,m,l,n,e,u),{},!0)},this.forceDisconnect=function(l,n){this.publish(a.connections.destroy(v,m,l),{},!0,n)},this.forceUnpublish=function(l,n){this.publish(a.streams.destroy(v,m,l),{},!0,n)},this.jsepCandidate=function(l,n){this.publish(a.streams.candidate(v,m,l,n),{},!0)},this.jsepCandidateP2p=function(l,n,e){this.publish(a.subscribers.candidate(v,m,l,n,e),{},!0)},this.jsepOffer=function(l,n){this.publish(a.offer(l,n),{},!0)},this.jsepAnswer=function(l,n){this.publish(a.streams.answer(v,m,l,n),{},!0)},this.jsepAnswerP2p=function(l,n,e){this.publish(a.subscribers.answer(v,m,l,n,e),{},!0)},this.signal=function(l,n,e){var t=new f(m,y.id(),l||{});return t.valid?void this.publish(t.toRaptorMessage(),{},t.retryAfterReconnect,function(l){var i,o,s,a=[400,403,404,413];if(l)l.code&&a.indexOf(l.code)>-1?(o=l.code,s=l.message):(o=r.UNEXPECTED_SERVER_RESPONSE,s="Unexpected server response. Try this operation again later."),i=new u(o,s);else{var c=t.data?typeof t.data:null;e("signal","send",{type:c})}n&&d.isFunction(n)&&n(i,t.toHash())}):void(n&&d.isFunction(n)&&n(new u(t.error.code,t.error.reason),t.toHash()))},this.id=function(){return y&&y.id()},null==p&&(p=new o),_=p};p.RumorSocket=h,n.exports=p},{"../../analytics.js":139,"../../exception_codes.js":156,"../../logging.js":160,"../../ot_error.js":181,"../rumor/rumor_socket.js":179,"./dispatcher.js":163,"./message.js":165,"./signal.js":171,"@opentok/ot-helpers":4,uuid:109}],169:[function(l,n,e){"use strict";n.exports=function(l){return JSON.stringify(l)}},{}],170:[function(l,n,e){"use strict";function u(l,n){var e=l.channel.map(function(l){return new g(l)}),u=l.connectionId?l.connectionId:l.connection.id;return new p(l.id,l.name,l.creationTime,n.connections.get(u),n,e)}function t(l,n){if(!n.streams.has(l.id)){var e=u(l,n);return n.streams.add(e),e}}function i(l){return new o(l.id,l.name,l.status)}function r(l,n){if(!n.archives.has(l.id)){var e=i(l);return n.archives.add(e),e}}var o=l("../../archive.js"),s=l("../../connection.js"),a=l("./delayed_event_queue.js"),c=l("./dispatcher.js"),d=l("../../logging.js"),f=l("@opentok/ot-helpers"),h=l("../../session/objects.js"),p=l("../../stream.js"),g=l("../../stream_channel.js"),v=function(l){var n={};this.enqueue=function(){var e=arguments[0],u=Array.prototype.slice.call(arguments,1);n[e]||(n[e]=new a(l)),n[e].enqueue.apply(n[e],u)},this.triggerConnectionCreated=function(l){n["connectionCreated"+l.id]&&n["connectionCreated"+l.id].triggerAll()},this.triggerSessionConnected=function(l){n.sessionConnected&&n.sessionConnected.triggerAll(),l.forEach(function(l){this.triggerConnectionCreated(l)},this)}},m={};n.exports=function(l){var n=new c,e=!1,u=new v(n);n.on("reconnecting",function(){l._.reconnecting()}),n.on("reconnected",function(){l._.reconnected()}),n.on("close",function(n){var e=l.connection;if(e)return e.destroyedReason()?void d.debug("OT.Raptor.Socket: Socket was closed but the connection had already been destroyed. Reason: "+e.destroyedReason()):void e.destroy(n)});var i=function(n,e){return n=s.fromHash(n),(e||l.connection&&n.id!==l.connection.id)&&(l.connections.add(n),u.triggerConnectionCreated(n)),Object.keys(m).forEach(function(u){var i=m[u];if(i&&n.id===i.connection.id){t(i,l),delete m[i.id];var r={debug:e?"connection came in session#read":"connection came in connection#created",streamId:i.id,connectionId:n.id};l.logEvent("streamCreated","warning",r)}}),n};n.on("session#read",function(o,s){var a,c={};c.streams=[],c.connections=[],c.archives=[],o.connection.forEach(function(l){a=i(l,!0),c.connections.push(a)}),o.stream.forEach(function(n){c.streams.push(t(n,l))}),(o.archive||o.archives).forEach(function(n){c.archives.push(r(n,l))}),l._.subscriberMap={},n.triggerCallback(s,null,c),e=!0,u.triggerSessionConnected(l.connections)}),n.on("connection#created",function(l){i(l)}),n.on("connection#deleted",function(n,e){n=l.connections.get(n),n.destroy(e)}),n.on("stream#created",function(e,u){var i=e.connectionId?e.connectionId:e.connection.id;if(l.connections.has(i))e=t(e,l);else{m[e.id]=e;var r={debug:"eventOrderError -- streamCreated event before connectionCreated",streamId:e.id};l.logEvent("streamCreated","warning",r)}e.publisher&&e.publisher.setStream(e),n.triggerCallback(u,null,e)}),n.on("stream#deleted",function(n,e){var u=l.streams.get(n);return u?void u.destroy(e):void d.error("OT.Raptor.dispatch: A stream does not exist with the id of "+n+", for stream#deleted message!")}),n.on("stream#updated",function(n,e){var u=l.streams.get(n);return u?void u._.update(e):void d.error("OT.Raptor.dispatch: A stream does not exist with the id of "+n+", for stream#updated message!")}),n.on("streamChannel#updated",function(n,e,u){var t;return n&&(t=l.streams.get(n))?void t._.updateChannel(e,u):void d.error("OT.Raptor.dispatch: Unable to determine streamId, or the stream does not exist, for streamChannel message!")});var o=function(l,n){return l.reduce(function(l,e){if(0===l.length){var u=e.find(n);return u?[u]:[]}return l},[])},a=function(n,e,u,t){var i,r,a={streamId:e},c=h.subscribers,p=h.publishers;switch(n){case"offer":r=o([c,p],a);break;case"answer":case"pranswer":r=o([p,c],a);break;case"generateoffer":case"unsubscribe":r=o([p],a);break;case"candidate":r=c.where(a).concat(p.where(a));break;default:return void d.warn("OT.Raptor.dispatch: jsep#"+n+" is not currently implemented")}if(0!==r.length){if(i=l.connections.get(u),!i&&u.match(/^symphony\./))i=s.fromHash({id:u,creationTime:Math.floor(f.now())}),l.connections.add(i);else if(!i)return void d.warn("OT.Raptor.dispatch: Messsage comes from a connection ("+u+") that we do not know about. The message was ignored.");r.forEach(function(l){l.processMessage(n,i,t)})}};return n.on("jsep#offer",a.bind(null,"offer")),n.on("jsep#answer",a.bind(null,"answer")),n.on("jsep#pranswer",a.bind(null,"pranswer")),n.on("jsep#generateoffer",a.bind(null,"generateoffer")),n.on("jsep#unsubscribe",a.bind(null,"unsubscribe")),n.on("jsep#candidate",a.bind(null,"candidate")),n.on("subscriberChannel#updated",function(n,e,u){return n&&l.streams.has(n)?void l.streams.get(n)._.updateChannel(e,u):void d.error("OT.Raptor.dispatch: Unable to determine streamId, or the stream does not exist, for subscriberChannel#updated message!")}),n.on("subscriberChannel#update",function(n,e,u){return e&&l.streams.has(e)?h.subscribers.has(n)?void h.subscribers.get(n).disableVideo(u.active):void d.error("OT.Raptor.dispatch: Unable to determine subscriberId, or the subscriber does not exist, for subscriberChannel#update message!"):void d.error("OT.Raptor.dispatch: Unable to determine streamId, or the stream does not exist, for subscriberChannel#update message!")}),n.on("subscriber#created",function(n,e,u){var t=n?l.streams.get(n):null;return t?void(l._.subscriberMap[e+"_"+t.id]=u):void d.error("OT.Raptor.dispatch: Unable to determine streamId, or the stream does not exist, for subscriber#created message!")}),n.on("subscriber#deleted",function(n,e){var u=n?l.streams.get(n):null;return u?void delete l._.subscriberMap[e+"_"+u.id]:void d.error("OT.Raptor.dispatch: Unable to determine streamId, or the stream does not exist, for subscriber#created message!")}),n.on("signal",function(n,t,i){var r=l.connections.get(n);l.connection&&n===l.connection.connectionId?e?l._.dispatchSignal(r,t,i):u.enqueue("sessionConnected","signal",n,t,i):l.connections.get(n)?l._.dispatchSignal(r,t,i):""===n?l._.dispatchSignal(null,t,i):u.enqueue("connectionCreated"+n,"signal",n,t,i)}),n.on("archive#created",function(n){r(n,l)}),n.on("archive#updated",function(n,e){var u=l.archives.get(n);return u?void u._.update(e):void d.error("OT.Raptor.dispatch: An archive does not exist with the id of "+n+", for archive#updated message!")}),n}},{"../../archive.js":142,"../../connection.js":153,"../../logging.js":160,"../../session/objects.js":212,"../../stream.js":214,"../../stream_channel.js":215,"./delayed_event_queue.js":161,"./dispatcher.js":163,"@opentok/ot-helpers":4}],171:[function(l,n,e){"use strict";var u=l("../../api_key.js"),t=l("../../connection.js"),i=l("./message.js"),r=l("@opentok/ot-helpers"),o=l("../../session/tag.js"),s=8192,a=128;n.exports=function(l,n,e){var c=function(l){return!/^[a-zA-Z0-9\-\._~]+$/.exec(l)},d=function(l){return l?l instanceof t||l._tag===o?null:{code:400,reason:"The To field was invalid"}:{code:400,reason:"The signal to field was invalid. Either set it to a OT.Connection, OT.Session, or omit it entirely"}},f=function(l){var n=null;return null===l||void 0===l?n={code:400,reason:"The signal type was null or undefined. Either set it to a String value or omit it"}:l.length>a?n={code:413,reason:"The signal type was too long, the maximum length of it is "+a+" characters"}:c(l)&&(n={code:400,reason:"The signal type was invalid, it can only contain letters, numbers, '-', '_', and '~'."}),n},h=function(l){var n=null;if(null===l||void 0===l)n={code:400,reason:"The signal data was null or undefined. Either set it to a String value or omit it"};else try{JSON.stringify(l).length>s&&(n={code:413,reason:"The data field was too long, the maximum size of it is "+s+" characters"})}catch(e){n={code:400,reason:"The data field was not valid JSON"}}return n},p=function(l){var n=null;return l!==!0&&l!==!1&&(n={code:400,reason:"The signal retryAfterReconnect was not true or false. Either set it to a Boolean value or omit it"}),n};this.toRaptorMessage=function(){var n=this.to;return n&&"string"!=typeof n&&(n=n.id),i.signals.create(u.value,l,n,this.type,this.data)},this.toHash=function(){return e},this.error=null,this.retryAfterReconnect=!0,e&&(e.hasOwnProperty("data")&&(this.data=r.clone(e.data),this.error=h(this.data)),e.hasOwnProperty("to")&&(this.to=e.to,this.error||(this.error=d(this.to))),e.hasOwnProperty("type")&&(this.error||(this.error=f(e.type)),this.type=e.type),e.hasOwnProperty("retryAfterReconnect")&&(this.error||(this.error=p(e.retryAfterReconnect)),this.retryAfterReconnect=e.retryAfterReconnect)),this.valid=null===this.error}},{"../../api_key.js":141,"../../connection.js":153,"../../session/tag.js":213,"./message.js":165,"@opentok/ot-helpers":4}],172:[function(l,n,e){"use strict";var u=l("./deserialize_message.js");n.exports=function(l){var n=u(l.data);return n.transactionId=l.transactionId,n.fromAddress=l.headers["X-TB-FROM-ADDRESS"],n}},{"./deserialize_message.js":162}],173:[function(l,n,e){(function(e){"use strict";var u=l("text-encoding");n.exports={TextEncoder:e.TextEncoder||u.TextEncoder,TextDecoder:e.TextDecoder||u.TextDecoder}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"text-encoding":105}],174:[function(l,n,e){"use strict";var u={};u.MessageType=l("./rumor_message_types.js"),u.PluginSocket=l("./plugin_socket.js"),u.Message=l("./rumor_message.js"),u.NativeSocket=l("./native_socket.js"),u.SocketError=l("./socket_error.js"),u.Socket=l("./rumor_socket.js"),n.exports=u},{"./native_socket.js":175,"./plugin_socket.js":176,"./rumor_message.js":177,"./rumor_message_types.js":178,"./rumor_socket.js":179,"./socket_error.js":180}],175:[function(l,n,e){"use strict";var u=l("./rumor_message.js"),t=100,i=10;n.exports=function(l,n,e){var r,o,s,a;r=new l(n),r.binaryType="arraybuffer",r.onopen=e.onOpen,r.onclose=e.onClose,r.onerror=e.onError,r.onmessage=function(l){if(u){var n=u.deserialize(l.data);e.onMessage(n)}},o=function c(l){r&&(void 0===l&&(l=0),s&&clearTimeout(s),r.bufferedAmount>0&&i>=l+1?s=setTimeout(c,t,l+1):a())},a=function(){r.close()},this.close=function(l,n){if(n){var e=function(){};r.onopen=e,r.onclose=e,r.onerror=e,r.onmessage=e}l?o():a()},this.send=function(l){r.send(l.serialize())},this.isClosed=function(){return 3===r.readyState}}},{"./rumor_message.js":177}],176:[function(l,n,e){"use strict";var u=l("./rumor_message.js"),t=l("@opentok/otplugin.js");n.exports=function(l,n){var e,i="initializing";t.initRumorSocket(l,function(l,t){l?(i="closed",n.onClose({code:4999})):"initializing"===i?(e=t,e.onOpen(function(){i="open",n.onOpen()}),e.onClose(function(l){i="closed",n.onClose({code:l})}),e.onError(function(l){i="closed",n.onError(l),n.onClose({code:l})}),e.onMessage(function(l,e,t,i){var r=new u(l,e,t,i);n.onMessage(r)}),e.open()):this.close()}.bind(this)),this.close=function(l,n){if(n){var u=function(){};e.onOpen(function(){i="open",u()}),e.onClose(function(){i="closed",u()}),e.onError(function(){i="closed",u()}),e.onMessage(u)}return"initializing"===i||"closed"===i?void(i="closed"):void e.close(1e3,"")},this.send=function(l){"open"===i&&e.send(l)},this.isClosed=function(){return"closed"===i}}},{"./rumor_message.js":177,"@opentok/otplugin.js":42}],177:[function(l,n,e){(function(e){"use strict";function u(l){for(var n=new ArrayBuffer(l.length),e=new Uint8Array(n),u=0;u<l.length;++u)e[u]=l[u];return n}var t=l("uuid"),i=l("./encoding.js"),r=l("./rumor_message_types.js"),o=function(l,n,e,u){this.type=l,this.toAddress=n,this.headers=e,this.data=u,this.transactionId=this.headers["TRANSACTION-ID"],this.status=this.headers.STATUS,this.isError=!(this.status&&"2"===this.status[0])};n.exports=o,o.prototype.serialize=function(){var l,n,e,u,t=8,r=7,o=[],s=[],a=[];for(r++,e=0;e<this.toAddress.length;e++)o.push(new i.TextEncoder("utf-8").encode(this.toAddress[e])),r+=2,r+=o[e].length;r++,e=0;for(var c in this.headers)this.headers.hasOwnProperty(c)&&(s.push(new i.TextEncoder("utf-8").encode(c)),a.push(new i.TextEncoder("utf-8").encode(this.headers[c])),r+=4,r+=s[e].length,r+=a[e].length,e++);n=new i.TextEncoder("utf-8").encode(this.data),r+=n.length;var d=new ArrayBuffer(r),f=new Uint8Array(d,0,r);for(r-=4,f[0]=(4278190080&r)>>>24,f[1]=(16711680&r)>>>16,f[2]=(65280&r)>>>8,f[3]=(255&r)>>>0,f[4]=0,f[5]=0,f[6]=this.type,f[7]=this.toAddress.length,e=0;e<o.length;e++)for(l=o[e],f[t++]=l.length>>8&255,f[t++]=l.length>>0&255,u=0;u<l.length;u++)f[t++]=l[u];for(f[t++]=s.length,e=0;e<s.length;e++){for(l=s[e],f[t++]=l.length>>8&255,f[t++]=l.length>>0&255,u=0;u<l.length;u++)f[t++]=l[u];for(l=a[e],f[t++]=l.length>>8&255,f[t++]=l.length>>0&255,u=0;u<l.length;u++)f[t++]=l[u]}for(e=0;e<n.length;e++)f[t++]=n[e];return d},o.deserialize=function(l){"undefined"!=typeof e&&e.isBuffer(l)&&(l=u(l));var n,t,r,s,a,c,d,f,h=0,p=8,g=new Uint8Array(l);h+=g[0]<<24,h+=g[1]<<16,h+=g[2]<<8,h+=g[3]<<0,n=g[6];var v=[];for(f=0;f<g[7];f++)d=g[p++]<<8,d+=g[p++],t=new Uint8Array(l,p,d),v[f]=new i.TextDecoder("utf-8").decode(t),p+=d;for(r=g[p++],s={},f=0;r>f;f++)d=g[p++]<<8,d+=g[p++],t=new Uint8Array(l,p,d),a=new i.TextDecoder("utf-8").decode(t),p+=d,d=g[p++]<<8,d+=g[p++],t=new Uint8Array(l,p,d),c=new i.TextDecoder("utf-8").decode(t),s[a]=c,p+=d;var m=new Uint8Array(l,p),b=new i.TextDecoder("utf-8").decode(m);return new o(n,v,s,b)},o.Connect=function(l,n){var e={uniqueId:l,"TRANSACTION-ID":t(),notifyDisconnectAddress:n};return new o(r.CONNECT,[],e,"")},o.Disconnect=function(){return new o(r.DISCONNECT,[],{},"")},o.Subscribe=function(l){return new o(r.SUBSCRIBE,l,{},"")},o.Unsubscribe=function(l){return new o(r.UNSUBSCRIBE,l,{},"")},o.Publish=function(l,n,e){return new o(r.MESSAGE,l,e||{},n||"")},o.Status=function(l,n){return new o(r.STATUS,l,n||{},"")},o.Ping=function(){return new o(r.PING,[],{},"")}}).call(this,l("buffer").Buffer)},{"./encoding.js":173,"./rumor_message_types.js":178,buffer:72,uuid:109}],178:[function(l,n,e){"use strict";n.exports={SUBSCRIBE:0,UNSUBSCRIBE:1,MESSAGE:2,CONNECT:3,DISCONNECT:4,PING:7,PONG:8,STATUS:9}},{}],179:[function(l,n,e){"use strict";var u=l("uuid"),t=l("../../../helpers/is_dom_unloaded.js"),i=l("./rumor_message.js"),r=l("@opentok/ot-helpers"),o=l("../../logging.js"),s=l("./native_socket.js"),a=l("./plugin_socket.js"),c=l("./rumor_message_types.js"),d=l("./rumor_message.js"),f=l("./socket_error.js"),h=l("ws"),p=5e3,g=2*p-100,v=10*p-100,m={
 1002:"The endpoint is terminating the connection due to a protocol error. (CLOSE_PROTOCOL_ERROR)",1003:"The connection is being terminated because the endpoint received data of a type it cannot accept (for example, a text-only endpoint received binary data). (CLOSE_UNSUPPORTED)",1004:"The endpoint is terminating the connection because a data frame was received that is too large. (CLOSE_TOO_LARGE)",1005:"Indicates that no status code was provided even though one was expected. (CLOSE_NO_STATUS)",1006:"Used to indicate that a connection was closed abnormally (that is, with no close frame being sent) when a status code is expected. (CLOSE_ABNORMAL)",1007:"Indicates that an endpoint is terminating the connection because it has received data within a message that was not consistent with the type of the message (e.g., non-UTF-8 [RFC3629] data within a text message)",1008:"Indicates that an endpoint is terminating the connection because it has received a message that violates its policy.  This is a generic status code that can be returned when there is no other more suitable status code (e.g., 1003 or 1009) or if there is a need to hide specific details about the policy",1009:"Indicates that an endpoint is terminating the connection because it has received a message that is too big for it to process",1011:"Indicates that a server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request",4001:"Connectivity loss was detected as it was too long since the socket received the last PONG message",4010:"Timed out while waiting for the Rumor socket to connect.",4020:"Error code unavailable.",4030:"Exception was thrown during Rumor connection, possibly because of a blocked port."},b={CLOSE_PROTOCOL_ERROR:1002,CLOSE_UNSUPPORTED:1003,CLOSE_TOO_LARGE:1004,CLOSE_NO_STATUS:1005,CLOSE_ABNORMAL:1006,CLOSE_UNEXPECTED_CONDITION:1011,CLOSE_TIMEOUT:4010,CLOSE_FALLBACK_CODE:4020,CLOSE_CONNECT_EXCEPTION:4030},y=function(l){var n,e,_,w,E,S,T,C,j,O,R,k,A,I,x,P=this,D=0,N=["disconnected","error","connected","connecting","disconnecting","reconnecting"],L=u(),F=[],M=l.messagingURL,U=l.notifyDisconnectAddress,B=l.connectionId,V=l.enableReconnection,H=l.TheWebSocket||h,W=!1,q=V?g:v,z=[d.Connect(B,U)],G=function(l){switch(l){case"disconnected":case"error":if(A=void 0,n=null,w){var e;K()&&(e=new Error(m[4001]),e.code=4001),w(e)}break;case"reconnecting":if(E&&W&&E(),P.is("disconnected"))return;D=0,A=Date.now()+y.RECONNECT_TIMEOUT;break;case"connected":C&&W?C():W=!0,A=void 0}},J=r.statable(P,N,"disconnected",G),Y=function(l,n){if(null===n||!r.isFunction(n))throw new Error("The RumorSocket "+l+" callback must be a valid function or null")},Q=function(){if(O){var l=Array.prototype.slice.call(arguments),n=O;O=void 0,n.apply(void 0,l)}},$=function(l,n){l=l||b.CLOSE_FALLBACK_CODE;var e=m[l]||"No message available from code.",u=e+(n?" "+n:"");o.error("RumorSocket: "+u);var t=new f(l,u);R&&clearTimeout(R),P.is("reconnecting")&&T&&T(t),P.isNot("reconnecting","disconnecting","disconnected")&&(V&&l!==b.CLOSE_UNEXPECTED_CONDITION?(o.debug("Initial connectivity loss detected at "+new Date),J("reconnecting")):o.debug("Connectivity loss detected at "+new Date)),P.is("disconnected","disconnecting")||(!V||Date.now()>=A||l===b.CLOSE_UNEXPECTED_CONDITION?(l===b.CLOSE_UNEXPECTED_CONDITION&&o.debug("Connectivity not restored because the server said to stop connecting."),V?o.debug("Connectivity not restored within "+y.RECONNECT_TIMEOUT+"ms, we have disconnected."):o.debug("Reconnections are disabled, will not attempt to reconnect."),J("error"),O?Q(t,void 0):_&&_(t)):(o.debug("Scheduling reconnection in "+y.RECONNECT_RETRY+"ms. Remaining time: "+(A-Date.now())+"ms."),k=setTimeout(il,y.RECONNECT_RETRY),D++,S&&S()))},K=function(){return I?r.now()-I>=q:!1},X=function(){P.is("connected")&&(K()?(ul({code:4001}),n.close(!1,!0)):(n.send(i.Ping()),x=setTimeout(X,p)))},Z=function(l){n.send(i.Status(l.toAddress,{"TRANSACTION-ID":l.headers["TRANSACTION-ID"],"X-TB-FROM-ADDRESS":B}))},ll=function(){return R&&clearTimeout(R),P.isNot("connecting","reconnecting")?void o.debug("webSocketConnected reached in state other than connecting ("+P.currentState+")"):(o.debug("Sending "+z.length+" pending messages"),z.map(function(l){n.send(l)}),z=z.filter(function(l){return l.type!==c.CONNECT}),J("connected"),Q(void 0,B),e&&e(B),void(x=setTimeout(function(){I=r.now(),X()},p)))},nl=function(){var l=n;$(b.CLOSE_TIMEOUT);try{l.close()}catch(e){o.debug("webSocket.close() raised an exception: "+(e.message||e))}},el=function(){},ul=function(l){o.debug("OT.Rumor.Socket: webSocketDisconnected (code: "+l.code+")"),R&&clearTimeout(R),x&&clearTimeout(x),t()||(P.isNot("disconnecting")&&1e3!==l.code&&1001!==l.code&&(l.code?$(l.code):$(b.CLOSE_FALLBACK_CODE,l.reason||l.message)),P.isNot("error","reconnecting")&&J("disconnected"))},tl=function(l){if(I=r.now(),l.type!==c.PONG){if(o.debug("OT.Rumor.Socket webSocketReceivedMessage: "+JSON.stringify(l,null,2)),l.transactionId&&(z=z.filter(function(n){return n.transactionId===l.transactionId&&o.debug("Marking",l.transactionId," as received"),n.transactionId!==l.transactionId})),l.transactionId&&l.type!==c.STATUS){if(Z(l),F.indexOf(l.transactionId)>=0)return;F.push(l.transactionId)}j&&j(l)}},il=function(){if(P.is("connecting","connected"))return void o.error("Rumor.Socket cannot connect when it is already connecting or connected.");P.is("reconnecting")?o.debug("Attempting reconnection..."):J("connecting");var l=u(),e={onOpen:ll,onClose:ul,onError:el,onMessage:tl},t=M;V&&(t=[M,M.indexOf("?")>=0?"&":"?","socketId="+L,P.is("reconnecting")?"&reconnect=true":"","&attempt="+l].join(""));try{n=null!=H?new s(H,t,e):new a(t,e),R=setTimeout(nl,y.CONNECT_TIMEOUT)}catch(i){o.error(i),$(b.CLOSE_CONNECT_EXCEPTION)}};P.publish=function(l,e,u,t){var r=i.Publish(l,e,u);t&&z.push(r),P.is("connected")&&n.send(r)},P.subscribe=function(l){n.send(i.Subscribe(l))},P.unsubscribe=function(l){n.send(i.Unsubscribe(l))},P.connect=function(l){P.is("connecting","connected")?"function"==typeof l?l(new f(null,"Rumor.Socket cannot connect when it is already connecting or connected.")):o.error("Rumor.Socket cannot connect when it is already connecting or connected."):(O=l,il())},P.disconnect=function(l){return R&&clearTimeout(R),x&&clearTimeout(x),k&&clearTimeout(k),n?void(n.isClosed()?P.isNot("error")&&J("disconnected"):(P.is("connected")&&n.send(i.Disconnect()),J("disconnecting"),n.close(l))):void(P.isNot("error")&&J("disconnected"))},P.reconnectRetriesCount=function(){return D},P.messageQueueSize=function(){return z.length},r.defineProperties(P,{id:{get:function(){return B}},socketID:{get:function(){return L}},onOpen:{set:function(l){Y("onOpen",l),e=l},get:function(){return e}},onError:{set:function(l){Y("onError",l),_=l},get:function(){return _}},onClose:{set:function(l){Y("onClose",l),w=l},get:function(){return w}},onMessage:{set:function(l){Y("onMessage",l),j=l},get:function(){return j}},onReconnecting:{set:function(l){Y("onReconnecting",l),E=l},get:function(){return E}},onReconnectAttempt:{set:function(l){Y("onReconnectAttempt",l),S=l},get:function(){return S}},onReconnectFailure:{set:function(l){Y("onReconnectFailure",l),T=l},get:function(){return T}},onReconnected:{set:function(l){Y("reconnected",l),C=l},get:function(){return C}}})};y.CONNECT_TIMEOUT=15e3,y.RECONNECT_TIMEOUT=6e4,y.RECONNECT_RETRY=500,n.exports=y},{"../../../helpers/is_dom_unloaded.js":124,"../../logging.js":160,"./native_socket.js":175,"./plugin_socket.js":176,"./rumor_message.js":177,"./rumor_message_types.js":178,"./socket_error.js":180,"@opentok/ot-helpers":4,uuid:109,ws:110}],180:[function(l,n,e){"use strict";n.exports=function(l,n){this.code=l,this.message=n}},{}],181:[function(l,n,e){"use strict";function u(l,n,e,u){var c=a.getTitleByCode(e),d=u?o.clone(u):{};s.error("OT.exception :: title: "+c+" ("+e+") msg: "+n),d.partnerId||(d.partnerId=i.value);try{t.logError(e,"tb.exception",c,{details:n},d),a.dispatchEvent(new r.ExceptionEvent(r.Event.names.EXCEPTION,n,c,e,l,l))}catch(f){s.error("OT.exception :: Failed to dispatch exception - "+f.toString())}}var t=l("./analytics.js"),i=l("./api_key.js"),r=l("./events.js"),o=l("@opentok/ot-helpers"),s=l("./logging.js"),a=function(l,n){this.code=l,this.message=n};n.exports=a,o.eventing(a);var c={1004:"Authentication error",1005:"Invalid Session ID",1006:"Connect Failed",1007:"Connect Rejected",1008:"Connect Time-out",1009:"Security Error",1010:"Not Connected",1011:"Invalid Parameter",1012:"Peer-to-peer Stream Play Failed",1013:"Connection Failed",1014:"API Response Failure",1015:"PeerConnection not connected, cannot call this method",1021:"Request Timeout",1026:"Terms of Service Violation: Export Compliance",1500:"Unable to Publish",1503:"No TURN server found",1520:"Unable to Force Disconnect",1530:"Unable to Force Unpublish",1553:"ICEWorkflow failed",1600:"createOffer, createAnswer, setLocalDescription, setRemoteDescription",2e3:"Internal Error",2001:"Unexpected Server Response",4e3:"WebSocket Connection Failed",4001:"WebSocket Network Disconnected"};a.getTitleByCode=function(l){return c[+l]},a.handleJsException=function(l,n,e){e=e||{};var t,i=e.session;i?(t={sessionId:i.sessionId},i.isConnected()&&(t.connectionId=i.connection.connectionId),e.target||(e.target=i)):e.sessionId&&(t={sessionId:e.sessionId},e.target||(e.target=null)),u(e.target,l,n,t)}},{"./analytics.js":139,"./api_key.js":141,"./events.js":155,"./logging.js":160,"@opentok/ot-helpers":4}],182:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("../logging.js");n.exports=function(l){var n,e,i=u.now(),r=[],o=function(){var e=u.now(),i=r[r.length-1],o={delta:n?e-n:0};i&&i.iceConnection===l.iceConnectionState||(o.iceConnectionState=l.iceConnectionState),i&&i.signalingState===l.signalingState||(o.signalingState=l.signalingState),i&&i.iceGatheringState===l.iceGatheringState||(o.iceGathering=l.iceGatheringState),t.debug(o),r.push(o),n=e};return l.addEventListener("iceconnectionstatechange",o,!1),l.addEventListener("signalingstatechange",o,!1),l.addEventListener("icegatheringstatechange",o,!1),{stop:function(){l.removeEventListener("iceconnectionstatechange",o,!1),l.removeEventListener("signalingstatechange",o,!1),l.removeEventListener("icegatheringstatechange",o,!1),e=!0;var u={type:"PeerConnectionWorkflow",success:e,startTime:i,finishTime:n,states:r};t.debug(u)}}}},{"../logging.js":160,"@opentok/ot-helpers":4}],183:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("../logging.js"),i=function(l){this.data=l.data,this.source=l.source,this.lastEventId=l.lastEventId,this.origin=l.origin,this.timeStamp=l.timeStamp,this.type=l.type,this.ports=l.ports,this.path=l.path};n.exports=function(l){var n={},e=[],r={sentMessages:0,recvMessages:0},o=function(l){return e.push(l),n},s=function(e){return l.send(e),r.sentMessages++,n},a=function(){for(var l;l=e.shift();)n.send(l)},c=function(){n.send=s,a()},d=function(l){n.send=o,n.trigger("close",l)},f=function(l){t.error("Data Channel Error:",l)},h=function(l){var e=new i(l);r.recvMessages++,n.trigger("message",e)};return u.eventing(n,!0),n.label=l.label,n.id=l.id,n.reliable=l.reliable,n.negotiated=l.negotiated,n.ordered=l.ordered,n.protocol=l.protocol,n._channel=l,n.close=function(){l.close()},n.equals=function(l,e){if(n.label!==l)return!1;for(var u in e)if(e.hasOwnProperty(u)&&n[u]!==e[u])return!1;return!0},n.getQosData=function(){return r},n.send=o,l.addEventListener("open",c,!1),l.addEventListener("close",d,!1),l.addEventListener("error",f,!1),l.addEventListener("message",h,!1),n}},{"../logging.js":160,"@opentok/ot-helpers":4}],184:[function(l,n,e){"use strict";var u=l("@opentok/otplugin.js"),t=l("@opentok/ot-helpers");n.exports=function(){function l(l,n){l.getStats(function(l){var e=[];l.result().forEach(function(l){var n={};l.names().forEach(function(e){n[e]=l.stat(e)}),n.id=l.id,n.type=l.type,n.timestamp=l.timestamp,e.push(n)}),n(null,e)})}function n(l,n){l.getStats(null,function(l){var e=[];l.forEach(function(l){e.push(l)}),n(null,e)},n)}return"Firefox"===t.browserVersion().name||u.isInstalled()?n:l}},{"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],185:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t={};n.exports=t,t.isVideoStat=function(l){return l.hasOwnProperty("googFrameWidthReceived")||l.hasOwnProperty("googFrameWidthInput")||"video"===l.mediaType},t.isAudioStat=function(l){return l.hasOwnProperty("audioInputLevel")||l.hasOwnProperty("audioOutputLevel")||"audio"===l.mediaType},t.isInboundStat=function(l){return l.hasOwnProperty("bytesReceived")},t.parseStatCategory=function(l){var n={packetsLost:0,packetsReceived:0,bytesReceived:0};return l.hasOwnProperty("packetsReceived")&&(n.packetsReceived=parseInt(l.packetsReceived,10)),l.hasOwnProperty("packetsLost")&&(n.packetsLost=parseInt(l.packetsLost,10)),l.hasOwnProperty("bytesReceived")&&(n.bytesReceived+=parseInt(l.bytesReceived,10)),n},t.normalizeTimestamp=function(l){return u.isObject(l)&&"getTime"in l?l.getTime():l}},{"@opentok/ot-helpers":4}],186:[function(l,n,e){(function(e){"use strict";var u,t=l("@opentok/otplugin.js");u=t.isInstalled()?t.RTCIceCandidate:e.RTCIceCandidate||e.mozRTCIceCandidate,n.exports=function(){var l=[],n=null;this.setPeerConnection=function(l){n=l},this.process=function(e){var t=new u(e.content);n?n.addIceCandidate(t):l.push(t)},this.processPending=function(){for(;l.length;)n.addIceCandidate(l.shift())}}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"@opentok/otplugin.js":42}],187:[function(l,n,e){"use strict";var u=l("../logging.js"),t=l("./sdp_helpers.js");n.exports=function(l,n,e,i,r){var o,s,a;if(o=function(l,n){return function(e){u.error(l),u.error(e),r&&r(l,e,n)}},s=function(u){u.sdp=t.removeComfortNoise(u.sdp),n>1&&(e.sdp=t.enableSimulcast(e.sdp,n)),l.setLocalDescription(u,function(){i(u)},o("Error while setting LocalDescription","SetLocalDescription"))},a=function(){l.createAnswer(s,o("Error while setting createAnswer","CreateAnswer"),null,!1)},-1===e.sdp.indexOf("a=rtcp-fb")){var c="a=rtcp-fb:* ccm fir\r\na=rtcp-fb:* nack ";e.sdp=e.sdp.replace(/^m=video(.*)$/gim,"m=video$1\r\n"+c)}l.setRemoteDescription(e,a,o("Error while setting RemoteDescription","SetRemoteDescription"))}},{"../logging.js":160,"./sdp_helpers.js":193}],188:[function(l,n,e){(function(e){"use strict";l("../../helpers/web_rtc_polyfills.js");var u,t=l("../analytics.js"),i=l("./connection_state_logger.js"),r=l("../../helpers/create_peer_connection.js"),o=l("./get_stats_adapter.js"),s=l("./ice_candidate_processor"),a=l("../logging.js"),c=l("./offer_processor.js"),d=l("@opentok/ot-helpers"),f=l("@opentok/otplugin.js"),h=l("./peer_connection_channels.js"),p=l("../messaging/raptor/raptor_constants.js"),g=l("./subscribe_processor.js"),v=l("./qos.js");u=f.isInstalled()?f.RTCSessionDescription:e.RTCSessionDescription||e.mozRTCSessionDescription;var m=function(l){return function(n){n.candidate?l(p.Actions.CANDIDATE,{candidate:n.candidate.candidate,sdpMid:n.candidate.sdpMid||"",sdpMLineIndex:n.candidate.sdpMLineIndex||0}):a.debug("IceCandidateForwarder: No more ICE candidates.")}},b=function(l){var n,e,r,f,y,_=[],w=new s,E=o(),S="new",T=[],C={};d.eventing(C),l.iceServers||(l.iceServers=[]);var j=function(l,n,e){T.length&&T[0](l,n,e)},O=function(e,u){if(n)return void e.call(null,null,n);if(_.push(e),!(_.length>1)){var i={optional:[{DtlsSrtpKeyAgreement:!0},{googIPv6:!1}]};a.debug('Creating peer connection config "'+JSON.stringify(l)+'".'),l.iceServers&&0!==l.iceServers.length||(a.error("No ice servers present"),t.logEvent({action:"Error",variation:"noIceServers"})),b.createPeerConnection(l,i,u,R)}},R=function(u,r){if(u)return B("Failed to create PeerConnection, exception: "+u.toString(),"NewPeerConnection"),void(_=[]);if(a.debug("OT attachEventsToPeerConnection"),n=r,y=i(n),e=new h(n),l.channels&&e.addMany(l.channels),n.addEventListener("icecandidate",m(j),!1),n.addEventListener("addstream",D,!1),n.addEventListener("removestream",N,!1),n.addEventListener("signalingstatechange",I,!1),void 0!==n.oniceconnectionstatechange){var o;n.addEventListener("iceconnectionstatechange",function(l){C.trigger("iceConnectionStateChange",l.target.iceConnectionState),"failed"===l.target.iceConnectionState?(o&&clearTimeout(o),o=setTimeout(function(){"failed"===l.target.iceConnectionState&&B("The stream was unable to connect due to a network error. Make sure your connection isn't blocked by a firewall.","ICEWorkflow")},5e3)):t.logEvent({action:"attachEventsToPeerConnection",variation:"iceconnectionstatechange",payload:l.target.iceConnectionState})},!1)}k(null)},k=function(){for(;_.length;)_.shift().call(null)},A=function(){w&&w.setPeerConnection(null),y&&y.stop(),H.stopCollecting(),null!==n&&(n.destroy&&n.destroy(),n=null,C.trigger("close"))},I=function(){var l=n.signalingState;if(l&&l!==S)switch(S=l,a.debug("PeerConnection.stateChange: "+S),S){case"closed":A()}},x=function(l){l.dataChannels=e.sampleQos(),C.trigger("qos",l)},P=function(){var l;if(n.getRemoteStreams)l=n.getRemoteStreams();else{if(!n.remoteStreams)throw new Error("Invalid Peer Connection object implements no method for retrieving remote streams");l=n.remoteStreams}return Array.prototype.slice.call(l)},D=function(l){C.trigger("streamAdded",l.stream)},N=function(l){C.trigger("streamRemoved",l.stream)},L=function(l,n,e){j(l,n,e)},F=function(e){var t=new u({type:"offer",sdp:e.content.sdp}),i=function(l){w.setPeerConnection(n),w.processPending(),L(p.Actions.ANSWER,l),H.startCollecting(n)},r=function(l,n,e){B("PeerConnection.offerProcessor "+l+": "+n,e)};O(function(){c(n,l.numberOfSimulcastStreams,t,i,r)})},M=function(l){return l.content.sdp?(f=new u({type:"answer",sdp:l.content.sdp}),n.setRemoteDescription(f,function(){a.debug("PeerConnection.processAnswer: setRemoteDescription Success")},function(l){B("Error while setting RemoteDescription "+l,"SetRemoteDescription")}),w.setPeerConnection(n),w.processPending(),void H.startCollecting(n)):void a.error("PeerConnection.processMessage: Weird answer message, no SDP.")},U=function(e){if(a.debug("PeerConnection.processSubscribe: Sending offer to subscriber."),!n)throw new Error("PeerConnection broke!");O(function(){g(n,l.numberOfSimulcastStreams,function(l){r=l,L(p.Actions.OFFER,r,e.uri)},function(l,n,e){B("subscribeProcessor "+l+": "+n,e)})})},B=function(l,n){a.error(l),C.trigger("error",l,n)};C.addLocalStream=function(l){O(function(){n.addStream(l)},l)},C.getSenders=function(){return n.getSenders()},C.disconnect=function(){w=null,n&&n.signalingState&&"closed"!==n.signalingState.toLowerCase()&&(n.close(),"Firefox"===d.env.name&&d.callAsync(A)),C.off()},C.createOfferWithIceRestart=function(l){U({uri:l})},C.processMessage=function(l,n){switch(a.debug("PeerConnection.processMessage: Received "+l+" from "+n.fromAddress),a.debug(n),l){case"generateoffer":U(n);break;case"offer":F(n);break;case"answer":case"pranswer":M(n);break;case"candidate":w.process(n);break;default:a.debug("PeerConnection.processMessage: Received an unexpected message of type "+l+" from "+n.fromAddress+": "+JSON.stringify(n))}return C},C.setIceServers=function(n){n&&(l.iceServers=n)},C.registerMessageDelegate=function(l){return T.push(l)},C.unregisterMessageDelegate=function(l){var n=T.indexOf(l);return-1!==n&&T.splice(n,1),T.length},C.remoteStreams=function(){return n?P():[]},C.getStats=function(l){return n?void E(n,l):void l(new d.Error("Cannot call getStats before there is a connection.","NotConnectedError",{code:1015}))};var V=function W(l,n,u,t){var i,r=e.get(n,u);if(!r){if(l>0)return void setTimeout(W.bind(null,l-1,n,u,t),200);i=new d.Error("A channel with that label and options could not be found. Label:"+n+". Options: "+JSON.stringify(u))}t(i,r)};C.getDataChannel=function(l,e,u){return n?void V(100,l,e,u):void u(new d.Error("Cannot create a DataChannel before there is a connection."))},C.iceConnectionStateIsConnected=function(){return"connected"===n.iceConnectionState||"completed"===n.iceConnectionState};var H=new v(x);return C};b.createPeerConnection=r,n.exports=b}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../../helpers/create_peer_connection.js":118,"../../helpers/web_rtc_polyfills.js":136,"../analytics.js":139,"../logging.js":160,"../messaging/raptor/raptor_constants.js":167,"./connection_state_logger.js":182,"./get_stats_adapter.js":184,"./ice_candidate_processor":186,"./offer_processor.js":187,"./peer_connection_channels.js":189,"./qos.js":192,"./subscribe_processor.js":195,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],189:[function(l,n,e){"use strict";var u=l("./data_channel.js"),t=l("@opentok/ot-helpers");n.exports=function(l){var n=[],e={},i={sentMessages:0,recvMessages:0},r=function(l){n.filter(function(n){return l!==n})},o=function(l){var e=new u(l);return n.push(e),e.on("close",function(){r(e)}),e};return e.add=function(n,e){return o(l.createDataChannel(n,e))},e.addMany=function(l){for(var n in l)l.hasOwnProperty(n)&&e.add(n,l[n])},e.get=function(l,e){return t.find(n,function(n){return n.equals(l,e)})},e.getOrAdd=function(l,n){var u=e.get(l,n);return u||(u=e.add(l,n)),u},e.getQosData=function(){var l={sentMessages:0,recvMessages:0};return n.forEach(function(n){l.sentMessages+=n.getQosData().sentMessages,l.recvMessages+=n.getQosData().recvMessages}),l},e.sampleQos=function(){var l=e.getQosData(),n={sentMessages:l.sentMessages-i.sentMessages,recvMessages:l.recvMessages-i.recvMessages};return i=l,n},e.destroy=function(){n.forEach(function(l){l.close()}),n=[]},l.addEventListener("datachannel",function(l){o(l.channel)},!1),e}},{"./data_channel.js":183,"@opentok/ot-helpers":4}],190:[function(l,n,e){"use strict";var u=l("./peer_connection.js"),t={},i={};n.exports=i,i.add=function(l,n,e){var i=l.id+"_"+n,r=t[i];return r||(r=t[i]={count:0,pc:new u(e)}),r.count+=1,r.pc},i.remove=function(l,n){var e=l.id+"_"+n,u=t[e];u&&(u.count-=1,0===u.count&&(u.pc.disconnect(),delete t[e]))}},{"./peer_connection.js":188}],191:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("./peer_connections.js"),i=l("../messaging/raptor/raptor_constants.js"),r=l("./set_certificates.js");n.exports=function(l,n,e,o,s,a,c){var d,f=this,h=!1,p=n._.subscriberMap[l.id+"_"+e],g=!1,v=function(){this.destroy(),g&&this.trigger("iceRestartFailure",this),this.trigger("disconnected",this)},m=function(l,n){this.trigger("error",null,l,this,n),this.destroy()},b=function(){g&&d.iceConnectionStateIsConnected()&&(g=!1,this.trigger("iceRestartSuccess"))},y=function(l,u,t){if(!h){var r=l===i.Actions.CANDIDATE||l===i.Actions.OFFER||l===i.Actions.ANSWER||l===i.Actions.PRANSWER;if(r){var o=l===i.Actions.CANDIDATE?u.candidate:u.sdp;h=-1!==o.indexOf("typ relay")}}switch(l){case i.Actions.ANSWER:case i.Actions.PRANSWER:n.sessionInfo.p2pEnabled?n._.jsepAnswerP2p(e,p,u.sdp):n._.jsepAnswer(e,u.sdp);break;case i.Actions.OFFER:this.trigger("connected"),n._.jsepOffer(t,u.sdp);break;case i.Actions.CANDIDATE:n.sessionInfo.p2pEnabled?n._.jsepCandidateP2p(e,p,u):n._.jsepCandidate(e,u)}}.bind(this),_=function(n,e){this.trigger("qos",l,n,e)}.bind(this);u.eventing(this),this.getDataChannel=function(l,n,e){d.getDataChannel(l,n,e)},this.destroy=function(){d&&(d.off(),t.remove(l,e)),d=null},this.processMessage=function(l,n){d.processMessage(l,n)},this.init=function(n,u){var i={iceServers:n,channels:s,numberOfSimulcastStreams:a};r(i,function(n,i){return n?void u(n):(d=t.add(l,e,i),d.on({close:v,error:m,qos:_,iceConnectionStateChange:b},f),d.registerMessageDelegate(y),d.addLocalStream(o),void u(void 0,f))}),this.remoteConnection=function(){return l},this.hasRelayCandidates=function(){return h}},this.getSenders=function(){return d.getSenders()},this.createOfferWithIceRestart=function(){return g=!0,d.createOfferWithIceRestart(c)},this.iceConnectionStateIsConnected=function(){return d.iceConnectionStateIsConnected()}}},{"../messaging/raptor/raptor_constants.js":167,"./peer_connections.js":190,"./set_certificates.js":194,"@opentok/ot-helpers":4}],192:[function(l,n,e){"use strict";var u=l("@opentok/otplugin.js"),t=l("@opentok/ot-helpers"),i=l("../logging.js"),r=function(l,n,e,u){var t=function(l){return l.stat("googFrameRateSent")?(e.videoSentBytes=Number(l.stat("bytesSent")),e.videoSentPackets=Number(l.stat("packetsSent")),e.videoSentPacketsLost=Number(l.stat("packetsLost")),e.videoRtt=Number(l.stat("googRtt")),e.videoFrameRate=Number(l.stat("googFrameRateInput")),e.videoWidth=Number(l.stat("googFrameWidthSent")),e.videoHeight=Number(l.stat("googFrameHeightSent")),e.videoFrameRateSent=Number(l.stat("googFrameRateSent")),e.videoWidthInput=Number(l.stat("googFrameWidthInput")),e.videoHeightInput=Number(l.stat("googFrameHeightInput")),e.videoCodec=l.stat("googCodecName")):l.stat("googFrameRateReceived")&&(e.videoRecvBytes=Number(l.stat("bytesReceived")),e.videoRecvPackets=Number(l.stat("packetsReceived")),e.videoRecvPacketsLost=Number(l.stat("packetsLost")),e.videoFrameRate=Number(l.stat("googFrameRateOutput")),e.videoFrameRateReceived=Number(l.stat("googFrameRateReceived")),e.videoFrameRateDecoded=Number(l.stat("googFrameRateDecoded")),e.videoWidth=Number(l.stat("googFrameWidthReceived")),e.videoHeight=Number(l.stat("googFrameHeightReceived")),e.videoCodec=l.stat("googCodecName")),null},i=function(l){l.stat("audioInputLevel")?(e.audioSentPackets=Number(l.stat("packetsSent")),e.audioSentPacketsLost=Number(l.stat("packetsLost")),e.audioSentBytes=Number(l.stat("bytesSent")),e.audioCodec=l.stat("googCodecName"),e.audioRtt=Number(l.stat("googRtt"))):l.stat("audioOutputLevel")&&(e.audioRecvPackets=Number(l.stat("packetsReceived")),e.audioRecvPacketsLost=Number(l.stat("packetsLost")),e.audioRecvBytes=Number(l.stat("bytesReceived")),e.audioCodec=l.stat("googCodecName"))},r=function(l){if(l.result)for(var n=l.result(),r=0;r<n.length;r++){var o=n[r];o.stat&&("true"===o.stat("googActiveConnection")&&(e.localCandidateType=o.stat("googLocalCandidateType"),e.remoteCandidateType=o.stat("googRemoteCandidateType"),e.transportType=o.stat("googTransportType")),i(o),t(o))}u(null,e)};l.getStats(r)},o=function(l,n,e,u){var t=function(l){u(l)},i=function(l){var u,t=n.audioBytesTransferred||0;l.audioInputLevel?(e.audioSentBytes=Number(l.bytesSent),e.audioSentPackets=Number(l.packetsSent),e.audioSentPacketsLost=Number(l.packetsLost),e.audioRtt=Number(l.googRtt),e.audioCodec=l.googCodecName):l.audioOutputLevel&&(e.audioBytesTransferred=Number(l.bytesReceived),e.audioCodec=l.googCodecName),e.audioBytesTransferred&&(u=e.audioBytesTransferred-t,e.avgAudioBitrate=Math.round(8*u/(e.period/1e3)))},r=function(l){var u,t=n.videoBytesTransferred||0;l.googFrameHeightSent?(e.videoSentBytes=Number(l.bytesSent),e.videoSentPackets=Number(l.packetsSent),e.videoSentPacketsLost=Number(l.packetsLost),e.videoRtt=Number(l.googRtt),e.videoCodec=l.googCodecName,e.videoWidth=Number(l.googFrameWidthSent),e.videoHeight=Number(l.googFrameHeightSent),e.videoFrameRateSent=Number(l.googFrameRateSent),e.videoWidthInput=Number(l.googFrameWidthInput),e.videoHeightInput=Number(l.googFrameHeightInput)):l.googFrameHeightReceived&&(e.videoRecvBytes=Number(l.bytesReceived),e.videoRecvPackets=Number(l.packetsReceived),e.videoRecvPacketsLost=Number(l.packetsLost),e.videoRtt=Number(l.googRtt),e.videoCodec=l.googCodecName,e.videoFrameRateReceived=Number(l.googFrameRateReceived),e.videoFrameRateDecoded=Number(l.googFrameRateDecoded),e.videoWidth=Number(l.googFrameWidthReceived),e.videoHeight=Number(l.googFrameHeightReceived)),e.videoBytesTransferred&&(u=e.videoBytesTransferred-t,e.avgVideoBitrate=Math.round(8*u/(e.period/1e3))),l.googFrameRateInput?e.videoFrameRate=Number(l.googFrameRateInput):l.googFrameRateOutput&&(e.videoFrameRate=Number(l.googFrameRateOutput))},o=function(l){return void 0!==l.googFrameHeightSent||void 0!==l.googFrameHeightReceived||void 0!==e.videoBytesTransferred||void 0!==l.googFrameRateSent},s=function(l){return"true"===l.googActiveConnection};l.getStats(null,function(l){l.forEach(function(l){s(l)?(e.localCandidateType=l.googLocalCandidateType,e.remoteCandidateType=l.googRemoteCandidateType,e.transportType=l.googTransportType):o(l)?r(l):i(l)}),u(null,e)},t)},s=function(l,n,e,u){var t=function(l){u(l)},i=function(l){"outboundrtp"===l.type?(e.audioSentPackets=l.packetsSent,e.audioSentPacketsLost=l.packetsLost,e.audioSentBytes=l.bytesSent):"inboundrtp"===l.type&&(e.audioRecvPackets=l.packetsReceived,e.audioRecvPacketsLost=l.packetsLost,e.audioRecvBytes=l.bytesReceived)},r=function(l){"outboundrtp"===l.type?(e.videoSentPackets=l.packetsSent,e.videoSentPacketsLost=l.packetsLost,e.videoSentBytes=l.bytesSent):"inboundrtp"===l.type&&(e.videoRecvPackets=l.packetsReceived,e.videoRecvPacketsLost=l.packetsLost,e.videoRecvBytes=l.bytesReceived)};l.getStats(null,function(l){for(var n in l)if(l.hasOwnProperty(n)&&("outboundrtp"===l[n].type||"inboundrtp"===l[n].type)){var t=l[n];-1!==t.id.indexOf("rtp")&&(-1!==t.id.indexOf("audio")?i(t):-1!==t.id.indexOf("video")&&r(t))}u(null,e)},t)},a=function(l,n,e,i){return u.isInstalled()?(a=o,o(l,n,e,i)):"Firefox"===t.env.name&&t.env.version>=27?(a=s,s(l,n,e,i)):(a=r,r(l,n,e,i))},c=function(l){var n,e=t.now(),u=function r(u,o){if(n){var s=t.now(),d={timeStamp:s,duration:Math.round(s-e),period:Math.round(s-u.timeStamp)},f=function(n,e){if(n)return void i.error("Failed to Parse QOS Stats: "+JSON.stringify(n));l(e,u);var t=o===c.INITIAL_INTERVAL?c.INTERVAL-c.INITIAL_INTERVAL:c.INTERVAL;setTimeout(r.bind(null,e,t),o)};a(n,u,d,f)}};this.startCollecting=function(l){l&&l.getStats&&(n=l,u({timeStamp:t.now()},c.INITIAL_INTERVAL))},this.stopCollecting=function(){n=null}};c.INITIAL_INTERVAL=1e3,c.INTERVAL=3e4,n.exports=c},{"../logging.js":160,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}],193:[function(l,n,e){"use strict";var u=l("../logging.js"),t=l("@opentok/ot-helpers"),i=1e4,r=2e4,o={};n.exports=o,o.getMLineIndex=function(l,n){var e="m="+n;return t.findIndex(l,function(l){return-1!==l.indexOf(e)})},o.getMLine=function(l,n){var e=o.getMLineIndex(l,n);return e>-1?l[e]:void 0},o.hasMLinePayloadType=function(l,n,e){var u=o.getMLine(l,n),t=o.getMLinePayloadTypes(u,n);return t.indexOf(e)>-1},o.getMLinePayloadTypes=function(l,n){var e=new RegExp("^m="+n+" \\d+(/\\d+)? [a-zA-Z0-9/]+(( [a-zA-Z0-9/]+)+)$","i"),u=l.match(e);return!u||u.length<2?[]:u[2].trim().split(" ")},o.removeTypesFromMLine=function(l,n){return l.replace(new RegExp(" "+n.join(" |"),"ig")," ").replace(/\s+/g," ").trim()},o.removeMediaEncoding=function(l,n,e){var u,t,i=l.split("\r\n"),r=o.getMLineIndex(i,n),s=r>-1?i[r]:void 0,a=[];if(-1===r)return i.join("\r\n");if(u=o.getMLinePayloadTypes(s,n),0===u.length)return i.join("\r\n");var c=new RegExp("a=rtpmap:("+u.join("|")+") "+e+"\\/\\d+","i");return i=i.filter(function(l,n){return t=l.match(c),null===t?!0:(a.push(t[1]),r>n&&r--,!1)}),a.length>0&&r>-1&&(i[r]=o.removeTypesFromMLine(s,a)),i.join("\r\n")},o.removeComfortNoise=function(l){return o.removeMediaEncoding(l,"audio","CN")},o.removeVideoCodec=function(l,n){return o.removeMediaEncoding(l,"video",n)};var s=function(l,n){var e=n.filterByName("ssrc-group:FID"),t=0===e.length;switch(e=t?[]:e[0].value.split(" "),e.length){case 0:case 1:var i=n.find(function(l){return 0===l.name.indexOf("rtpmap:")&&l.value.indexOf("rtx/90000")>-1});if(!i)return!1;var r=i.name.split(":")[1];return r.indexOf("/")>-1&&(r=r.split("/")[0]),o.hasMLinePayloadType(l,"video",r);default:return u.debug("SDP Helpers: There are more than two FIDs, RTX is definitely enabled"),!0}};o.getAttributesForMediaType=function(l,n){for(var e,u,i,r,a,c,d,f=o.getMLineIndex(l,n),h=new RegExp("m=(^"+n+") ","i"),p=new RegExp("a=ssrc:\\d+ .*","i"),g=new RegExp("a=ssrc-group:FID (\\d+).*?","i"),v=new RegExp("a=([a-z0-9:/-]+) (.*)","i"),m=[],b=f+1;b<l.length&&!h.test(l[b]);b++){a=l[b].match(g),a&&(e=b,r=a[1]),c=l[b].match("a=ssrc:"+r+" msid:(.+)"),c&&(d=c[1]);var y=p.test(l[b]);
 (void 0!==e&&void 0===u&&!y||b===l.length-1)&&(u=b),i=v.exec(l[b]),i&&3===i.length&&m.push({name:i[1],value:i[2]})}return m.ssrcStartIndex=e,m.ssrcEndIndex=u,m.msid=d,Array.prototype.filter||(m.filter=t.filter.bind(t,m)),Array.prototype.find||(m.find=t.find.bind(t,m)),m.isUsingRTX=s.bind(null,l,m),m.filterByName=function(l){return this.filter(function(n){return n.name===l})},m},o.enableSimulcast=function(l,n){var e,t,s=l.split("\r\n"),a=o.getAttributesForMediaType(s,"video");if(a.filterByName("ssrc-group:SIM").length>0)return u.debug("Simulcast is already enabled in this SDP, not attempting to enable again."),l;if(!a.msid)return u.debug("No local stream attached, not enabling simulcast."),l;var c=a.isUsingRTX(),d=[],f=[];for(t=0;n>t;++t)d.push(i+t),c&&f.push(r+t);if(e=["a=ssrc-group:SIM "+d.join(" ")],c)for(t=0;n>t;++t)e.push("a=ssrc-group:FID "+d[t]+" "+f[t]);for(t=0;n>t;++t)e.push("a=ssrc:"+d[t]+" cname:localCname","a=ssrc:"+d[t]+" msid:"+a.msid);if(c)for(t=0;n>t;++t)e.push("a=ssrc:"+f[t]+" cname:localCname","a=ssrc:"+f[t]+" msid:"+a.msid);return e.unshift(a.ssrcStartIndex,a.ssrcEndIndex-a.ssrcStartIndex),s.splice.apply(s,e),s.join("\r\n")},o.fixChromeBug528089=function(l){return l.replace(/sendonly/g,"recvonly")}},{"../logging.js":160,"@opentok/ot-helpers":4}],194:[function(l,n,e){(function(e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l,n){"Firefox"===u.env.name&&e.mozRTCPeerConnection&&e.mozRTCPeerConnection.generateCertificate?e.mozRTCPeerConnection.generateCertificate({name:"RSASSA-PKCS1-v1_5",hash:"SHA-256",modulusLength:2048,publicExponent:new Uint8Array([1,0,1])})["catch"](function(l){n(l)}).then(function(e){l.certificates=[e],n(void 0,l)}):u.callAsync(function(){n(void 0,l)})}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"@opentok/ot-helpers":4}],195:[function(l,n,e){"use strict";var u=l("../logging.js"),t=l("./sdp_helpers.js");n.exports=function(l,n,e,i){var r,o;r=function(l,n){return function(e){u.error(l),u.error(e),i&&i(l,e,n)}},o=function(u){u.sdp=t.removeComfortNoise(u.sdp),0===l.getLocalStreams().length&&(u.sdp=t.fixChromeBug528089(u.sdp)),n>1&&(u.sdp=t.enableSimulcast(u.sdp,n)),l.setLocalDescription(u,function(){e(u)},r("Error while setting LocalDescription","SetLocalDescription"))},l.createOffer(o,r("Error while creating Offer","CreateOffer"),{iceRestart:!0})}},{"../logging.js":160,"./sdp_helpers.js":193}],196:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("../messaging/raptor/parse_ice_servers.js"),i=l("./peer_connections.js"),r=l("../messaging/raptor/raptor_constants.js"),o=l("./set_certificates.js");n.exports=function(l,n,e,s,a,c){var d,f=this,h=!1,p=!1,g=!1,v=function(){this.destroy(),g&&this.trigger("iceRestartFailure",this),this.trigger("disconnected",this)},m=function(l){this.trigger("remoteStreamAdded",l,this)},b=function(l){this.trigger("remoteStreamRemoved",l,this)},y=function(l,n){this.trigger("error",null,l,this,n)},_=function(l){!g||"connected"!==l&&"completed"!==l||(g=!1,this.trigger("iceRestartSuccess")),this.trigger("iceConnectionStateChange",l)},w=function(l,u){if(!p){var t=l===r.Actions.CANDIDATE||l===r.Actions.OFFER||l===r.Actions.ANSWER||l===r.Actions.PRANSWER;if(t){var i=l===r.Actions.CANDIDATE?u.candidate:u.sdp;p=-1!==i.indexOf("typ relay")}}switch(l){case r.Actions.ANSWER:case r.Actions.PRANSWER:this.trigger("connected"),n._.jsepAnswerP2p(e.id,s.widgetId,u.sdp);break;case r.Actions.OFFER:n._.jsepOffer(a,u.sdp);break;case r.Actions.CANDIDATE:n._.jsepCandidateP2p(e.id,s.widgetId,u)}}.bind(this),E=function(l){var n="get"+(l?"Video":"Audio")+"Tracks";return function(l){if(d){var e,u,t=d.remoteStreams();if(0!==t.length&&t[0][n])for(var i=0,r=t.length;r>i;++i){u=t[i],e=u[n]();for(var o=0,s=e.length;s>o;++o)e[o].enabled!==l&&e[o].setEnabled(l)}}}},S=function(l,n){this.trigger("qos",l,n)}.bind(this);u.eventing(this),this.destroy=function(){if(!h){if(h=!0,d){var u=d.unregisterMessageDelegate(w);0===u&&(n&&n.isConnected()&&e&&!e.destroyed&&n._.subscriberDestroy(e,s),this.subscribeToAudio(!1)),i.remove(l,e.id)}d=null,this.off()}},this.getDataChannel=function(l,n,e){d.getDataChannel(l,n,e)},this.processMessage=function(l,n){d.processMessage(l,n)},this.getStats=function(l){d?d.getStats(l):l(new u.Error("Subscriber is not connected cannot getStats","NotConnectedError",{code:1015}))},this.subscribeToAudio=E(!1),this.subscribeToVideo=E(!0),this.hasRelayCandidates=function(){return p},this.createOfferWithIceRestart=function(){return g=!0,d.createOfferWithIceRestart(a)},this.iceConnectionStateIsConnected=function(){return d.iceConnectionStateIsConnected()},this.init=function(u){var r={};o(r,function(r,o){if(r)return void u(r);d=i.add(l,e.streamId,o),d.on({close:v,streamAdded:m,streamRemoved:b,error:y,qos:S,iceConnectionStateChange:_},f);var a=d.registerMessageDelegate(w);if(d.remoteStreams().length>0)d.remoteStreams().forEach(m,f);else if(1===a){var h;if(c.subscribeToVideo||c.subscribeToAudio){var p=e.getChannelsOfType("audio"),g=e.getChannelsOfType("video");h=p.map(function(l){return{id:l.id,type:l.type,active:c.subscribeToAudio}}).concat(g.map(function(l){var n={id:l.id,type:l.type,active:c.subscribeToVideo,restrictFrameRate:void 0!==c.restrictFrameRate?c.restrictFrameRate:!1};return void 0!==c.preferredFrameRate&&(n.preferredFrameRate=parseFloat(c.preferredFrameRate)),void 0!==c.preferredHeight&&(n.preferredHeight=parseInt(c.preferredHeight,10)),void 0!==c.preferredWidth&&(n.preferredWidth=parseInt(c.preferredWidth,10)),n}))}n._.subscriberCreate(e,s,h,function(l,n){l&&f.trigger("error",l.message,f,"Subscribe"),d&&d.setIceServers(t(n))}),u(void 0,f)}})}}},{"../messaging/raptor/parse_ice_servers.js":166,"../messaging/raptor/raptor_constants.js":167,"./peer_connections.js":190,"./set_certificates.js":194,"@opentok/ot-helpers":4}],197:[function(l,n,e){(function(e){"use strict";var u=l("../analytics.js"),t=l("../api_key.js"),i=l("../chrome/archiving.js"),r=l("../../helpers/audio_context.js"),o=l("../chrome/audio_level_meter.js"),s=l("../audio_level_transformer"),a=l("../chrome/backing_bar.js"),c=l("bluebird"),d=l("../chrome/chrome.js"),f=l("../../helpers/connectivity_attempt_pinger.js"),h=l("../../helpers/device_helpers.js"),p=l("../environment_loader.js"),g=l("../events.js"),v=l("../exception_codes.js"),m=l("../../helpers/get_user_media.js"),b=l("../interval_runner.js"),y=l("../logging.js"),_=l("./microphone.js"),w=l("../chrome/mute_button.js"),E=l("../chrome/name_panel.js"),S=l("../ot_error.js"),T=l("@opentok/ot-helpers"),C=l("@opentok/otplugin.js"),j=l("../messaging/raptor/parse_ice_servers.js"),O=l("../../helpers/properties.js"),R=l("../peer_connection/publisher_peer_connection.js"),k=l("./state.js"),A=l("../screensharing/screen_sharing.js"),I=l("../stream_channel.js"),x=l("../stylable_component.js"),P=l("../system_requirements.js"),D=l("uuid"),N=l("../../helpers/video_orientation.js"),L=l("../../helpers/widget_view.js"),F={audio:!0,video:!0},M=l("./max_delay.js"),U=function(l){if(!P.check())return void P.upgrade();var n,r,m,_,R,L,B,V,H,W,q,z,G,J,Y,Q,$=U.nextId(),K={},X=!1,Z=[1,7,15,30],ll=l&&("screen"===l.videoSource||"window"===l.videoSource||"tab"===l.videoSource||"browser"===l.videoSource||"application"===l.videoSource),nl=this;if(q=T.defaults(l||{},{publishAudio:!ll,publishVideo:!0,mirror:!ll,showControls:!0,fitMode:ll?"contain":"cover",audioFallbackEnabled:!ll,maxResolution:ll?{width:1920,height:1920}:void 0}),z={"320x240":{width:320,height:240},"640x480":{width:640,height:480},"1280x720":{width:1280,height:720}},T.eventing(this),!ll){var el=new b(function(){r&&r.getAudioInputLevel().then(function(l){T.requestAnimationFrame(function(){nl.dispatchEvent(new g.AudioLevelUpdatedEvent(l))})})},60);this.on({"audioLevelUpdated:added":function(l){1===l&&el.start()},"audioLevelUpdated:removed":function(l){0===l&&el.stop()}})}var ul=function(l,n,e,i){u.logEvent({action:l,variation:n,payload:e,sessionId:L?L.sessionId:null,connectionId:L&&L.isConnected()?L.connection.connectionId:null,partnerId:L?L.apiKey:t.value,streamId:_},i)},tl=function(l,n){"Attempt"!==l&&Y||(Y=new f({action:"Publish",sessionId:L?L.sessionId:null,connectionId:L&&L.isConnected()?L.connection.connectionId:null,partnerId:L?L.apiKey:t.value,streamId:_})),"Failure"===l&&"Non-fatal"!==n.reason&&Y.setVariation(l),ul("Publish",l,n)},il=function(l,n){ul("ICERestart",l,n)},rl=function(l,e){var i={streamType:"WebRTC",sessionId:L?L.sessionId:null,connectionId:L&&L.isConnected()?L.connection.connectionId:null,partnerId:L?L.apiKey:t.value,streamId:_,width:n?Number(T.width(n.domElement).replace("px","")):void 0,height:n?Number(T.height(n.domElement).replace("px","")):void 0,version:O.version,mediaServerName:L?L.sessionInfo.messagingServer:null,p2pFlag:L?L.sessionInfo.p2pEnabled:!1,duration:B?(new Date).getTime()-B.getTime():0,remoteConnectionId:l.id,scalableVideo:!!Q};u.logQOS(T.extend(i,e)),nl.trigger("qos",e)},ol=function(){var l,n;return q.videoDimensions?(l=Math.min(q.videoDimensions.width,r&&r.videoWidth()||640),n=Math.min(q.videoDimensions.height,r&&r.videoHeight()||480)):(l=r&&r.videoWidth()||640,n=r&&r.videoHeight()||480),{width:l,height:n}},sl=function(l){y.error("OT.Publisher State Change Failed: ",l.message),y.debug(l)},al=function(){G.isDestroyed()||(y.debug("OT.Publisher.onLoaded"),G.set("MediaBound"),n.loading(nl.session?!m:!1),X=!0,Rl.call(nl),nl.trigger("initSuccess"),nl.trigger("loaded",nl))},cl=function(l){var n=v.P2P_CONNECTION_FAILED,e={reason:"OT.Publisher PeerConnection Error: ",code:n,message:l};tl("Failure",e),G.set("Failed"),nl.trigger("publishComplete",new S(n,"OT.Publisher PeerConnection Error: "+l)),S.handleJsException("OT.Publisher PeerConnection Error: "+l,v.P2P_CONNECTION_FAILED,{session:L,target:nl})},dl=function(){R&&(e.MediaStreamTrack&&e.MediaStreamTrack.prototype.stop?R.getAudioTracks().concat(R.getVideoTracks()).forEach(function(l){l.stop()}):R.stop(),R=null)},fl=function(l){y.debug("OT.Publisher.onStreamAvailable"),G.set("BindingMedia"),dl(),R=l,V=new U.Microphone(R,!q.publishAudio),nl.publishVideo(q.publishVideo&&R.getVideoTracks().length>0),nl.accessAllowed=!0,nl.dispatchEvent(new g.Event(g.Event.names.ACCESS_ALLOWED,!1));var e={muted:!0,error:yl};r=n.bindVideo(R,e,function(l){return l?void cl(l):void al()})},hl=function(l){y.error("OT.Publisher.onPublishingTimeout"),G.set("Failed"),nl.trigger("publishComplete",new S(v.UNABLE_TO_PUBLISH,"Could not publish in a reasonable amount of time")),l.isConnected()&&nl.stream&&l._.streamDestroy(nl.stream.id),nl.disconnect(),nl.session=L=null,G.isDestroyed()||G.set("MediaBound"),Y&&(Y.stop(),Y=null),nl._.streamDestroyed("networkDisconnected");var n={reason:"publish",code:v.UNABLE_TO_PUBLISH,message:"OT.Publisher failed to publish in a reasonable amount of time (timeout)"};tl("Failure",n),S.handleJsException(n.reason,n.code,{session:L,target:nl})},pl=function(l){y.error("OT.Publisher.onStreamAvailableError "+l.name+": "+l.message),G.set("Failed"),nl.trigger("publishComplete",new S(v.UNABLE_TO_PUBLISH,l.message)),n&&n.destroy();var e={reason:"GetUserMedia",code:v.UNABLE_TO_PUBLISH,message:"OT.Publisher failed to access camera/mic: "+l.message};tl("Failure",e),S.handleJsException(e.reason,e.code,{session:L,target:nl})},gl=function(l){y.error("OT.Publisher.onScreenSharingError "+l.message),G.set("Failed"),nl.trigger("publishComplete",new S(v.UNABLE_TO_PUBLISH,"Screensharing: "+l.message));var n={reason:"ScreenSharing",message:l.message};tl("Failure",n)},vl=function(l){ll&&"https:"!==e.location.protocol&&(l.message+=" Note: https:// is required for screen sharing."),y.error("OT.Publisher.onStreamAvailableError Permission Denied"),G.set("Failed");var n="OT.Publisher Access Denied: Permission Denied"+(l.message?": "+l.message:""),u=v.UNABLE_TO_PUBLISH;nl.trigger("publishComplete",new S(u,n));var t={reason:"GetUserMedia",code:u,message:n};tl("Failure",t),nl.dispatchEvent(new g.Event(g.Event.names.ACCESS_DENIED))},ml=function(){ul("accessDialog","Opened"),nl.dispatchEvent(new g.Event(g.Event.names.ACCESS_DIALOG_OPENED,!0))},bl=function(){ul("accessDialog","Closed"),nl.dispatchEvent(new g.Event(g.Event.names.ACCESS_DIALOG_CLOSED,!1))},yl=function(l,n){y.error("OT.Publisher.onVideoError");var e=n+(l?" ("+l+")":"");ul("stream",null,{reason:"OT.Publisher while playing stream: "+e}),G.set("Failed"),G.isAttemptingToPublish()?nl.trigger("publishComplete",new S(v.UNABLE_TO_PUBLISH,e)):nl.trigger("error",e),S.handleJsException("OT.Publisher error playing stream: "+e,v.UNABLE_TO_PUBLISH,{session:L,target:nl})},_l=function(l){y.debug("Subscriber has been disconnected from the Publisher's PeerConnection"),nl.cleanupSubscriber(l.remoteConnection().id)},wl=function(l,n,e,u){var t;t="ICEWorkflow"===u?v.PUBLISHER_ICE_WORKFLOW_FAILED:v.UNABLE_TO_PUBLISH;var i={reason:u?u:"PeerConnectionError",code:t,message:(u?u:"")+":Publisher PeerConnection with connection "+(e&&e.remoteConnection&&e.remoteConnection().id)+" failed: "+n,hasRelayCandidates:e.hasRelayCandidates()};G.isPublishing()?i.reason="Non-fatal":nl.trigger("publishComplete",new S(v.UNABLE_TO_PUBLISH,i.message)),tl("Failure",i),S.handleJsException("OT.Publisher PeerConnection Error: "+n,t,{session:L,target:nl}),delete K[e.remoteConnection().id]},El=function(l){il("Success",{remoteConnectionId:l})},Sl=function(l){il("Failure",{reason:"ICEWorkflow",message:"OT.Publisher PeerConnection Error: The stream was unable to connect due to a network error. Make sure your connection isn't blocked by a firewall.",remoteConnectionId:l})},Tl=function(l){nl.stream=m=l,m.on("destroyed",nl.disconnect,nl),G.set("Publishing"),n.loading(!X),B=new Date,nl.trigger("publishComplete",null,nl),nl.dispatchEvent(new g.StreamEvent("streamCreated",l,null,!1));var e={streamType:"WebRTC"};tl("Success",e)},Cl=function(n,e,u){var t=K[n.id];if(t)T.callAsync(function(){u(void 0,t)});else{var i=T.now();ul("createPeerConnection","Attempt"),n.on("destroyed",nl.cleanupSubscriber.bind(nl,n.id));var r=1;if(Q=!1,"Chrome"!==T.env.name||ll||L.sessionInfo.p2pEnabled||!q.constraints.video||(Q=L.sessionInfo.simulcast,void 0===Q&&(Q=l&&l._enableSimulcast)),Q){var o=ol();r=o.width>640&&o.height>480?3:2}t=K[n.id]=new U.PublisherPeerConnection(n,L,_,R,q.channels,r,e),t.on({connected:function(){var l={pcc:parseInt(T.now()-i,10),hasRelayCandidates:t.hasRelayCandidates()};ul("createPeerConnection","Success",l)},disconnected:_l,error:wl,qos:rl,iceRestartSuccess:El.bind(void 0,n.id),iceRestartFailure:Sl.bind(void 0,n.id)}),t.init(J,u)}},jl=function(l){if(l===!1)return"off";var n=nl.getStyle("buttonDisplayMode");return n===!1?"on":n},Ol=function(l,e){if(H)switch(l){case"nameDisplayMode":H.name.setDisplayMode(e),H.backingBar.setNameMode(e);break;case"showArchiveStatus":ul("showArchiveStatus","styleChange",{mode:e?"on":"off"}),H.archive.setShowArchiveStatus(e);break;case"buttonDisplayMode":H.muteButton.setDisplayMode(e),H.backingBar.setMuteMode(e);break;case"audioLevelDisplayMode":H.audioLevel.setDisplayMode(e);break;case"backgroundImageURI":n.setBackgroundImageURI(e)}},Rl=function(){nl.getStyle("showArchiveStatus")||ul("showArchiveStatus","createChrome",{mode:"off"});var l={backingBar:new a({nameMode:q.name?nl.getStyle("nameDisplayMode"):"off",muteMode:jl.call(nl,nl.getStyle("buttonDisplayMode"))}),name:new E({name:q.name,mode:nl.getStyle("nameDisplayMode")}),archive:new i({show:nl.getStyle("showArchiveStatus"),archiving:!1})};null!==q.audioSource&&q.audioSource!==!1&&(l.muteButton=new w({muted:q.publishAudio===!1,mode:jl.call(nl,nl.getStyle("buttonDisplayMode"))}));var e=new s,u=function(l){W.setValue(e.transform(l.audioLevel))};W=new o({mode:nl.getStyle("audioLevelDisplayMode"),onActivate:function(){nl.on("audioLevelUpdated",u)},onPassivate:function(){nl.off("audioLevelUpdated",u)}}),l.audioLevel=W,H=new d({parent:n.domElement}).set(l).on({muted:nl.publishAudio.bind(nl,!1),unmuted:nl.publishAudio.bind(nl,!0)}),Al()},kl=function(){H&&(H.destroy(),H=null),nl.disconnect(),V=null,r&&(r.destroy(),r=null),dl(),n&&(n.destroy(),n=null),L&&nl._.unpublishFromSession(L,"reset"),nl.id=null,nl.stream=m=null,X=!1,nl.session=L=null,G.isDestroyed()||G.set("NotPublishing")};x(nl,{showArchiveStatus:!0,nameDisplayMode:"auto",buttonDisplayMode:"auto",audioLevelDisplayMode:ll?"off":"auto",backgroundImageURI:null},q.showControls,function(l){ul("SetStyle","Publisher",l,.1)});var Al=function(){W&&"auto"===nl.getStyle("audioLevelDisplayMode")&&(!q.publishVideo&&q.publishAudio?W.show():W.hide())},Il=function(l){n&&(n.audioOnly(l),n.showPoster(l)),Al()};this.publish=function(e){if(y.debug("OT.Publisher: publish"),(G.isAttemptingToPublish()||G.isPublishing())&&kl(),G.set("GetUserMedia"),q.constraints)y.warn("You have passed your own constraints not using ours");else if(q.constraints=T.clone(F),ll&&(null!=q.audioSource&&y.warn("Invalid audioSource passed to Publisher - when using screen sharing no audioSource may be used"),q.audioSource=null),null===q.audioSource||q.audioSource===!1?(q.constraints.audio=!1,q.publishAudio=!1):("object"==typeof q.audioSource&&(null!=q.audioSource.deviceId?q.audioSource=q.audioSource.deviceId:y.warn("Invalid audioSource passed to Publisher. Expected either a device ID")),q.audioSource&&("object"!=typeof q.constraints.audio&&(q.constraints.audio={}),q.constraints.audio.mandatory||(q.constraints.audio.mandatory={}),q.constraints.audio.optional||(q.constraints.audio.optional=[]),q.constraints.audio.mandatory.sourceId=q.audioSource)),null===q.videoSource||q.videoSource===!1)q.constraints.video=!1,q.publishVideo=!1;else{"object"==typeof q.videoSource&&null==q.videoSource.deviceId&&(y.warn("Invalid videoSource passed to Publisher. Expected either a device ID or device."),q.videoSource=null);var u=function(){"object"!=typeof q.constraints.video&&(q.constraints.video={}),q.constraints.video.mandatory||(q.constraints.video.mandatory={}),q.constraints.video.optional||(q.constraints.video.optional=[]),"Firefox"===T.env.name&&(q.constraints.video.width={},q.constraints.video.height={},q.constraints.video.frameRate={})};if(q.videoSource&&!ll){u();var t=q.constraints.video.mandatory;null!=q.videoSource.deviceId?t.sourceId=q.videoSource.deviceId:t.sourceId=q.videoSource}q.resolution&&(z.hasOwnProperty(q.resolution)?(q.videoDimensions=z[q.resolution],"Chrome"===T.env.name||C.isInstalled()?(u(),q.constraints.video.optional=q.constraints.video.optional.concat([{minWidth:q.videoDimensions.width},{maxWidth:q.videoDimensions.width},{minHeight:q.videoDimensions.height},{maxHeight:q.videoDimensions.height}])):"Firefox"===T.env.name&&(u(),q.constraints.video.width.ideal=q.videoDimensions.width,q.constraints.video.height.ideal=q.videoDimensions.height)):y.warn("Invalid resolution passed to the Publisher. Got: "+q.resolution+' expecting one of "'+Object.keys(z).join('","')+'"')),q.maxResolution&&(u(),q.maxResolution.width>1920&&(y.warn("Invalid maxResolution passed to the Publisher. maxResolution.width must be less than or equal to 1920"),q.maxResolution.width=1920),q.maxResolution.height>1920&&(y.warn("Invalid maxResolution passed to the Publisher. maxResolution.height must be less than or equal to 1920"),q.maxResolution.height=1920),q.videoDimensions=q.maxResolution,"Chrome"===T.env.name?(u(),q.constraints.video.mandatory.maxWidth=q.videoDimensions.width,q.constraints.video.mandatory.maxHeight=q.videoDimensions.height):"Firefox"===T.env.name&&(u(),q.constraints.video.width.max=q.videoDimensions.width,q.constraints.video.height.max=q.videoDimensions.height)),void 0!==q.frameRate&&-1===Z.indexOf(q.frameRate)?(y.warn("Invalid frameRate passed to the publisher got: "+q.frameRate+" expecting one of "+Z.join(",")),delete q.frameRate):q.frameRate&&(u(),"Chrome"===T.env.name||C.isInstalled()?q.constraints.video.optional=q.constraints.video.optional.concat([{minFrameRate:q.frameRate},{maxFrameRate:q.frameRate}]):"Firefox"===T.env.name&&(q.constraints.video.frameRate.ideal=q.frameRate))}return q.style&&nl.setStyle(q.style,null,!0),q.name&&(q.name=q.name.toString()),q.classNames="OT_root OT_publisher",p.onLoad(function(){n=new U.WidgetView(e,q),nl.id=n.domId(),nl.element=n.domElement,n.on("videoDimensionsChanged",function(l,n){m&&m.setVideoDimensions(n.width,n.height),nl.dispatchEvent(new g.VideoDimensionsChangedEvent(nl,l,n))}),n.on("mediaStopped",function(){var l=new g.MediaStoppedEvent(nl);nl.dispatchEvent(l,function(){l.isDefaultPrevented()||(L?nl._.unpublishFromSession(L,"mediaStopped"):nl.destroy("mediaStopped"))})}),T.waterfall([function(n){ll?A.checkCapability(function(e){if(e.supported)if(e.extensionRegistered===!1)gl(new Error("Screen Sharing support in this browser requires an extension, but one has not been registered."));else if(e.extensionInstalled===!1)gl(new Error("Screen Sharing support in this browser requires an extension, but the extension is not installed."));else{var u=A.pickHelper();u.proto.getConstraintsShowsPermissionUI&&ml(),u.instance.getConstraints(l.videoSource,q.constraints,function(l,e){u.proto.getConstraintsShowsPermissionUI&&bl(),l?"PermissionDeniedError"===l.message?vl(l):gl(l):(q.constraints=e,n())})}else gl(new Error("Screen Sharing is not supported in this browser"))}):h.shouldAskForDevices(function(l){l.video||(y.warn("Setting video constraint to false, there are no video sources"),q.constraints.video=!1),l.audio||(y.warn("Setting audio constraint to false, there are no audio sources"),q.constraints.audio=!1),n()})},function(){G.isDestroyed()||U.getUserMedia(q.constraints,fl,pl,ml,bl,vl)}])},nl),nl},this.publishAudio=function(l){return q.publishAudio=l,V&&V.muted(!l),H&&H.muteButton.muted(!l),L&&m&&m.setChannelActiveState("audio",l),Al(),nl},this.publishVideo=function(l){var n=q.publishVideo;if(q.publishVideo=l,L&&m&&q.publishVideo!==n&&m.setChannelActiveState("video",l),R)for(var e=R.getVideoTracks(),u=0,t=e.length;t>u;++u)e[u].setEnabled(l);return Il(!l),nl},this.destroy=function(l,n){return G.isAttemptingToPublish()&&(Y&&(Y.stop(),Y=null),L&&tl("Canceled")),G.isDestroyed()?nl:(G.set("Destroyed"),kl(),n!==!0&&nl.dispatchEvent(new g.DestroyedEvent(g.Event.names.PUBLISHER_DESTROYED,nl,l),nl.off.bind(nl)),nl)},this.disconnect=function(){for(var l in K)K.hasOwnProperty(l)&&nl.cleanupSubscriber(l)},this.cleanupSubscriber=function(l){var n=K[l];n&&(n.destroy(),delete K[l],ul("disconnect","PeerConnection",{subscriberConnection:l}))},this.processMessage=function(l,n,e){switch(y.debug("OT.Publisher.processMessage: Received "+l+" from "+n.id),y.debug(e),l){case"unsubscribe":nl.cleanupSubscriber(e.content.connection.id);break;default:Cl(n,e.uri,function(n,u){if(n)throw n;u.processMessage(l,e)})}},this.getImgData=function(){return X?r.imgData():(y.error("OT.Publisher.getImgData: Cannot getImgData before the Publisher is publishing."),null)},this._={publishToSession:function(l){nl.session=L=l,_=D();var n=function(){if(L){var n=setTimeout(function(){hl(l)},M);nl.on("publishComplete",function(){clearTimeout(n)}),G.set("PublishingToSession");var e=function(l,n,e){if(l){var u,t,i=[403,404,409];l.code&&i.indexOf(l.code)>-1?(u=v.UNABLE_TO_PUBLISH,t=l.message):(u=v.UNEXPECTED_SERVER_RESPONSE,t="Unexpected server response. Try this operation again later.");var r={reason:"Publish",code:u,message:t};return tl("Failure",r),G.isAttemptingToPublish()&&nl.trigger("publishComplete",new S(u,t)),void S.handleJsException(l.message,u,{session:L,target:nl})}nl.streamId=_=n,J=j(e)},u=ol(),t=[];null!==q.videoSource&&q.videoSource!==!1&&t.push(new I({id:"video1",type:"video",active:q.publishVideo,orientation:N.ROTATED_NORMAL,frameRate:q.frameRate,width:u.width,height:u.height,source:ll?"screen":"camera",fitMode:q.fitMode})),null!==q.audioSource&&q.audioSource!==!1&&t.push(new I({id:"audio1",type:"audio",active:q.publishAudio})),l._.streamCreate(q.name||"",_,q.audioFallbackEnabled,t,e)}};return X?n.call(nl):nl.on("initSuccess",n,nl),tl("Attempt",{streamType:"WebRTC",dataChannels:q.channels}),nl},unpublishFromSession:function(l,n){return L&&l.id===L.id?(l.isConnected()&&nl.stream&&l._.streamDestroy(nl.stream.id),nl.disconnect(),G.isAttemptingToPublish()&&tl("Canceled"),nl.session=L=null,G.isDestroyed()||G.set("MediaBound"),Y&&(Y.stop(),Y=null),ul("unpublish","Success",{sessionId:l.id}),nl._.streamDestroyed(n),nl):(y.warn("The publisher "+$+" is trying to unpublish from a session "+l.id+" it is not attached to (it is attached to "+(L&&L.id||"no session")+")"),nl)},streamDestroyed:function(l){if(["reset"].indexOf(l)<0){var n=new g.StreamEvent("streamDestroyed",m,l,!0),e=function(){n.isDefaultPrevented()||nl.destroy()};nl.dispatchEvent(n,e)}},archivingStatus:function(l){return H&&H.archive.setArchiving(l),l},webRtcStream:function(){return R},switchTracks:function(){return new c.Promise(function(l,e){U.getUserMedia(q.constraints,function(u){dl(),R=u,V=new U.Microphone(R,!q.publishAudio);var t={muted:!0,error:yl};r=n.bindVideo(R,t,function(l){l&&(cl(l),e(l))});var i=[];Object.keys(K).forEach(function(l){var n=K[l];n.getSenders().forEach(function(l){"audio"===l.track.kind&&u.getAudioTracks().length?i.push(l.replaceTrack(u.getAudioTracks()[0])):"video"===l.track.kind&&u.getVideoTracks().length&&i.push(l.replaceTrack(u.getVideoTracks()[0]))})}),c.all(i).then(l,e)},function(l){pl(l),e(l)},ml,bl,function(l){vl(l),e(l)})})},switchAcquiredWindow:function(l){if("Firefox"!==T.env.name||T.env.version<38)throw new Error("switchAcquiredWindow is an experimental method and is not supported bythe current platform");"undefined"!=typeof l&&(q.constraints.video.browserWindow=l),ul("SwitchAcquiredWindow","Attempt",{constraints:q.constraints});var n=nl._.switchTracks();return n.then(function(){ul("SwitchAcquiredWindow","Success",{constraints:q.constraints})},function(l){ul("SwitchAcquiredWindow","Failure",{error:l,constraints:q.constraints})}),n},getDataChannel:function(l,n,e){var u=K[Object.keys(K)[0]];return u?void u.getDataChannel(l,n,e):void e(new T.Error("Cannot create a DataChannel before there is a subscriber."))},iceRestart:function(l){var n,e;for(e in K)K.hasOwnProperty(e)&&(n=K[e],l||!n.iceConnectionStateIsConnected()?(il("Attempt",{remoteConnectionId:e}),K[e].createOfferWithIceRestart()):y.debug("Publisher: Skipping ice restart for "+e+", we are connected."))}},this.detectDevices=function(){y.warn("Fixme: Haven't implemented detectDevices")},this.detectMicActivity=function(){y.warn("Fixme: Haven't implemented detectMicActivity")},this.getEchoCancellationMode=function(){return y.warn("Fixme: Haven't implemented getEchoCancellationMode"),"fullDuplex"},this.setMicrophoneGain=function(){y.warn("Fixme: Haven't implemented setMicrophoneGain")},this.getMicrophoneGain=function(){return y.warn("Fixme: Haven't implemented getMicrophoneGain"),.5},this.setCamera=function(){y.warn("Fixme: Haven't implemented setCamera")},this.setMicrophone=function(){y.warn("Fixme: Haven't implemented setMicrophone")},this.guid=function(){return $},this.videoElement=function(){return r.domElement()},this.setStream=Tl,this.isWebRTC=!0,this.isLoading=function(){return n&&n.loading()},this.videoWidth=function(){return r.videoWidth()},this.videoHeight=function(){return r.videoHeight()},this.on("styleValueChanged",Ol,this),G=new k(sl),this.accessAllowed=!1};U.nextId=D,U.audioContext=r,U.getUserMedia=m,U.Microphone=_,U.PublisherPeerConnection=R,U.WidgetView=L,n.exports=U}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../../helpers/audio_context.js":113,"../../helpers/connectivity_attempt_pinger.js":117,"../../helpers/device_helpers.js":120,"../../helpers/get_user_media.js":122,"../../helpers/properties.js":126,"../../helpers/video_orientation.js":135,"../../helpers/widget_view.js":137,"../analytics.js":139,"../api_key.js":141,"../audio_level_transformer":143,"../chrome/archiving.js":145,"../chrome/audio_level_meter.js":146,"../chrome/backing_bar.js":147,"../chrome/chrome.js":149,"../chrome/mute_button.js":150,"../chrome/name_panel.js":151,"../environment_loader.js":154,"../events.js":155,"../exception_codes.js":156,"../interval_runner.js":159,"../logging.js":160,"../messaging/raptor/parse_ice_servers.js":166,"../ot_error.js":181,"../peer_connection/publisher_peer_connection.js":191,"../screensharing/screen_sharing.js":208,"../stream_channel.js":215,"../stylable_component.js":216,"../system_requirements.js":220,"./max_delay.js":199,"./microphone.js":200,"./state.js":201,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42,bluebird:70,uuid:109}],198:[function(l,n,e){"use strict";var u=l("../logging.js"),t=l("@opentok/ot-helpers"),i=l("./index.js"),r=l("../session/objects.js");n.exports=function(l,n,e){u.debug("OT.initPublisher("+l+")"),"string"!=typeof l||document.getElementById(l)||(l=n,n=e,e=arguments[3]),"function"==typeof l?(e=l,n=void 0,l=void 0):t.isObject(l)&&!t.isElementNode(l)&&(e=n,n=l,l=void 0),"function"==typeof n&&(e=n,n=void 0);var o;n&&!t.isObject(n)&&(o="properties argument to Publisher constructor, if provided, should be an object",n=void 0);var s=new i(n);r.publishers.add(s);var a=function(){e&&t.isFunction(e)&&(e.apply(null,arguments),e=void 0)};void 0!==o&&(u.error(o),a(new Error(o)));var c=function(l){s.off("publishComplete",d),a(l)},d=function(l){s.off("initSuccess",c),l&&a(l)};return s.once("initSuccess",c),s.once("publishComplete",d),s.publish(l),s}},{"../logging.js":160,"../session/objects.js":212,"./index.js":197,"@opentok/ot-helpers":4}],199:[function(l,n,e){"use strict";n.exports=15e3},{}],200:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers");n.exports=function(l,n){var e;u.defineProperties(this,{muted:{get:function(){return e},set:function(n){if(e!==n){e=n;for(var u=l.getAudioTracks(),t=0,i=u.length;i>t;++t)u[t].setEnabled(!e)}}}}),void 0!==n?this.muted(n===!0):l.getAudioTracks().length?this.muted(!l.getAudioTracks()[0].enabled):this.muted(!1)}},{"@opentok/ot-helpers":4}],201:[function(l,n,e){"use strict";var u=l("../generate_simple_state_machine.js"),t=["NotPublishing","GetUserMedia","BindingMedia","MediaBound","PublishingToSession","Publishing","Failed","Destroyed"],i={NotPublishing:["NotPublishing","GetUserMedia","Destroyed"],GetUserMedia:["BindingMedia","Failed","NotPublishing","Destroyed"],BindingMedia:["MediaBound","Failed","NotPublishing","Destroyed"],MediaBound:["NotPublishing","PublishingToSession","Failed","Destroyed"],PublishingToSession:["NotPublishing","Publishing","Failed","Destroyed"],Publishing:["NotPublishing","MediaBound","Failed","Destroyed"],Failed:["Destroyed"],Destroyed:[]},r="NotPublishing",o=u(r,t,i);n.exports=o,o.prototype.isDestroyed=function(){return"Destroyed"===this.current},o.prototype.isAttemptingToPublish=function(){return-1!==["GetUserMedia","BindingMedia","MediaBound","PublishingToSession"].indexOf(this.current)},o.prototype.isPublishing=function(){return"Publishing"===this.current}},{"../generate_simple_state_machine.js":157}],202:[function(l,n,e){"use strict";var u=l("bluebird");n.exports=function(l){function n(l){var n=new XMLHttpRequest,e=new u.Promise(function(e,u){function t(l){return 8e3*l/(Date.now()-i)}var i=Date.now(),r=0;n.addEventListener("load",function(l){e(t(l.loaded))}),n.addEventListener("abort",function(){e(t(r))}),n.addEventListener("error",function(l){u(l)}),n.addEventListener("progress",function(l){r=l.loaded}),n.open("GET",l+"?_"+Math.random()),n.send()});return{promise:e,abort:function(){n.abort()}}}function e(l,n){var e=new XMLHttpRequest,t=new u.Promise(function(u,t){var i,r,o;e.upload.addEventListener("progress",function(l){i||(i=Date.now()),o=l.loaded}),e.addEventListener("load",function(){r=Date.now(),u(8e3*o/(r-i))}),e.addEventListener("error",function(l){t(l)}),e.addEventListener("abort",function(){t()}),e.open("POST",l),e.send(n)});return{promise:t,abort:function(){e.abort()}}}function t(l,e){var u=n(l);return setTimeout(function(){u.abort()},e),u.promise}function i(l,n,t){return new u.Promise(function(u){function i(n){r=e(l,new ArrayBuffer(n/8)),r.promise.then(function(l){
@@ -35255,15 +36065,15 @@ o=l,i(2*n)})}var r,o=0;setTimeout(function(){r.abort(),u(o)},t),i(n)})}var r=l.h
 })}}},this.getPreferredResolution=function(){var l=f.getChannelsOfType("video")[0];if(l&&(l.preferredWidth||l.preferredHeight))return{width:l.preferredWidth,height:l.preferredHeight}},this.setPreferredFrameRate=function(l){if(!g())return void t.warn("setPreferredFrameRate has no affect when called by a publisher");if(a.sessionInfo.p2pEnabled)return void t.warn("Stream.setPreferredFrameRate will not work in a P2P Session");if(l&&isNaN(parseFloat(l)))throw new i.Error("stream preferred frameRate must be a number","Subscriber");var n=f.getChannelsOfType("video")[0];n&&(n.preferredFrameRate=l?parseFloat(l):void 0,a._.subscriberChannelUpdate(f,p(),n,{preferredFrameRate:n.preferredFrameRate||0}))},this.getPreferredFrameRate=function(){var l=f.getChannelsOfType("video")[0];return l?l.preferredFrameRate:void 0};var b=function(l,n){var e;if(f.publisher)e=function(l){a._.streamChannelUpdate(f,l,n)};else{var u=p();e=function(l){a._.subscriberChannelUpdate(f,u,l,n)}}f.getChannelsOfType(l).forEach(e)};this.destroyed=!1,this.destroyedReason=void 0,this.destroy=function(l,n){d=l||"clientDisconnected",f.destroyed=!0,f.destroyedReason=d,n!==!0&&f.dispatchEvent(new u.DestroyedEvent("destroyed",f,d))},this._={},this._.updateProperty=function(l,n){if(-1===o.indexOf(l))return void t.warn('Unknown stream property "'+l+'" was modified to "'+n+'".');var e=f[l],i=n;switch(l){case"name":f[l]=i;break;case"archiving":var r=p();f.publisher&&r&&r._.archivingStatus(i),f[l]=i}var s=new u.StreamUpdatedEvent(f,l,e,i);f.dispatchEvent(s)},this._.update=function(l){for(var n in l)l.hasOwnProperty(n)&&f._.updateProperty(n,l[n])},this._.updateChannel=function(l,n){f.getChannel(l).update(n)}}},{"./events.js":155,"./logging.js":160,"./session/objects.js":212,"@opentok/ot-helpers":4}],215:[function(l,n,e){"use strict";var u=l("@opentok/ot-helpers"),t=l("./logging.js"),i=l("../helpers/video_orientation.js");n.exports=function(l){this.id=l.id,this.type=l.type,this.active=u.castToBoolean(l.active),this.orientation=l.orientation||i.ROTATED_NORMAL,l.frameRate&&(this.frameRate=parseFloat(l.frameRate)),l.preferredFrameRate&&(this.preferredFrameRate=parseFloat(l.preferredFrameRate)),l.preferredWidth&&(this.preferredWidth=parseInt(l.preferredWidth,10)),l.preferredHeight&&(this.preferredHeight=parseInt(l.preferredHeight,10)),this.width=parseInt(l.width,10),this.height=parseInt(l.height,10),this.source=l.source||"camera",this.fitMode=l.fitMode||"cover",u.eventing(this,!0),this.update=function(l){var n={},e={};for(var i in l)if(l.hasOwnProperty(i)){var r=this[i];switch(i){case"active":this.active=u.castToBoolean(l[i]);break;case"disableWarning":this.disableWarning=u.castToBoolean(l[i]);break;case"frameRate":this.frameRate=parseFloat(l[i],10);break;case"width":case"height":this[i]=parseInt(l[i],10),n[i]=this[i],e[i]=r;break;case"orientation":this[i]=l[i],n[i]=this[i],e[i]=r;break;case"fitMode":this[i]=l[i];break;case"source":this[i]=l[i];break;default:return t.warn("Tried to update unknown key "+i+" on "+this.type+" channel "+this.id),!1}this.trigger("update",this,i,r,this[i])}return Object.keys(n).length&&this.trigger("update",this,"videoDimensions",e,n),!0}}},{"../helpers/video_orientation.js":135,"./logging.js":160,"@opentok/ot-helpers":4}],216:[function(l,n,e){"use strict";var u=l("./logging.js"),t=l("./style.js");n.exports=function(l,n,e,i){if(!l.trigger)throw new Error("OT.StylableComponent is dependent on the mixin OTHelpers.eventing. Ensure that this is included in the object before StylableComponent.");var r=!1,o=function(n,e,u){u?l.trigger("styleValueChanged",n,e,u):l.trigger("styleValueChanged",n,e)};e===!1&&(n={buttonDisplayMode:"off",nameDisplayMode:"off",audioLevelDisplayMode:"off"},r=!0,i({showControls:!1}));var s=new t(n,o);l.getStyle=function(l){return s.get(l)},r?l.setStyle=function(){return u.warn("Calling setStyle() has no effect because theshowControls option was set to false"),this}:l.setStyle=function(l,n,e){var u={};return"string"!=typeof l?(s.setAll(l,e),u=l):(s.set(l,n),u[l]=n),i&&i(u),this}}},{"./logging.js":160,"./style.js":217}],217:[function(l,n,e){"use strict";var u=l("./logging.js"),t=l("@opentok/ot-helpers");n.exports=function(l,n){var e={},i=["showMicButton","showSpeakerButton","nameDisplayMode","buttonDisplayMode","backgroundImageURI","audioLevelDisplayMode"],r={buttonDisplayMode:["auto","mini","mini-auto","off","on"],nameDisplayMode:["auto","off","on"],audioLevelDisplayMode:["auto","off","on"],showSettingsButton:[!0,!1],showMicButton:[!0,!1],backgroundImageURI:null,showControlBar:[!0,!1],showArchiveStatus:[!0,!1],videoDisabledDisplayMode:["auto","off","on"]},o=function(l,n){return"backgroundImageURI"===l||r.hasOwnProperty(l)&&-1!==r[l].indexOf(n)},s=function(l){switch(l){case"true":return!0;case"false":return!1;default:return l}};this.getAll=function(){var l=t.clone(e);for(var n in l)l.hasOwnProperty(n)&&i.indexOf(n)<0&&delete l[n];return l},this.get=function(l){return l?e[l]:this.getAll()},this.setAll=function(l,t){var i,r;for(var a in l)l.hasOwnProperty(a)&&(r=s(l[a]),o(a,r)?(i=e[a],r!==i&&(e[a]=r,t||n(a,r,i))):u.warn("Style.setAll::Invalid style property passed "+a+" : "+r));return this},this.set=function(l,t){u.debug("setStyle: "+l.toString());var i,r=s(t);return o(l,r)?(i=e[l],r!==i&&(e[l]=r,n(l,t,i)),this):(u.warn("Style.set::Invalid style property passed "+l+" : "+r),this)},l&&this.setAll(l,!0)}},{"./logging.js":160,"@opentok/ot-helpers":4}],218:[function(l,n,e){"use strict";var u=l("uuid"),t=l("../analytics.js"),i=l("../../helpers/audio_context.js"),r=l("../../helpers/audio_level_samplers/getstats_audio_output_level_sampler"),o=l("../../helpers/audio_level_samplers/webaudio_audio_level_sampler"),s=l("../audio_level_transformer"),a=l("../chrome/audio_level_meter.js"),c=l("../chrome/backing_bar.js"),d=l("../chrome/chrome.js"),f=l("../../helpers/connectivity_attempt_pinger.js"),h=l("../events.js"),p=l("../exception_codes.js"),g=l("../peer_connection/get_stats_helpers.js"),v=l("../interval_runner.js"),m=l("../logging.js"),b=l("../messaging/raptor/message.js"),y=l("../chrome/mute_button.js"),_=l("../chrome/name_panel.js"),w=l("../ot_error.js"),E=l("@opentok/ot-helpers"),S=l("@opentok/otplugin.js"),T=l("../../helpers/properties.js"),C=l("../peer_connection/subscriber_peer_connection.js"),j=l("./state.js"),O=l("../stylable_component.js"),R=l("../chrome/video_disabled_indicator.js"),k=l("../../helpers/widget_view.js"),A=15e3,I=function(l,n,e){var C,k,x,P,D,N,L,F,M,U,B,V,H,W,q=u(),z=l||q,G=n.session,J=n.stream,Y=100,Q=E.hasCapabilities("audioOutputLevelStat")||E.hasCapabilities("webAudioCapableRemoteStream"),$=!1,K=h.Event.names.SUBSCRIBER_DISCONNECTED,X=this,Z=E.defaults({},n,{showControls:!0,testNetwork:!1,fitMode:J.defaultFitMode||"cover"});if("function"!=typeof e&&(e=function(){}),this.id=z,this.widgetId=q,this.session=G,this.stream=J=Z.stream,this.streamId=J.id,!G)return w.handleJsException("OT.Subscriber must be passed a session option",2e3,{session:G,target:this}),null;E.eventing(this,!1);var ll=setTimeout(function(){sl(null,"OT.Subscriber failed to subscribe to a stream in a reasonable amount of time",N)},A);X.once("subscribeComplete",function(){clearTimeout(ll)}),X.once("subscribeComplete",e),Q&&this.on({"audioLevelUpdated:added":function(l){1===l&&B&&B.start()},"audioLevelUpdated:removed":function(l){0===l&&B&&B.stop()}});var nl=function(l,n,e,u){var i=[{action:l,variation:n,payload:e,streamId:J?J.id:null,sessionId:G?G.sessionId:null,connectionId:G&&G.isConnected()?G.connection.connectionId:null,partnerId:G&&G.isConnected()?G.sessionInfo.partnerId:null,subscriberId:q}];u&&i.push(u),t.logEvent.apply(t,i)},el=function(l,n){"Attempt"!==l&&W||(W=new f({action:"Subscribe",sessionId:G?G.sessionId:null,connectionId:G&&G.isConnected()?G.connection.connectionId:null,partnerId:G.isConnected()?G.sessionInfo.partnerId:null,streamId:J?J.id:null})),W.setVariation(l),nl("Subscribe",l,n)},ul=function(l,n){nl("ICERestart",l,n)},tl=function(l){var n={streamType:"WebRTC",width:C?Number(E.width(C.domElement).replace("px","")):null,height:C?Number(E.height(C.domElement).replace("px","")):null,sessionId:G?G.sessionId:null,connectionId:G?G.connection.connectionId:null,mediaServerName:G?G.sessionInfo.messagingServer:null,p2pFlag:G?G.sessionInfo.p2pEnabled:!1,partnerId:G?G.apiKey:null,streamId:J.id,subscriberId:q,version:T.version,duration:parseInt(E.now()-L,10),remoteConnectionId:J.connection.connectionId};t.logQOS(E.extend(n,l)),this.trigger("qos",l)}.bind(this),il=function(l){m.error("OT.Subscriber State Change Failed: ",l.message),m.debug(l)},rl=function(){if(!M.isSubscribing()&&k){m.debug("OT.Subscriber.onLoaded"),M.set("Subscribing"),L=E.now();var l={pcc:parseInt(L-F,10),hasRelayCandidates:N&&N.hasRelayCandidates()};nl("createPeerConnection","Success",l),C.loading(!1),x.showAfterLoading(),$&&J.setRestrictFrameRate(!0),P&&"auto"===X.getStyle("audioLevelDisplayMode")&&P[C.audioOnly()?"show":"hide"](),this.trigger("subscribeComplete",null,this),this.trigger("loaded",this),el("Success",{streamId:J.id})}},ol=function(){m.debug("OT.Subscriber has been disconnected from the Publisher's PeerConnection"),M.isAttemptingToSubscribe()?(M.set("Failed"),this.trigger("subscribeComplete",new w(null,"ClientDisconnected"),this)):M.isSubscribing()&&M.set("Failed"),this.disconnect()},sl=function(l,n,e,u){var t,i;M.isAttemptingToSubscribe()?(t={reason:u?u:"PeerConnectionError",message:"OT.Subscriber PeerConnection Error: "+n,hasRelayCandidates:N&&N.hasRelayCandidates()},nl("createPeerConnection","Failure",t),M.set("Failed"),this.trigger("subscribeComplete",new w(null,n),this)):M.isSubscribing()&&(M.set("Failed"),this.trigger("error",n)),this.disconnect(),i="ICEWorkflow"===u?p.SUBSCRIBER_ICE_WORKFLOW_FAILED:p.P2P_CONNECTION_FAILED,t={reason:u?u:"PeerConnectionError",message:"OT.Subscriber PeerConnection Error: "+n,code:i},el("Failure",t),w.handleJsException("OT.Subscriber PeerConnection Error: "+n,i,{session:G,target:this}),_l.call(this,n)}.bind(this),al=function(l){m.debug("OT.Subscriber.onRemoteStreamAdded"),M.set("BindingRemoteStream"),this.subscribeToAudio(Z.subscribeToAudio),H="loading",this.subscribeToVideo(Z.subscribeToVideo,"loading"),G.sessionInfo.p2pEnabled||(this.setPreferredResolution(Z.preferredResolution),this.setPreferredFrameRate(Z.preferredFrameRate));var n={error:sl,audioVolume:Y},e=l.getVideoTracks();e.length>0&&e.forEach(function(l){l.setEnabled(J.hasVideo&&Z.subscribeToVideo)}),k=C.bindVideo(l,n,function(l){return l?void sl(null,l.message||l,N,"VideoElement"):(k&&k.orientation({width:J.videoDimensions.width,height:J.videoDimensions.height,videoOrientation:J.videoDimensions.orientation}),void rl.call(this,null))}.bind(this)),U&&"webRTCStream"in U&&l.getAudioTracks().length>0&&U.webRTCStream(l),nl("createPeerConnection","StreamAdded"),this.trigger("streamAdded",this)},cl=function(l){m.debug("OT.Subscriber.onStreamRemoved"),k.stream===l&&(k.destroy(),k=null),this.trigger("streamRemoved",this)},dl={"new":h.Event.names.SUBSCRIBER_DISCONNECTED,checking:h.Event.names.SUBSCRIBER_DISCONNECTED,connected:h.Event.names.SUBSCRIBER_CONNECTED,completed:h.Event.names.SUBSCRIBER_CONNECTED,disconnected:h.Event.names.SUBSCRIBER_DISCONNECTED},fl=function(l){var n=dl[l];n&&n!==K&&(K=n,m.debug("OT.Subscriber.connectionStateChanged to "+l),this.dispatchEvent(new h.ConnectionStateChangedEvent(n,this)))},hl=function(){ul("Success")},pl=function(){ul("Failure",{reason:"ICEWorkflow",message:"OT.Subscriber PeerConnection Error: The stream was unable to connect due to a network error. Make sure your connection isn't blocked by a firewall."})},gl=function(){this.disconnect()},vl=function(l){switch(l.changedProperty){case"videoDimensions":if(!k)break;k.orientation({width:l.newValue.width,height:l.newValue.height,videoOrientation:l.newValue.orientation}),this.dispatchEvent(new h.VideoDimensionsChangedEvent(this,l.oldValue,l.newValue));break;case"videoDisableWarning":x.videoDisabledIndicator.setWarning(l.newValue),this.dispatchEvent(new h.VideoDisableWarningEvent(l.newValue?"videoDisableWarning":"videoDisableWarningLifted"));break;case"hasVideo":wl(!(J.hasVideo&&Z.subscribeToVideo)),this.dispatchEvent(new h.VideoEnabledChangedEvent(J.hasVideo?"videoEnabled":"videoDisabled",{reason:"publishVideo"}));break;case"hasAudio":var n=this.getStyle("showMuteButton")?this.getStyle("showMuteButton"):"auto";x.muteButton.setDisplayMode(l.newValue?n:"auto")}},ml=function(l){if(l===!1)return"off";var n=this.getStyle("buttonDisplayMode");return n===!1?"on":n},bl=function(l,n){if(x)switch(l){case"nameDisplayMode":x.name.setDisplayMode(n),x.backingBar.setNameMode(n);break;case"videoDisabledDisplayMode":x.videoDisabledIndicator.setDisplayMode(n);break;case"showArchiveStatus":x.archive.setShowArchiveStatus(n);break;case"buttonDisplayMode":x.muteButton.setDisplayMode(n),x.backingBar.setMuteMode(n);break;case"audioLevelDisplayMode":x.audioLevel.setDisplayMode(n);break;case"bugDisplayMode":break;case"backgroundImageURI":C.setBackgroundImageURI(n)}},yl=function(){var l={backingBar:new c({nameMode:Z.name?this.getStyle("nameDisplayMode"):"off",muteMode:ml.call(this,this.getStyle("showMuteButton"))}),name:new _({name:Z.name,mode:this.getStyle("nameDisplayMode")}),muteButton:new y({muted:Z.muted,mode:J.hasAudio?ml.call(this,this.getStyle("showMuteButton")):"off"})};if(Q){var n=new s,e=function(l){P.setValue(n.transform(l.audioLevel))};P=new a({mode:this.getStyle("audioLevelDisplayMode"),onActivate:function(){X.on("audioLevelUpdated",e)},onPassivate:function(){X.off("audioLevelUpdated",e)}}),l.audioLevel=P}l.videoDisabledIndicator=new R({mode:this.getStyle("videoDisabledDisplayMode")}),x=new d({parent:C.domElement}).set(l).on({muted:function(){Sl.call(this,!0)},unmuted:function(){Sl.call(this,!1)}},this),x.hideWhileLoading()},_l=function(){C&&C.addError("The stream was unable to connect due to a network error.","Make sure your connection isn't blocked by a firewall.")};O(this,{nameDisplayMode:"auto",buttonDisplayMode:"auto",audioLevelDisplayMode:"auto",videoDisabledDisplayMode:"auto",backgroundImageURI:null,showArchiveStatus:!0,showMicButton:!0},Z.showControls,function(l){nl("SetStyle","Subscriber",l,.1)});var wl=function(l){N&&N.subscribeToVideo(!l),C&&(C.audioOnly(l),C.showPoster(l)),P&&"auto"===X.getStyle("audioLevelDisplayMode")&&P[l?"show":"hide"]()},El=function(){var l=0;return function(){0===l&&nl("GetStats","Called"),l++}}();this.destroy=function(l,n){return M.isDestroyed()?this:(M.isAttemptingToSubscribe()&&("streamDestroyed"===l?this.trigger("subscribeComplete",new w(null,"InvalidStreamID"),this):(el("Canceled",{streamId:J.id}),W.stop())),M.set("Destroyed"),B&&B.stop(),this.disconnect(),x&&(x.destroy(),x=null),C&&(C.destroy(),C=null,this.element=null),J&&!J.destroyed&&nl("unsubscribe",null,{streamId:J.id}),this.id=z=null,this.stream=J=null,this.streamId=null,this.session=G=null,Z=null,n!==!0&&this.dispatchEvent(new h.DestroyedEvent(h.Event.names.SUBSCRIBER_DESTROYED,this,l),this.off.bind(this)),this)},this.disconnect=function(){M.isDestroyed()||M.isFailed()||M.set("NotSubscribing"),k&&(k.destroy(),k=null),N&&(N.destroy(),N=null,nl("disconnect","PeerConnection",{streamId:J.id}))},this.processMessage=function(l,n,e){m.debug("OT.Subscriber.processMessage: Received "+l+" message from "+n.id),m.debug(e),D!==n.id&&(D=n.id),N&&N.processMessage(l,e)},this.disableVideo=function(l){if(l){if("auto"!==H)return void m.info("Video was not re-enabled because it was manually disabled");m.info("Video has been re-enabled"),x.videoDisabledIndicator.disableVideo(!1)}else m.warn("Due to high packet loss and low bandwidth, video has been disabled");this.subscribeToVideo(l,"auto"),l||x.videoDisabledIndicator.disableVideo(!0);var n=l?{videoEnabled:!0}:{videoDisabled:!0};nl("updateQuality","video",n)},this.getImgData=function(){return this.isSubscribing()?k.imgData():(m.error("OT.Subscriber.getImgData: Cannot getImgData before the Subscriber is subscribing."),null)},this.getStats=function(l){return N?(El(),void N.getStats(function(n,e){if(n)return void l(n);var u={timestamp:0};e.forEach(function(l){if(g.isInboundStat(l)){var n=g.isVideoStat(l),e=g.isAudioStat(l);(e||n)&&(u.timestamp=g.normalizeTimestamp(l.timestamp)),n?u.video=g.parseStatCategory(l):e&&(u.audio=g.parseStatCategory(l))}}),l(null,u)})):void l(new E.Error("OT.Subscriber is not connected cannot getStats","NotConnectedError",{code:1015}))},this.setAudioVolume=function(l){return l=parseInt(l,10),isNaN(l)?(m.error("OT.Subscriber.setAudioVolume: value should be an integer between 0 and 100"),this):(Y=Math.max(0,Math.min(100,l)),Y!==l&&m.warn("OT.Subscriber.setAudioVolume: value should be an integer between 0 and 100"),Z.muted&&Y>0&&(Z.premuteVolume=l,Sl.call(this,!1)),k&&k.setAudioVolume(Y),this)},this.getAudioVolume=function(){return Z.muted?0:k?k.getAudioVolume():Y},this.subscribeToAudio=function(l){var n=E.castToBoolean(l,!0);return N&&(N.subscribeToAudio(n&&!Z.subscribeMute),G&&J&&n!==Z.subscribeToAudio&&J.setChannelActiveState("audio",n&&!Z.subscribeMute)),Z.subscribeToAudio=n,this};var Sl=function(l){x.muteButton.muted(l),l!==Z.mute&&("Chrome"===E.env.name||S.isInstalled()?(Z.subscribeMute=Z.muted=l,this.subscribeToAudio(Z.subscribeToAudio)):l?(Z.premuteVolume=this.getAudioVolume(),Z.muted=!0,this.setAudioVolume(0)):(Z.premuteVolume||Z.audioVolume)&&(Z.muted=!1,this.setAudioVolume(Z.premuteVolume||Z.audioVolume)),Z.mute=Z.mute)},Tl={auto:"quality",publishVideo:"publishVideo",subscribeToVideo:"subscribeToVideo"};if(this.subscribeToVideo=function(l,n){var e=E.castToBoolean(l,!0);return wl(!(e&&J.hasVideo)),e&&C&&C.video()&&J.hasVideo&&(C.loading(e),C.video().whenTimeIncrements(function(){C.loading(!1)},this)),x&&x.videoDisabledIndicator&&x.videoDisabledIndicator.disableVideo(!1),N&&G&&J&&(e!==Z.subscribeToVideo||n!==H)&&J.setChannelActiveState("video",e,n),Z.subscribeToVideo=e,H=n,"loading"!==n&&this.dispatchEvent(new h.VideoEnabledChangedEvent(e?"videoEnabled":"videoDisabled",{reason:Tl[n]||"subscribeToVideo"})),this},this.setPreferredResolution=function(l){if(M.isDestroyed()||!N)return void m.warn("Cannot set the max Resolution when not subscribing to a publisher");if(Z.preferredResolution=l,G.sessionInfo.p2pEnabled)return void m.warn("OT.Subscriber.setPreferredResolution will not work in a P2P Session");var n=J.getPreferredResolution(),e=n&&l&&n.width===l.width&&n.height===l.height||!n&&!l;e||J.setPreferredResolution(l)},this.setPreferredFrameRate=function(l){return M.isDestroyed()||!N?void m.warn("Cannot set the max frameRate when not subscribing to a publisher"):(Z.preferredFrameRate=l,G.sessionInfo.p2pEnabled?void m.warn("OT.Subscriber.setPreferredFrameRate will not work in a P2P Session"):void(J.getPreferredFrameRate()!==l&&J.setPreferredFrameRate(l)))},this.isSubscribing=function(){return M.isSubscribing()},this.isWebRTC=!0,this.isLoading=function(){return C&&C.loading()},this.videoElement=function(){return k.domElement()},this.videoWidth=function(){return k.videoWidth()},this.videoHeight=function(){return k.videoHeight()},this.restrictFrameRate=function(l){return m.debug("OT.Subscriber.restrictFrameRate("+l+")"),nl("restrictFrameRate",l.toString(),{streamId:J.id}),G.sessionInfo.p2pEnabled&&m.warn("OT.Subscriber.restrictFrameRate: Cannot restrictFrameRate on a P2P session"),"boolean"!=typeof l?m.error("OT.Subscriber.restrictFrameRate: expected a boolean value got a "+typeof l):($=l,J.setRestrictFrameRate(l)),this},this.on("styleValueChanged",bl,this),this._={getDataChannel:function(l,n,e){return N?void N.getDataChannel(l,n,e):void e(new E.Error("Cannot create a DataChannel before there is a publisher connection."))},iceRestart:function(){N?N.iceConnectionStateIsConnected()?m.debug("Subscriber: Skipping ice restart, we are connected."):(ul("Attempt"),N.createOfferWithIceRestart()):m.debug("Subscriber: Skipping ice restart, we have no peer connection")}},M=new j(il),m.debug("OT.Subscriber: subscribe to "+J.id),M.set("Init"),!J)return m.error("OT.Subscriber: No stream parameter."),!1;if(J.on({updated:vl,destroyed:gl},this),D=J.connection.id,Z.name=Z.name||J.name,Z.classNames="OT_root OT_subscriber",Z.style&&this.setStyle(Z.style,null,!0),Z.audioVolume&&this.setAudioVolume(Z.audioVolume),Z.subscribeToAudio=E.castToBoolean(Z.subscribeToAudio,!0),Z.subscribeToVideo=E.castToBoolean(Z.subscribeToVideo,!0),C=new I.WidgetView(l,Z),this.id=z=C.domId(),this.element=C.domElement,yl.call(this),F=E.now(),nl("createPeerConnection","Attempt",""),V=J.connection.id===G.connection.id,!Z.testNetwork&&V){var Cl=G.getPublisherForStream(J);if(!Cl||!Cl._.webRtcStream())return this.trigger("subscribeComplete",new w(null,"InvalidStreamID"),this),this;al.call(this,Cl._.webRtcStream())}else{Z.testNetwork&&this.setAudioVolume(0),M.set("ConnectingToPeer");var jl=b.subscribers.uri(G.apiKey,G.sessionId,J.id,this.widgetId);if(N=new I.SubscriberPeerConnection(J.connection,G,J,this,jl,Z),N.on({disconnected:ol,error:sl,remoteStreamAdded:al,remoteStreamRemoved:cl,qos:tl,iceConnectionStateChange:fl,iceRestartSuccess:hl,iceRestartFailure:pl},this),N.init(function(l){if(l)throw l}),E.hasCapabilities("audioOutputLevelStat")?U=new r(N.getStats):E.hasCapabilities("webAudioCapableRemoteStream")&&(U=new o(i())),U){var Ol=this;B=new v(function(){U.sample(function(l){null!==l&&E.requestAnimationFrame(function(){Ol.dispatchEvent(new h.AudioLevelUpdatedEvent(l))})})},60)}}el("Attempt",{streamId:J.id})};I.WidgetView=k,I.SubscriberPeerConnection=C,n.exports=I},{"../../helpers/audio_context.js":113,"../../helpers/audio_level_samplers/getstats_audio_output_level_sampler":114,"../../helpers/audio_level_samplers/webaudio_audio_level_sampler":115,"../../helpers/connectivity_attempt_pinger.js":117,"../../helpers/properties.js":126,"../../helpers/widget_view.js":137,"../analytics.js":139,"../audio_level_transformer":143,"../chrome/audio_level_meter.js":146,"../chrome/backing_bar.js":147,"../chrome/chrome.js":149,"../chrome/mute_button.js":150,"../chrome/name_panel.js":151,"../chrome/video_disabled_indicator.js":152,"../events.js":155,"../exception_codes.js":156,"../interval_runner.js":159,"../logging.js":160,"../messaging/raptor/message.js":165,"../ot_error.js":181,"../peer_connection/get_stats_helpers.js":185,"../peer_connection/subscriber_peer_connection.js":196,"../stylable_component.js":216,"./state.js":219,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42,uuid:109}],219:[function(l,n,e){"use strict";var u=l("../generate_simple_state_machine.js"),t="NotSubscribing",i=["NotSubscribing","Init","ConnectingToPeer","BindingRemoteStream","Subscribing","Failed","Destroyed"],r={NotSubscribing:["NotSubscribing","Init","Destroyed"],Init:["NotSubscribing","ConnectingToPeer","BindingRemoteStream","Destroyed"],ConnectingToPeer:["NotSubscribing","BindingRemoteStream","Failed","Destroyed"],BindingRemoteStream:["NotSubscribing","Subscribing","Failed","Destroyed"],Subscribing:["NotSubscribing","Failed","Destroyed"],Failed:["Destroyed"],Destroyed:[]},o=u(t,i,r);o.prototype.isDestroyed=function(){return"Destroyed"===this.current},o.prototype.isFailed=function(){return"Failed"===this.current},o.prototype.isSubscribing=function(){return"Subscribing"===this.current},o.prototype.isAttemptingToSubscribe=function(){return-1!==["Init","ConnectingToPeer","BindingRemoteStream"].indexOf(this.current)},n.exports=o},{"../generate_simple_state_machine.js":157}],220:[function(l,n,e){(function(e){"use strict";var u=l("./analytics.js"),t=l("./api_key.js"),i=l("../helpers/dialogs.js"),r=l("../ot/environment_loader.js"),o=l("@opentok/otplugin.js"),s=l("@opentok/ot-helpers"),a=l("./logging.js"),c=l("../helpers/properties.js"),d={};n.exports=d;var f,h=document.location.hash,p=1,g=0;d.check=function(){a.debug("OT.checkSystemRequirements()");var l=s.hasCapabilities("websockets","webrtc")||o.isInstalled();return l=l?p:g,d.check=function(){return a.debug("OT.checkSystemRequirements()"),l},l===g&&u.logEvent({action:"checkSystemRequirements",variation:"notHasRequirements",partnerId:t.value,payload:{userAgent:s.env.userAgent}}),l},d.upgrade=function(){r.onLoad(function(){if(o.isSupported())return void i.Plugin.promptToInstall().on({download:function(){o.pathToInstaller(function(l){e.location=l})},refresh:function(){location.reload()},closed:function(){}});var l="_upgradeFlash";document.body.appendChild(function(){var n=document.createElement("iframe");n.id=l,n.style.position="absolute",n.style.position="fixed",n.style.height="100%",n.style.width="100%",n.style.top="0px",n.style.left="0px",n.style.right="0px",n.style.bottom="0px",n.style.zIndex=1e3,n.style.backgroundColor="rgba(0,0,0,0.2)",n.setAttribute("frameBorder","0"),n.frameBorder="0",n.scrolling="no",n.setAttribute("scrolling","no");var e=c.minimumVersion[s.env.name.toLowerCase()],u=e>s.env.version;return n.src=c.assetURL+"/html/upgrade.html#"+encodeURIComponent(u?"true":"false")+","+encodeURIComponent(JSON.stringify(c.minimumVersion))+"|"+encodeURIComponent(document.location.href),n}()),f&&clearInterval(f),f=setInterval(function(){var n=document.location.hash,e=/^#?\d+&/;n!==h&&e.test(n)&&(h=n,"close_window"===n.replace(e,"")&&(document.body.removeChild(document.getElementById(l)),document.location.hash=""))},100)})},n.exports=d}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"../helpers/dialogs.js":121,"../helpers/properties.js":126,"../ot/environment_loader.js":154,"./analytics.js":139,"./api_key.js":141,"./logging.js":160,"@opentok/ot-helpers":4,"@opentok/otplugin.js":42}]},{},[138]);
 //# sourceMappingURL=sourcemaps/TB.min.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(85).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54), __webpack_require__(85).setImmediate))
 
 /***/ },
-/* 185 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 'use strict';
-var strictUriEncode = __webpack_require__(288);
+var strictUriEncode = __webpack_require__(298);
 
 exports.extract = function (str) {
 	return str.split('?')[1] || '';
@@ -35331,7 +36141,7 @@ exports.stringify = function (obj) {
 
 
 /***/ },
-/* 186 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35342,11 +36152,11 @@ exports["default"] = undefined;
 
 var _react = __webpack_require__(4);
 
-var _storeShape = __webpack_require__(97);
+var _storeShape = __webpack_require__(98);
 
 var _storeShape2 = _interopRequireDefault(_storeShape);
 
-var _warning = __webpack_require__(98);
+var _warning = __webpack_require__(99);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -35416,7 +36226,7 @@ Provider.childContextTypes = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 187 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35429,27 +36239,27 @@ exports["default"] = connect;
 
 var _react = __webpack_require__(4);
 
-var _storeShape = __webpack_require__(97);
+var _storeShape = __webpack_require__(98);
 
 var _storeShape2 = _interopRequireDefault(_storeShape);
 
-var _shallowEqual = __webpack_require__(188);
+var _shallowEqual = __webpack_require__(198);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-var _wrapActionCreators = __webpack_require__(189);
+var _wrapActionCreators = __webpack_require__(199);
 
 var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
-var _warning = __webpack_require__(98);
+var _warning = __webpack_require__(99);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _isPlainObject = __webpack_require__(193);
+var _isPlainObject = __webpack_require__(203);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-var _hoistNonReactStatics = __webpack_require__(95);
+var _hoistNonReactStatics = __webpack_require__(96);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -35816,7 +36626,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 188 */
+/* 198 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -35848,7 +36658,7 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ },
-/* 189 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35857,7 +36667,7 @@ function shallowEqual(objA, objB) {
 exports.__esModule = true;
 exports["default"] = wrapActionCreators;
 
-var _redux = __webpack_require__(23);
+var _redux = __webpack_require__(17);
 
 function wrapActionCreators(actionCreators) {
   return function (dispatch) {
@@ -35866,10 +36676,10 @@ function wrapActionCreators(actionCreators) {
 }
 
 /***/ },
-/* 190 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(191);
+var overArg = __webpack_require__(201);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -35878,7 +36688,7 @@ module.exports = getPrototype;
 
 
 /***/ },
-/* 191 */
+/* 201 */
 /***/ function(module, exports) {
 
 /**
@@ -35899,7 +36709,7 @@ module.exports = overArg;
 
 
 /***/ },
-/* 192 */
+/* 202 */
 /***/ function(module, exports) {
 
 /**
@@ -35934,11 +36744,11 @@ module.exports = isObjectLike;
 
 
 /***/ },
-/* 193 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-var getPrototype = __webpack_require__(190),
-    isObjectLike = __webpack_require__(192);
+var getPrototype = __webpack_require__(200),
+    isObjectLike = __webpack_require__(202);
 
 /** `Object#toString` result references. */
 var objectTag = '[object Object]';
@@ -36008,7 +36818,7 @@ module.exports = isPlainObject;
 
 
 /***/ },
-/* 194 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36044,7 +36854,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 195 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36058,7 +36868,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Link = __webpack_require__(99);
+var _Link = __webpack_require__(100);
 
 var _Link2 = _interopRequireDefault(_Link);
 
@@ -36078,7 +36888,7 @@ exports.default = IndexLink;
 module.exports = exports['default'];
 
 /***/ },
-/* 196 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36098,7 +36908,7 @@ var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _Redirect = __webpack_require__(100);
+var _Redirect = __webpack_require__(101);
 
 var _Redirect2 = _interopRequireDefault(_Redirect);
 
@@ -36148,7 +36958,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 197 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36168,7 +36978,7 @@ var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
 var _InternalPropTypes = __webpack_require__(26);
 
@@ -36215,7 +37025,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 198 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36290,7 +37100,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 199 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36306,7 +37116,7 @@ var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
 var _InternalPropTypes = __webpack_require__(26);
 
@@ -36354,7 +37164,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 200 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36406,7 +37216,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 201 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36416,7 +37226,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _createHashHistory = __webpack_require__(92);
+var _createHashHistory = __webpack_require__(93);
 
 var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
@@ -36438,13 +37248,13 @@ var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager)
 
 var _InternalPropTypes = __webpack_require__(26);
 
-var _RouterContext = __webpack_require__(44);
+var _RouterContext = __webpack_require__(45);
 
 var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
-var _RouterUtils = __webpack_require__(101);
+var _RouterUtils = __webpack_require__(102);
 
 var _routerWarning = __webpack_require__(8);
 
@@ -36637,7 +37447,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 202 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36649,7 +37459,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _RouterContext = __webpack_require__(44);
+var _RouterContext = __webpack_require__(45);
 
 var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
@@ -36674,7 +37484,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 203 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36803,7 +37613,7 @@ function runLeaveHooks(routes, prevState) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 204 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36817,7 +37627,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _RouterContext = __webpack_require__(44);
+var _RouterContext = __webpack_require__(45);
 
 var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
@@ -36867,7 +37677,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 205 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36875,11 +37685,11 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _createBrowserHistory = __webpack_require__(178);
+var _createBrowserHistory = __webpack_require__(186);
 
 var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-var _createRouterHistory = __webpack_require__(103);
+var _createRouterHistory = __webpack_require__(104);
 
 var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -36889,7 +37699,7 @@ exports.default = (0, _createRouterHistory2.default)(_createBrowserHistory2.defa
 module.exports = exports['default'];
 
 /***/ },
-/* 206 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36897,7 +37707,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _PatternUtils = __webpack_require__(29);
+var _PatternUtils = __webpack_require__(31);
 
 function routeParamsChanged(route, prevState, nextState) {
   if (!route.path) return false;
@@ -36972,7 +37782,7 @@ exports.default = computeChangedRoutes;
 module.exports = exports['default'];
 
 /***/ },
-/* 207 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36982,7 +37792,7 @@ exports.__esModule = true;
 
 var _AsyncUtils = __webpack_require__(59);
 
-var _makeStateWithLocation = __webpack_require__(104);
+var _makeStateWithLocation = __webpack_require__(105);
 
 var _makeStateWithLocation2 = _interopRequireDefault(_makeStateWithLocation);
 
@@ -37024,7 +37834,7 @@ exports.default = getComponents;
 module.exports = exports['default'];
 
 /***/ },
-/* 208 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37032,7 +37842,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _PatternUtils = __webpack_require__(29);
+var _PatternUtils = __webpack_require__(31);
 
 /**
  * Extracts an object of params the given route cares about from
@@ -37056,7 +37866,7 @@ exports.default = getRouteParams;
 module.exports = exports['default'];
 
 /***/ },
-/* 209 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37064,11 +37874,11 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _createHashHistory = __webpack_require__(92);
+var _createHashHistory = __webpack_require__(93);
 
 var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-var _createRouterHistory = __webpack_require__(103);
+var _createRouterHistory = __webpack_require__(104);
 
 var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -37078,7 +37888,7 @@ exports.default = (0, _createRouterHistory2.default)(_createHashHistory2.default
 module.exports = exports['default'];
 
 /***/ },
-/* 210 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37090,7 +37900,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 exports.default = isActive;
 
-var _PatternUtils = __webpack_require__(29);
+var _PatternUtils = __webpack_require__(31);
 
 function deepEqual(a, b) {
   if (a == b) return true;
@@ -37236,7 +38046,7 @@ function isActive(_ref, indexOnly, currentLocation, routes, params) {
 module.exports = exports['default'];
 
 /***/ },
-/* 211 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37246,13 +38056,13 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _Actions = __webpack_require__(28);
+var _Actions = __webpack_require__(30);
 
 var _invariant = __webpack_require__(9);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _createMemoryHistory = __webpack_require__(102);
+var _createMemoryHistory = __webpack_require__(103);
 
 var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
@@ -37260,9 +38070,9 @@ var _createTransitionManager = __webpack_require__(61);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
-var _RouterUtils = __webpack_require__(101);
+var _RouterUtils = __webpack_require__(102);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37326,7 +38136,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 212 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37342,17 +38152,17 @@ exports.default = matchRoutes;
 
 var _AsyncUtils = __webpack_require__(59);
 
-var _makeStateWithLocation = __webpack_require__(104);
+var _makeStateWithLocation = __webpack_require__(105);
 
 var _makeStateWithLocation2 = _interopRequireDefault(_makeStateWithLocation);
 
-var _PatternUtils = __webpack_require__(29);
+var _PatternUtils = __webpack_require__(31);
 
 var _routerWarning = __webpack_require__(8);
 
 var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-var _RouteUtils = __webpack_require__(21);
+var _RouteUtils = __webpack_require__(23);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37584,7 +38394,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 213 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37642,7 +38452,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 214 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37662,7 +38472,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _hoistNonReactStatics = __webpack_require__(95);
+var _hoistNonReactStatics = __webpack_require__(96);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -37713,7 +38523,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 215 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37732,7 +38542,7 @@ module.exports = exports['default'];
 
 var ReactDOMComponentTree = __webpack_require__(6);
 
-var focusNode = __webpack_require__(88);
+var focusNode = __webpack_require__(89);
 
 var AutoFocusUtils = {
   focusDOMComponent: function () {
@@ -37743,7 +38553,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ },
-/* 216 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37760,14 +38570,14 @@ module.exports = AutoFocusUtils;
 
 'use strict';
 
-var EventConstants = __webpack_require__(16);
-var EventPropagators = __webpack_require__(36);
+var EventConstants = __webpack_require__(18);
+var EventPropagators = __webpack_require__(37);
 var ExecutionEnvironment = __webpack_require__(7);
-var FallbackCompositionState = __webpack_require__(222);
-var SyntheticCompositionEvent = __webpack_require__(266);
-var SyntheticInputEvent = __webpack_require__(269);
+var FallbackCompositionState = __webpack_require__(232);
+var SyntheticCompositionEvent = __webpack_require__(276);
+var SyntheticInputEvent = __webpack_require__(279);
 
-var keyOf = __webpack_require__(19);
+var keyOf = __webpack_require__(22);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -38139,7 +38949,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ },
-/* 217 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38156,14 +38966,14 @@ module.exports = BeforeInputEventPlugin;
 
 'use strict';
 
-var CSSProperty = __webpack_require__(106);
+var CSSProperty = __webpack_require__(107);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactInstrumentation = __webpack_require__(10);
 
-var camelizeStyleName = __webpack_require__(164);
-var dangerousStyleValue = __webpack_require__(275);
-var hyphenateStyleName = __webpack_require__(171);
-var memoizeStringOnly = __webpack_require__(174);
+var camelizeStyleName = __webpack_require__(172);
+var dangerousStyleValue = __webpack_require__(285);
+var hyphenateStyleName = __webpack_require__(179);
+var memoizeStringOnly = __webpack_require__(182);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -38351,7 +39161,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 218 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38368,18 +39178,18 @@ module.exports = CSSPropertyOperations;
 
 'use strict';
 
-var EventConstants = __webpack_require__(16);
-var EventPluginHub = __webpack_require__(35);
-var EventPropagators = __webpack_require__(36);
+var EventConstants = __webpack_require__(18);
+var EventPluginHub = __webpack_require__(36);
+var EventPropagators = __webpack_require__(37);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(15);
-var SyntheticEvent = __webpack_require__(18);
+var ReactUpdates = __webpack_require__(16);
+var SyntheticEvent = __webpack_require__(20);
 
 var getEventTarget = __webpack_require__(79);
 var isEventSupported = __webpack_require__(81);
-var isTextInputElement = __webpack_require__(130);
-var keyOf = __webpack_require__(19);
+var isTextInputElement = __webpack_require__(131);
+var keyOf = __webpack_require__(22);
 
 var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -38682,7 +39492,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ },
-/* 219 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38701,10 +39511,10 @@ module.exports = ChangeEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(32);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createNodesFromMarkup = __webpack_require__(167);
+var createNodesFromMarkup = __webpack_require__(175);
 var emptyFunction = __webpack_require__(11);
 var invariant = __webpack_require__(1);
 
@@ -38737,7 +39547,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 220 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38754,7 +39564,7 @@ module.exports = Danger;
 
 'use strict';
 
-var keyOf = __webpack_require__(19);
+var keyOf = __webpack_require__(22);
 
 /**
  * Module that is injectable into `EventPluginHub`, that specifies a
@@ -38770,7 +39580,7 @@ var DefaultEventPluginOrder = [keyOf({ ResponderEventPlugin: null }), keyOf({ Si
 module.exports = DefaultEventPluginOrder;
 
 /***/ },
-/* 221 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38787,12 +39597,12 @@ module.exports = DefaultEventPluginOrder;
 
 'use strict';
 
-var EventConstants = __webpack_require__(16);
-var EventPropagators = __webpack_require__(36);
+var EventConstants = __webpack_require__(18);
+var EventPropagators = __webpack_require__(37);
 var ReactDOMComponentTree = __webpack_require__(6);
-var SyntheticMouseEvent = __webpack_require__(50);
+var SyntheticMouseEvent = __webpack_require__(51);
 
-var keyOf = __webpack_require__(19);
+var keyOf = __webpack_require__(22);
 
 var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -38881,7 +39691,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ },
-/* 222 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38900,9 +39710,9 @@ module.exports = EnterLeaveEventPlugin;
 
 var _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(22);
+var PooledClass = __webpack_require__(24);
 
-var getTextContentAccessor = __webpack_require__(128);
+var getTextContentAccessor = __webpack_require__(129);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -38982,7 +39792,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ },
-/* 223 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39200,7 +40010,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ },
-/* 224 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39219,16 +40029,16 @@ module.exports = HTMLDOMPropertyConfig;
 
 var _assign = __webpack_require__(5);
 
-var ReactChildren = __webpack_require__(109);
+var ReactChildren = __webpack_require__(110);
 var ReactComponent = __webpack_require__(68);
-var ReactPureComponent = __webpack_require__(256);
-var ReactClass = __webpack_require__(110);
-var ReactDOMFactories = __webpack_require__(234);
+var ReactPureComponent = __webpack_require__(266);
+var ReactClass = __webpack_require__(111);
+var ReactDOMFactories = __webpack_require__(244);
 var ReactElement = __webpack_require__(13);
-var ReactPropTypes = __webpack_require__(121);
-var ReactVersion = __webpack_require__(122);
+var ReactPropTypes = __webpack_require__(122);
+var ReactVersion = __webpack_require__(123);
 
-var onlyChild = __webpack_require__(281);
+var onlyChild = __webpack_require__(291);
 var warning = __webpack_require__(2);
 
 var createElement = ReactElement.createElement;
@@ -39236,7 +40046,7 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(113);
+  var ReactElementValidator = __webpack_require__(114);
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
   cloneElement = ReactElementValidator.cloneElement;
@@ -39296,7 +40106,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 225 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39313,9 +40123,9 @@ module.exports = React;
 
 'use strict';
 
-var ReactReconciler = __webpack_require__(31);
+var ReactReconciler = __webpack_require__(33);
 
-var instantiateReactComponent = __webpack_require__(129);
+var instantiateReactComponent = __webpack_require__(130);
 var KeyEscapeUtils = __webpack_require__(66);
 var shouldUpdateReactComponent = __webpack_require__(82);
 var traverseAllChildren = __webpack_require__(83);
@@ -39457,7 +40267,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 226 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39518,7 +40328,7 @@ module.exports = ReactChildrenMutationWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 227 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39536,7 +40346,7 @@ module.exports = ReactChildrenMutationWarningHook;
 'use strict';
 
 var DOMChildrenOperations = __webpack_require__(63);
-var ReactDOMIDOperations = __webpack_require__(236);
+var ReactDOMIDOperations = __webpack_require__(246);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -39554,7 +40364,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ },
-/* 228 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39575,19 +40385,19 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
 var ReactComponentEnvironment = __webpack_require__(69);
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactCurrentOwner = __webpack_require__(19);
 var ReactElement = __webpack_require__(13);
 var ReactErrorUtils = __webpack_require__(70);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactNodeTypes = __webpack_require__(120);
-var ReactPropTypeLocations = __webpack_require__(49);
-var ReactReconciler = __webpack_require__(31);
+var ReactNodeTypes = __webpack_require__(121);
+var ReactPropTypeLocations = __webpack_require__(50);
+var ReactReconciler = __webpack_require__(33);
 
-var checkReactTypeSpec = __webpack_require__(125);
-var emptyObject = __webpack_require__(34);
+var checkReactTypeSpec = __webpack_require__(126);
+var emptyObject = __webpack_require__(35);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(54);
+var shallowEqual = __webpack_require__(55);
 var shouldUpdateReactComponent = __webpack_require__(82);
 var warning = __webpack_require__(2);
 
@@ -40465,7 +41275,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 229 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40485,15 +41295,15 @@ module.exports = ReactCompositeComponent;
 'use strict';
 
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDefaultInjection = __webpack_require__(247);
-var ReactMount = __webpack_require__(118);
-var ReactReconciler = __webpack_require__(31);
-var ReactUpdates = __webpack_require__(15);
-var ReactVersion = __webpack_require__(122);
+var ReactDefaultInjection = __webpack_require__(257);
+var ReactMount = __webpack_require__(119);
+var ReactReconciler = __webpack_require__(33);
+var ReactUpdates = __webpack_require__(16);
+var ReactVersion = __webpack_require__(123);
 
-var findDOMNode = __webpack_require__(276);
-var getHostComponentFromComposite = __webpack_require__(127);
-var renderSubtreeIntoContainer = __webpack_require__(283);
+var findDOMNode = __webpack_require__(286);
+var getHostComponentFromComposite = __webpack_require__(128);
+var renderSubtreeIntoContainer = __webpack_require__(293);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -40571,8 +41381,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(10);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(244);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(238);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(254);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(248);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -40582,7 +41392,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 230 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40599,7 +41409,7 @@ module.exports = ReactDOM;
 
 'use strict';
 
-var DisabledInputUtils = __webpack_require__(46);
+var DisabledInputUtils = __webpack_require__(47);
 
 /**
  * Implements a <button> host component that does not receive mouse events
@@ -40612,7 +41422,7 @@ var ReactDOMButton = {
 module.exports = ReactDOMButton;
 
 /***/ },
-/* 231 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40634,33 +41444,33 @@ module.exports = ReactDOMButton;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
-var AutoFocusUtils = __webpack_require__(215);
-var CSSPropertyOperations = __webpack_require__(217);
-var DOMLazyTree = __webpack_require__(30);
+var AutoFocusUtils = __webpack_require__(225);
+var CSSPropertyOperations = __webpack_require__(227);
+var DOMLazyTree = __webpack_require__(32);
 var DOMNamespaces = __webpack_require__(64);
 var DOMProperty = __webpack_require__(27);
-var DOMPropertyOperations = __webpack_require__(108);
-var EventConstants = __webpack_require__(16);
-var EventPluginHub = __webpack_require__(35);
-var EventPluginRegistry = __webpack_require__(47);
-var ReactBrowserEventEmitter = __webpack_require__(48);
-var ReactDOMButton = __webpack_require__(230);
-var ReactDOMComponentFlags = __webpack_require__(111);
+var DOMPropertyOperations = __webpack_require__(109);
+var EventConstants = __webpack_require__(18);
+var EventPluginHub = __webpack_require__(36);
+var EventPluginRegistry = __webpack_require__(48);
+var ReactBrowserEventEmitter = __webpack_require__(49);
+var ReactDOMButton = __webpack_require__(240);
+var ReactDOMComponentFlags = __webpack_require__(112);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMInput = __webpack_require__(237);
-var ReactDOMOption = __webpack_require__(239);
-var ReactDOMSelect = __webpack_require__(112);
-var ReactDOMTextarea = __webpack_require__(242);
+var ReactDOMInput = __webpack_require__(247);
+var ReactDOMOption = __webpack_require__(249);
+var ReactDOMSelect = __webpack_require__(113);
+var ReactDOMTextarea = __webpack_require__(252);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactMultiChild = __webpack_require__(254);
-var ReactServerRenderingTransaction = __webpack_require__(259);
+var ReactMultiChild = __webpack_require__(264);
+var ReactServerRenderingTransaction = __webpack_require__(269);
 
 var emptyFunction = __webpack_require__(11);
-var escapeTextContentForBrowser = __webpack_require__(51);
+var escapeTextContentForBrowser = __webpack_require__(52);
 var invariant = __webpack_require__(1);
 var isEventSupported = __webpack_require__(81);
-var keyOf = __webpack_require__(19);
-var shallowEqual = __webpack_require__(54);
+var keyOf = __webpack_require__(22);
+var shallowEqual = __webpack_require__(55);
 var validateDOMNesting = __webpack_require__(84);
 var warning = __webpack_require__(2);
 
@@ -41625,7 +42435,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 232 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41665,7 +42475,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 233 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41684,7 +42494,7 @@ module.exports = ReactDOMContainerInfo;
 
 var _assign = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(32);
 var ReactDOMComponentTree = __webpack_require__(6);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -41731,7 +42541,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ },
-/* 234 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41757,7 +42567,7 @@ var ReactElement = __webpack_require__(13);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(113);
+  var ReactElementValidator = __webpack_require__(114);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -41908,7 +42718,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 235 */
+/* 245 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -41932,7 +42742,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ },
-/* 236 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41972,7 +42782,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ },
-/* 237 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41992,11 +42802,11 @@ module.exports = ReactDOMIDOperations;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
-var DisabledInputUtils = __webpack_require__(46);
-var DOMPropertyOperations = __webpack_require__(108);
+var DisabledInputUtils = __webpack_require__(47);
+var DOMPropertyOperations = __webpack_require__(109);
 var LinkedValueUtils = __webpack_require__(67);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -42248,7 +43058,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 238 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42298,7 +43108,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 239 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42317,9 +43127,9 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 var _assign = __webpack_require__(5);
 
-var ReactChildren = __webpack_require__(109);
+var ReactChildren = __webpack_require__(110);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMSelect = __webpack_require__(112);
+var ReactDOMSelect = __webpack_require__(113);
 
 var warning = __webpack_require__(2);
 var didWarnInvalidOptionChildren = false;
@@ -42428,7 +43238,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 240 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42447,8 +43257,8 @@ module.exports = ReactDOMOption;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var getNodeForCharacterOffset = __webpack_require__(279);
-var getTextContentAccessor = __webpack_require__(128);
+var getNodeForCharacterOffset = __webpack_require__(289);
+var getTextContentAccessor = __webpack_require__(129);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -42646,7 +43456,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ },
-/* 241 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42667,10 +43477,10 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
 var DOMChildrenOperations = __webpack_require__(63);
-var DOMLazyTree = __webpack_require__(30);
+var DOMLazyTree = __webpack_require__(32);
 var ReactDOMComponentTree = __webpack_require__(6);
 
-var escapeTextContentForBrowser = __webpack_require__(51);
+var escapeTextContentForBrowser = __webpack_require__(52);
 var invariant = __webpack_require__(1);
 var validateDOMNesting = __webpack_require__(84);
 
@@ -42817,7 +43627,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 242 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42837,10 +43647,10 @@ module.exports = ReactDOMTextComponent;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(5);
 
-var DisabledInputUtils = __webpack_require__(46);
+var DisabledInputUtils = __webpack_require__(47);
 var LinkedValueUtils = __webpack_require__(67);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -42979,7 +43789,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 243 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43122,7 +43932,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 244 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43140,7 +43950,7 @@ module.exports = {
 'use strict';
 
 var DOMProperty = __webpack_require__(27);
-var EventPluginRegistry = __webpack_require__(47);
+var EventPluginRegistry = __webpack_require__(48);
 var ReactComponentTreeHook = __webpack_require__(12);
 
 var warning = __webpack_require__(2);
@@ -43241,7 +44051,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 245 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43258,13 +44068,13 @@ module.exports = ReactDOMUnknownPropertyHook;
 
 'use strict';
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(252);
-var ReactHostOperationHistoryHook = __webpack_require__(250);
+var ReactInvalidSetStateWarningHook = __webpack_require__(262);
+var ReactHostOperationHistoryHook = __webpack_require__(260);
 var ReactComponentTreeHook = __webpack_require__(12);
-var ReactChildrenMutationWarningHook = __webpack_require__(226);
+var ReactChildrenMutationWarningHook = __webpack_require__(236);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var performanceNow = __webpack_require__(176);
+var performanceNow = __webpack_require__(184);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -43549,7 +44359,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 246 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43568,8 +44378,8 @@ module.exports = ReactDebugTool;
 
 var _assign = __webpack_require__(5);
 
-var ReactUpdates = __webpack_require__(15);
-var Transaction = __webpack_require__(39);
+var ReactUpdates = __webpack_require__(16);
+var Transaction = __webpack_require__(40);
 
 var emptyFunction = __webpack_require__(11);
 
@@ -43623,7 +44433,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ },
-/* 247 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43640,24 +44450,24 @@ module.exports = ReactDefaultBatchingStrategy;
 
 'use strict';
 
-var BeforeInputEventPlugin = __webpack_require__(216);
-var ChangeEventPlugin = __webpack_require__(218);
-var DefaultEventPluginOrder = __webpack_require__(220);
-var EnterLeaveEventPlugin = __webpack_require__(221);
-var HTMLDOMPropertyConfig = __webpack_require__(223);
-var ReactComponentBrowserEnvironment = __webpack_require__(227);
-var ReactDOMComponent = __webpack_require__(231);
+var BeforeInputEventPlugin = __webpack_require__(226);
+var ChangeEventPlugin = __webpack_require__(228);
+var DefaultEventPluginOrder = __webpack_require__(230);
+var EnterLeaveEventPlugin = __webpack_require__(231);
+var HTMLDOMPropertyConfig = __webpack_require__(233);
+var ReactComponentBrowserEnvironment = __webpack_require__(237);
+var ReactDOMComponent = __webpack_require__(241);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMEmptyComponent = __webpack_require__(233);
-var ReactDOMTreeTraversal = __webpack_require__(243);
-var ReactDOMTextComponent = __webpack_require__(241);
-var ReactDefaultBatchingStrategy = __webpack_require__(246);
-var ReactEventListener = __webpack_require__(249);
-var ReactInjection = __webpack_require__(251);
-var ReactReconcileTransaction = __webpack_require__(257);
-var SVGDOMPropertyConfig = __webpack_require__(261);
-var SelectEventPlugin = __webpack_require__(262);
-var SimpleEventPlugin = __webpack_require__(263);
+var ReactDOMEmptyComponent = __webpack_require__(243);
+var ReactDOMTreeTraversal = __webpack_require__(253);
+var ReactDOMTextComponent = __webpack_require__(251);
+var ReactDefaultBatchingStrategy = __webpack_require__(256);
+var ReactEventListener = __webpack_require__(259);
+var ReactInjection = __webpack_require__(261);
+var ReactReconcileTransaction = __webpack_require__(267);
+var SVGDOMPropertyConfig = __webpack_require__(271);
+var SelectEventPlugin = __webpack_require__(272);
+var SimpleEventPlugin = __webpack_require__(273);
 
 var alreadyInjected = false;
 
@@ -43713,7 +44523,7 @@ module.exports = {
 };
 
 /***/ },
-/* 248 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43730,7 +44540,7 @@ module.exports = {
 
 'use strict';
 
-var EventPluginHub = __webpack_require__(35);
+var EventPluginHub = __webpack_require__(36);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -43752,7 +44562,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ },
-/* 249 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43771,14 +44581,14 @@ module.exports = ReactEventEmitterMixin;
 
 var _assign = __webpack_require__(5);
 
-var EventListener = __webpack_require__(87);
+var EventListener = __webpack_require__(88);
 var ExecutionEnvironment = __webpack_require__(7);
-var PooledClass = __webpack_require__(22);
+var PooledClass = __webpack_require__(24);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(16);
 
 var getEventTarget = __webpack_require__(79);
-var getUnboundedScrollPosition = __webpack_require__(169);
+var getUnboundedScrollPosition = __webpack_require__(177);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -43915,7 +44725,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ },
-/* 250 */
+/* 260 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -43958,7 +44768,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ },
-/* 251 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43976,14 +44786,14 @@ module.exports = ReactHostOperationHistoryHook;
 'use strict';
 
 var DOMProperty = __webpack_require__(27);
-var EventPluginHub = __webpack_require__(35);
+var EventPluginHub = __webpack_require__(36);
 var EventPluginUtils = __webpack_require__(65);
 var ReactComponentEnvironment = __webpack_require__(69);
-var ReactClass = __webpack_require__(110);
-var ReactEmptyComponent = __webpack_require__(114);
-var ReactBrowserEventEmitter = __webpack_require__(48);
-var ReactHostComponent = __webpack_require__(116);
-var ReactUpdates = __webpack_require__(15);
+var ReactClass = __webpack_require__(111);
+var ReactEmptyComponent = __webpack_require__(115);
+var ReactBrowserEventEmitter = __webpack_require__(49);
+var ReactHostComponent = __webpack_require__(117);
+var ReactUpdates = __webpack_require__(16);
 
 var ReactInjection = {
   Component: ReactComponentEnvironment.injection,
@@ -44000,7 +44810,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ },
-/* 252 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44043,7 +44853,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 253 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44060,7 +44870,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 
 'use strict';
 
-var adler32 = __webpack_require__(274);
+var adler32 = __webpack_require__(284);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -44099,7 +44909,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ },
-/* 254 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44119,16 +44929,16 @@ module.exports = ReactMarkupChecksum;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactComponentEnvironment = __webpack_require__(69);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactMultiChildUpdateTypes = __webpack_require__(119);
+var ReactMultiChildUpdateTypes = __webpack_require__(120);
 
-var ReactCurrentOwner = __webpack_require__(17);
-var ReactReconciler = __webpack_require__(31);
-var ReactChildReconciler = __webpack_require__(225);
+var ReactCurrentOwner = __webpack_require__(19);
+var ReactReconciler = __webpack_require__(33);
+var ReactChildReconciler = __webpack_require__(235);
 
 var emptyFunction = __webpack_require__(11);
-var flattenChildren = __webpack_require__(277);
+var flattenChildren = __webpack_require__(287);
 var invariant = __webpack_require__(1);
 
 /**
@@ -44557,7 +45367,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 255 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44658,7 +45468,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 256 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44680,7 +45490,7 @@ var _assign = __webpack_require__(5);
 var ReactComponent = __webpack_require__(68);
 var ReactNoopUpdateQueue = __webpack_require__(71);
 
-var emptyObject = __webpack_require__(34);
+var emptyObject = __webpack_require__(35);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -44706,7 +45516,7 @@ ReactPureComponent.prototype.isPureReactComponent = true;
 module.exports = ReactPureComponent;
 
 /***/ },
-/* 257 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44725,12 +45535,12 @@ module.exports = ReactPureComponent;
 
 var _assign = __webpack_require__(5);
 
-var CallbackQueue = __webpack_require__(107);
-var PooledClass = __webpack_require__(22);
-var ReactBrowserEventEmitter = __webpack_require__(48);
-var ReactInputSelection = __webpack_require__(117);
+var CallbackQueue = __webpack_require__(108);
+var PooledClass = __webpack_require__(24);
+var ReactBrowserEventEmitter = __webpack_require__(49);
+var ReactInputSelection = __webpack_require__(118);
 var ReactInstrumentation = __webpack_require__(10);
-var Transaction = __webpack_require__(39);
+var Transaction = __webpack_require__(40);
 var ReactUpdateQueue = __webpack_require__(74);
 
 /**
@@ -44891,7 +45701,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 258 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44908,7 +45718,7 @@ module.exports = ReactReconcileTransaction;
 
 'use strict';
 
-var ReactOwner = __webpack_require__(255);
+var ReactOwner = __webpack_require__(265);
 
 var ReactRef = {};
 
@@ -44977,7 +45787,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ },
-/* 259 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44996,10 +45806,10 @@ module.exports = ReactRef;
 
 var _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(22);
-var Transaction = __webpack_require__(39);
+var PooledClass = __webpack_require__(24);
+var Transaction = __webpack_require__(40);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactServerUpdateQueue = __webpack_require__(260);
+var ReactServerUpdateQueue = __webpack_require__(270);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -45074,7 +45884,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 260 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45095,7 +45905,7 @@ module.exports = ReactServerRenderingTransaction;
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ReactUpdateQueue = __webpack_require__(74);
-var Transaction = __webpack_require__(39);
+var Transaction = __webpack_require__(40);
 var warning = __webpack_require__(2);
 
 function warnNoop(publicInstance, callerName) {
@@ -45222,7 +46032,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 261 */
+/* 271 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -45530,7 +46340,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ },
-/* 262 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45547,17 +46357,17 @@ module.exports = SVGDOMPropertyConfig;
 
 'use strict';
 
-var EventConstants = __webpack_require__(16);
-var EventPropagators = __webpack_require__(36);
+var EventConstants = __webpack_require__(18);
+var EventPropagators = __webpack_require__(37);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInputSelection = __webpack_require__(117);
-var SyntheticEvent = __webpack_require__(18);
+var ReactInputSelection = __webpack_require__(118);
+var SyntheticEvent = __webpack_require__(20);
 
-var getActiveElement = __webpack_require__(89);
-var isTextInputElement = __webpack_require__(130);
-var keyOf = __webpack_require__(19);
-var shallowEqual = __webpack_require__(54);
+var getActiveElement = __webpack_require__(90);
+var isTextInputElement = __webpack_require__(131);
+var keyOf = __webpack_require__(22);
+var shallowEqual = __webpack_require__(55);
 
 var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -45732,7 +46542,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ },
-/* 263 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45751,26 +46561,26 @@ module.exports = SelectEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventConstants = __webpack_require__(16);
-var EventListener = __webpack_require__(87);
-var EventPropagators = __webpack_require__(36);
+var EventConstants = __webpack_require__(18);
+var EventListener = __webpack_require__(88);
+var EventPropagators = __webpack_require__(37);
 var ReactDOMComponentTree = __webpack_require__(6);
-var SyntheticAnimationEvent = __webpack_require__(264);
-var SyntheticClipboardEvent = __webpack_require__(265);
-var SyntheticEvent = __webpack_require__(18);
-var SyntheticFocusEvent = __webpack_require__(268);
-var SyntheticKeyboardEvent = __webpack_require__(270);
-var SyntheticMouseEvent = __webpack_require__(50);
-var SyntheticDragEvent = __webpack_require__(267);
-var SyntheticTouchEvent = __webpack_require__(271);
-var SyntheticTransitionEvent = __webpack_require__(272);
-var SyntheticUIEvent = __webpack_require__(38);
-var SyntheticWheelEvent = __webpack_require__(273);
+var SyntheticAnimationEvent = __webpack_require__(274);
+var SyntheticClipboardEvent = __webpack_require__(275);
+var SyntheticEvent = __webpack_require__(20);
+var SyntheticFocusEvent = __webpack_require__(278);
+var SyntheticKeyboardEvent = __webpack_require__(280);
+var SyntheticMouseEvent = __webpack_require__(51);
+var SyntheticDragEvent = __webpack_require__(277);
+var SyntheticTouchEvent = __webpack_require__(281);
+var SyntheticTransitionEvent = __webpack_require__(282);
+var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticWheelEvent = __webpack_require__(283);
 
 var emptyFunction = __webpack_require__(11);
 var getEventCharCode = __webpack_require__(77);
 var invariant = __webpack_require__(1);
-var keyOf = __webpack_require__(19);
+var keyOf = __webpack_require__(22);
 
 var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -46374,7 +47184,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 264 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46391,7 +47201,7 @@ module.exports = SimpleEventPlugin;
 
 'use strict';
 
-var SyntheticEvent = __webpack_require__(18);
+var SyntheticEvent = __webpack_require__(20);
 
 /**
  * @interface Event
@@ -46419,7 +47229,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ },
-/* 265 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46436,7 +47246,7 @@ module.exports = SyntheticAnimationEvent;
 
 'use strict';
 
-var SyntheticEvent = __webpack_require__(18);
+var SyntheticEvent = __webpack_require__(20);
 
 /**
  * @interface Event
@@ -46463,7 +47273,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ },
-/* 266 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46480,7 +47290,7 @@ module.exports = SyntheticClipboardEvent;
 
 'use strict';
 
-var SyntheticEvent = __webpack_require__(18);
+var SyntheticEvent = __webpack_require__(20);
 
 /**
  * @interface Event
@@ -46505,7 +47315,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ },
-/* 267 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46522,7 +47332,7 @@ module.exports = SyntheticCompositionEvent;
 
 'use strict';
 
-var SyntheticMouseEvent = __webpack_require__(50);
+var SyntheticMouseEvent = __webpack_require__(51);
 
 /**
  * @interface DragEvent
@@ -46547,7 +47357,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ },
-/* 268 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46564,7 +47374,7 @@ module.exports = SyntheticDragEvent;
 
 'use strict';
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 
 /**
  * @interface FocusEvent
@@ -46589,7 +47399,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ },
-/* 269 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46606,7 +47416,7 @@ module.exports = SyntheticFocusEvent;
 
 'use strict';
 
-var SyntheticEvent = __webpack_require__(18);
+var SyntheticEvent = __webpack_require__(20);
 
 /**
  * @interface Event
@@ -46632,7 +47442,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ },
-/* 270 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46649,10 +47459,10 @@ module.exports = SyntheticInputEvent;
 
 'use strict';
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 
 var getEventCharCode = __webpack_require__(77);
-var getEventKey = __webpack_require__(278);
+var getEventKey = __webpack_require__(288);
 var getEventModifierState = __webpack_require__(78);
 
 /**
@@ -46722,7 +47532,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ },
-/* 271 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46739,7 +47549,7 @@ module.exports = SyntheticKeyboardEvent;
 
 'use strict';
 
-var SyntheticUIEvent = __webpack_require__(38);
+var SyntheticUIEvent = __webpack_require__(39);
 
 var getEventModifierState = __webpack_require__(78);
 
@@ -46773,7 +47583,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ },
-/* 272 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46790,7 +47600,7 @@ module.exports = SyntheticTouchEvent;
 
 'use strict';
 
-var SyntheticEvent = __webpack_require__(18);
+var SyntheticEvent = __webpack_require__(20);
 
 /**
  * @interface Event
@@ -46818,7 +47628,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ },
-/* 273 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46835,7 +47645,7 @@ module.exports = SyntheticTransitionEvent;
 
 'use strict';
 
-var SyntheticMouseEvent = __webpack_require__(50);
+var SyntheticMouseEvent = __webpack_require__(51);
 
 /**
  * @interface WheelEvent
@@ -46878,7 +47688,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ },
-/* 274 */
+/* 284 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -46928,7 +47738,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ },
-/* 275 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46945,7 +47755,7 @@ module.exports = adler32;
 
 'use strict';
 
-var CSSProperty = __webpack_require__(106);
+var CSSProperty = __webpack_require__(107);
 var warning = __webpack_require__(2);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -47014,7 +47824,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 276 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47033,11 +47843,11 @@ module.exports = dangerousStyleValue;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactCurrentOwner = __webpack_require__(17);
+var ReactCurrentOwner = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstanceMap = __webpack_require__(37);
+var ReactInstanceMap = __webpack_require__(38);
 
-var getHostComponentFromComposite = __webpack_require__(127);
+var getHostComponentFromComposite = __webpack_require__(128);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -47081,7 +47891,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 277 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47164,7 +47974,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 278 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47272,7 +48082,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ },
-/* 279 */
+/* 289 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -47352,7 +48162,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ },
-/* 280 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47459,7 +48269,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ },
-/* 281 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47504,7 +48314,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 282 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47521,7 +48331,7 @@ module.exports = onlyChild;
 
 'use strict';
 
-var escapeTextContentForBrowser = __webpack_require__(51);
+var escapeTextContentForBrowser = __webpack_require__(52);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -47536,7 +48346,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ },
-/* 283 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47553,12 +48363,12 @@ module.exports = quoteAttributeValueForBrowser;
 
 'use strict';
 
-var ReactMount = __webpack_require__(118);
+var ReactMount = __webpack_require__(119);
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 284 */
+/* 294 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -47587,11 +48397,11 @@ thunk.withExtraArgument = createThunkMiddleware;
 exports['default'] = thunk;
 
 /***/ },
-/* 285 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(133);
 /* harmony export (immutable) */ exports["a"] = applyMiddleware;
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -47643,7 +48453,7 @@ function applyMiddleware() {
 }
 
 /***/ },
-/* 286 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47697,13 +48507,13 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ },
-/* 287 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(134);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(135);
 /* harmony export (immutable) */ exports["a"] = combineReducers;
 
 
@@ -47837,7 +48647,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 288 */
+/* 298 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -47850,16 +48660,16 @@ module.exports = function (str) {
 
 
 /***/ },
-/* 289 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(155);
+var content = __webpack_require__(162);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
+var update = __webpack_require__(34)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -47876,16 +48686,16 @@ if(false) {
 }
 
 /***/ },
-/* 290 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(156);
+var content = __webpack_require__(163);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
+var update = __webpack_require__(34)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -47902,16 +48712,16 @@ if(false) {
 }
 
 /***/ },
-/* 291 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(157);
+var content = __webpack_require__(164);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
+var update = __webpack_require__(34)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -47928,16 +48738,16 @@ if(false) {
 }
 
 /***/ },
-/* 292 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(158);
+var content = __webpack_require__(165);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
+var update = __webpack_require__(34)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -47954,16 +48764,16 @@ if(false) {
 }
 
 /***/ },
-/* 293 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(159);
+var content = __webpack_require__(166);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
+var update = __webpack_require__(34)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -47980,7 +48790,33 @@ if(false) {
 }
 
 /***/ },
-/* 294 */
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(167);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(34)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./../../../node_modules/less-loader/index.js!./styles.less", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./../../../node_modules/less-loader/index.js!./styles.less");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 /**
@@ -47997,9 +48833,9 @@ if (typeof window !== 'undefined') { // Browser window
   root = this;
 }
 
-var Emitter = __webpack_require__(154);
-var requestBase = __webpack_require__(295);
-var isObject = __webpack_require__(135);
+var Emitter = __webpack_require__(160);
+var requestBase = __webpack_require__(306);
+var isObject = __webpack_require__(136);
 
 /**
  * Noop.
@@ -48011,7 +48847,7 @@ function noop(){};
  * Expose `request`.
  */
 
-var request = module.exports = __webpack_require__(296).bind(null, Request);
+var request = module.exports = __webpack_require__(307).bind(null, Request);
 
 /**
  * Determine XHR.
@@ -48962,13 +49798,13 @@ request.put = function(url, data, fn){
 
 
 /***/ },
-/* 295 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(135);
+var isObject = __webpack_require__(136);
 
 /**
  * Clear previous timeout.
@@ -49340,7 +50176,7 @@ exports.send = function(data){
 
 
 /***/ },
-/* 296 */
+/* 307 */
 /***/ function(module, exports) {
 
 // The node and browser modules expose versions of this with the
@@ -49378,14 +50214,14 @@ module.exports = request;
 
 
 /***/ },
-/* 297 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(298);
+module.exports = __webpack_require__(309);
 
 
 /***/ },
-/* 298 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49395,7 +50231,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ponyfill = __webpack_require__(299);
+var _ponyfill = __webpack_require__(310);
 
 var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
@@ -49418,10 +50254,10 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(136)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54), __webpack_require__(138)(module)))
 
 /***/ },
-/* 299 */
+/* 310 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -49450,7 +50286,7 @@ function symbolObservablePonyfill(root) {
 };
 
 /***/ },
-/* 300 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -49486,199 +50322,10 @@ if (!rng) {
 module.exports = rng;
 
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54)))
 
 /***/ },
-/* 301 */
-/***/ function(module, exports, __webpack_require__) {
-
-//     uuid.js
-//
-//     Copyright (c) 2010-2012 Robert Kieffer
-//     MIT License - http://opensource.org/licenses/mit-license.php
-
-// Unique ID creation requires a high quality random # generator.  We feature
-// detect to determine the best RNG source, normalizing to a function that
-// returns 128-bits of randomness, since that's what's usually required
-var _rng = __webpack_require__(300);
-
-// Maps for number <-> hex string conversion
-var _byteToHex = [];
-var _hexToByte = {};
-for (var i = 0; i < 256; i++) {
-  _byteToHex[i] = (i + 0x100).toString(16).substr(1);
-  _hexToByte[_byteToHex[i]] = i;
-}
-
-// **`parse()` - Parse a UUID into it's component bytes**
-function parse(s, buf, offset) {
-  var i = (buf && offset) || 0, ii = 0;
-
-  buf = buf || [];
-  s.toLowerCase().replace(/[0-9a-f]{2}/g, function(oct) {
-    if (ii < 16) { // Don't overflow!
-      buf[i + ii++] = _hexToByte[oct];
-    }
-  });
-
-  // Zero out remaining bytes if string was short
-  while (ii < 16) {
-    buf[i + ii++] = 0;
-  }
-
-  return buf;
-}
-
-// **`unparse()` - Convert UUID byte array (ala parse()) into a string**
-function unparse(buf, offset) {
-  var i = offset || 0, bth = _byteToHex;
-  return  bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]] + '-' +
-          bth[buf[i++]] + bth[buf[i++]] + '-' +
-          bth[buf[i++]] + bth[buf[i++]] + '-' +
-          bth[buf[i++]] + bth[buf[i++]] + '-' +
-          bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]];
-}
-
-// **`v1()` - Generate time-based UUID**
-//
-// Inspired by https://github.com/LiosK/UUID.js
-// and http://docs.python.org/library/uuid.html
-
-// random #'s we need to init node and clockseq
-var _seedBytes = _rng();
-
-// Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
-var _nodeId = [
-  _seedBytes[0] | 0x01,
-  _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
-];
-
-// Per 4.2.2, randomize (14 bit) clockseq
-var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
-
-// Previous uuid creation time
-var _lastMSecs = 0, _lastNSecs = 0;
-
-// See https://github.com/broofa/node-uuid for API details
-function v1(options, buf, offset) {
-  var i = buf && offset || 0;
-  var b = buf || [];
-
-  options = options || {};
-
-  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
-
-  // UUID timestamps are 100 nano-second units since the Gregorian epoch,
-  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
-  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
-  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
-  var msecs = options.msecs !== undefined ? options.msecs : new Date().getTime();
-
-  // Per 4.2.1.2, use count of uuid's generated during the current clock
-  // cycle to simulate higher resolution clock
-  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
-
-  // Time since last uuid creation (in msecs)
-  var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
-
-  // Per 4.2.1.2, Bump clockseq on clock regression
-  if (dt < 0 && options.clockseq === undefined) {
-    clockseq = clockseq + 1 & 0x3fff;
-  }
-
-  // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
-  // time interval
-  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
-    nsecs = 0;
-  }
-
-  // Per 4.2.1.2 Throw error if too many uuids are requested
-  if (nsecs >= 10000) {
-    throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
-  }
-
-  _lastMSecs = msecs;
-  _lastNSecs = nsecs;
-  _clockseq = clockseq;
-
-  // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
-  msecs += 12219292800000;
-
-  // `time_low`
-  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
-  b[i++] = tl >>> 24 & 0xff;
-  b[i++] = tl >>> 16 & 0xff;
-  b[i++] = tl >>> 8 & 0xff;
-  b[i++] = tl & 0xff;
-
-  // `time_mid`
-  var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
-  b[i++] = tmh >>> 8 & 0xff;
-  b[i++] = tmh & 0xff;
-
-  // `time_high_and_version`
-  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
-  b[i++] = tmh >>> 16 & 0xff;
-
-  // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
-  b[i++] = clockseq >>> 8 | 0x80;
-
-  // `clock_seq_low`
-  b[i++] = clockseq & 0xff;
-
-  // `node`
-  var node = options.node || _nodeId;
-  for (var n = 0; n < 6; n++) {
-    b[i + n] = node[n];
-  }
-
-  return buf ? buf : unparse(b);
-}
-
-// **`v4()` - Generate random UUID**
-
-// See https://github.com/broofa/node-uuid for API details
-function v4(options, buf, offset) {
-  // Deprecated - 'format' argument, as supported in v1.2
-  var i = buf && offset || 0;
-
-  if (typeof(options) == 'string') {
-    buf = options == 'binary' ? new Array(16) : null;
-    options = null;
-  }
-  options = options || {};
-
-  var rnds = options.random || (options.rng || _rng)();
-
-  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
-  rnds[6] = (rnds[6] & 0x0f) | 0x40;
-  rnds[8] = (rnds[8] & 0x3f) | 0x80;
-
-  // Copy bytes to buffer, if provided
-  if (buf) {
-    for (var ii = 0; ii < 16; ii++) {
-      buf[i + ii] = rnds[ii];
-    }
-  }
-
-  return buf || unparse(rnds);
-}
-
-// Export public API
-var uuid = v4;
-uuid.v1 = v1;
-uuid.v4 = v4;
-uuid.parse = parse;
-uuid.unparse = unparse;
-
-module.exports = uuid;
-
-
-/***/ },
-/* 302 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49746,561 +50393,12 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 303 */
+/* 313 */
 /***/ function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
 
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
-
-/***/ },
-/* 304 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Root__ = __webpack_require__(137);
-
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Root__["a" /* default */], null), document.getElementById('root'));
-
-/***/ },
-/* 305 */
-/***/ function(module, exports) {
-
-var charenc = {
-  // UTF-8 encoding
-  utf8: {
-    // Convert a string to a byte array
-    stringToBytes: function(str) {
-      return charenc.bin.stringToBytes(unescape(encodeURIComponent(str)));
-    },
-
-    // Convert a byte array to a string
-    bytesToString: function(bytes) {
-      return decodeURIComponent(escape(charenc.bin.bytesToString(bytes)));
-    }
-  },
-
-  // Binary encoding
-  bin: {
-    // Convert a string to a byte array
-    stringToBytes: function(str) {
-      for (var bytes = [], i = 0; i < str.length; i++)
-        bytes.push(str.charCodeAt(i) & 0xFF);
-      return bytes;
-    },
-
-    // Convert a byte array to a string
-    bytesToString: function(bytes) {
-      for (var str = [], i = 0; i < bytes.length; i++)
-        str.push(String.fromCharCode(bytes[i]));
-      return str.join('');
-    }
-  }
-};
-
-module.exports = charenc;
-
-
-/***/ },
-/* 306 */,
-/* 307 */
-/***/ function(module, exports) {
-
-(function() {
-  var base64map
-      = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
-
-  crypt = {
-    // Bit-wise rotation left
-    rotl: function(n, b) {
-      return (n << b) | (n >>> (32 - b));
-    },
-
-    // Bit-wise rotation right
-    rotr: function(n, b) {
-      return (n << (32 - b)) | (n >>> b);
-    },
-
-    // Swap big-endian to little-endian and vice versa
-    endian: function(n) {
-      // If number given, swap endian
-      if (n.constructor == Number) {
-        return crypt.rotl(n, 8) & 0x00FF00FF | crypt.rotl(n, 24) & 0xFF00FF00;
-      }
-
-      // Else, assume array and swap all items
-      for (var i = 0; i < n.length; i++)
-        n[i] = crypt.endian(n[i]);
-      return n;
-    },
-
-    // Generate an array of any length of random bytes
-    randomBytes: function(n) {
-      for (var bytes = []; n > 0; n--)
-        bytes.push(Math.floor(Math.random() * 256));
-      return bytes;
-    },
-
-    // Convert a byte array to big-endian 32-bit words
-    bytesToWords: function(bytes) {
-      for (var words = [], i = 0, b = 0; i < bytes.length; i++, b += 8)
-        words[b >>> 5] |= bytes[i] << (24 - b % 32);
-      return words;
-    },
-
-    // Convert big-endian 32-bit words to a byte array
-    wordsToBytes: function(words) {
-      for (var bytes = [], b = 0; b < words.length * 32; b += 8)
-        bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF);
-      return bytes;
-    },
-
-    // Convert a byte array to a hex string
-    bytesToHex: function(bytes) {
-      for (var hex = [], i = 0; i < bytes.length; i++) {
-        hex.push((bytes[i] >>> 4).toString(16));
-        hex.push((bytes[i] & 0xF).toString(16));
-      }
-      return hex.join('');
-    },
-
-    // Convert a hex string to a byte array
-    hexToBytes: function(hex) {
-      for (var bytes = [], c = 0; c < hex.length; c += 2)
-        bytes.push(parseInt(hex.substr(c, 2), 16));
-      return bytes;
-    },
-
-    // Convert a byte array to a base-64 string
-    bytesToBase64: function(bytes) {
-      for (var base64 = [], i = 0; i < bytes.length; i += 3) {
-        var triplet = (bytes[i] << 16) | (bytes[i + 1] << 8) | bytes[i + 2];
-        for (var j = 0; j < 4; j++)
-          if (i * 8 + j * 6 <= bytes.length * 8)
-            base64.push(base64map.charAt((triplet >>> 6 * (3 - j)) & 0x3F));
-          else
-            base64.push('=');
-      }
-      return base64.join('');
-    },
-
-    // Convert a base-64 string to a byte array
-    base64ToBytes: function(base64) {
-      // Remove non-base-64 characters
-      base64 = base64.replace(/[^A-Z0-9+\/]/ig, '');
-
-      for (var bytes = [], i = 0, imod4 = 0; i < base64.length;
-          imod4 = ++i % 4) {
-        if (imod4 == 0) continue;
-        bytes.push(((base64map.indexOf(base64.charAt(i - 1))
-            & (Math.pow(2, -2 * imod4 + 8) - 1)) << (imod4 * 2))
-            | (base64map.indexOf(base64.charAt(i)) >>> (6 - imod4 * 2)));
-      }
-      return bytes;
-    }
-  };
-
-  module.exports = crypt;
-})();
-
-
-/***/ },
-/* 308 */
-/***/ function(module, exports) {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
- * @license  MIT
- */
-
-// The _isBuffer check is for Safari 5-7 support, because it's missing
-// Object.prototype.constructor. Remove this eventually
-module.exports = function (obj) {
-  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
-}
-
-function isBuffer (obj) {
-  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-// For Node v0.10 support. Remove this eventually.
-function isSlowBuffer (obj) {
-  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
-}
-
-
-/***/ },
-/* 309 */
-/***/ function(module, exports, __webpack_require__) {
-
-(function(){
-  var crypt = __webpack_require__(307),
-      utf8 = __webpack_require__(305).utf8,
-      isBuffer = __webpack_require__(308),
-      bin = __webpack_require__(305).bin,
-
-  // The core
-  md5 = function (message, options) {
-    // Convert to byte array
-    if (message.constructor == String)
-      if (options && options.encoding === 'binary')
-        message = bin.stringToBytes(message);
-      else
-        message = utf8.stringToBytes(message);
-    else if (isBuffer(message))
-      message = Array.prototype.slice.call(message, 0);
-    else if (!Array.isArray(message))
-      message = message.toString();
-    // else, assume byte array already
-
-    var m = crypt.bytesToWords(message),
-        l = message.length * 8,
-        a =  1732584193,
-        b = -271733879,
-        c = -1732584194,
-        d =  271733878;
-
-    // Swap endian
-    for (var i = 0; i < m.length; i++) {
-      m[i] = ((m[i] <<  8) | (m[i] >>> 24)) & 0x00FF00FF |
-             ((m[i] << 24) | (m[i] >>>  8)) & 0xFF00FF00;
-    }
-
-    // Padding
-    m[l >>> 5] |= 0x80 << (l % 32);
-    m[(((l + 64) >>> 9) << 4) + 14] = l;
-
-    // Method shortcuts
-    var FF = md5._ff,
-        GG = md5._gg,
-        HH = md5._hh,
-        II = md5._ii;
-
-    for (var i = 0; i < m.length; i += 16) {
-
-      var aa = a,
-          bb = b,
-          cc = c,
-          dd = d;
-
-      a = FF(a, b, c, d, m[i+ 0],  7, -680876936);
-      d = FF(d, a, b, c, m[i+ 1], 12, -389564586);
-      c = FF(c, d, a, b, m[i+ 2], 17,  606105819);
-      b = FF(b, c, d, a, m[i+ 3], 22, -1044525330);
-      a = FF(a, b, c, d, m[i+ 4],  7, -176418897);
-      d = FF(d, a, b, c, m[i+ 5], 12,  1200080426);
-      c = FF(c, d, a, b, m[i+ 6], 17, -1473231341);
-      b = FF(b, c, d, a, m[i+ 7], 22, -45705983);
-      a = FF(a, b, c, d, m[i+ 8],  7,  1770035416);
-      d = FF(d, a, b, c, m[i+ 9], 12, -1958414417);
-      c = FF(c, d, a, b, m[i+10], 17, -42063);
-      b = FF(b, c, d, a, m[i+11], 22, -1990404162);
-      a = FF(a, b, c, d, m[i+12],  7,  1804603682);
-      d = FF(d, a, b, c, m[i+13], 12, -40341101);
-      c = FF(c, d, a, b, m[i+14], 17, -1502002290);
-      b = FF(b, c, d, a, m[i+15], 22,  1236535329);
-
-      a = GG(a, b, c, d, m[i+ 1],  5, -165796510);
-      d = GG(d, a, b, c, m[i+ 6],  9, -1069501632);
-      c = GG(c, d, a, b, m[i+11], 14,  643717713);
-      b = GG(b, c, d, a, m[i+ 0], 20, -373897302);
-      a = GG(a, b, c, d, m[i+ 5],  5, -701558691);
-      d = GG(d, a, b, c, m[i+10],  9,  38016083);
-      c = GG(c, d, a, b, m[i+15], 14, -660478335);
-      b = GG(b, c, d, a, m[i+ 4], 20, -405537848);
-      a = GG(a, b, c, d, m[i+ 9],  5,  568446438);
-      d = GG(d, a, b, c, m[i+14],  9, -1019803690);
-      c = GG(c, d, a, b, m[i+ 3], 14, -187363961);
-      b = GG(b, c, d, a, m[i+ 8], 20,  1163531501);
-      a = GG(a, b, c, d, m[i+13],  5, -1444681467);
-      d = GG(d, a, b, c, m[i+ 2],  9, -51403784);
-      c = GG(c, d, a, b, m[i+ 7], 14,  1735328473);
-      b = GG(b, c, d, a, m[i+12], 20, -1926607734);
-
-      a = HH(a, b, c, d, m[i+ 5],  4, -378558);
-      d = HH(d, a, b, c, m[i+ 8], 11, -2022574463);
-      c = HH(c, d, a, b, m[i+11], 16,  1839030562);
-      b = HH(b, c, d, a, m[i+14], 23, -35309556);
-      a = HH(a, b, c, d, m[i+ 1],  4, -1530992060);
-      d = HH(d, a, b, c, m[i+ 4], 11,  1272893353);
-      c = HH(c, d, a, b, m[i+ 7], 16, -155497632);
-      b = HH(b, c, d, a, m[i+10], 23, -1094730640);
-      a = HH(a, b, c, d, m[i+13],  4,  681279174);
-      d = HH(d, a, b, c, m[i+ 0], 11, -358537222);
-      c = HH(c, d, a, b, m[i+ 3], 16, -722521979);
-      b = HH(b, c, d, a, m[i+ 6], 23,  76029189);
-      a = HH(a, b, c, d, m[i+ 9],  4, -640364487);
-      d = HH(d, a, b, c, m[i+12], 11, -421815835);
-      c = HH(c, d, a, b, m[i+15], 16,  530742520);
-      b = HH(b, c, d, a, m[i+ 2], 23, -995338651);
-
-      a = II(a, b, c, d, m[i+ 0],  6, -198630844);
-      d = II(d, a, b, c, m[i+ 7], 10,  1126891415);
-      c = II(c, d, a, b, m[i+14], 15, -1416354905);
-      b = II(b, c, d, a, m[i+ 5], 21, -57434055);
-      a = II(a, b, c, d, m[i+12],  6,  1700485571);
-      d = II(d, a, b, c, m[i+ 3], 10, -1894986606);
-      c = II(c, d, a, b, m[i+10], 15, -1051523);
-      b = II(b, c, d, a, m[i+ 1], 21, -2054922799);
-      a = II(a, b, c, d, m[i+ 8],  6,  1873313359);
-      d = II(d, a, b, c, m[i+15], 10, -30611744);
-      c = II(c, d, a, b, m[i+ 6], 15, -1560198380);
-      b = II(b, c, d, a, m[i+13], 21,  1309151649);
-      a = II(a, b, c, d, m[i+ 4],  6, -145523070);
-      d = II(d, a, b, c, m[i+11], 10, -1120210379);
-      c = II(c, d, a, b, m[i+ 2], 15,  718787259);
-      b = II(b, c, d, a, m[i+ 9], 21, -343485551);
-
-      a = (a + aa) >>> 0;
-      b = (b + bb) >>> 0;
-      c = (c + cc) >>> 0;
-      d = (d + dd) >>> 0;
-    }
-
-    return crypt.endian([a, b, c, d]);
-  };
-
-  // Auxiliary functions
-  md5._ff  = function (a, b, c, d, x, s, t) {
-    var n = a + (b & c | ~b & d) + (x >>> 0) + t;
-    return ((n << s) | (n >>> (32 - s))) + b;
-  };
-  md5._gg  = function (a, b, c, d, x, s, t) {
-    var n = a + (b & d | c & ~d) + (x >>> 0) + t;
-    return ((n << s) | (n >>> (32 - s))) + b;
-  };
-  md5._hh  = function (a, b, c, d, x, s, t) {
-    var n = a + (b ^ c ^ d) + (x >>> 0) + t;
-    return ((n << s) | (n >>> (32 - s))) + b;
-  };
-  md5._ii  = function (a, b, c, d, x, s, t) {
-    var n = a + (c ^ (b | ~d)) + (x >>> 0) + t;
-    return ((n << s) | (n >>> (32 - s))) + b;
-  };
-
-  // Package private blocksize
-  md5._blocksize = 16;
-  md5._digestsize = 16;
-
-  module.exports = function (message, options) {
-    if (message === undefined || message === null)
-      throw new Error('Illegal argument ' + message);
-
-    var digestbytes = crypt.wordsToBytes(md5(message, options));
-    return options && options.asBytes ? digestbytes :
-        options && options.asString ? bin.bytesToString(digestbytes) :
-        crypt.bytesToHex(digestbytes);
-  };
-
-})();
-
-
-/***/ },
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_md5__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_md5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_uuid__);
-/* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getCurrentUser; });
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-var createName = function createName() {
-  var firstNames = ['Hank', 'Phil', 'Jamie', 'Krissy', 'Jemma', 'Cat', 'Doug', 'Gina', 'Marc', 'Sammie'];
-  var lastNames = ['Paulson', 'Kaperty', 'Shmitzz', 'Sorrell', 'the Great', 'Buffington', 'Wiserty', 'Camillo', 'Grobby', 'Cruncher'];
-  var firstName = firstNames[__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.random(0, firstNames.length - 1)];
-  var lastName = lastNames[__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.random(0, lastNames.length - 1)];
-  return firstName + ' ' + lastName;
-};
-
-var createUser = function createUser() {
-  var id = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_uuid__["v4"])();
-
-  return {
-    id: id,
-    imageUrl: 'https://gravatar.com/avatar/' + __WEBPACK_IMPORTED_MODULE_1_md5___default()(id) + '?d=monsterid&f=y',
-    name: createName()
-  };
-};
-
-var currentUser = function currentUser() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : createUser();
-  var action = arguments[1];
-
-  return state;
-};
-
-var byId = function byId() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments[1];
-
-  switch (action.type) {
-    case 'ADD_USER':
-      return _extends({}, state, _defineProperty({}, action.user.id, action.user));
-    default:
-      return state;
-  }
-};
-
-/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_redux__["combineReducers"])({
-  byId: byId,
-  currentUser: currentUser
-});
-
-// Selectors
-
-var getCurrentUser = function getCurrentUser(state) {
-  return state.currentUser;
-};
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_reducers__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_less__);
-
-
-
-
-
-
-
-var getMessageHeaderExtraText = function getMessageHeaderExtraText(type) {
-  switch (type) {
-    case 'joinPing':
-      return 'joined the room';
-    case 'leavePing':
-      return 'left the room';
-    default:
-      return '';
-  }
-};
-
-var MessageHeader = function MessageHeader(_ref) {
-  var currentUser = _ref.currentUser;
-  var id = _ref.id;
-  var type = _ref.type;
-  var user = _ref.user;
-
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.header },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.userImg, src: user.imageUrl, alt: user.name }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'span',
-      { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.userName },
-      currentUser && currentUser.id == user.id ? 'You' : user.name
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'span',
-      { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.extraText },
-      getMessageHeaderExtraText(type)
-    )
-  );
-};
-
-var Message = function Message(_ref2) {
-  var content = _ref2.content;
-  var currentUser = _ref2.currentUser;
-  var id = _ref2.id;
-  var type = _ref2.type;
-  var user = _ref2.user;
-
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.message },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MessageHeader, { currentUser: currentUser, id: id, type: type, user: user }),
-    content && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'div',
-      { className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.content },
-      content
-    )
-  );
-};
-
-var mapStateToProps = function mapStateToProps(state, ownProps) {
-  return {
-    currentUser: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_app_reducers__["g" /* getCurrentUser */])(state)
-  };
-};
-
-/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps)(Message);
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(33)();
-// imports
-
-
-// module
-exports.push([module.i, ".styles__message___1HQ_9 {\n  width: 320px;\n  padding: 10px;\n  margin-bottom: 15px;\n  background-color: rgba(240, 240, 240, 0.5);\n  border-radius: 5px;\n}\n.styles__message___1HQ_9:hover {\n  background-color: rgba(240, 240, 240, 0.9);\n}\n.styles__header___3sM1s {\n  position: relative;\n  font-size: 12px;\n  font-weight: 600;\n}\n.styles__userImg___396rs {\n  height: 20px;\n  width: 20px;\n  border-radius: 100%;\n  margin-right: 2px;\n}\n.styles__userName___2bxc4 {\n  display: inline-block;\n  position: relative;\n  bottom: 6px;\n  margin-left: 5px;\n}\n.styles__extraText___3XZo4 {\n  display: inline-block;\n  position: relative;\n  bottom: 6px;\n  margin-left: 5px;\n}\n.styles__content___2h995 {\n  margin-left: 28px;\n}\n", ""]);
-
-// exports
-exports.locals = {
-	"message": "styles__message___1HQ_9",
-	"header": "styles__header___3sM1s",
-	"userImg": "styles__userImg___396rs",
-	"userName": "styles__userName___2bxc4",
-	"extraText": "styles__extraText___3XZo4",
-	"content": "styles__content___2h995"
-};
-
-/***/ },
-/* 313 */
-/***/ function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(312);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(40)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!./../../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./../../../node_modules/less-loader/index.js!./styles.less", function() {
-			var newContent = require("!!./../../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./../../../node_modules/less-loader/index.js!./styles.less");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ },
 /* 314 */
@@ -50309,117 +50407,15 @@ if(false) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_actions__ = __webpack_require__(32);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Root__ = __webpack_require__(139);
 
 
 
 
 
-
-var SessionBar = function (_React$Component) {
-  _inherits(SessionBar, _React$Component);
-
-  function SessionBar() {
-    _classCallCheck(this, SessionBar);
-
-    return _possibleConstructorReturn(this, (SessionBar.__proto__ || Object.getPrototypeOf(SessionBar)).apply(this, arguments));
-  }
-
-  _createClass(SessionBar, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.props.dispatchSignalJoinPing();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null);
-    }
-  }]);
-
-  return SessionBar;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {};
-};
-
-var mapDispatchToProps = {
-  dispatchSignalJoinPing: __WEBPACK_IMPORTED_MODULE_2_app_actions__["b" /* signalJoinPing */]
-};
-
-/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(SessionBar);
-
-/***/ },
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(23);
-/* unused harmony export get */
-/* unused harmony export getByUserId */
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-var byId = function byId() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments[1];
-
-  switch (action.type) {
-    case 'ADD_CONNECTION':
-      return _extends({}, state, _defineProperty({}, action.connection.id, action.connection));
-    case 'REMOVE_CONNECTION':
-      return _.omit(state, action.connection.id);
-    default:
-      return state;
-  }
-};
-
-var idByUserId = function idByUserId() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments[1];
-
-  switch (action.type) {
-    case 'ADD_USER':
-      return _extends({}, state, _defineProperty({}, action.user.id, action.connectionId));
-    case 'REMOVE_CONNECTION':
-      return _.omitBy(state, function (value) {
-        return value !== action.connection.id;
-      });
-    default:
-      return state;
-  }
-};
-
-/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
-  byId: byId,
-  idByUserId: idByUserId
-});
-
-// Selectors
-
-var get = function get(state, id) {
-  return state.byId[id] || null;
-};
-
-var getByUserId = function getByUserId(state, userId) {
-  return get(state, state.idByUserId[userId]);
-};
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Root__["a" /* default */], null), document.getElementById('root'));
 
 /***/ }
 /******/ ]);

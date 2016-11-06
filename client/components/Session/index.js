@@ -10,7 +10,7 @@ import {
   handleStreamCreated,
   handleStreamDestroyed,
 } from 'app/actions'
-import Feed from 'app/components/Feed'
+import Theater from 'app/components/Theater'
 import MessageBar from 'app/components/MessageBar'
 import { getSession } from 'app/reducers'
 
@@ -22,7 +22,7 @@ class Session extends React.Component {
   componentWillReceiveProps(newProps) {
     const { session } = newProps
 
-    // Register handlers if session
+    // Register handlers on session creation
     if (!this.props.session && session) {
       session.on({
         connectionCreated: this.props.dispatchHandleConnectionCreated,
@@ -39,7 +39,7 @@ class Session extends React.Component {
     const { session } = this.props
 
     return <div>
-      {session && <Feed />}
+      {session && <Theater />}
       {session && <MessageBar />}
     </div>
   }
