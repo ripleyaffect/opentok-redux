@@ -1,16 +1,29 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { subscribeToStream } from 'app/actions'
+import { subscribeToStream, unsubscribeFromStream } from 'app/actions'
 import { getStream, getStreamNodeId } from 'app/reducers'
 
 class Subscriber extends React.Component {
   componentDidMount() {
-    if (this.props.stream) {
-      this.props.dispatchSubscribeToStream(this.props.stream, this.props.options)
+    const { dispatchSubscribeToStream, options, stream } = this.props
+
+    if (stream) {
+      dispatchSubscribeToStream(stream, options)
     }
     else {
       console.log('No stream to subscribe to')
+    }
+  }
+
+  componentWillUnmount() {
+    const { dispatchUnsubscribeFromStream, stream } = this.props
+
+    if (stream) {
+      dispatchUnsubscribeFromStream(stream)
+    }
+    else {
+      console.log('No stream to unsubscribe from')
     }
   }
 
@@ -29,6 +42,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = {
   dispatchSubscribeToStream: subscribeToStream,
+  dispatchUnsubscribeFromStream: unsubscribeFromStream,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Subscriber)

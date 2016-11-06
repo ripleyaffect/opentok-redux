@@ -1,14 +1,15 @@
 import _ from 'lodash'
 import { combineReducers } from 'redux'
 
-export const byId = (state={}, action) => {
+export const byStreamId = (state={}, action) => {
   switch (action.type) {
-    case 'STREAM_SUBSCRIBER_CREATED':
+    case 'ADD_SUBSCRIBER':
       return {
         ...state,
         [action.stream.id]: action.subscriber
       }
     case 'REMOVE_STREAM':
+    case 'REMOVE_SUBSCRIBER':
       return _.omit(state, action.stream.id)
     default:
       return state
@@ -16,11 +17,11 @@ export const byId = (state={}, action) => {
 }
 
 export default combineReducers({
-  byId,
+  byStreamId,
 })
 
 // Selectors
 
-export const get = (state, id) => {
-  return state.byId[id] || null
+export const get = (state, streamId) => {
+  return state.byStreamId[streamId] || null
 }

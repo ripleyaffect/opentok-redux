@@ -1,4 +1,18 @@
+import _ from 'lodash'
 import { combineReducers } from 'redux'
+
+const activeId = (state=null, action) => {
+  switch (action.type) {
+    case 'SET_ACTIVE_CONNECTION':
+      console.log(state, action)
+      return !state || (action.timestamp > state.timestamp) ?
+        _.pick(action, ['connectionId', 'timestamp']) : state
+    case 'REMOVE_ACTIVE_CONNECTION':
+      return null
+    default:
+      return state
+  }
+}
 
 const byId = (state={}, action) => {
   switch (action.type) {
@@ -29,6 +43,7 @@ const idByUserId = (state={}, action) => {
 }
 
 export default combineReducers({
+  activeId,
   byId,
   idByUserId,
 })
@@ -36,6 +51,15 @@ export default combineReducers({
 // Selectors
 
 export const get = (state, id) => state.byId[id] || null
+
+export const getActive = (state) => get(state, getActiveId(state))
+
+export const getActiveId = (state) => {
+  return (state.activeId || {}).connectionId || null
+}
+export const getActiveTimestamp = (state) => {
+  return (state.activeId || {}).timestamp || null
+}
 
 export const getByUserId = (state, userId) =>
   get(state, state.idByUserId[userId])

@@ -37,22 +37,36 @@ export const idsByConnectionId = (state={}, action) => {
   }
 }
 
+export const subscribersByStreamId = (state={}, action) => {
+  switch (action.type) {
+    case 'ADD_SUBSCRIBER':
+      return {
+        ...state,
+        [action.stream.id]: action.subscriber
+      }
+    case 'REMOVE_STREAM':
+    case 'REMOVE_SUBSCRIBER':
+      return _.omit(state, action.stream.id)
+    default:
+      return state
+  }
+}
+
+// Selectors
+
 export default combineReducers({
   byId,
   idsByConnectionId,
+  subscribersByStreamId,
 })
 
 // Selectors
 
-export const get = (state, id) => {
-  return state.byId[id] || null
-}
+export const get = (state, id) => state.byId[id] || null
 
-export const getAll = (state) => {
-  return _.values(state.byId)
-}
+export const getAll = (state) => _.values(state.byId)
 
-export const getConnectionStreams = (state, connectionId) => {
+export const getForConnection = (state, connectionId) => {
   if (!connectionId) {
     console.log('Must pass a connection id to get connection streams')
     return []
@@ -67,4 +81,8 @@ export const getNodeId = (state, stream) => {
     return null
   }
   return `stream-${stream.id}`
+}
+
+export const getSubscriber = (state, stream) => {
+  return state.subscribersByStreamId[stream.id] || null
 }

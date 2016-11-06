@@ -5,7 +5,6 @@ import messages, * as fromMessages from './messages'
 import publishers from './publishers'
 import session, * as fromSession from './session'
 import streams, * as fromStreams from './streams'
-import subscribers from './subscribers'
 import users, * as fromUsers from './users'
 
 export const app = combineReducers({
@@ -14,14 +13,16 @@ export const app = combineReducers({
   publishers,
   session,
   streams,
-  subscribers,
   users,
 })
 
 // Selectors
 
-export const getCurrentUser = (state) => {
-  return fromUsers.getCurrentUser(state.users)
+export const getActiveConnectionId = (state) => {
+  return fromConnections.getActiveId(state.connections)
+}
+export const getActiveConnectionTimestamp = (state) => {
+  return fromConnections.getActiveTimestamp(state.connections)
 }
 
 export const getAllMessages = (state) => {
@@ -44,6 +45,10 @@ export const getSessionToken = (state) => {
   return fromSession.getToken(state.session)
 }
 
+
+export const getConnectionStreams = (state, connectionId) => {
+  return fromStreams.getForConnection(state.streams, connectionId)
+}
 export const getStream = (state, streamId) => {
   return fromStreams.get(state.streams, streamId)
 }
@@ -52,4 +57,15 @@ export const getAllStreams = (state) => {
 }
 export const getStreamNodeId = (state, stream) => {
   return fromStreams.getNodeId(state.streams, stream)
+}
+export const getStreamSubscriber = (state, stream) => {
+  return fromStreams.getSubscriber(state.streams, stream)
+}
+
+export const getCurrentUser = (state) => {
+  return fromUsers.getCurrentUser(state.users)
+}
+
+export const getIsActiveConnection = (state) => {
+  return getActiveConnectionId(state) === getSessionConnectionId(state)
 }

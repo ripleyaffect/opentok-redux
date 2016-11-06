@@ -3,7 +3,9 @@ import superagent from 'superagent'
 import { v4 } from 'uuid'
 
 import {
+  getActiveConnectionTimestamp,
   getCurrentUser,
+  getIsActiveConnection,
   getSession,
   getSessionConnectionId,
   getSessionId,
@@ -106,9 +108,24 @@ export const subscribeToStream = (stream, options={}) => {
       stream, getStreamNodeId(state, stream), finalOptions)
 
     dispatch({
-      type: 'STREAM_SUBSCRIBER_CREATED',
+      type: 'ADD_SUBSCRIBER',
       stream,
       subscriber,
+    })
+  }
+}
+
+export const unsubscribeFromStream = (stream) => {
+  return (dispatch, getState) => {
+    const state = getState()
+    const session = getSession(state)
+    const subscriber = getStreamSubscriber(state, stream)
+
+    session.usubscribe(subscriber)
+
+    dispatch({
+      type: 'REMOVE_SUBSCRIBER',
+      stream,
     })
   }
 }
@@ -117,6 +134,7 @@ export const handleConnectionCreated = (event) => {
   return (dispatch, getState) => {
     const state = getState()
     const connectionId = getSessionConnectionId(state)
+    const isActiveConnection = getIsActiveConnection(state)
     const session = getSession(state)
     const user = getCurrentUser(state)
 
@@ -134,6 +152,17 @@ export const handleConnectionCreated = (event) => {
         user,
       }
     })
+
+    // Tell new connection if this connection is the active one
+    if (isActiveConnection) {
+      session.signal({
+        type: 'setActiveConnectionId',
+        data: {
+          connectionId,
+          timestamp: getActiveConnectionTimestamp(state),
+        }
+      })
+    }
 
     dispatch({
       connection: event.connection,
@@ -157,10 +186,17 @@ export const handleSignalMessage = (event) => ({
   type: 'ADD_MESSAGE',
 })
 
-export const handleStreamCreated = (event) => ({
-  stream: event.stream,
-  type: 'ADD_STREAM',
+export const handleSignalSetActiveConnectionId = (event) => ({
+  ...event.data,
+  type: 'SET_ACTIVE_CONNECTION',
 })
+
+export const handleStreamCreated = (event) => {
+  return {
+    stream: event.stream,
+    type: 'ADD_STREAM',
+  }
+}
 
 export const handleStreamDestroyed = (event) => ({
   stream: event.stream,
@@ -197,10 +233,26 @@ export const signalMessage = (options) => {
       },
       type: 'message',
     })
+  }
+}
+
+export const signalSetActiveConnectionId = (connectionId) => {
+  return (dispatch, getState) => {
+    const session = getSession(getState())
+    const timestamp = Date.now()
+
+    session.signal({
+      type: 'setActiveConnectionId',
+      data: {
+        connectionId,
+        timestamp,
+      }
+    })
 
     dispatch({
-      message,
-      type: 'ADD_MESSAGE',
+      connectionId,
+      timestamp,
+      type: 'SET_ACTIVE_CONNECTION',
     })
   }
 }
