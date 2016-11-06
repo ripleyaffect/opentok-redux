@@ -70,6 +70,9 @@ export const getCurrentUser = (state) => {
 export const getAllUsers = (state) => {
   return fromUsers.getAll(state.users)
 }
+export const getUserByConnectionId = (state, connectionId) => {
+  return fromUsers.getByConnectionId(state.users, connectionId)
+}
 
 export const getIsActiveConnection = (state) => {
   return getActiveConnectionId(state) === getSessionConnectionId(state)

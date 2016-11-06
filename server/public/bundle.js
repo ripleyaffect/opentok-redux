@@ -896,23 +896,24 @@ exports.connect = _connect2["default"];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__session__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__streams__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__users__ = __webpack_require__(163);
-/* harmony export (binding) */ __webpack_require__.d(exports, "q", function() { return app; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "r", function() { return app; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "g", function() { return getActiveConnectionId; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "k", function() { return getActiveConnectionTimestamp; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "n", function() { return getAllMessages; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "p", function() { return getMessagesVisible; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "l", function() { return getActiveConnectionTimestamp; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "o", function() { return getAllMessages; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "q", function() { return getMessagesVisible; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getTokboxApiKey; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "h", function() { return getSessionConnectionId; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return getSession; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return getSessionId; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "c", function() { return getSessionToken; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "m", function() { return getConnectionStreams; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "l", function() { return getStream; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "n", function() { return getConnectionStreams; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "m", function() { return getStream; });
 /* unused harmony export getAllStreams */
 /* harmony export (binding) */ __webpack_require__.d(exports, "e", function() { return getStreamNodeId; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "f", function() { return getStreamSubscriber; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "j", function() { return getCurrentUser; });
-/* harmony export (binding) */ __webpack_require__.d(exports, "o", function() { return getAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "p", function() { return getAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "k", function() { return getUserByConnectionId; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "i", function() { return getIsActiveConnection; });
 
 
@@ -985,6 +986,9 @@ var getCurrentUser = function getCurrentUser(state) {
 };
 var getAllUsers = function getAllUsers(state) {
   return __WEBPACK_IMPORTED_MODULE_6__users__["c" /* getAll */](state.users);
+};
+var getUserByConnectionId = function getUserByConnectionId(state, connectionId) {
+  return __WEBPACK_IMPORTED_MODULE_6__users__["d" /* getByConnectionId */](state.users, connectionId);
 };
 
 var getIsActiveConnection = function getIsActiveConnection(state) {
@@ -3013,6 +3017,10 @@ var unsubscribeFromStream = function unsubscribeFromStream(stream) {
 };
 
 var addMessage = function addMessage(message) {
+  // Add id if needed
+  if (!message.id) {
+    message.id = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_uuid__["v4"])();
+  }
   return {
     message: message,
     type: 'ADD_MESSAGE'
@@ -3076,9 +3084,18 @@ var handleConnectionCreated = function handleConnectionCreated(event) {
 };
 
 var handleConnectionDestroyed = function handleConnectionDestroyed(event) {
-  return {
-    connection: event.connection,
-    type: 'REMOVE_CONNECTION'
+  return function (dispatch, getState) {
+    var user = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["k" /* getUserByConnectionId */])(getState(), event.connection.id);
+
+    if (user) {
+      dispatch(addMessage({ type: 'leavePing', user: user }));
+    }
+
+    dispatch({
+      connection: event.connection,
+      userId: user ? user.id : null,
+      type: 'REMOVE_CONNECTION'
+    });
   };
 };
 
@@ -3119,7 +3136,7 @@ var signalActiveConnectionPing = function signalActiveConnectionPing(to) {
     var state = getState();
     var connectionId = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["h" /* getSessionConnectionId */])(state);
     var session = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["d" /* getSession */])(state);
-    var timestamp = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["k" /* getActiveConnectionTimestamp */])(state);
+    var timestamp = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["l" /* getActiveConnectionTimestamp */])(state);
     var user = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["j" /* getCurrentUser */])(state);
 
     var signalData = {
@@ -33273,7 +33290,7 @@ var ActiveConnectionStreams = function ActiveConnectionStreams(_ref) {
 var mapStateToProps = function mapStateToProps(state, _ref2) {
   var connectionId = _ref2.connectionId;
   return {
-    streams: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["m" /* getConnectionStreams */])(state, connectionId)
+    streams: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["n" /* getConnectionStreams */])(state, connectionId)
   };
 };
 
@@ -33493,6 +33510,7 @@ var MessageBar = function (_React$Component) {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
             className: __WEBPACK_IMPORTED_MODULE_3__styles_less___default.a.message,
             onChange: this.handleMessageChange,
+            placeholder: 'Send a message',
             type: 'text',
             value: this.state.message })
         ),
@@ -33560,7 +33578,7 @@ var Messages = function Messages(_ref) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    messages: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["n" /* getAllMessages */])(state)
+    messages: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["o" /* getAllMessages */])(state)
   };
 };
 
@@ -33897,8 +33915,8 @@ var SessionBar = function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["o" /* getAllUsers */])(state),
-    messagesVisible: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["p" /* getMessagesVisible */])(state)
+    users: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["p" /* getAllUsers */])(state),
+    messagesVisible: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["q" /* getMessagesVisible */])(state)
   };
 };
 
@@ -33987,7 +34005,7 @@ var Subscriber = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  var stream = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["l" /* getStream */])(state, ownProps.streamId);
+  var stream = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["m" /* getStream */])(state, ownProps.streamId);
   return {
     nodeId: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_app_reducers__["e" /* getStreamNodeId */])(state, stream),
     stream: stream
@@ -34040,7 +34058,7 @@ var Theater = function Theater(_ref) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    messagesVisible: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_app_reducers__["p" /* getMessagesVisible */])(state)
+    messagesVisible: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_app_reducers__["q" /* getMessagesVisible */])(state)
   };
 };
 
@@ -34102,7 +34120,7 @@ var loggerMiddleware = function loggerMiddleware(store) {
 };
 
 /* harmony default export */ exports["a"] = function () {
-  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers__["q" /* app */], {}, composeEnhancers(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["applyMiddleware"])(__WEBPACK_IMPORTED_MODULE_1_redux_thunk___default.a, loggerMiddleware)));
+  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers__["r" /* app */], {}, composeEnhancers(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["applyMiddleware"])(__WEBPACK_IMPORTED_MODULE_1_redux_thunk___default.a, loggerMiddleware)));
 };
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
@@ -34517,8 +34535,10 @@ var getSubscriber = function getSubscriber(state, stream) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_uuid__);
-/* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getCurrentUser; });
+/* unused harmony export get */
 /* harmony export (binding) */ __webpack_require__.d(exports, "c", function() { return getAll; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "b", function() { return getCurrentUser; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return getByConnectionId; });
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -34560,6 +34580,24 @@ var byId = function byId() {
   switch (action.type) {
     case 'ADD_USER':
       return _extends({}, state, _defineProperty({}, action.user.id, action.user));
+    case 'REMOVE_CONNECTION':
+      return __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.omit(state, action.userId);
+    default:
+      return state;
+  }
+};
+
+var idByConnectionId = function idByConnectionId() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'ADD_USER':
+      return _extends({}, state, _defineProperty({}, action.connectionId, action.user.id));
+    case 'REMOVE_CONNECTION':
+      return __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.omitBy(state, function (value) {
+        return value !== action.connection.id;
+      });
     default:
       return state;
   }
@@ -34567,16 +34605,26 @@ var byId = function byId() {
 
 /* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_redux__["combineReducers"])({
   byId: byId,
-  currentUser: currentUser
+  currentUser: currentUser,
+  idByConnectionId: idByConnectionId
 });
 
 // Selectors
 
+var get = function get(state, id) {
+  return state.byId[id] || null;
+};
+
+var getAll = function getAll(state) {
+  return __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.values(state.byId);
+};
+
 var getCurrentUser = function getCurrentUser(state) {
   return state.currentUser;
 };
-var getAll = function getAll(state) {
-  return __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.values(state.byId);
+
+var getByConnectionId = function getByConnectionId(state, connectionId) {
+  return get(state, state.idByConnectionId[connectionId]);
 };
 
 /***/ },

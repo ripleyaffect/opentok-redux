@@ -14,6 +14,7 @@ import {
   getStreamNodeId,
   getStreamSubscriber,
   getTokboxApiKey,
+  getUserByConnectionId,
 } from 'app/reducers'
 
 export const fetchSessionToken = (room) => {
@@ -135,10 +136,16 @@ export const unsubscribeFromStream = (stream) => {
   }
 }
 
-export const addMessage = (message) => ({
-  message,
-  type: 'ADD_MESSAGE'
-})
+export const addMessage = (message) => {
+  // Add id if needed
+  if (!message.id) {
+    message.id = v4()
+  }
+  return {
+    message,
+    type: 'ADD_MESSAGE',
+  }
+}
 
 export const toggleMessagesVisible = () => ({
   type: 'TOGGLE_MESSAGES_VISIBLE',
@@ -194,10 +201,21 @@ export const handleConnectionCreated = (event) => {
   }
 }
 
-export const handleConnectionDestroyed = (event) => ({
-  connection: event.connection,
-  type: 'REMOVE_CONNECTION',
-})
+export const handleConnectionDestroyed = (event) => {
+  return (dispatch, getState) => {
+    const user = getUserByConnectionId(getState(), event.connection.id)
+
+    if (user) {
+      dispatch(addMessage({ type: 'leavePing', user }))
+    }
+
+    dispatch({
+      connection: event.connection,
+      userId: user ? user.id : null,
+      type: 'REMOVE_CONNECTION',
+    })
+  }
+}
 
 export const handleSignalIdentify = (event) => ({
   ...event.data,

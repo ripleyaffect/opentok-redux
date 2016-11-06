@@ -54,6 +54,22 @@ const byId = (state={}, action) => {
         ...state,
         [action.user.id]: action.user
       }
+    case 'REMOVE_CONNECTION':
+      return _.omit(state, action.userId)
+    default:
+      return state
+  }
+}
+
+const idByConnectionId = (state={}, action) => {
+  switch (action.type) {
+    case 'ADD_USER':
+      return {
+        ...state,
+        [action.connectionId]: action.user.id,
+      }
+    case 'REMOVE_CONNECTION':
+      return _.omitBy(state, value => value !== action.connection.id)
     default:
       return state
   }
@@ -62,13 +78,17 @@ const byId = (state={}, action) => {
 export default combineReducers({
   byId,
   currentUser,
+  idByConnectionId
 })
 
 // Selectors
 
-export const getCurrentUser = (state) => {
-  return state.currentUser
-}
-export const getAll = (state) => {
-  return _.values(state.byId)
+export const get = (state, id) => state.byId[id] || null
+
+export const getAll = (state) => _.values(state.byId)
+
+export const getCurrentUser = (state) => state.currentUser
+
+export const getByConnectionId = (state, connectionId) => {
+  return get(state, state.idByConnectionId[connectionId])
 }

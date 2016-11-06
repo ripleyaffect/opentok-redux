@@ -46,6 +46,7 @@ class MessageBar extends React.Component {
         <input
             className={styles.message}
             onChange={this.handleMessageChange}
+            placeholder="Send a message"
             type="text"
             value={this.state.message} />
       </form>
