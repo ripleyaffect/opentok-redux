@@ -13,8 +13,7 @@ class Publishers extends React.Component {
   render() {
     const { publisher } = this.props
 
-    return <div id="publisher-container" className={styles.publisher}>
-    </div>
+    return <div id="publisher-container" className={styles.publisher} />
   }
 }
 

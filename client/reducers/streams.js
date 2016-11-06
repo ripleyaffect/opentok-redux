@@ -15,8 +15,31 @@ export const byId = (state={}, action) => {
   }
 }
 
+export const idsByConnectionId = (state={}, action) => {
+  switch (action.type) {
+    case 'ADD_STREAM':
+      return {
+        ...state,
+        [action.stream.connection.id]:
+          (state[action.stream.connection.id] || []).concat(action.stream.id)
+      }
+    case 'REMOVE_CONNECTION':
+      return _.omit(state, action.connection.id)
+    case 'REMOVE_STREAM':
+      return {
+        ...state,
+        [action.stream.connection.id]:
+          (state[action.stream.connection.id] || []).filter(
+            streamId => streamId !== action.stream.id)
+      }
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
   byId,
+  idsByConnectionId,
 })
 
 // Selectors

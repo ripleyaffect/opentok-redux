@@ -2,13 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 
-import { fetchToken } from 'app/actions'
+import { fetchSessionToken } from 'app/actions'
+
 import Session from 'app/components/Session'
 import { getSessionId } from 'app/reducers'
 
 class Room extends React.Component {
   componentDidMount() {
-    this.props.dispatchFetchToken(this.props.name)
+    this.props.dispatchFetchSessionToken(this.props.name)
   }
 
   render() {
@@ -26,7 +27,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = {
-  dispatchFetchToken: fetchToken,
+  dispatchFetchSessionToken: fetchSessionToken,
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Room))

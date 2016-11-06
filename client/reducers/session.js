@@ -53,8 +53,12 @@ export default combineReducers({
 
 export const get = (state) => state.session
 
-export const getTokboxApiKey = (state) => state.tokboxApiKey
+export const getConnection = (state) => (get(state) || {}).connection || null
+
+export const getConnectionId = (state) => (getConnection(state) || {}).id || null
 
 export const getId = (state) => state.sessionId
+
+export const getTokboxApiKey = (state) => state.tokboxApiKey
 
 export const getToken = (state) => state.token

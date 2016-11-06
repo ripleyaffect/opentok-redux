@@ -2,10 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import {
-  addStream,
   connectToSession,
-  removeStream,
-  receiveMessage,
+  handleConnectionCreated,
+  handleConnectionDestroyed,
+  handleSignalIdentify,
+  handleSignalMessage,
+  handleStreamCreated,
+  handleStreamDestroyed,
 } from 'app/actions'
 import Feed from 'app/components/Feed'
 import MessageBar from 'app/components/MessageBar'
@@ -21,9 +24,14 @@ class Session extends React.Component {
 
     // Register handlers if session
     if (!this.props.session && session) {
-      session.on('streamCreated', this.props.dispatchAddStream)
-      session.on('streamDestroyed', this.props.dispatchRemoveStream)
-      session.on('signal:message', this.props.dispatchReceiveMessage)
+      session.on({
+        connectionCreated: this.props.dispatchHandleConnectionCreated,
+        connectionDestroyed: this.props.dispatchHandleConnectionDestroyed,
+        streamCreated: this.props.dispatchHandleStreamCreated,
+        streamDestroyed: this.props.dispatchHandleStreamDestroyed,
+        'signal:message': this.props.dispatchHandleSignalMessage,
+        'signal:identify': this.props.dispatchHandleSignalIdentify,
+      })
     }
   }
 
@@ -43,9 +51,12 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   dispatchConnectToSession: connectToSession,
-  dispatchAddStream: addStream,
-  dispatchRemoveStream: removeStream,
-  dispatchReceiveMessage: receiveMessage,
+  dispatchHandleConnectionCreated: handleConnectionCreated,
+  dispatchHandleConnectionDestroyed: handleConnectionDestroyed,
+  dispatchHandleStreamCreated: handleStreamCreated,
+  dispatchHandleSignalMessage: handleSignalMessage,
+  dispatchHandleSignalIdentify: handleSignalIdentify,
+  dispatchHandleStreamDestroyed: handleStreamDestroyed,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Session)

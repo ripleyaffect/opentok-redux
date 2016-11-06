@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { sendMessage } from 'app/actions'
+import { signalMessage } from 'app/actions'
 
 import styles from './styles.less'
 
@@ -21,7 +21,9 @@ class MessageBar extends React.Component {
   handleFormSubmit = (event) => {
     event.preventDefault()
 
-    this.props.dispatchSendMessage(this.state.message)
+    this.props.dispatchSignalMessage({
+      content: this.state.message,
+    })
 
     this.setState({ message: '' })
   }
@@ -42,7 +44,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  dispatchSendMessage: sendMessage,
+  dispatchSignalMessage: signalMessage,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageBar)

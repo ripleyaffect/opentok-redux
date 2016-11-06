@@ -1,20 +1,28 @@
 import { combineReducers } from 'redux'
 
+import connections, * as fromConnections from './connections'
 import messages, * as fromMessages from './messages'
 import publishers from './publishers'
 import session, * as fromSession from './session'
 import streams, * as fromStreams from './streams'
 import subscribers from './subscribers'
+import users, * as fromUsers from './users'
 
 export const app = combineReducers({
+  connections,
   messages,
   publishers,
   session,
   streams,
   subscribers,
+  users,
 })
 
 // Selectors
+
+export const getCurrentUser = (state) => {
+  return fromUsers.getCurrentUser(state.users)
+}
 
 export const getAllMessages = (state) => {
   return fromMessages.getAll(state.messages)
@@ -22,6 +30,9 @@ export const getAllMessages = (state) => {
 
 export const getTokboxApiKey = (state) => {
   return fromSession.getTokboxApiKey(state.session)
+}
+export const getSessionConnectionId = (state) => {
+  return fromSession.getConnectionId(state.session)
 }
 export const getSession = (state) => {
   return fromSession.get(state.session)

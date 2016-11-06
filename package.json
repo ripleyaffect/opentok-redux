@@ -17,6 +17,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "lodash": "^4.16.6",
+    "md5": "^2.2.1",
     "opentok": "^2.4.0",
     "opentok-client-sdk": "^1.0.0",
     "react": "^15.3.2",
