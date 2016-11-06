@@ -105,8 +105,6 @@ export const subscribeToStream = (stream, options={}) => {
     const subscriber = session.subscribe(
       stream, getStreamNodeId(state, stream), finalOptions)
 
-    console.log(subscriber)
-
     dispatch({
       type: 'STREAM_SUBSCRIBER_CREATED',
       stream,

@@ -5,7 +5,7 @@ import { publishToSession } from 'app/actions'
 
 import styles from './styles.less'
 
-class Publishers extends React.Component {
+class Publisher extends React.Component {
   componentDidMount() {
     this.props.dispatchPublishToSession()
   }
@@ -25,4 +25,4 @@ const mapDispatchToProps = {
   dispatchPublishToSession: publishToSession,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Publishers)
+export default connect(mapStateToProps, mapDispatchToProps)(Publisher)
