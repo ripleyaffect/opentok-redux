@@ -69,3 +69,6 @@ export default combineReducers({
 export const getCurrentUser = (state) => {
   return state.currentUser
 }
+export const getAll = (state) => {
+  return _.values(state.byId)
+}

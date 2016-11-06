@@ -102,6 +102,7 @@ export const subscribeToStream = (stream, options={}) => {
     // Passed options take precedence over defaults
     const defaultOptions = {
       height: 'calc(100vh - 75px)',
+      showControls: false,
       width: '100%',
     }
     const finalOptions = _.assign({}, defaultOptions, options)
@@ -137,6 +138,10 @@ export const unsubscribeFromStream = (stream) => {
 export const addMessage = (message) => ({
   message,
   type: 'ADD_MESSAGE'
+})
+
+export const toggleMessagesVisible = () => ({
+  type: 'TOGGLE_MESSAGES_VISIBLE',
 })
 
 export const handleSignalActiveConnectionPing = (event) => {

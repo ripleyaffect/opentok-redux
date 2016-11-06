@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { signalSetActiveConnectionId } from 'app/actions'
 import { getSessionConnectionId } from 'app/reducers'
 
+import styles from 'app/Components/ActiveConnection/styles.less'
+
 class ActiveConnectionFallback extends React.Component {
   handleClickTakeStage = () => {
     this.props.dispatchSignalSetActiveConnectionId(
@@ -11,9 +13,13 @@ class ActiveConnectionFallback extends React.Component {
   }
 
   render() {
-    return <div>
+    return <div className={styles.dashboard}>
       <h3>No one has the stage</h3>
-      <button onClick={this.handleClickTakeStage}>Take the stage</button>
+      <button
+          className={styles.button}
+          onClick={this.handleClickTakeStage}>
+        💃 Take the stage
+      </button>
     </div>
   }
 }

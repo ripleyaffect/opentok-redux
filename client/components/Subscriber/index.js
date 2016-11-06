@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { subscribeToStream, unsubscribeFromStream } from 'app/actions'
 import { getStream, getStreamNodeId } from 'app/reducers'
 
+import styles from './styles.less'
+
 class Subscriber extends React.Component {
   componentDidMount() {
     const { dispatchSubscribeToStream, options, stream } = this.props
@@ -28,7 +30,7 @@ class Subscriber extends React.Component {
   }
 
   render() {
-    return <div id={this.props.nodeId} />
+    return <div className={styles.subscriber} id={this.props.nodeId} />
   }
 }
 

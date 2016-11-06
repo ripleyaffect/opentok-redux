@@ -7,6 +7,8 @@ import {
 } from 'app/actions'
 import { getSessionConnectionId } from 'app/reducers'
 
+import styles from 'app/Components/ActiveConnection/styles.less'
+
 class ActiveConnectionDashboard extends React.Component {
   componentDidMount() {
     this.pingInterval = setInterval(
@@ -22,9 +24,13 @@ class ActiveConnectionDashboard extends React.Component {
   }
 
   render() {
-    return <div>
+    return <div className={styles.dashboard}>
       <h3>You have the stage</h3>
-      <button onClick={this.handleClickGiveUpStage}>Give up the stage</button>
+      <button
+          className={styles.button}
+          onClick={this.handleClickGiveUpStage}>
+        🙈 Give up the stage
+      </button>
     </div>
   }
 }

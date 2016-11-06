@@ -28,6 +28,9 @@ export const getActiveConnectionTimestamp = (state) => {
 export const getAllMessages = (state) => {
   return fromMessages.getAll(state.messages)
 }
+export const getMessagesVisible = (state) => {
+  return fromMessages.getVisible(state.messages)
+}
 
 export const getTokboxApiKey = (state) => {
   return fromSession.getTokboxApiKey(state.session)
@@ -44,7 +47,6 @@ export const getSessionId = (state) => {
 export const getSessionToken = (state) => {
   return fromSession.getToken(state.session)
 }
-
 
 export const getConnectionStreams = (state, connectionId) => {
   return fromStreams.getForConnection(state.streams, connectionId)
@@ -64,6 +66,9 @@ export const getStreamSubscriber = (state, stream) => {
 
 export const getCurrentUser = (state) => {
   return fromUsers.getCurrentUser(state.users)
+}
+export const getAllUsers = (state) => {
+  return fromUsers.getAll(state.users)
 }
 
 export const getIsActiveConnection = (state) => {
