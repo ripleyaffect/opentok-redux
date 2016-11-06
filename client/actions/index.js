@@ -226,7 +226,6 @@ export const handleStreamDestroyed = (event) => ({
 })
 
 export const signalActiveConnectionPing = (to) => {
-  console.log('sweeeeeee')
   return (dispatch, getState) => {
     const state = getState()
     const connectionId = getSessionConnectionId(state)

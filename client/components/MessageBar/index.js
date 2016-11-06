@@ -14,11 +14,23 @@ class MessageBar extends React.Component {
     }
   }
 
+  handleClickThumbsUp = () => {
+    this.props.dispatchSignalMessage({
+      content: '👍',
+    })
+  }
+
+  handleClickThumbsDown = () => {
+    this.props.dispatchSignalMessage({
+      content: '👎',
+    })
+  }
+
   handleMessageChange = (event) => {
     this.setState({ message: event.target.value })
   }
 
-  handleFormSubmit = (event) => {
+  handleSubmitForm = (event) => {
     event.preventDefault()
 
     this.props.dispatchSignalMessage({
@@ -29,13 +41,17 @@ class MessageBar extends React.Component {
   }
 
   render() {
-    return <form className={styles.bar} onSubmit={this.handleFormSubmit}>
-      <input
-          className={styles.message}
-          onChange={this.handleMessageChange}
-          type="text"
-          value={this.state.message} />
-    </form>
+    return <div className={styles.bar}>
+      <form className={styles.form} onSubmit={this.handleSubmitForm}>
+        <input
+            className={styles.message}
+            onChange={this.handleMessageChange}
+            type="text"
+            value={this.state.message} />
+      </form>
+      <button className={styles.button} onClick={this.handleClickThumbsUp}>👍</button>
+      <button className={styles.button} onClick={this.handleClickThumbsDown}>👎</button>
+    </div>
   } 
 }
 
