@@ -24,6 +24,9 @@ export const getActiveConnectionId = (state) => {
 export const getActiveConnectionTimestamp = (state) => {
   return fromConnections.getActiveTimestamp(state.connections)
 }
+export const getUserConnection = (state, userId) => {
+  return fromConnections.getByUserId(state.connections, userId)
+}
 
 export const getAllMessages = (state) => {
   return fromMessages.getAll(state.messages)
@@ -64,15 +67,25 @@ export const getStreamSubscriber = (state, stream) => {
   return fromStreams.getSubscriber(state.streams, stream)
 }
 
+export const getAllUsers = (state) => {
+  return fromUsers.getAll(state.users)
+}
+export const getAudioUsers = (state) => {
+  return fromUsers.getAudio(state.users)
+}
 export const getCurrentUser = (state) => {
   return fromUsers.getCurrentUser(state.users)
 }
-export const getAllUsers = (state) => {
-  return fromUsers.getAll(state.users)
+export const getUser = (state, userId) => {
+  return fromUsers.get(state.users, userId)
 }
 export const getUserByConnectionId = (state, connectionId) => {
   return fromUsers.getByConnectionId(state.users, connectionId)
 }
+export const getUserIsStreamingAudio = (state, connectionId) => {
+  return fromUsers.getIsStreamingAudio(state.users)
+}
+
 
 export const getIsActiveConnection = (state) => {
   return getActiveConnectionId(state) === getSessionConnectionId(state)

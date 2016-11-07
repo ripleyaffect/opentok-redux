@@ -43,6 +43,17 @@ const createUser = () => {
   }
 }
 
+const audio = (state=[], action) => {
+  switch (action.type) {
+    case 'ADD_USER_AUDIO':
+      return state.filter(id => id !== action.user.id).concat(action.user.id)
+    case 'REMOVE_USER_AUDIO':
+      return state.filter(id => id !== action.user.id)
+    default:
+      return state
+  }
+}
+
 const currentUser = (state=createUser(), action) => {
   return state
 }
@@ -75,10 +86,24 @@ const idByConnectionId = (state={}, action) => {
   }
 }
 
+
+const isStreamingAudio = (state=false, action) => {
+  switch (action.type) {
+    case 'START_STREAMING_AUDIO':
+      return true
+    case 'STOP_STREAMING_AUDIO':
+      return false
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
+  audio,
   byId,
   currentUser,
-  idByConnectionId
+  idByConnectionId,
+  isStreamingAudio,
 })
 
 // Selectors
@@ -87,8 +112,12 @@ export const get = (state, id) => state.byId[id] || null
 
 export const getAll = (state) => _.values(state.byId)
 
-export const getCurrentUser = (state) => state.currentUser
+export const getAudio = (state) => state.audio
 
 export const getByConnectionId = (state, connectionId) => {
   return get(state, state.idByConnectionId[connectionId])
 }
+
+export const getCurrentUser = (state) => state.currentUser
+
+export const getIsStreamingAudio = (state) => state.isStreamingAudio

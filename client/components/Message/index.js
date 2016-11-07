@@ -15,6 +15,8 @@ const getMessageHeaderExtraText = (type) => {
       return 'has the stage'
     case 'activeConnectionTakenNotice':
       return 'took the stage'
+    case 'userAudioSubscriber':
+      return 'is streaming audio'
     default:
       return ''
   }

@@ -77,7 +77,7 @@ export const getForConnection = (state, connectionId) => {
 
 export const getNodeId = (state, stream) => {
   if (!stream || !stream.id) {
-    console.log('Must pass a stream to get the node ide')
+    console.log('Must pass a stream to get the node id')
     return null
   }
   return `stream-${stream.id}`

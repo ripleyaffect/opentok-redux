@@ -9,6 +9,8 @@ import {
   handleSignalIdentify,
   handleSignalMessage,
   handleSignalSetActiveConnectionId,
+  handleSignalSubscribeToUserAudio,
+  handleSignalUnsubscribeFromUserAudio,
   handleStreamCreated,
   handleStreamDestroyed,
 } from 'app/actions'
@@ -35,6 +37,8 @@ class Session extends React.Component {
         'signal:message': this.props.dispatchHandleSignalMessage,
         'signal:identify': this.props.dispatchHandleSignalIdentify,
         'signal:setActiveConnectionId': this.props.dispatchHandleSignalSetActiveConnectionId,
+        'signal:subscribeToUserAudio': this.props.dispatchHandleSignalSubscribeToUserAudio,
+        'signal:unsubscribeFromUserAudio': this.props.dispatchHandleSignalUnsubscribeFromUserAudio,
       })
     }
   }
@@ -63,6 +67,8 @@ const mapDispatchToProps = {
   dispatchHandleSignalIdentify: handleSignalIdentify,
   dispatchHandleStreamCreated: handleStreamCreated,
   dispatchHandleStreamDestroyed: handleStreamDestroyed,
+  dispatchHandleSignalSubscribeToUserAudio: handleSignalSubscribeToUserAudio,
+  dispatchHandleSignalUnsubscribeFromUserAudio: handleSignalUnsubscribeFromUserAudio,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Session)

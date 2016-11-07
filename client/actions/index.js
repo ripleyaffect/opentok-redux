@@ -141,6 +141,9 @@ export const addMessage = (message) => {
   if (!message.id) {
     message.id = v4()
   }
+  if (!message.timestamp) {
+    message.timestamp = Date.now()
+  }
   return {
     message,
     type: 'ADD_MESSAGE',
@@ -187,14 +190,17 @@ export const handleConnectionCreated = (event) => {
       return
     }
 
-    session.signal({
-      type: 'identify',
-      to: event.connection,
-      data: {
-        connectionId,
-        user,
-      }
-    })
+    // The new connection doesn't pick up on signals immediately :/
+    setTimeout(() => {
+      session.signal({
+        type: 'identify',
+        to: event.connection,
+        data: {
+          connectionId,
+          user,
+        }
+      })
+    }, 1000)
 
     // Tell new connection if this connection is the active one
     if (isActiveConnection) {
@@ -251,6 +257,25 @@ export const handleStreamDestroyed = (event) => ({
   type: 'REMOVE_STREAM',
 })
 
+export const handleSignalSubscribeToUserAudio = (event) => {
+  return (dispatch, getState) => {
+    const user = getCurrentUser(getState())
+
+    // Never add self to subcribed audio
+    if (user.id !== event.data.user.id) {
+      dispatch({
+        ...event.data,
+        type: 'ADD_USER_AUDIO',
+      })
+    }
+  }
+}
+
+export const handleSignalUnsubscribeFromUserAudio = (event) => ({
+  ...event.data,
+  type: 'REMOVE_USER_AUDIO',
+})
+
 export const signalActiveConnectionPing = (to) => {
   return (dispatch, getState) => {
     const state = getState()
@@ -290,13 +315,14 @@ export const signalMessage = (options) => {
 
     const defaultOptions = {
       content: null,
+      id: v4(),
+      timestamp: Date.now(),
       type: 'text',
     }
     const finalOptions = _.assign({}, defaultOptions, options)
 
     const message = {
       ...finalOptions,
-      id: v4(),
       user,
     }
 
@@ -329,3 +355,44 @@ export const signalSetActiveConnectionId = (connectionId) => {
     })
   }
 }
+
+export const signalSubscribeToUserAudio = () => {
+  return (dispatch, getState) => {
+    const state = getState()
+    const session = getSession(state)
+    const user = getCurrentUser(state)
+
+    session.signal({
+      type: 'subscribeToUserAudio',
+      data: {
+        user,
+        timestamp: Date.now(),
+      }
+    })
+
+    dispatch({
+      type: 'START_STREAMING_AUDIO',
+    })
+  }
+}
+
+export const signalUnsubscribeFromUserAudio = () => {
+  return (dispatch, getState) => {
+    const state = getState()
+    const session = getSession(state)
+    const user = getCurrentUser(state)
+
+    session.signal({
+      type: 'unsubscribeFromUserAudio',
+      data: {
+        user,
+        timestamp: Date.now(),
+      }
+    })
+
+    dispatch({
+      type: 'STOP_STREAMING_AUDIO',
+    })
+  }
+}
+

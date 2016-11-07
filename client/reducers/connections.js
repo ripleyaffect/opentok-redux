@@ -56,9 +56,11 @@ export const getActive = (state) => get(state, getActiveId(state))
 export const getActiveId = (state) => {
   return (state.activeId || {}).connectionId || null
 }
+
 export const getActiveTimestamp = (state) => {
   return (state.activeId || {}).timestamp || null
 }
 
-export const getByUserId = (state, userId) =>
-  get(state, state.idByUserId[userId])
+export const getByUserId = (state, userId) => {
+  return get(state, state.idByUserId[userId])
+}

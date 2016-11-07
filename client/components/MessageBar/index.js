@@ -1,7 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { signalMessage } from 'app/actions'
+import {
+  signalMessage,
+  signalSubscribeToUserAudio,
+  signalUnsubscribeFromUserAudio,
+} from 'app/actions'
+import {
+  getIsActiveConnection,
+  getUserIsStreamingAudio,
+} from 'app/reducers'
 
 import styles from './styles.less'
 
@@ -12,6 +20,14 @@ class MessageBar extends React.Component {
     this.state = {
       message: '',
     }
+  }
+
+  handleMouseDownTalkButton = () => {
+    this.props.dispatchSignalSubscribeToUserAudio()
+  }
+
+  handleMouseUpTalkButton = () => {
+    this.props.dispatchSignalUnsubscribeFromUserAudio()
   }
 
   handleClickThumbsUp = () => {
@@ -41,7 +57,21 @@ class MessageBar extends React.Component {
   }
 
   render() {
+    const { userIsActiveConnection, userIsStreamingAudio } = this.props
+
     return <div className={styles.bar}>
+      {userIsActiveConnection ? 
+        <button
+            className={`${styles.button} ${styles.talkButton} ${styles.disabled}`}>
+          🎙 Streaming
+        </button>
+      : <button
+            className={
+              `${styles.button} ${styles.talkButton} ${userIsStreamingAudio ? styles.active : ''}`}
+            onMouseDown={this.handleMouseDownTalkButton}
+            onMouseUp={this.handleMouseUpTalkButton}>
+          🎙 {userIsStreamingAudio ? 'Streaming...' : 'Press to talk'}
+        </button>}
       <form className={styles.form} onSubmit={this.handleSubmitForm}>
         <input
             className={styles.message}
@@ -57,11 +87,16 @@ class MessageBar extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {}
+  return {
+    userIsStreamingAudio: getUserIsStreamingAudio(state),
+    userIsActiveConnection: getIsActiveConnection(state),
+  }
 }
 
 const mapDispatchToProps = {
   dispatchSignalMessage: signalMessage,
+  dispatchSignalSubscribeToUserAudio: signalSubscribeToUserAudio,
+  dispatchSignalUnsubscribeFromUserAudio: signalUnsubscribeFromUserAudio,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageBar)

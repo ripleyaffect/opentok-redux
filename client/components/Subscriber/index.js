@@ -30,7 +30,11 @@ class Subscriber extends React.Component {
   }
 
   render() {
-    return <div className={styles.subscriber} id={this.props.nodeId} />
+    const { className, nodeId } = this.props
+
+    return <div
+        className={`${styles.subscriber} ${className ? className : ''}`}
+        id={nodeId} />
   }
 }
 
