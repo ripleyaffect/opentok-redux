@@ -3136,9 +3136,6 @@ var handleConnectionDestroyed = function handleConnectionDestroyed(event) {
 };
 
 var handleSignalIdentify = function handleSignalIdentify(event) {
-  console.log('-------------');
-  console.log(event);
-  console.log('-------------');
   return function (dispatch) {
     dispatch(addUser(event.data.user, event.data.connectionId));
   };
