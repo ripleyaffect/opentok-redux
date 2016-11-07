@@ -5,7 +5,6 @@ import Subscriber from 'app/components/Subscriber'
 import { getActiveConnectionId, getConnectionStreams } from 'app/reducers'
 
 const ActiveConnectionStreams = ({ streams }) => {
-  console.log(streams)
   return <div>
     {streams.map(stream => <Subscriber key={stream.id} streamId={stream.id} />)}
   </div>

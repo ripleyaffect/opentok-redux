@@ -147,6 +147,12 @@ export const addMessage = (message) => {
   }
 }
 
+export const addUser = (user, connectionId) => ({
+  connectionId,
+  type: 'ADD_USER',
+  user,
+})
+
 export const toggleMessagesVisible = () => ({
   type: 'TOGGLE_MESSAGES_VISIBLE',
 })
@@ -156,6 +162,7 @@ export const handleSignalActiveConnectionPing = (event) => {
     const activeConnectionId = getActiveConnectionId(getState())
 
     if (event.data.connectionId != activeConnectionId) {
+      dispatch(addUser(event.data.user, event.data.connectionId))
       dispatch(handleSignalSetActiveConnectionId(event))
       dispatch(addMessage({
         id: v4(),
@@ -217,10 +224,11 @@ export const handleConnectionDestroyed = (event) => {
   }
 }
 
-export const handleSignalIdentify = (event) => ({
-  ...event.data,
-  type: 'ADD_USER',
-})
+export const handleSignalIdentify = (event) => {
+  return dispatch => {
+    dispatch(addUser(event.data.user, event.data.connectionId))
+  }
+}
 
 export const handleSignalMessage = (event) => {
   return (dispatch) => dispatch(addMessage(event.data.message))
