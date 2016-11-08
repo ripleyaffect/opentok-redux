@@ -49,6 +49,8 @@ const audio = (state=[], action) => {
       return state.filter(id => id !== action.user.id).concat(action.user.id)
     case 'REMOVE_USER_AUDIO':
       return state.filter(id => id !== action.user.id)
+    case 'REMOVE_CONNECTION':
+      return state.filter(id => id !== action.userId)
     default:
       return state
   }
@@ -80,7 +82,7 @@ const idByConnectionId = (state={}, action) => {
         [action.connectionId]: action.user.id,
       }
     case 'REMOVE_CONNECTION':
-      return _.omitBy(state, value => value !== action.connection.id)
+      return _.omit(state, action.connection.id)
     default:
       return state
   }

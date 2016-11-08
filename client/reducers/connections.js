@@ -35,7 +35,7 @@ const idByUserId = (state={}, action) => {
         [action.user.id]: action.connectionId,
       }
     case 'REMOVE_CONNECTION':
-      return _.omitBy(state, value => value !== action.connection.id)
+      return _.omitBy(state, value => value === action.connection.id)
     default:
       return state
   }
