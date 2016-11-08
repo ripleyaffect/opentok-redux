@@ -33,7 +33,7 @@ class MessageBar extends React.Component {
   }
 
   handleKeyDown = (event) => {
-    if (event.ctrlKey && event.altKey) {
+    if (!this.props.userIsActiveConnection && event.ctrlKey && event.altKey) {
       this.props.dispatchSignalSubscribeToUserAudio()
     }
   }

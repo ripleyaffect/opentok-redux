@@ -15,6 +15,7 @@ import {
   getStreamSubscriber,
   getTokboxApiKey,
   getUserByConnectionId,
+  getUserIsStreamingAudio,
 } from 'app/reducers'
 
 export const fetchSessionToken = (room) => {
@@ -337,8 +338,18 @@ export const signalMessage = (options) => {
 
 export const signalSetActiveConnectionId = (connectionId) => {
   return (dispatch, getState) => {
-    const session = getSession(getState())
+    const state = getState()
+    const session = getSession(state)
     const timestamp = Date.now()
+
+    // If setting this connection active and currently streaming audio,
+    // stop streaming
+    if (
+        connectionId === getSessionConnectionId(state) &&
+        getUserIsStreamingAudio(state)
+    ) {
+      dispatch(signalUnsubscribeFromUserAudio())
+    }
 
     session.signal({
       type: 'setActiveConnectionId',

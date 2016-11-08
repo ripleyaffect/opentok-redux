@@ -71,7 +71,6 @@ export const getForConnection = (state, connectionId) => {
     console.log('Must pass a connection id to get connection streams')
     return []
   }
-  console.log(connectionId)
   return (state.idsByConnectionId[connectionId] || []).map(id => get(state, id))
 }
 
