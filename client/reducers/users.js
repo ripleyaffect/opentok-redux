@@ -43,7 +43,7 @@ const createUser = () => {
   }
 }
 
-const audio = (state=[], action) => {
+const streamingAudio = (state=[], action) => {
   switch (action.type) {
     case 'ADD_USER_AUDIO':
       return state.filter(id => id !== action.user.id).concat(action.user.id)
@@ -89,7 +89,7 @@ const idByConnectionId = (state={}, action) => {
 }
 
 
-const isStreamingAudio = (state=false, action) => {
+const currentIsStreamingAudio = (state=false, action) => {
   switch (action.type) {
     case 'START_STREAMING_AUDIO':
       return true
@@ -100,21 +100,35 @@ const isStreamingAudio = (state=false, action) => {
   }
 }
 
+const listIsVisible = (state=false, action) => {
+  switch (action.type) {
+    case 'TOGGLE_USER_LIST_VISIBLE':
+      return !state
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
-  audio,
+  streamingAudio,
   byId,
   currentUser,
   idByConnectionId,
-  isStreamingAudio,
+  currentIsStreamingAudio,
+  listIsVisible,
 })
 
 // Selectors
 
 export const get = (state, id) => state.byId[id] || null
 
-export const getAll = (state) => _.values(state.byId)
+export const getAll = (state) => _.sortBy(_.values(state.byId), 'name')
 
-export const getAudio = (state) => state.audio
+export const getStreamingAudio = (state) => state.streamingAudio
+
+export const getIsStreamingAudio = (state, id) => {
+  return state.streamingAudio.indexOf(id) > -1
+}
 
 export const getByConnectionId = (state, connectionId) => {
   return get(state, state.idByConnectionId[connectionId])
@@ -122,4 +136,6 @@ export const getByConnectionId = (state, connectionId) => {
 
 export const getCurrentUser = (state) => state.currentUser
 
-export const getIsStreamingAudio = (state) => state.isStreamingAudio
+export const getCurrentIsStreamingAudio = (state) => state.currentIsStreamingAudio
+
+export const getListIsVisible = (state) => state.listIsVisible

@@ -70,11 +70,14 @@ export const getStreamSubscriber = (state, stream) => {
 export const getAllUsers = (state) => {
   return fromUsers.getAll(state.users)
 }
-export const getAudioUsers = (state) => {
-  return fromUsers.getAudio(state.users)
+export const getUsersStreamingAudio = (state) => {
+  return fromUsers.getStreamingAudio(state.users)
 }
 export const getCurrentUser = (state) => {
   return fromUsers.getCurrentUser(state.users)
+}
+export const getCurrentUserIsStreamingAudio = (state, connectionId) => {
+  return fromUsers.getCurrentIsStreamingAudio(state.users)
 }
 export const getUser = (state, userId) => {
   return fromUsers.get(state.users, userId)
@@ -82,8 +85,11 @@ export const getUser = (state, userId) => {
 export const getUserByConnectionId = (state, connectionId) => {
   return fromUsers.getByConnectionId(state.users, connectionId)
 }
-export const getUserIsStreamingAudio = (state, connectionId) => {
-  return fromUsers.getIsStreamingAudio(state.users)
+export const getUserIsStreamingAudio = (state, userId) => {
+  return fromUsers.getIsStreamingAudio(state.users, userId)
+}
+export const getUserListIsVisible = (state, connectionId) => {
+  return fromUsers.getListIsVisible(state.users)
 }
 
 

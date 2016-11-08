@@ -8,7 +8,7 @@ import {
 } from 'app/actions'
 import {
   getIsActiveConnection,
-  getUserIsStreamingAudio,
+  getCurrentUserIsStreamingAudio,
 } from 'app/reducers'
 
 import styles from './styles.less'
@@ -39,7 +39,7 @@ class MessageBar extends React.Component {
   }
 
   handleKeyUp = (event) => {
-    if (this.props.userIsStreamingAudio && !(event.ctrlKey && event.altKey)) {
+    if (this.props.currentUserIsStreamingAudio && !(event.ctrlKey && event.altKey)) {
       this.props.dispatchSignalUnsubscribeFromUserAudio()
     }
   }
@@ -86,7 +86,7 @@ class MessageBar extends React.Component {
   }
 
   render() {
-    const { userIsActiveConnection, userIsStreamingAudio } = this.props
+    const { userIsActiveConnection, currentUserIsStreamingAudio } = this.props
 
     return <div className={styles.bar}>
       {userIsActiveConnection ? 
@@ -96,10 +96,10 @@ class MessageBar extends React.Component {
         </button>
       : <button
             className={
-              `${styles.button} ${styles.talkButton} ${userIsStreamingAudio ? styles.active : ''}`}
+              `${styles.button} ${styles.talkButton} ${currentUserIsStreamingAudio ? styles.active : ''}`}
             onMouseDown={this.handleMouseDownTalkButton}
             onMouseUp={this.handleMouseUpTalkButton}>
-          🎙 {userIsStreamingAudio ? 'Streaming' : 'Hold to talk'}
+          🎙 {currentUserIsStreamingAudio ? 'Streaming' : 'Hold to talk'}
         </button>}
       <form className={styles.form} onSubmit={this.handleSubmitForm}>
         <input
@@ -118,7 +118,7 @@ class MessageBar extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    userIsStreamingAudio: getUserIsStreamingAudio(state),
+    currentUserIsStreamingAudio: getCurrentUserIsStreamingAudio(state),
     userIsActiveConnection: getIsActiveConnection(state),
   }
 }

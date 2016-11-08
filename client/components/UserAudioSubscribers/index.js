@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import UserAudioSubscriber from 'app/components/UserAudioSubscriber'
-import { getAudioUsers } from 'app/reducers'
+import { getUsersStreamingAudio } from 'app/reducers'
 
 import styles from './styles.less'
 
@@ -14,7 +14,7 @@ const UserAudioSubscribers = ({ userIds }) => {
 }
 
 const mapStateToProps = (state) => ({
-  userIds: getAudioUsers(state),
+  userIds: getUsersStreamingAudio(state),
 })
 
 export default connect(mapStateToProps)(UserAudioSubscribers)

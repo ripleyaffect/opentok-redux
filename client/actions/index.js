@@ -15,7 +15,7 @@ import {
   getStreamSubscriber,
   getTokboxApiKey,
   getUserByConnectionId,
-  getUserIsStreamingAudio,
+  getCurrentUserIsStreamingAudio,
 } from 'app/reducers'
 
 export const fetchSessionToken = (room) => {
@@ -159,6 +159,10 @@ export const addUser = (user, connectionId) => ({
 
 export const toggleMessagesVisible = () => ({
   type: 'TOGGLE_MESSAGES_VISIBLE',
+})
+
+export const toggleUserListVisible = () => ({
+  type: 'TOGGLE_USER_LIST_VISIBLE',
 })
 
 export const handleSignalActiveConnectionPing = (event) => {
@@ -346,7 +350,7 @@ export const signalSetActiveConnectionId = (connectionId) => {
     // stop streaming
     if (
         connectionId === getSessionConnectionId(state) &&
-        getUserIsStreamingAudio(state)
+        getCurrentUserIsStreamingAudio(state)
     ) {
       dispatch(signalUnsubscribeFromUserAudio())
     }
