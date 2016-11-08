@@ -242,7 +242,17 @@ export const handleSignalIdentify = (event) => {
 }
 
 export const handleSignalMessage = (event) => {
-  return (dispatch) => dispatch(addMessage(event.data.message))
+  return (dispatch) => {
+    const message = event.data.message
+
+    // Play a ding if hand is raised
+    if (message.type === 'raiseHand') {
+      const audio = new Audio('/static/ding.wav')
+      audio.play();
+    }
+
+    dispatch(addMessage(message))
+  }
 }
 
 export const handleSignalSetActiveConnectionId = (event) => ({

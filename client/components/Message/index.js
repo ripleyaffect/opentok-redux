@@ -33,14 +33,6 @@ const MessageHeader = ({ currentUser, id, type, user }) => {
 }
 
 class Message extends React.Component {
-  componentWillMount() {
-    // Play a ding if hand is raised
-    if (this.props.type === 'raiseHand') {
-      var snd = new Audio('/static/ding.wav')
-      snd.play();
-    }
-  }
-
   render() {
     const { content, currentUser, id, type, user } = this.props
 
