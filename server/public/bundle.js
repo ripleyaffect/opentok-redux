@@ -33664,6 +33664,18 @@ var MessageBar = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (MessageBar.__proto__ || Object.getPrototypeOf(MessageBar)).call(this, props));
 
+    _this.handleKeyDown = function (event) {
+      if (event.ctrlKey && event.altKey) {
+        _this.props.dispatchSignalSubscribeToUserAudio();
+      }
+    };
+
+    _this.handleKeyUp = function (event) {
+      if (_this.props.userIsStreamingAudio && !(event.ctrlKey && event.altKey)) {
+        _this.props.dispatchSignalUnsubscribeFromUserAudio();
+      }
+    };
+
     _this.handleMouseDownTalkButton = function () {
       _this.props.dispatchSignalSubscribeToUserAudio();
     };
@@ -33705,6 +33717,18 @@ var MessageBar = function (_React$Component) {
   }
 
   _createClass(MessageBar, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      document.addEventListener('keydown', this.handleKeyDown);
+      document.addEventListener('keyup', this.handleKeyUp);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      document.removeEventListener('keydown', this.handleKeyDown);
+      document.removeEventListener('keyup', this.handleKeyUp);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props;

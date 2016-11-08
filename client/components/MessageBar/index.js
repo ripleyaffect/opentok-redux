@@ -22,6 +22,28 @@ class MessageBar extends React.Component {
     }
   }
 
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyDown)
+    document.addEventListener('keyup', this.handleKeyUp)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyDown)
+    document.removeEventListener('keyup', this.handleKeyUp)
+  }
+
+  handleKeyDown = (event) => {
+    if (event.ctrlKey && event.altKey) {
+      this.props.dispatchSignalSubscribeToUserAudio()
+    }
+  }
+
+  handleKeyUp = (event) => {
+    if (this.props.userIsStreamingAudio && !(event.ctrlKey && event.altKey)) {
+      this.props.dispatchSignalUnsubscribeFromUserAudio()
+    }
+  }
+
   handleMouseDownTalkButton = () => {
     this.props.dispatchSignalSubscribeToUserAudio()
   }
