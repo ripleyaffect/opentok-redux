@@ -32,11 +32,23 @@ const MessageHeader = ({ currentUser, id, type, user }) => {
   </div>
 }
 
-const Message = ({ content, currentUser, id, type, user }) => {
-  return <div className={styles.message}>
-    <MessageHeader currentUser={currentUser} id={id} type={type} user={user} />
-    {content && <div className={styles.content}>{content}</div>}
-  </div>
+class Message extends React.Component {
+  componentWillMount() {
+    // Play a ding if hand is raised
+    if (this.props.type === 'raiseHand') {
+      var snd = new Audio('/static/ding.wav')
+      snd.play();
+    }
+  }
+
+  render() {
+    const { content, currentUser, id, type, user } = this.props
+
+    return <div className={styles.message}>
+      <MessageHeader currentUser={currentUser} id={id} type={type} user={user} />
+      {content && <div className={styles.content}>{content}</div>}
+    </div>
+  }
 }
 
 const mapStateToProps = (state, ownProps) => ({

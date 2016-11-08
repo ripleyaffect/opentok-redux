@@ -64,6 +64,13 @@ class MessageBar extends React.Component {
     })
   }
 
+  handleClickRaiseHand = () => {
+    this.props.dispatchSignalMessage({
+      content: '✋',
+      type: 'raiseHand',
+    })
+  }
+
   handleMessageChange = (event) => {
     this.setState({ message: event.target.value })
   }
@@ -92,7 +99,7 @@ class MessageBar extends React.Component {
               `${styles.button} ${styles.talkButton} ${userIsStreamingAudio ? styles.active : ''}`}
             onMouseDown={this.handleMouseDownTalkButton}
             onMouseUp={this.handleMouseUpTalkButton}>
-          🎙 {userIsStreamingAudio ? 'Streaming...' : 'Press to talk'}
+          🎙 {userIsStreamingAudio ? 'Streaming' : 'Hold to talk'}
         </button>}
       <form className={styles.form} onSubmit={this.handleSubmitForm}>
         <input
@@ -104,6 +111,7 @@ class MessageBar extends React.Component {
       </form>
       <button className={styles.button} onClick={this.handleClickThumbsUp}>👍</button>
       <button className={styles.button} onClick={this.handleClickThumbsDown}>👎</button>
+      <button className={styles.button} onClick={this.handleClickRaiseHand}>✋</button>
     </div>
   } 
 }
